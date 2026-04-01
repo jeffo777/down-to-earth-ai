@@ -1,0 +1,78 @@
+---
+import LeadGenerationLayout from '../layouts/LeadGenerationLayout.astro';
+
+const frontmatter = {
+  title: "Lead Generation For Garage Door Engineers",
+  metaTitle: "Lead Generation For Garage Door Engineers — Get More Leads | Down To Earth AI",
+  metaDescription: "A complete lead generation system for garage door engineers. Rank on Google for repairs and installations, answer every call 24/7. 30-day money back guarantee.",
+  canonicalUrl: "https://downtoearthai.co.uk/lead-generation-for-garage-door-engineers",
+  heroHeadline: "Lead Generation For Garage Door Engineers",
+  heroSubhead: "A complete system that gets your garage door business found when someone's door is stuck open in the rain, answers every call while you're replacing springs, and turns every installation into content that wins the next job.",
+  heroAIText: "Learn about getting more garage door leads",
+
+  problemHeadline: "Stuck Doors. Stuck Business.",
+  problemText: "A customer's garage door won't close — their car is exposed, their house isn't secure, and it's starting to rain. They Google 'garage door repair near me' and call the first result. You're on another job, replacing a torsion spring with both hands busy. The phone rings, you can't answer, and that £200-500 repair goes to someone else. Garage door work is niche — there aren't many of you — but that also means every missed call hurts more. One lost enquiry could be a £2,000 new electric door installation.",
+
+  receptionistLink: "/ai-receptionist-for-garage-door-engineers",
+  websiteLink: "/lead-generation-website-for-garage-door-engineers",
+  marketingLink: "/ai-content-marketing-for-garage-door-engineers",
+  automationsLink: "/custom-ai-automations-for-garage-door-engineers",
+
+  productCards: [
+    {
+      name: "AI Receptionist (your AI receptionist)",
+      description: "Replacing springs under tension? Don't reach for your phone. Your AI receptionist answers, captures the door type and problem, and reassures the customer. You get the details when you're safely finished.",
+      price: "£299 setup · £99/month",
+      link: "/ai-receptionist-for-garage-door-engineers",
+      icon: "📞",
+    },
+    {
+      name: "Lead Generation Website",
+      description: "Pages for 'garage door repair [your area]', 'electric garage door installation [town]', 'roller shutter repair near me'. Your niche, your area, top of Google.",
+      price: "From £997 one-off",
+      link: "/lead-generation-website-for-garage-door-engineers",
+      icon: "🌐",
+    },
+    {
+      name: "AI Marketing",
+      description: "Installed a new sectional door? Automated an old up-and-over? Before/after photos → blog post, social content, Google update. Every installation showcases your expertise.",
+      price: "£199 setup · £99/month",
+      link: "/ai-content-marketing-for-garage-door-engineers",
+      icon: "📈",
+    },
+    {
+      name: "Custom AI Automations",
+      description: "Automated annual service reminders, warranty expiry notifications, and follow-ups after spring replacements. Build recurring maintenance relationships.",
+      price: "Bespoke pricing",
+      link: "/custom-ai-automations-for-garage-door-engineers",
+      icon: "⚙️",
+    },
+  ],
+
+  foundersNote: "Garage door engineers are one of the most underserved trades when it comes to digital marketing. Most have basic websites or none at all. That's actually an advantage — there's less competition online, which means a well-optimised website can dominate local search results relatively quickly. The gap between what customers are searching for and what garage door engineers are offering online is enormous.",
+
+  showTradeGrid: false,
+
+  faqs: [
+    { question: "Is there enough search volume for garage door-specific leads?", answer: "Yes. 'Garage door repair near me' and 'new garage door cost' are searched thousands of times per month in the UK. It's a niche with lower competition than plumbing or electrical, which actually works in your favour — you can dominate local rankings faster." },
+    { question: "What kind of garage door work will this generate?", answer: "Spring replacements, cable repairs, motor/operator repairs, panel replacements, new door installations (sectional, roller, side-hinged, up-and-over), door automation, commercial roller shutters, industrial doors, and annual servicing." },
+    { question: "How does your AI receptionist handle different types of garage door enquiries?", answer: "A broken spring (urgent — the door is stuck) is handled differently from a new installation enquiry (planned purchase). Your AI receptionist captures the door type, brand if known, and specific problem, then routes urgent issues to you immediately." },
+    { question: "Can the website target new installation leads?", answer: "Yes. New door installations are high-value jobs (£800-3,000+). We create dedicated pages for each type — sectional, roller, manual, electric, insulated — targeting searches that bring in customers actively planning a purchase." },
+    { question: "How does AI marketing work for a niche trade like garage doors?", answer: "Before/after photos of door installations make excellent content. A modern sectional door replacing an old up-and-over is a dramatic transformation. The AI generates project case studies that rank for searches and showcase your work quality." },
+    { question: "Can I target commercial roller shutter work?", answer: "Yes. Commercial shutters — shops, warehouses, loading bays — are high-value recurring contracts. The website targets 'roller shutter repair [area]' and 'commercial shutter installation'. These searches bring in facilities managers and business owners." },
+    { question: "Is there competition from national garage door companies?", answer: "Some, but local service always wins for repairs and installation. National companies can't offer the same-day response or personal service. Your website positions you as the local expert — someone who's 20 minutes away, not a van dispatched from a depot three counties over." },
+    { question: "How do annual service reminders work?", answer: "After every installation or repair, the system tracks the date. At the appropriate interval, it contacts the customer offering an annual service — spring checks, lubrication, track alignment, safety tests. Recurring revenue from every past customer." },
+    { question: "Can the system help me convert repair calls into new installations?", answer: "Yes. When Your AI receptionist captures a repair call for an old door, she notes the age and condition. After the repair, automated follow-up can offer a 'new door consultation' — turning a £200 repair into a £2,000 installation lead." },
+    { question: "How quickly do garage door pages rank on Google?", answer: "Faster than most trades, because there's less competition. A well-optimised garage door website in a mid-sized town can start appearing on page 1 within 2-3 months. By 6 months, you should be a dominant local presence." },
+    { question: "Do I need to cover a large area for this to work?", answer: "No. Even a small coverage area works because garage door searches are highly localised. If you cover one town or city, that's enough — the website targets every service for that specific area." },
+    { question: "Can the system handle emergency call-outs?", answer: "Yes. A garage door stuck open is a security risk — your AI receptionist treats it as urgent. She captures the situation, sends you a priority alert, and reassures the customer. Emergency response builds loyalty and generates reviews." },
+    { question: "What about smart/automated garage door leads?", answer: "Smart home automation is growing. Pages targeting 'automatic garage door', 'smart garage door opener', and 'garage door automation [area]' capture tech-forward customers willing to invest in premium installations." },
+    { question: "How much does everything cost?", answer: "AI Receptionist: £299 setup + £99/month. Website: from £997 one-off. AI Marketing: £199 setup + £99/month. One new door installation per month covers everything. One spring replacement per week covers your AI receptionist. 30-day money back guarantee." },
+    { question: "Can I start with just the website and add your AI receptionist later?", answer: "Yes — though most garage door engineers find Your AI receptionist's instant call answering to be the most impactful first step, especially for emergency repair calls. You can build the system in any order that suits your business." },
+  ],
+
+  widgetTrade: "garage door",
+};
+---
+
+<LeadGenerationLayout frontmatter={frontmatter} />

@@ -1,0 +1,93 @@
+---
+import LeadGenerationLayout from '../layouts/LeadGenerationLayout.astro';
+
+const frontmatter = {
+  title: "Lead Generation For Tradesmen",
+  metaTitle: "Lead Generation For Tradesmen — The Complete System | Down To Earth AI",
+  metaDescription: "A complete lead generation system for UK tradesmen. Website, AI receptionist, automated marketing, and custom automations — all working together. 30-day money back guarantee.",
+  canonicalUrl: "https://downtoearthai.co.uk/lead-generation-for-tradesmen",
+  heroHeadline: "Lead Generation For Tradesmen",
+  heroSubhead: "A complete system that gets you found on Google, answers every enquiry instantly, and grows your online presence with every job you complete. Stop chasing work. Let the work chase you.",
+  heroAIText: "Learn about getting a steady stream of leads",
+
+  problemHeadline: "The Problem Every Tradesman Knows",
+  problemText: "You're relying on directories, shared leads, and word of mouth. Some months the phone rings. Some months it doesn't. You never know where next month's work is coming from. And the worst part? You're probably losing 3-5 leads a week right now — not because you're not good enough, but because you can't answer the phone while you're on a job. That's £2,000-5,000 a month walking out the door.",
+
+  receptionistLink: "/ai-receptionist-for-tradesmen",
+  websiteLink: "/lead-generation-websites-for-tradesmen",
+  marketingLink: "/ai-marketing-for-tradesmen",
+  automationsLink: "/custom-ai-automations-for-tradesmen",
+
+  productCards: [
+    {
+      name: "AI Receptionist (your AI receptionist)",
+      description: "Answers every call, text, WhatsApp, email, and social message — 24/7. Captures leads, qualifies them, and sends you the details. Never miss another job.",
+      price: "£299 setup · £99/month",
+      link: "/ai-receptionist-for-tradesmen",
+      icon: "📞",
+    },
+    {
+      name: "Lead Generation Website",
+      description: "A custom website that ranks on Google for your trade and area. 150-300+ pages of locally-targeted content that brings in organic leads every day.",
+      price: "From £997 one-off",
+      link: "/lead-generation-websites-for-tradesmen",
+      icon: "🌐",
+    },
+    {
+      name: "AI Marketing",
+      description: "Send a photo of your finished work. AI creates a blog post, social media content, and Google updates — automatically. Every job markets your next one.",
+      price: "£199 setup · £99/month",
+      link: "/ai-marketing-for-tradesmen",
+      icon: "📈",
+    },
+    {
+      name: "Custom AI Automations",
+      description: "Automated follow-ups, invoice reminders, review requests, and reporting. The admin runs itself so you can focus on the work.",
+      price: "Bespoke pricing",
+      link: "/custom-ai-automations-for-tradesmen",
+      icon: "⚙️",
+    },
+  ],
+
+  foundersNote: "I didn't set out to build four products. I set out to solve one problem: tradesmen losing work because they're too busy doing the work. But once you fix the phone answering, you realise the leads need to come from somewhere. Fix that with a website, and you realise the website needs content. Fix that with AI marketing, and you've got yourself a flywheel. Every piece makes the others stronger. That's not a sales pitch — it's just how it works.",
+
+  showTradeGrid: true,
+  tradeLinks: [
+    { name: "Lead Generation For Plumbers", href: "/lead-generation-for-plumbers" },
+    { name: "Lead Generation For Electricians", href: "/lead-generation-for-electricians" },
+    { name: "Lead Generation For Locksmiths", href: "/lead-generation-for-locksmiths" },
+    { name: "Lead Generation For Gas Engineers", href: "/lead-generation-for-gas-engineers" },
+    { name: "Lead Generation For Drainage Engineers", href: "/lead-generation-for-drainage-engineers" },
+    { name: "Lead Generation For Glaziers", href: "/lead-generation-for-glaziers" },
+    { name: "Lead Generation For Roofers", href: "/lead-generation-for-roofers" },
+    { name: "Lead Generation For HVAC Engineers", href: "/lead-generation-for-hvac-engineers" },
+    { name: "Lead Generation For Alarm Installers", href: "/lead-generation-for-alarm-installers" },
+    { name: "Lead Generation For Pest Control", href: "/lead-generation-for-pest-control" },
+    { name: "Lead Generation For Garage Door Engineers", href: "/lead-generation-for-garage-door-engineers" },
+    { name: "Lead Generation For Builders", href: "/lead-generation-for-builders" },
+    { name: "Lead Generation For Appliance Repair", href: "/lead-generation-for-appliance-repair-engineers" },
+  ],
+
+  faqs: [
+    { question: "How does the whole system work together?", answer: "Your website ranks on Google, bringing in organic traffic. When someone contacts you — by phone, text, WhatsApp, email, or chat — Your AI receptionist answers instantly, captures their details, qualifies the lead, and sends it to you. You do the job, take a photo, and the AI marketing engine turns it into blog posts, social media content, and Google updates. That content feeds your website, which brings in more traffic, which means more leads. It's a self-reinforcing cycle — a flywheel." },
+    { question: "Do I need all four products?", answer: "No. Each product works standalone. But they're most powerful together. Your AI receptionist works without a website — she'll answer your calls regardless. A website works without your AI receptionist — it'll still rank and generate leads. But together, you've got a system where every part makes the others stronger." },
+    { question: "How much does the full system cost?", answer: "AI Receptionist: £299 setup + £99/month. Lead Gen Website: from £997 one-off. AI Marketing: £199 setup + £99/month. Custom Automations: bespoke. For the core system (receptionist + website + marketing), you're looking at roughly £1,495 setup and £198/month. That's less than one decent job per month to pay for everything." },
+    { question: "How quickly will I see results?", answer: "Your AI receptionist is live within 24 hours — you'll see leads captured immediately. Your website starts generating organic traffic within 2-4 months, with significant growth by month 6. AI marketing compounds over time — every job you complete adds more content. By month 6-12, most tradesmen see a dramatic increase in inbound leads." },
+    { question: "What if it doesn't work for me?", answer: "Every product comes with a 30-day full money back guarantee. If you're not happy — for any reason — you get a complete refund including setup fees. No questions, no forms, no hassle." },
+    { question: "Is this just for one-man bands?", answer: "No. The system works for solo tradesmen, small teams, and established businesses. Whether you're a one-person operation or a team of fifteen, the fundamentals are the same — you need to be found, you need to answer, and you need to keep your pipeline full." },
+    { question: "How is this different from Checkatrade or MyBuilder?", answer: "Directories share leads between multiple tradesmen — you're competing for every job. Our system generates exclusive leads for YOUR business through YOUR website and YOUR phone number. You're not sharing with anyone. And because the leads come from Google, they come to you specifically — they've already chosen you before they pick up the phone." },
+    { question: "Do I need to be tech-savvy?", answer: "Not at all. We handle all the technical setup, configuration, and maintenance. You tell us about your business, you take photos of your finished work, and we do the rest. If you can send a WhatsApp message, you can use this system." },
+    { question: "Can I start with just one product and add more later?", answer: "Absolutely. Most tradesmen start with your AI receptionist (AI Receptionist) because the results are immediate. Then they add a website, then marketing. There's no pressure to buy everything at once — build your system at your own pace." },
+    { question: "What trades does this work for?", answer: "We support 13 trades: plumbers, electricians, locksmiths, gas engineers, drainage engineers, glaziers, roofers, HVAC engineers, alarm installers, pest control, garage door engineers, builders, and appliance repair engineers. Each trade gets trade-specific configuration and content." },
+    { question: "Are there any contracts or minimum terms?", answer: "No. Every product is month-to-month with no minimum term, no cancellation fees, and no notice period. If you want to cancel, you cancel. If you want to pause, you pause. We keep customers by delivering results, not by locking them in." },
+    { question: "Is my data and customer information secure?", answer: "Yes. All data is encrypted in transit and at rest. We're fully GDPR compliant. Your customer data is yours — we never share it with third parties, other tradesmen, or anyone else. Period." },
+    { question: "What kind of support do I get?", answer: "Direct access to our team — no support tickets, no chatbots (ironic, we know). If something needs changing, you tell us and we fix it. Most requests are handled within 24 hours." },
+    { question: "How do I measure results?", answer: "You'll see exactly how many calls Your AI receptionist handles, how many leads are captured, where your website ranks on Google, and how much content AI marketing has produced. Everything is trackable, transparent, and reported to you regularly." },
+    { question: "What if I grow and need to expand to new areas?", answer: "The system scales with you. Need to cover a new town? We add pages targeting that area. Hiring another tradesman? Your AI receptionist can route leads accordingly. Growing from one product to four? Build at your own pace with no pressure." },
+  ],
+
+  widgetTrade: "",
+};
+---
+
+<LeadGenerationLayout frontmatter={frontmatter} />

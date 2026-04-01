@@ -1,0 +1,80 @@
+---
+import ProductTradeLayout from '../layouts/ProductTradeLayout.astro';
+
+const frontmatter = {
+  title: "AI Receptionist For Electricians",
+  metaTitle: "AI Receptionist For Electricians — Never Miss An Electrical Lead | Down To Earth AI",
+  metaDescription: "AI receptionist built for electricians. Answers calls about rewires, fuseboards, and EICRs while you're working live. From £99/month. 30-day guarantee.",
+  canonicalUrl: "https://downtoearthai.co.uk/ai-receptionist-for-electricians",
+  heroHeadline: "AI Receptionist For Electricians",
+  heroSubhead: "Your AI receptionist answers every electrical enquiry — rewires, fuseboard upgrades, and EICR requests — while you're isolating circuits. Because you literally can't stop to answer the phone.",
+  heroAIText: "Tell me about your electrical business and I'll show you how I handle your calls",
+  showHeroAI: true,
+  showPrice: true,
+  heroPrice: "£99/month",
+  price: "£299 setup · £99/month",
+  trade: "Electricians",
+  tradeSlug: "electricians",
+  tradeAdjective: "electrical",
+  productSlug: "ai-receptionist",
+  productName: "AI Receptionist",
+
+  scenario: "\"You're replacing a consumer unit. The old board is isolated, the new one is half-wired. Your phone vibrates in your pocket — it's a letting agent needing an urgent EICR for a property sale. You can't stop. Not safely. By the time you finish two hours later, they've already booked another sparky. A £200+ certificate — gone.\"",
+
+  step1Title: "Tell Us About Your Electrical Business",
+  step1Text: "Your specialisms (domestic rewires, commercial, testing), your coverage area, your certification bodies (NICEIC, NAPIT, ELECSA), and how you'd like leads delivered.",
+  step2Title: "We Configure Your AI Receptionist For Electrical Work",
+  step2Text: "your AI receptionist learns the terminology — consumer units, RCDs, Part P, EICRs, BS 7671. She knows a total power loss is urgent and a quote for extra sockets is routine. Live within 24 hours.",
+  step3Title: "You Focus On Safe, Quality Work",
+  step3Text: "Every enquiry captured and sent to you. Emergency no-power calls get immediate alerts. EICR requests, rewire quotes, and fuseboard enquiries are logged with full details for you to follow up between jobs.",
+
+  features: [
+    { name: "Electrical Terminology Built In", description: "your AI receptionist understands consumer units, RCDs, MCBs, EICRs, Part P notifications, and earthing arrangements. She speaks the language without confusing customers." },
+    { name: "Certification Awareness", description: "If you're NICEIC, NAPIT, or ELECSA registered, your AI receptionist mentions it naturally when customers ask about qualifications — building trust from the first conversation." },
+    { name: "Emergency Power Triage", description: "Total power loss, partial outage, burning smell — your AI receptionist flags these as urgent with immediate alerts. Customers get reassurance that a qualified electrician is on the way." },
+    { name: "EICR & Certification Lead Capture", description: "Landlords and letting agents needing EICRs get efficient, professional handling. Your AI receptionist captures property address, number of circuits, and urgency." },
+    { name: "Availability Capture", description: "Your AI receptionist captures preferred dates and times, so when you call back you can offer slots that work — reducing back-and-forth." },
+    { name: "Multi-Channel Coverage", description: "Phone, text, WhatsApp, email, web chat, social media — your electrical business covered across all 9 channels, 24/7." },
+    { name: "Phone Answering", description: "Your AI receptionist answers electrical calls within seconds, discusses fuseboard upgrades, rewires, and EICR requirements — then sends you a complete lead brief.", href: "/ai-phone-answering-service-for-electricians" },
+    { name: "SMS Response", description: "Every text from an electrical customer gets one professional acknowledgment confirming you've received their enquiry.", href: "/ai-sms-messaging-service-for-electricians" },
+    { name: "WhatsApp Response", description: "Instant WhatsApp replies to electrical customers — they know you've seen their message and will be in touch.", href: "/ai-whatsapp-messaging-service-for-electricians" },
+    { name: "Email Response", description: "Professional email acknowledgment within seconds for every electrical enquiry that lands in your inbox.", href: "/ai-email-response-service-for-electricians" },
+    { name: "Facebook Messenger", description: "Instant replies to every electrical enquiry on your Facebook page — your response badge stays at 'Usually replies instantly.'", href: "/ai-facebook-messenger-service-for-electricians" },
+    { name: "Instagram DMs", description: "Instant replies to every electrical DM — including message requests from non-followers searching for local electricians.", href: "/ai-instagram-messaging-service-for-electricians" },
+    { name: "Google Business Profile", description: "Instant responses to electrical enquiries coming through Google Maps and 'electrician near me' searches.", href: "/ai-google-business-service-for-electricians" },
+    { name: "Website Live Chat", description: "A chat widget where Your AI receptionist has real conversations about rewires, fuseboards, and EICRs — converting visitors into captured leads.", href: "/ai-website-chat-bot-for-electricians" },
+  ],
+
+  foundersNote: "Electrical work demands concentration. You're working with something that can kill you if you make a mistake. Stopping to answer the phone isn't just inconvenient — it's genuinely dangerous. Yet every unanswered call is a rewire, a fuseboard, or an EICR walking to someone else. That's the problem your AI receptionist solves for electricians.",
+
+  relatedProducts: [
+    { name: "Lead Generation Website For Electricians", href: "/lead-generation-website-for-electricians", description: "A website that ranks for 'electrician near me' and brings in organic electrical leads." },
+    { name: "AI Marketing For Electricians", href: "/ai-content-marketing-for-electricians", description: "Turn completed rewires and installations into content that attracts more work." },
+    { name: "Lead Generation For Electricians", href: "/lead-generation-for-electricians", description: "See how all our services work together as a complete electrical lead system." },
+  ],
+
+  genericProductHref: "/ai-receptionist-for-tradesmen",
+  genericProductName: "AI Receptionist",
+
+  faqs: [
+    { question: "Does your AI receptionist understand electrical terminology?", answer: "Yes. She knows what a consumer unit upgrade is, understands EICR requirements, discusses Part P compliance naturally, and can talk about circuit breakers, RCDs, and earthing without confusing your customers." },
+    { question: "How does she handle emergency no-power calls?", answer: "Total power loss is flagged as urgent. Your AI receptionist captures the address and situation (whole house out, partial circuit failure, tripping), sends you an immediate priority alert, and reassures the customer that a qualified electrician will respond." },
+    { question: "Can she capture EICR lead details properly?", answer: "Yes. She asks for the property address, number of floors/bedrooms (to estimate circuit count), whether it's landlord-required, and the urgency. You get a complete brief before calling back." },
+    { question: "Will she mention my NICEIC/NAPIT registration?", answer: "Absolutely. If a customer asks about qualifications, your AI receptionist confirms your registration body. It's a critical trust signal that separates you from unregistered cowboys." },
+    { question: "Can I use your AI receptionist just for after-hours calls?", answer: "Yes. Many electricians use your AI receptionist as overflow — she only catches calls you don't answer. Or use her 24/7. Or just evenings and weekends. Completely flexible." },
+    { question: "How does she differentiate between job types?", answer: "your AI receptionist classifies enquiries: emergency (no power, burning smell), urgent (partial outage), routine (extra sockets, lights), and planned (rewire, fuseboard, EV charger). Each gets appropriate handling." },
+    { question: "Can she handle EV charger installation enquiries?", answer: "Yes. EV charging is a growing market. Your AI receptionist captures vehicle type, parking situation, existing electrical supply details, and whether the customer has received any OZEV grant information." },
+    { question: "What about commercial electrical enquiries?", answer: "your AI receptionist adapts her tone for commercial calls — facilities managers, office managers, and contractors get professional, specification-focused responses rather than the domestic-friendly approach." },
+    { question: "How quickly can I be up and running?", answer: "24 hours. Tell us about your electrical business, your specialisms, and your preferences — and Your AI receptionist is live tomorrow answering calls you'd otherwise miss." },
+    { question: "What's the 30-day guarantee?", answer: "If your AI receptionist doesn't work for your electrical business — for any reason — full refund including setup. No questions. No hassle. We're that confident." },
+    { question: "What is an AI receptionist for electricians and how does it work?", answer: "An AI receptionist for electricians is an artificial intelligence system that manages customer communications across all nine business channels — phone calls, SMS, WhatsApp, email, website chat, Facebook Messenger, Instagram DMs, Google Business Profile messages, and missed call text-back. Using natural language processing trained on electrical terminology, your AI receptionist understands the difference between an emergency power outage and a routine EICR booking. On phone calls and website chat, she holds detailed conversations about your electrical services. On messaging channels, she sends professional acknowledgments and captures lead details including job type, property information, and urgency. The AI operates 24/7/365, ensuring your electrical business captures every lead regardless of channel or whether you're up a ladder on-site." },
+    { question: "How does an AI receptionist help electricians compete with larger electrical companies?", answer: "Larger electrical companies have office staff answering phones, responding to emails, and managing social media enquiries all day. As a smaller electrical business, you can't match that manpower — but you can match that responsiveness with an AI receptionist. At £99/month, Your AI receptionist handles unlimited communications across all nine channels simultaneously. She answers phone calls during EICR inspections, responds to WhatsApp enquiries while you're wiring a consumer unit, captures Google Business leads during fuseboard installations, and engages website visitors at midnight. The AI understands electrical vocabulary — Part P, BS 7671, RCDs, MCBs, SPDs — and classifies every lead by type and urgency. One-person electrical businesses using AI receptionist technology capture as many leads as companies with three office staff, at a fraction of the cost." },
+    { question: "What makes an AI receptionist better than voicemail for an electrical business?", answer: "Voicemail is the single biggest lead killer for electricians. Industry data suggests over 80% of callers who reach voicemail hang up and call a competitor instead. An AI receptionist eliminates this problem across every channel. On phone, Your AI receptionist answers instantly with a professional, electrician-specific greeting and holds a genuine conversation. On WhatsApp, email, Instagram, Facebook, Google Business, and SMS, she responds within seconds. Every interaction captures the customer's name, contact details, electrical work needed, property information, and urgency level. The AI's natural language processing means the customer experience feels professional and personal — not automated. Emergency situations (sparking, burning smell, total power loss) trigger immediate phone escalation. At £99/month with unlimited interactions, an AI receptionist pays for itself with a single additional lead that would have gone to voicemail." },
+  ],
+
+  widgetTrade: "electrical",
+  widgetGoal: "calls",
+};
+---
+
+<ProductTradeLayout frontmatter={frontmatter} />

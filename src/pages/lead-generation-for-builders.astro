@@ -1,0 +1,78 @@
+---
+import LeadGenerationLayout from '../layouts/LeadGenerationLayout.astro';
+
+const frontmatter = {
+  title: "Lead Generation For Builders",
+  metaTitle: "Lead Generation For Builders — Get More Building Leads | Down To Earth AI",
+  metaDescription: "A complete lead generation system for builders. Rank on Google for extensions, renovations, and new builds. Answer every call while you're on site. 30-day guarantee.",
+  canonicalUrl: "https://downtoearthai.co.uk/lead-generation-for-builders",
+  heroHeadline: "Lead Generation For Builders",
+  heroSubhead: "A complete system that gets your building business found on Google for extensions, renovations, and new builds — answers every call while you're on the scaffolding — and turns every completed project into a portfolio that wins the next one.",
+  heroAIText: "Learn about getting more building leads",
+
+  problemHeadline: "Good Builders Shouldn't Have To Chase Work",
+  problemText: "You've just finished a beautiful kitchen extension. The customer loves it. But while you were focused on that project — eight weeks of your life — you didn't answer half the calls that came in. You didn't respond to half the website enquiries. You didn't follow up on the quotes you sent out three weeks ago. Now the extension is done, and your diary has a gap. You scramble for the next job. Post on Facebook. Refresh MyBuilder. Call up old contacts. The best builders in the country go through this cycle every single time a project finishes. It doesn't have to be this way.",
+
+  receptionistLink: "/ai-receptionist-for-builders",
+  websiteLink: "/lead-generation-website-for-builders",
+  marketingLink: "/ai-content-marketing-for-builders",
+  automationsLink: "/custom-ai-automations-for-builders",
+
+  productCards: [
+    {
+      name: "AI Receptionist (your AI receptionist)",
+      description: "Mixing concrete, operating a digger, fitting steels? Your AI receptionist handles the phone. Extension enquiry — she captures the scope, budget range, and timeline. Emergency call — she prioritises it. Every lead secured.",
+      price: "£299 setup · £99/month",
+      link: "/ai-receptionist-for-builders",
+      icon: "📞",
+    },
+    {
+      name: "Lead Generation Website",
+      description: "Pages for 'builder near me', 'house extension [area]', 'loft conversion [town]', 'renovation builder'. Rank for the searches that generate premium building work.",
+      price: "From £997 one-off",
+      link: "/lead-generation-website-for-builders",
+      icon: "🌐",
+    },
+    {
+      name: "AI Marketing",
+      description: "Completed an extension? Drone shot of a new build? Weekly progress photos → project case studies, social media showcasing your craftsmanship, Google updates. Your best marketing is the work itself.",
+      price: "£199 setup · £99/month",
+      link: "/ai-content-marketing-for-builders",
+      icon: "📈",
+    },
+    {
+      name: "Custom AI Automations",
+      description: "Automated quote follow-ups, project milestone updates to clients, review requests at project completion, and lead pipeline management. Keep customers informed without admin overhead.",
+      price: "Bespoke pricing",
+      link: "/custom-ai-automations-for-builders",
+      icon: "⚙️",
+    },
+  ],
+
+  foundersNote: "Building work is unique because projects take weeks or months. While you're focused on delivering quality — which is exactly what you should be doing — the phone rings and you can't answer. The quotes pile up unfollowed. And when the project ends, the pipeline is empty. This system keeps your pipeline full while you focus on the current build.",
+
+  showTradeGrid: false,
+
+  faqs: [
+    { question: "How does this help me avoid the feast-or-famine cycle?", answer: "While you're on a current project, Your AI receptionist answers every call. Your website generates new enquiries. Quote follow-ups happen automatically. AI marketing creates content from your current project. By the time you finish one build, the next one (or three) are already lined up." },
+    { question: "What kind of building work will this generate?", answer: "House extensions (single/double storey), loft conversions, garage conversions, kitchen renovations, bathroom renovations, new builds, orangeries, garden rooms, structural alterations, underpinning, groundworks, and commercial builds. Every type targeted for your area." },
+    { question: "Can the website generate leads for high-value extensions?", answer: "Yes. Extensions are £30,000-100,000+ projects. We target 'house extension [your area]', 'extension builder [town]', and 'how much does an extension cost'. These searches represent the premium work that sustains your business." },
+    { question: "How does AI marketing work with weekly site photos?", answer: "Many builders take weekly progress photos for their clients anyway. Share these with us and AI creates progress blog posts, social media updates, and Google content — documenting the build publicly. Potential customers seeing a 12-week build diary from concept to completion is incredibly powerful." },
+    { question: "Can your AI receptionist handle enquiries for different types of building work?", answer: "Yes. She distinguishes between someone wanting a small bathroom renovation and someone planning a full house extension. She captures scope, rough budget, preferred timeline, and property type — giving you everything you need to decide whether to quote." },
+    { question: "How does automated quote follow-up work?", answer: "Building quotes can take weeks for customers to decide — especially for large projects. The system follows up at intervals you set (typically 3 days, 7 days, 14 days), keeping your proposal visible. Most builders see their quote-to-contract rate improve significantly." },
+    { question: "Can the system help me manage multiple projects?", answer: "The automation system can send milestone updates to current clients ('foundations completed', 'roof on', 'internal plastering starting'), manage review requests at project completion, and keep your lead pipeline organised across multiple simultaneous projects." },
+    { question: "Is this better than MyBuilder or Checkatrade?", answer: "Directories share leads between builders — you're competing on price for every job. Our system generates exclusive leads through your own website. Customers have already chosen you before they call. No competition, no race to the bottom on pricing." },
+    { question: "I specialise in period property renovation — can the system focus on that?", answer: "Absolutely. Niche specialisation means less competition and higher-value clients. We'd create content around 'period property renovation', 'heritage building specialist', 'Victorian house restoration [your area]'. Customers searching these terms are willing to pay for expertise." },
+    { question: "How do portfolio/case study pages work?", answer: "Every completed project becomes a detailed case study on your website — the brief, the challenges, the solution, before/after photos, and the result. These pages rank on Google AND convince potential customers that you're the right builder for their project." },
+    { question: "Can the system help with planning permission enquiries?", answer: "Your website can include informational content about planning permission — permitted development rights, when you need full planning, building regs requirements. This educational content brings in customers at the research stage, before they've committed to a builder." },
+    { question: "What about new build leads?", answer: "New builds are the highest-value work. We create pages targeting 'new build costs [area]', 'custom house builder [region]', 'self-build contractor'. These attract serious clients with significant budgets." },
+    { question: "How does review collection work for long projects?", answer: "At project completion (not during), the system sends a personalised review request. For builders, reviews that detail the project scope and outcome are incredibly valuable — they're like mini case studies that future customers read before choosing a builder." },
+    { question: "How much does the full system cost?", answer: "AI Receptionist: £299 setup + £99/month. Website: from £997 one-off. AI Marketing: £199 setup + £99/month. One additional kitchen or bathroom project per quarter more than covers everything. 30-day money back guarantee." },
+    { question: "How quickly can I get started?", answer: "your AI receptionist: live within 24 hours, immediately catching calls you'd miss on site. Website: 2-4 weeks. AI Marketing: starts when your website launches. Most builders start with your AI receptionist during a busy project to capture leads they'd otherwise lose." },
+  ],
+
+  widgetTrade: "building",
+};
+---
+
+<LeadGenerationLayout frontmatter={frontmatter} />

@@ -1,0 +1,79 @@
+---
+import HomepageLayout from '../layouts/HomepageLayout.astro';
+
+const frontmatter = {
+  title: "Down To Earth AI — Never Miss Another Job",
+  metaTitle: "Down To Earth AI — AI Receptionist For Tradesmen | Never Miss A Lead",
+  metaDescription: "Your AI receptionist answers your calls, texts, and messages 24/7 — so you never lose a lead while you're on the tools. AI receptionist built specifically for UK tradesmen. £299 setup, £99/month.",
+  canonicalUrl: "https://downtoearthai.co.uk",
+  heroHeadline: "Never Miss Another Job",
+  heroSubhead: "Your AI receptionist answers your calls, texts, and messages 24/7 — so you never lose a lead while you're on the tools. Built specifically for tradesmen who are too busy doing the work to answer the phone.",
+  heroAIText: "Learn about getting more leads for your trade",
+  heroGreeting: "Got questions? Chat with our Down To Earth AI receptionist 👋",
+  heroPrice: "£99/month",
+  price: "£299 setup · £99/month",
+  guaranteeText: "30 Day Money Back Guarantee",
+
+  step1Title: "We set your AI receptionist up For You",
+  step1Text: "Tell us your trade, your services, and your preferred style. We Configure Your AI Receptionist to speak like part of your team — professional, friendly, and industry-aware. Done in under 24 hours.",
+  step2Title: "Your AI receptionist answers Everything",
+  step2Text: "Phone calls, texts, WhatsApp, Facebook, Instagram DMs, website chat, email — all 9 channels covered. She captures every lead and sends you the details instantly.",
+  step3Title: "You Close The Job",
+  step3Text: "You finish your current work, check your phone, and the lead is waiting. Name, number, what they need, when they need it. No voicemails to listen to. No missed opportunities.",
+
+  problemText: "You're under a sink, both hands full, phone buzzing in your pocket. You can't answer. By the time you call back, they've already booked someone else. That's a £500 job gone — not because you weren't good enough, but because you weren't available. It happens every single day to tradesmen across the UK. And it doesn't have to.",
+
+  channels: [
+    { name: "Phone Calls", description: "Your AI receptionist answers calls with your business name, understands the job, and captures every detail.", icon: "phone" },
+    { name: "Missed Call Text-Back", description: "If a call is missed, Your AI receptionist texts back automatically within seconds.", icon: "message-square" },
+    { name: "SMS", description: "Your AI receptionist sends one professional reply acknowledging the enquiry and letting them know you'll be in touch.", icon: "smartphone" },
+    { name: "Email", description: "One professional acknowledgment reply — the customer knows you've received their enquiry.", icon: "mail" },
+    { name: "Website Chat", description: "A live chat widget on your website where Your AI receptionist has a real conversation and captures the lead.", icon: "message-circle" },
+    { name: "WhatsApp", description: "Your AI receptionist replies on WhatsApp — the channel your customers actually use.", icon: "message-square" },
+    { name: "Facebook Messenger", description: "Instant responses to your Facebook page messages, 24/7.", icon: "facebook" },
+    { name: "Instagram DMs", description: "Your AI receptionist handles enquiries through Instagram direct messages too.", icon: "instagram" },
+    { name: "Lead Capture", description: "Every lead is captured and delivered to you with contact details, job description, and urgency level.", icon: "user-check" },
+    { name: "Human Escalation", description: "Urgent enquiries are escalated to you — or to a professional human receptionist who calls the customer.", icon: "users" },
+  ],
+
+  foundersNote: "I built Down To Earth AI because I watched my mate lose three jobs in a week — all because he was on a job and couldn't answer his phone. He's a brilliant plumber. But he's not a receptionist. None of us are. Your AI receptionist exists so you can focus on what you're actually good at — the work — and never lose another lead because of bad timing.",
+  founderName: "Jeff, Founder",
+
+  faqs: [
+    {
+      question: "How does your AI receptionist actually work?",
+      answer: "When a customer contacts you — by phone, text, WhatsApp, email, or any of 9 channels — Your AI receptionist responds instantly. On phone and website chat, she has a full conversation. On text-based channels like WhatsApp, email, and social media, she sends one professional reply acknowledging the enquiry. For urgent jobs, she escalates to you or a human receptionist. Every lead is captured and delivered to you. No app to install. No equipment needed. Works with your existing number."
+    },
+    {
+      question: "Is your AI receptionist a chatbot or a real person?",
+      answer: "Your AI receptionist is an AI receptionist — not a robotic chatbot. She understands context, speaks naturally, and knows the difference between a burst pipe emergency and a general enquiry. On phone calls and website chat she has a real conversation. On text channels she sends one professional reply. Urgent enquiries are escalated to you or a human receptionist who calls the customer."
+    },
+    {
+      question: "How much does it cost?",
+      answer: "£299 one-off setup, then £99 per month. That includes 5 hours of talk time. After that it's 20p per minute. No contracts, no minimum terms. And there's a 30-day full money back guarantee — so if it's not for you, you get every penny back."
+    },
+    {
+      question: "What trades does your AI receptionist work with?",
+      answer: "Your AI receptionist is configured for 13 trades: plumbers, electricians, locksmiths, gas engineers, drainage engineers, glaziers, roofers, HVAC engineers, alarm and security installers, pest control, garage door engineers, builders, and appliance repair engineers. Each configuration is tailored to the specific language, urgency levels, and service types of that trade."
+    },
+    {
+      question: "Can I try it risk-free?",
+      answer: "Yes. There's a 30-day full money back guarantee. If your AI receptionist doesn't work for you — for any reason — you get a complete refund. No questions, no hassle, no fine print."
+    },
+    {
+      question: "Do I need to install anything?",
+      answer: "No. Your AI receptionist works with your existing phone number and business setup. We handle all the configuration during onboarding. There's nothing for you to install, download, or maintain."
+    },
+    {
+      question: "What happens outside business hours?",
+      answer: "Your AI receptionist works 24/7, 365 days a year. She never sleeps, never takes a holiday, and never calls in sick. Whether a customer calls at 2am about an emergency or at 6pm on a Sunday about a quote, Your AI receptionist answers."
+    },
+    {
+      question: "How quickly can I get set up?",
+      answer: "Typically under 24 hours. We collect your business details, Configure Your AI Receptionist for your specific trade, connect your channels, and you're live. Most tradesmen are up and running the same day."
+    },
+  ],
+};
+---
+
+<HomepageLayout frontmatter={frontmatter} />

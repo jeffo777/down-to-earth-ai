@@ -1,0 +1,176 @@
+---
+/**
+ * BlogPostLayout.astro
+ * Template for: Blog posts (10+ pages)
+ */
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
+import HeroJaina from '../components/HeroJaina.astro';
+import WidgetJaina from '../components/WidgetJaina.astro';
+import CTAButton from '../components/CTAButton.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+
+interface Props {
+  frontmatter: {
+    title: string;
+    metaTitle: string;
+    metaDescription: string;
+    canonicalUrl?: string;
+    heroHeadline: string;
+    date: string;
+    readTime?: string;
+    heroAIText?: string;
+    // FAQs
+    faqs?: Array<{ question: string; answer: string }>;
+    // Related posts
+    relatedPosts?: Array<{ title: string; href: string; excerpt: string }>;
+    widgetTrade?: string;
+    widgetGoal?: string;
+  };
+}
+
+const { frontmatter } = Astro.props;
+const fm = frontmatter;
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{fm.metaTitle}</title>
+  <meta name="description" content={fm.metaDescription} />
+  {fm.canonicalUrl && <link rel="canonical" href={fm.canonicalUrl} />}
+  <meta property="og:title" content={fm.metaTitle} />
+  <meta property="og:description" content={fm.metaDescription} />
+  <meta property="og:url" content={fm.canonicalUrl} />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <Header />
+
+  <main id="main-content" style="padding-top: 64px;">
+
+    <!-- 1. HERO — Stacked -->
+    <section class="blog-hero">
+      <div class="blog-hero__inner">
+        <div class="blog-hero__stacked">
+          <div class="blog-hero__meta">
+            <time>{fm.date}</time>
+            {fm.readTime && <span>·</span>}
+            {fm.readTime && <span>{fm.readTime} read</span>}
+          </div>
+          <h1>{fm.heroHeadline}</h1>
+          <div class="blog-hero__jaina">
+            <HeroJaina showHeroAI={true} heroAIText={fm.heroAIText || "Got questions? Chat with us"} />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ARTICLE CONTENT (slot) -->
+    <section class="blog-section">
+      <article class="blog-article">
+        <slot />
+      </article>
+    </section>
+
+    <!-- 3. FAQs -->
+    {fm.faqs && fm.faqs.length > 0 && (
+      <section class="blog-section blog-section--alt">
+        <div class="blog-container">
+          <h2 class="blog-section__title">Frequently Asked Questions</h2>
+          <FAQAccordion faqs={fm.faqs} />
+        </div>
+      </section>
+    )}
+
+    <!-- 4. RELATED POSTS -->
+    {fm.relatedPosts && fm.relatedPosts.length > 0 && (
+      <section class="blog-section">
+        <div class="blog-container">
+          <h2 class="blog-section__title">Related Posts</h2>
+          <div class="blog-related">
+            {fm.relatedPosts.map(post => (
+              <a href={post.href} class="blog-related__card">
+                <h3 class="blog-related__title">{post.title}</h3>
+                <p class="blog-related__excerpt">{post.excerpt}</p>
+                <span class="blog-related__link">Read more →</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- 5. CTA BANNER -->
+    <section class="blog-cta-banner">
+      <div class="blog-container blog-container--narrow" style="text-align: center;">
+        <h2>Want To Stop Worrying About Leads?</h2>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">Let your AI receptionist handle your calls while you focus on the work.</p>
+        <CTAButton buttonText="Get Started" buttonLink="/get-started" showGuarantee={true} size="large" />
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+  <CookieConsent />
+  <WidgetJaina widgetTrade={fm.widgetTrade || ''} widgetGoal={fm.widgetGoal || ''} />
+</body>
+</html>
+
+<style>
+  .blog-hero { background: var(--color-primary); padding: 2.5rem 1rem 2rem; }
+  .blog-hero__inner { max-width: 56rem; margin: 0 auto; }
+  .blog-hero__stacked { display: flex; flex-direction: column; align-items: center; text-align: center; }
+  @media (min-width: 1024px) { .blog-hero { padding: 3.5rem 2rem 2rem; } }
+  .blog-hero__meta { display: flex; align-items: center; justify-content: center; gap: 0.5rem; color: var(--color-text-muted); font-size: 0.875rem; margin-bottom: 0.75rem; }
+
+  .blog-section { padding: 3rem 1rem; }
+  @media (min-width: 768px) { .blog-section { padding: 4rem 2rem; } }
+  .blog-section--alt { background: var(--color-secondary); }
+  .blog-container { max-width: 56rem; margin: 0 auto; }
+  .blog-container--narrow { max-width: 42rem; margin: 0 auto; }
+  .blog-section__title { text-align: center; margin-bottom: 1.5rem; }
+
+  /* Article */
+  .blog-article {
+    max-width: 42rem;
+    margin: 0 auto;
+    color: var(--color-text-secondary);
+    font-size: 1.0625rem;
+    line-height: 1.8;
+  }
+  .blog-article :global(h2) { margin-top: 2.5rem; margin-bottom: 1rem; }
+  .blog-article :global(h3) { margin-top: 2rem; margin-bottom: 0.75rem; }
+  .blog-article :global(p) { margin-bottom: 1.25rem; }
+  .blog-article :global(strong) { color: var(--color-text-primary); }
+  .blog-article :global(ul), .blog-article :global(ol) { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+  .blog-article :global(li) { margin-bottom: 0.5rem; }
+  .blog-article :global(a) { color: var(--color-accent); text-decoration: underline; }
+  .blog-article :global(blockquote) {
+    border-left: 3px solid var(--color-accent);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: var(--color-text-primary);
+  }
+
+  /* Related */
+  .blog-related { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+  @media (min-width: 768px) { .blog-related { grid-template-columns: repeat(3, 1fr); } }
+  .blog-related__card { padding: 1.5rem; background: var(--color-surface); border: 1px solid var(--color-border-subtle); border-radius: 1rem; text-decoration: none; transition: border-color 150ms; }
+  .blog-related__card:hover { border-color: var(--color-accent); }
+  .blog-related__title { font-size: 1rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem; }
+  .blog-related__excerpt { font-size: 0.875rem; color: var(--color-text-secondary); margin-bottom: 0.75rem; }
+  .blog-related__link { font-size: 0.875rem; color: var(--color-accent); font-weight: 600; }
+
+  /* CTA Banner */
+  .blog-cta-banner { background: var(--color-secondary); padding: 4rem 1rem; }
+  @media (min-width: 768px) { .blog-cta-banner { padding: 5rem 2rem; } }
+</style>

@@ -1,0 +1,26 @@
+[
+    {
+        "name": "AI Receptionist",
+        "slug": "ai-receptionist",
+        "price": "£299 setup · £99/month",
+        "showPrice": true
+    },
+    {
+        "name": "Lead Generation Website",
+        "slug": "lead-generation-website",
+        "price": "From £997 one-off",
+        "showPrice": true
+    },
+    {
+        "name": "AI Marketing",
+        "slug": "ai-marketing",
+        "price": "£199 setup · £99/month",
+        "showPrice": true
+    },
+    {
+        "name": "Custom AI Automations",
+        "slug": "custom-ai-automations",
+        "price": "Bespoke pricing",
+        "showPrice": false
+    }
+]

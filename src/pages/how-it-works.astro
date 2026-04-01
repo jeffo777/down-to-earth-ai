@@ -1,0 +1,224 @@
+---
+import CorePageLayout from '../layouts/CorePageLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+
+const frontmatter = {
+  title: "How It Works — Down To Earth AI",
+  metaTitle: "How It Works — From First Call To A Steady Stream Of Leads | Down To Earth AI",
+  metaDescription: "From first call to a steady stream of leads. Here's exactly how Down To Earth AI gets your trade business set up with AI-powered lead generation.",
+  canonicalUrl: "https://downtoearthai.co.uk/how-it-works",
+  showHeroAI: true,
+  heroAIText: "Talk to your AI receptionist — she'll show you how it works",
+  heroHeadline: "How It Works",
+  heroSubhead: "From first call to a steady stream of leads. Here's exactly how we get you set up.",
+  widgetTrade: '',
+  widgetGoal: 'how it works',
+};
+
+const faqs = [
+  { question: "How long does setup take?", answer: "Your AI receptionist is typically configured for your business within 48 hours of signing up. Your lead generation website takes 5–10 working days depending on scope. AI content marketing starts publishing within a week." },
+  { question: "Do I need to be technical?", answer: "Not at all. Jeff handles everything. The most technical thing you'll do is send a photo via WhatsApp after completing a job." },
+  { question: "What happens on the first call with Jeff?", answer: "Jeff will ask about your trade, your area, what services you offer, and what you're looking to achieve. He'll then explain exactly what we can do for your specific business. No pressure, no hard sell." },
+  { question: "How quickly will I see results?", answer: "your AI receptionist starts answering your calls, texts, and messages as soon as she's set up — usually within 48 hours. Website ranking takes a few weeks to a few months depending on your area. AI content marketing starts building visibility immediately." },
+  { question: "What if it doesn't work for me?", answer: "We have a 30-day money back guarantee. If you're not happy with the results, you get your money back. No questions asked." },
+  { question: "Can I start with just one product?", answer: "Absolutely. Most tradesmen start with just your AI receptionist (the AI receptionist) and add other products as their business grows. Each product works on its own, but they're more powerful together." },
+  { question: "Do I need to change my phone number?", answer: "No. We Configure Your AI Receptionist to work with your existing phone number. When you can't answer, Your AI receptionist picks up. It's completely seamless for your customers." },
+  { question: "What trades do you work with?", answer: "We work with plumbers, electricians, locksmiths, gas engineers, drainage engineers, glaziers, roofers, HVAC engineers, alarm installers, pest control, garage door engineers, builders, and appliance repair engineers. If your trade isn't listed, get in touch — we can probably help." },
+  { question: "Is there a contract or minimum term?", answer: "No long-term contracts. Your AI receptionist's monthly plan is rolling — you can cancel anytime. The lead generation website is a one-off build. AI marketing is monthly, cancel anytime." },
+  { question: "How does the 'flywheel' actually work?", answer: "Every job you complete, you send us photos. Our AI turns those into content for your website, Google Business Profile, social media, and YouTube. That content brings in more visibility, which brings in more leads, which means more jobs, which means more content. It's a self-reinforcing cycle." },
+];
+---
+
+<CorePageLayout frontmatter={frontmatter}>
+
+  <!-- Steps -->
+  <section class="core-section--alt">
+    <div class="core-container">
+      <div class="hiw-steps">
+
+        <div class="hiw-step">
+          <div class="hiw-step__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="hiw-step__num">Step 1</div>
+          <h3>Book A Call With Jeff</h3>
+          <p>It starts with a 15-minute chat. Jeff's spent 25 years in the trades — he knows your world. He'll learn about your business, your trade, your area, and explain exactly what we can do.</p>
+        </div>
+
+        <div class="hiw-step">
+          <div class="hiw-step__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <div class="hiw-step__num">Step 2</div>
+          <h3>We Set Up your AI receptionist For Your Business</h3>
+          <p>Within 48 hours of signing up, Your AI receptionist is configured for your specific trade and business. She knows your services, your area, your pricing. When a customer calls, she answers with your business name.</p>
+        </div>
+
+        <div class="hiw-step">
+          <div class="hiw-step__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="hiw-step__num">Step 3</div>
+          <h3>Your AI receptionist answers Every Call, Text & Message</h3>
+          <p>Phone calls. Texts. Emails. WhatsApp. Facebook. Instagram. Website chat. Your AI receptionist handles them all. 24/7. Nights. Weekends. Bank holidays. She qualifies the lead, captures their details, and sends you everything you need to book the job.</p>
+        </div>
+
+        <div class="hiw-step">
+          <div class="hiw-step__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <div class="hiw-step__num">Step 4</div>
+          <h3>You Do The Work</h3>
+          <p>That's what you're good at. While you're on the tools, Your AI receptionist's handling every new enquiry. No missed calls. No lost jobs. No voicemail.</p>
+        </div>
+
+        <div class="hiw-step">
+          <div class="hiw-step__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          </div>
+          <div class="hiw-step__num">Step 5</div>
+          <h3>Send A Photo, We Do The Rest</h3>
+          <p>When you finish a job, take a few photos and send them via WhatsApp. Our AI turns them into content on your website, Google profile, Facebook, Instagram, and YouTube. Your online presence grows with every job you complete.</p>
+        </div>
+
+        <div class="hiw-step">
+          <div class="hiw-step__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+          </div>
+          <div class="hiw-step__num">Step 6</div>
+          <h3>The Flywheel Spins</h3>
+          <p>More visibility means more leads. More leads means more jobs. More jobs means more content. More content means more visibility. Every job you complete makes the next one easier to win.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Flywheel Visual -->
+  <section>
+    <div class="core-container core-container--narrow" style="text-align: center;">
+      <h2>The Lead Generation Flywheel</h2>
+      <p style="color: var(--color-text-secondary); margin-bottom: 2rem;">Every job feeds the system. The system brings more jobs.</p>
+      <div class="hiw-flywheel">
+        <div class="hiw-flywheel__step">🌐<span>Website Ranks</span></div>
+        <div class="hiw-flywheel__arrow">→</div>
+        <div class="hiw-flywheel__step">📞<span>Leads Come In</span></div>
+        <div class="hiw-flywheel__arrow">→</div>
+        <div class="hiw-flywheel__step">🤖<span>Your AI receptionist answers</span></div>
+        <div class="hiw-flywheel__arrow">→</div>
+        <div class="hiw-flywheel__step">🔧<span>You Do The Work</span></div>
+        <div class="hiw-flywheel__arrow">→</div>
+        <div class="hiw-flywheel__step">📸<span>Send Photos</span></div>
+        <div class="hiw-flywheel__arrow">→</div>
+        <div class="hiw-flywheel__step">📈<span>AI Creates Content</span></div>
+      </div>
+      <div class="hiw-flywheel-badge">♻️ More visibility → More leads → Repeat</div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="core-section--alt">
+    <div class="core-container core-container--narrow" style="text-align: center;">
+      <h2>Ready To Get Started?</h2>
+      <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">Let's get your AI receptionist set up for your business.</p>
+      <CTAButton
+        buttonText="Get Started"
+        buttonLink="/get-started"
+        showGuarantee={true}
+        size="large"
+      />
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section>
+    <div class="core-container">
+      <h2 style="text-align: center; margin-bottom: 1.5rem;">Frequently Asked Questions</h2>
+      <FAQAccordion faqs={faqs} />
+    </div>
+  </section>
+
+</CorePageLayout>
+
+<style>
+  .hiw-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  @media (min-width: 768px) { .hiw-steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .hiw-steps { grid-template-columns: repeat(3, 1fr); } }
+
+  .hiw-step {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: var(--color-surface);
+    border-radius: 1rem;
+    border: 1px solid var(--color-border-subtle);
+    transition: border-color 150ms, transform 150ms;
+  }
+  .hiw-step:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+  .hiw-step__icon {
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+  }
+  .hiw-step__num {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+  .hiw-step h3 { margin-bottom: 0.75rem; font-size: 1.125rem; }
+  .hiw-step p { color: var(--color-text-secondary); font-size: 0.9375rem; line-height: 1.6; }
+
+  .hiw-flywheel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 2rem 0;
+  }
+  .hiw-flywheel__step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 1rem;
+    background: var(--color-surface);
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-border-subtle);
+    min-width: 100px;
+    font-size: 1.5rem;
+  }
+  .hiw-flywheel__step span {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    font-weight: 600;
+  }
+  .hiw-flywheel__arrow {
+    color: var(--color-accent);
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+  @media (max-width: 767px) {
+    .hiw-flywheel { flex-direction: column; }
+    .hiw-flywheel__arrow { transform: rotate(90deg); }
+  }
+  .hiw-flywheel-badge {
+    display: inline-block;
+    background: var(--color-accent);
+    color: #fff;
+    padding: 0.625rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+</style>

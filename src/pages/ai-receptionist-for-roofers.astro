@@ -1,0 +1,76 @@
+---
+import ProductTradeLayout from '../layouts/ProductTradeLayout.astro';
+
+const frontmatter = {
+  title: "AI Receptionist For Roofers",
+  metaTitle: "AI Receptionist For Roofers — Never Miss A Roofing Lead | Down To Earth AI",
+  metaDescription: "AI receptionist for roofers. Answers calls about roof leaks, storm damage, and new roofs while you're up on the scaffolding. From £99/month. 30-day guarantee.",
+  canonicalUrl: "https://downtoearthai.co.uk/ai-receptionist-for-roofers",
+  heroHeadline: "AI Receptionist For Roofers",
+  heroSubhead: "Your AI receptionist answers every roofing enquiry — leaks, storm damage, and new roof quotes — while you're three storeys up. You can't answer the phone on a roof. She can answer it for you.",
+  heroAIText: "Tell me about your roofing business and I'll show you how I handle your calls",
+  showHeroAI: true, showPrice: true,
+  heroPrice: "£99/month",
+  price: "£299 setup · £99/month",
+  trade: "Roofers", tradeSlug: "roofers", tradeAdjective: "roofing",
+  productSlug: "ai-receptionist", productName: "AI Receptionist",
+
+  scenario: "\"You're on a pitched roof in the wind, stripping tiles. Your phone is in the van three storeys below. A homeowner across town just noticed water coming through their bedroom ceiling — they need a roofer urgently. Your phone rings in the van. No answer. They call the next roofer. That £300-500 repair just went to someone else because you were literally doing your job.\"",
+
+  step1Title: "Tell Us About Your Roofing Business",
+  step1Text: "Your specialisms (pitched, flat, slate, leadwork), your coverage area, whether you handle insurance work, and how you'd like leads delivered.",
+  step2Title: "We Configure Your AI Receptionist For Roofing",
+  step2Text: "your AI receptionist learns roofing — pitched vs flat, slate vs tile, EPDM vs felt, leadwork, fascia, and guttering. She knows a ceiling leak is urgent and a new roof quote is planned. Live in 24 hours.",
+  step3Title: "You Stay On The Roof",
+  step3Text: "Every roofing lead captured while you work safely at height. Storm damage emergencies get immediate alerts. New roof quotes and repair enquiries are logged with full details for your follow-up.",
+
+  features: [
+    { name: "Roofing Terminology", description: "your AI receptionist discusses pitched roofs, flat roofs, slate, clay tiles, concrete tiles, EPDM, GRP, lead valleys, and flashing — speaking the language of your trade." },
+    { name: "Storm Damage Surge Handling", description: "After a storm, your phone rings 30-50 times in a day. Your AI receptionist handles every single call simultaneously — no busy signals, no voicemails ignored." },
+    { name: "Leak Emergency Triage", description: "Active water ingress gets priority alerts. Mould concerns or damp patches are logged as non-urgent. Your AI receptionist triages appropriately." },
+    { name: "Insurance Work Capture", description: "Storm damage claims, fire damage, subsidence-related roof work — Your AI receptionist captures insurance details, policy numbers, and loss adjuster contacts." },
+    { name: "Job Detail Capture", description: "For new roof enquiries, Your AI receptionist captures property type, roof type, approximate area, current condition, and access details — giving you everything you need before visiting." },
+    { name: "Seasonal Availability Management", description: "Spring and summer are peak roofing season. Your AI receptionist can communicate your lead times and booking windows to manage customer expectations." },
+    { name: "Phone Answering", description: "Your AI receptionist answers roofing calls within seconds, discusses roof types, storm damage, and leak locations — then sends you a complete lead brief.", href: "/ai-phone-answering-service-for-roofers" },
+    { name: "SMS Response", description: "Every text from a roofing customer gets one professional acknowledgment confirming you've received their roof enquiry.", href: "/ai-sms-messaging-service-for-roofers" },
+    { name: "WhatsApp Response", description: "Instant WhatsApp replies to roofing customers — they know you've seen their storm damage message and will be in touch.", href: "/ai-whatsapp-messaging-service-for-roofers" },
+    { name: "Email Response", description: "Professional email acknowledgment within seconds for every roofing enquiry that lands in your inbox.", href: "/ai-email-response-service-for-roofers" },
+    { name: "Facebook Messenger", description: "Instant replies to every roofing enquiry on your Facebook page — your response badge stays at 'Usually replies instantly.'", href: "/ai-facebook-messenger-service-for-roofers" },
+    { name: "Instagram DMs", description: "Instant replies to every roofing DM — including message requests from non-followers searching for local roofers.", href: "/ai-instagram-messaging-service-for-roofers" },
+    { name: "Google Business Profile", description: "Instant responses to roofing enquiries coming through Google Maps and 'roofer near me' searches.", href: "/ai-google-business-service-for-roofers" },
+    { name: "Website Live Chat", description: "A chat widget where Your AI receptionist has real conversations about roof repairs, re-roofing projects, and storm damage — converting visitors into captured leads.", href: "/ai-website-chat-bot-for-roofers" },
+  ],
+
+  foundersNote: "Roofers spend their working day in the one place on a job site where you absolutely cannot answer a phone safely — the roof. It's not just impractical, it's dangerous. But every missed call from the ground is a leak repair, a re-roof, or a storm damage job paying someone else. Your AI receptionist solves this perfectly.",
+
+  relatedProducts: [
+    { name: "Lead Generation Website For Roofers", href: "/lead-generation-website-for-roofers", description: "Rank for 'roofer near me' and 'roof repair [your area]' on Google." },
+    { name: "AI Marketing For Roofers", href: "/ai-content-marketing-for-roofers", description: "Drone shots and before/after photos turned into content that generates work." },
+    { name: "Lead Generation For Roofers", href: "/lead-generation-for-roofers", description: "See how our complete system fills your roofing diary." },
+  ],
+
+  genericProductHref: "/ai-receptionist-for-tradesmen",
+  genericProductName: "AI Receptionist",
+
+  faqs: [
+    { question: "How does your AI receptionist handle calls during storms?", answer: "After severe weather, call volume spikes dramatically. Your AI receptionist handles unlimited simultaneous calls — every homeowner with a leak or loose tile gets answered, captured, and queued. You work through them systematically when it's safe." },
+    { question: "Can she differentiate between an active leak and general maintenance?", answer: "Yes. 'Water coming through the ceiling' gets an urgent alert. 'A few tiles look loose' is logged as routine. 'I think there's damp in the attic' is captured for assessment." },
+    { question: "Does she understand different roof types?", answer: "Yes — pitched, flat, mansard, hipped, mono-pitch. She knows the difference between slate, clay tile, concrete tile, and flat roof coverings like EPDM, felt, and GRP." },
+    { question: "Can she handle commercial roofing enquiries?", answer: "Yes. Industrial flat roofing, built-up felt, single-ply membrane — commercial work gets specification-focused capture with building details and access requirements." },
+    { question: "What about guttering and fascia enquiries?", answer: "Many roofers also do guttering, fascias, and soffits. Your AI receptionist handles these enquiries alongside roofing calls, capturing the same level of detail." },
+    { question: "How does she handle heritage/listed building roofing?", answer: "Specialist work like heritage slate roofing, lime mortar, or listed building repairs are captured with appropriate detail — including conservation area requirements." },
+    { question: "Can I use her during peak season when I'm weeks out?", answer: "Yes. Your AI receptionist can communicate your current lead times and still capture enquiries. Building a waiting list through busy periods ensures you have work when things slow down." },
+    { question: "Does she handle roof survey requests?", answer: "Yes. Pre-purchase surveys, condition assessments, and insurance inspections are captured with property details and urgency level." },
+    { question: "How fast is setup?", answer: "24 hours. Tell us your roofing specialisms and coverage area, and Your AI receptionist is live tomorrow — catching every call that rings while you're on the roof." },
+    { question: "What if it doesn't work?", answer: "30-day full money back guarantee including setup fee. One month, risk-free. If you're not happy, you get every penny back." },
+    { question: "What is an AI receptionist for roofers and how does it work?", answer: "An AI receptionist for roofers is an artificial intelligence system that handles customer communications across nine business channels — phone calls, SMS, WhatsApp, email, website chat, Facebook Messenger, Instagram DMs, Google Business Profile messages, and missed call text-back. Built on natural language processing trained on roofing terminology, your AI receptionist understands roof leak emergencies, re-roofing project enquiries, flat roof conversions, and guttering requests. On phone calls and website chat, she holds detailed conversations about the roofing work needed. On messaging channels, she sends professional acknowledgments with appropriate urgency and captures complete lead details. The AI operates 24/7/365, ensuring your roofing business captures every lead — particularly critical during storm periods when enquiry volumes spike dramatically." },
+    { question: "How does an AI receptionist help roofers manage post-storm demand?", answer: "Storm periods create the biggest revenue opportunity — and the biggest communication challenge — for roofing businesses. In one day, you might receive 20-30 calls, dozens of WhatsApp messages, and multiple Google Business Profile enquiries from homeowners with storm damage. You can't answer them all while you're on roofs fixing damage. An AI receptionist handles every communication instantly across all nine channels. Phone calls are answered, WhatsApp messages responded to, Google leads captured, website visitors engaged — all simultaneously and without limit. The AI's natural language processing differentiates active leaks (immediate escalation) from cosmetic storm damage (standard lead capture). At £99/month flat rate, the AI costs the same during a storm day with 30 leads as a quiet Tuesday with two — unlike per-call answering services that become prohibitively expensive during peaks." },
+    { question: "What makes an AI receptionist better than a traditional answering service for roofers?", answer: "Traditional answering services cover phone calls only, charge per interaction, and use generic scripts. An AI receptionist for roofers is categorically different. Your AI receptionist covers nine channels — phone, WhatsApp, Google Business, Instagram, Facebook, email, website chat, SMS, and missed call text-back. Her natural language processing understands roofing vocabulary: slate, tile, EPDM, GRP, lead valleys, ridge tiles, fascias, soffits, felt, and battens. She classifies leads by urgency — active roof leaks are escalated immediately while planned re-roofing enquiries are captured as standard leads. The AI handles unlimited simultaneous interactions at £99/month flat rate, providing storm-surge capacity that would cost thousands from a traditional service. Most importantly, she captures leads across all channels that a phone-only service would miss entirely." },
+  ],
+
+  widgetTrade: "roofing",
+  widgetGoal: "calls",
+};
+---
+
+<ProductTradeLayout frontmatter={frontmatter} />

@@ -1,0 +1,57 @@
+[
+    {
+        "name": "AI Phone Answering",
+        "slug": "ai-phone-answering",
+        "icon": "phone"
+    },
+    {
+        "name": "AI Voicemail",
+        "slug": "ai-voicemail",
+        "icon": "voicemail"
+    },
+    {
+        "name": "AI Missed Call Text-Back",
+        "slug": "ai-missed-call-text-back",
+        "icon": "message-square"
+    },
+    {
+        "name": "AI SMS Chatbot",
+        "slug": "ai-sms-chatbot",
+        "icon": "smartphone"
+    },
+    {
+        "name": "AI Email Autoresponder",
+        "slug": "ai-email-autoresponder",
+        "icon": "mail"
+    },
+    {
+        "name": "AI Website Chat",
+        "slug": "ai-website-chat",
+        "icon": "message-circle"
+    },
+    {
+        "name": "AI WhatsApp Chatbot",
+        "slug": "ai-whatsapp-chatbot",
+        "icon": "message-square"
+    },
+    {
+        "name": "AI Facebook Messenger Chatbot",
+        "slug": "ai-facebook-messenger-chatbot",
+        "icon": "facebook"
+    },
+    {
+        "name": "AI Instagram DM Chatbot",
+        "slug": "ai-instagram-dm-chatbot",
+        "icon": "instagram"
+    },
+    {
+        "name": "AI Lead Capture & Qualification",
+        "slug": "ai-lead-capture-and-qualification",
+        "icon": "user-check"
+    },
+    {
+        "name": "AI Receptionist with Human Backup",
+        "slug": "ai-receptionist-with-human-backup",
+        "icon": "users"
+    }
+]

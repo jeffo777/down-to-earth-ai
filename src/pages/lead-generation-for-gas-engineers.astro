@@ -1,0 +1,78 @@
+---
+import LeadGenerationLayout from '../layouts/LeadGenerationLayout.astro';
+
+const frontmatter = {
+  title: "Lead Generation For Gas Engineers",
+  metaTitle: "Lead Generation For Gas Engineers — Get More Gas Work Leads | Down To Earth AI",
+  metaDescription: "A complete lead generation system for Gas Safe registered engineers. Website, AI receptionist, and automated marketing for boiler repairs, servicing, and installations.",
+  canonicalUrl: "https://downtoearthai.co.uk/lead-generation-for-gas-engineers",
+  heroHeadline: "Lead Generation For Gas Engineers",
+  heroSubhead: "A complete system that gets Gas Safe registered engineers found on Google, answers every boiler breakdown call instantly, and builds a reputation that keeps the diary full year-round.",
+  heroAIText: "Learn about getting more gas engineering leads",
+
+  problemHeadline: "The Gas Engineer's Problem",
+  problemText: "It's January. Every boiler in the country has decided to break down at once. Your phone hasn't stopped and you're booked solid for three weeks. By March, it's a ghost town — the phone barely rings and you're wondering whether to advertise. That feast-or-famine cycle is exhausting. And during the busy months, you're missing calls constantly because you're diagnosing fault codes with your head inside a boiler. Those missed calls don't wait — they ring the next Gas Safe engineer on Google.",
+
+  receptionistLink: "/ai-receptionist-for-gas-engineers",
+  websiteLink: "/lead-generation-website-for-gas-engineers",
+  marketingLink: "/ai-content-marketing-for-gas-engineers",
+  automationsLink: "/custom-ai-automations-for-gas-engineers",
+
+  productCards: [
+    {
+      name: "AI Receptionist (your AI receptionist)",
+      description: "Head inside a boiler? Your AI receptionist answers the phone. She knows the difference between a complete breakdown and a routine service. Emergency calls get prioritised, scheduled work gets captured properly.",
+      price: "£299 setup · £99/month",
+      link: "/ai-receptionist-for-gas-engineers",
+      icon: "📞",
+    },
+    {
+      name: "Lead Generation Website",
+      description: "Pages targeting 'boiler repair [your area]', 'Gas Safe engineer near me', 'boiler installation [your town]'. Rank for the searches that generate high-value gas work.",
+      price: "From £997 one-off",
+      link: "/lead-generation-website-for-gas-engineers",
+      icon: "🌐",
+    },
+    {
+      name: "AI Marketing",
+      description: "Installed a new Vaillant? Serviced a Worcester? Photo → blog post with technical detail, social content, Google update. Show customers you know gas work inside out.",
+      price: "£199 setup · £99/month",
+      link: "/ai-content-marketing-for-gas-engineers",
+      icon: "📈",
+    },
+    {
+      name: "Custom AI Automations",
+      description: "Automated annual service reminders, warranty expiry notifications, landlord gas safety certificate renewals, quote follow-ups. Recurring revenue on autopilot.",
+      price: "Bespoke pricing",
+      link: "/custom-ai-automations-for-gas-engineers",
+      icon: "⚙️",
+    },
+  ],
+
+  foundersNote: "Gas engineers have a unique problem — their busiest months are pure chaos, and their quieter months feel like a different job entirely. The system we built smooths that curve. Annual service reminders keep work coming in summer. The website captures 'boiler replacement' searches all year round. And your AI receptionist catches every call during those insane January weeks when you physically can't answer the phone.",
+
+  showTradeGrid: false,
+
+  faqs: [
+    { question: "How does this help during the winter rush?", answer: "During October-March, Your AI receptionist handles the overflow. She answers every call, captures every breakdown, and sends you prioritised details. Meanwhile, your website keeps generating new leads. You focus on fixing boilers — Your AI receptionist handles the phones." },
+    { question: "What about the quiet summer months?", answer: "That's where the system really shines. Automated annual service reminders bring in summer work. Your website ranks for 'boiler installation' and 'boiler replacement' searches — people plan these in warmer months. And your AI marketing keeps content flowing, maintaining your Google visibility year-round." },
+    { question: "What kind of gas work does this generate?", answer: "Boiler repairs, breakdowns, annual servicing, new boiler installations (combi, system, regular), central heating systems, radiator installations, gas safety certificates (CP12), unvented hot water cylinders, gas fires, gas hobs, and power flushing. Every search term targeted." },
+    { question: "Does your AI receptionist understand gas engineering terminology?", answer: "Yes. She's configured for gas work — she understands fault codes, boiler brands (Worcester, Vaillant, Baxi, Ideal), the difference between a combi and a system boiler, and what a CP12 is. Customers feel like they're speaking to someone who knows the industry." },
+    { question: "Can the system automate annual boiler service reminders?", answer: "Yes — this is one of our most popular automations for gas engineers. When a service is due (typically 12 months after the last one), the system automatically contacts the customer to book. It's recurring revenue with zero admin effort from you." },
+    { question: "How does this help with landlord gas safety certificates?", answer: "The website targets 'landlord gas safety certificate [your area]' searches, bringing in letting agents and landlords. The automation system tracks certificate expiry dates and sends renewal reminders automatically. Letting agents love the reliability — they become repeat customers." },
+    { question: "Will my website mention my Gas Safe registration?", answer: "Absolutely. Your Gas Safe registration number is prominently displayed on every page. It's a critical trust signal — it separates you from unregistered cowboys and gives customers confidence they're hiring a qualified, registered engineer." },
+    { question: "I mainly do boiler installations — can you target that specifically?", answer: "Yes. If boiler installations are your bread and butter, we can weight the content strategy towards 'new boiler [your area]', 'boiler replacement cost', 'best combi boiler for [house type]'. These are high-value searches that generate premium jobs." },
+    { question: "How does AI marketing work for gas engineers?", answer: "Finish an install? Take a photo of the boiler (label visible, no customer info). AI generates a blog post like 'New Worcester Bosch 30i Installed in [Area]', social content, and a Google update. It's technical content that builds authority with both Google and customers." },
+    { question: "Can your AI receptionist prioritise emergency breakdown calls?", answer: "Yes. Your AI receptionist recognises 'no heating', 'no hot water', 'gas leak', 'boiler not working' as emergencies. She fast-tracks the capture, sends you an immediate alert, and reassures the customer that help is on the way. Routine service enquiries are handled normally." },
+    { question: "How much work do I need to make this pay for itself?", answer: "One boiler install per month more than covers the entire system cost. One extra service per week covers your AI receptionist alone. Given that most gas engineers miss 3-5 calls per week, the maths is overwhelmingly in your favour." },
+    { question: "Can I use this if I work for a company and do private work too?", answer: "Yes. Many gas engineers use the system for their private work while being employed elsewhere. Your AI receptionist answers your private number, your website generates your private leads, and your employer doesn't need to know." },
+    { question: "Do I need a website already?", answer: "No. We build you one from scratch — custom designed for gas engineers, optimised for local search, and loaded with content targeting every service and area you cover. If you have an existing website, we can assess whether to improve it or start fresh." },
+    { question: "What's the 30-day money back guarantee?", answer: "If you're not happy with any service within 30 days — AI Receptionist, website, marketing, or automations — you get a full refund including setup fees. No questions, no forms, no conditions." },
+    { question: "How quickly can I get started?", answer: "Your AI receptionist can be live within 24 hours. A website typically takes 2-4 weeks to build and launch. AI marketing starts the day your website goes live. Service reminders can begin as soon as you have customer data to work from." },
+  ],
+
+  widgetTrade: "gas engineering",
+};
+---
+
+<LeadGenerationLayout frontmatter={frontmatter} />

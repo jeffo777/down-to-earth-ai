@@ -1,0 +1,60 @@
+---
+import ProductMasterLayout from '../layouts/ProductMasterLayout.astro';
+
+const frontmatter = {
+  title: "Custom AI Automations For Tradesmen",
+  metaTitle: "Custom AI Automations For Tradesmen | Bespoke Business Workflows — Down To Earth AI",
+  metaDescription: "Bespoke AI automations built around how your trade business actually works. Automate follow-ups, invoicing, scheduling, and more. Contact us for pricing.",
+  canonicalUrl: "https://downtoearthai.co.uk/custom-ai-automations-for-tradesmen",
+  heroHeadline: "AI That Works The Way You Work",
+  heroSubhead: "Every trade business is different. Custom AI automations are built around your specific processes — from automated follow-ups to intelligent scheduling to invoice reminders. Tell us what takes too long, and we'll automate it.",
+  heroAIText: "Learn about custom AI automations",
+  showHeroAI: true,
+  showPrice: false,
+  price: "Bespoke pricing",
+  productSlug: "custom-ai-automations",
+  productName: "Custom AI Automations",
+
+  step1Title: "Tell Us What Slows You Down",
+  step1Text: "We start with a conversation about your business. What takes too long? What do you forget? What would you automate if you could? We identify the biggest time-wasters in your workflow.",
+  step2Title: "We Design Your Automation",
+  step2Text: "We map out your ideal workflow and build a custom AI system that handles it. No generic templates — everything is designed around how your specific business operates.",
+  step3Title: "It Runs In The Background",
+  step3Text: "Once live, your automations run quietly in the background. Follow-ups happen automatically. Invoices go out on time. Review requests are sent after every job. You barely notice — except that everything works better.",
+
+  features: [
+    { name: "Automated Follow-Ups", description: "Never forget to follow up on a quote again. AI sends personalised follow-up messages at the right time — increasing your conversion rate." },
+    { name: "Invoice & Payment Reminders", description: "Automatic invoice sending and payment reminders. Professional, polite, and persistent — so you don't have to be." },
+    { name: "Job Scheduling Intelligence", description: "AI that helps optimise your schedule — grouping jobs by area, suggesting efficient routes, and reducing wasted time." },
+    { name: "Review Collection", description: "After every completed job, an automated review request goes out. More reviews mean more trust, more rankings, more leads." },
+    { name: "Quote Follow-Up Sequences", description: "When you send a quote, AI follows up at 24 hours, 3 days, and 7 days — keeping your quote top of mind without you lifting a finger." },
+    { name: "Customer Database", description: "Every customer, every job, every interaction — organised and searchable. Know your customer history before they even finish explaining." },
+    { name: "WhatsApp Business Automation", description: "Automated responses, appointment confirmations, and job updates through WhatsApp — the channel your customers prefer." },
+    { name: "Reporting & Insights", description: "Weekly summaries of leads received, jobs booked, revenue generated, and response times. Know how your business is performing." },
+  ],
+
+  foundersNote: "The best tradesmen I know aren't bad at running a business — they just don't have time for it. They're brilliant at the work, but the admin side drowns them. Custom automations give you the efficiency of a company with a full back-office team — without the team.",
+
+  relatedProducts: [
+    { name: "AI Receptionist (your AI receptionist)", href: "/ai-receptionist-for-tradesmen", description: "Combine your AI receptionist with custom automations for a complete business management system." },
+    { name: "Lead Generation Websites", href: "/lead-generation-websites-for-tradesmen", description: "A website that generates the leads — automations that manage what happens next." },
+    { name: "AI Marketing", href: "/ai-marketing-for-tradesmen", description: "Automated content marketing that runs alongside your business automations." },
+  ],
+
+  faqs: [
+    { question: "What kind of tasks can be automated?", answer: "Almost anything repetitive. Follow-ups after quotes, invoice reminders, review requests, appointment confirmations, customer welcome messages, end-of-day summaries, weekly reports — if you do it more than once, we can probably automate it." },
+    { question: "How much do custom automations cost?", answer: "It depends on complexity. Simple automations (like follow-up sequences) start from a few hundred pounds. More complex systems (like full CRM integrations) cost more. We'll give you a clear, fixed quote before any work begins — no surprises." },
+    { question: "Do I need technical knowledge?", answer: "None at all. We build, configure, and maintain everything. You tell us what you want to happen, and we make it work. If you need changes later, we handle those too." },
+    { question: "How long does it take to set up?", answer: "Simple automations can be live within a few days. More complex systems typically take 1-2 weeks. We'll give you a timeline before we start, and we stick to it." },
+    { question: "Can automations work with my existing tools?", answer: "Yes. We integrate with the tools you already use — your phone system, your email, your accounting software, your CRM. The automation works within your existing workflow, not on top of it." },
+    { question: "What if I want to change something later?", answer: "Automations aren't set in stone. As your business evolves, we adjust the automations to match. Your processes change? We update the system. No lengthy rebuild required." },
+    { question: "Will customers know they're talking to an AI?", answer: "That's your choice. Some tradesmen prefer transparency, others prefer the messages to sound indistinguishable from a real person. We configure the tone and style to match your preference." },
+    { question: "Can I see what the automations are doing?", answer: "Yes. You get full visibility into what's been sent, what's been responded to, and what's pending. Plus weekly summary reports so you always know what's happening in your business." },
+  ],
+
+  widgetTrade: "",
+  widgetGoal: "automations",
+};
+---
+
+<ProductMasterLayout frontmatter={frontmatter} />

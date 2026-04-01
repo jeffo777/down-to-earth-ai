@@ -1,0 +1,76 @@
+---
+import ProductTradeLayout from '../layouts/ProductTradeLayout.astro';
+
+const frontmatter = {
+  title: "AI Receptionist For Appliance Repair Engineers",
+  metaTitle: "AI Receptionist For Appliance Repair Engineers — Every Call Answered | Down To Earth AI",
+  metaDescription: "AI receptionist for appliance repair engineers. Answers calls about broken washing machines, ovens, and fridges while you're on another job. From £99/month.",
+  canonicalUrl: "https://downtoearthai.co.uk/ai-receptionist-for-appliance-repair-engineers",
+  heroHeadline: "AI Receptionist For Appliance Repair Engineers",
+  heroSubhead: "Your AI receptionist answers every frantic appliance call — broken washing machines, dead ovens, and warm fridges — while you're elbow-deep in someone else's dishwasher. Every repair lead captured.",
+  heroAIText: "Tell me about your appliance repair business and I'll show you how I handle your calls",
+  showHeroAI: true, showPrice: true,
+  heroPrice: "£99/month",
+  price: "£299 setup · £99/month",
+  trade: "Appliance Repair Engineers", tradeSlug: "appliance-repair-engineers", tradeAdjective: "appliance repair",
+  productSlug: "ai-receptionist", productName: "AI Receptionist",
+
+  scenario: "\"You're diagnosing a washing machine — pulled out from the wall, panels off, multimeter in hand. Your phone rings. A family's oven has died the day before a big dinner party. They need it fixed TODAY. You can't stop mid-diagnosis. By the time you finish, test, and reassemble — 45 minutes later — they've found another engineer. That £120 call-out just walked. And this happens three or four times a day.\"",
+
+  step1Title: "Tell Us About Your Repair Business",
+  step1Text: "The appliances you repair (white goods, cooking, cooling), brands you specialise in, your coverage area, and how you'd like leads delivered. A quick 15-minute setup.",
+  step2Title: "We Configure Your AI Receptionist For Appliance Repair",
+  step2Text: "your AI receptionist learns appliance brands, error codes, and fault symptoms. She knows a leaking washing machine is more urgent than a noisy tumble dryer. Live within 24 hours.",
+  step3Title: "You Fix Appliances, She Fills Your Diary",
+  step3Text: "Every broken appliance call answered. Your AI receptionist captures the brand, model, fault symptoms, and error codes — so you can arrive with the right parts. Multiple calls per day, every one captured.",
+
+  features: [
+    { name: "Brand & Model Capture", description: "Bosch, Samsung, Miele, Beko, LG, Whirlpool — your AI receptionist asks for make and model number, giving you the information to check parts availability before visiting." },
+    { name: "Error Code Recognition", description: "Customers quoting 'E18', 'F5', or 'E24'? Your AI receptionist captures these codes accurately. You know what you're dealing with before you leave the driveway." },
+    { name: "Urgency-Based Triage", description: "A leaking washing machine flooding the kitchen gets priority over a noisy dryer. A dead fridge with food at risk gets flagged as urgent. Your AI receptionist triages by genuine urgency." },
+    { name: "High-Volume Call Handling", description: "Appliance repair is a volume game — 4-6 jobs per day. Missing one call per day means 20+ lost jobs per month. Your AI receptionist catches every single one." },
+    { name: "Parts Preparation", description: "By capturing make, model, and fault description, your AI receptionist helps you arrive with the right parts — increasing first-time fix rates and reducing costly second visits." },
+    { name: "24/7 Fault Reporting", description: "Fridge died overnight? Oven broken on a Sunday? Your AI receptionist captures the details whenever the appliance fails — not just during your office hours." },
+    { name: "Phone Answering", description: "Your AI receptionist answers appliance repair calls within seconds, captures the brand, model, and fault symptoms — then sends you a complete lead brief so you can arrive with the right parts.", href: "/ai-phone-answering-service-for-appliance-repair-engineers" },
+    { name: "SMS Response", description: "Every text from an appliance repair customer gets one professional acknowledgment confirming you've received their breakdown enquiry.", href: "/ai-sms-messaging-service-for-appliance-repair-engineers" },
+    { name: "WhatsApp Response", description: "Instant WhatsApp replies to appliance repair customers — they know you've seen their broken washing machine message and will be in touch.", href: "/ai-whatsapp-messaging-service-for-appliance-repair-engineers" },
+    { name: "Email Response", description: "Professional email acknowledgment within seconds for every appliance repair enquiry that lands in your inbox.", href: "/ai-email-response-service-for-appliance-repair-engineers" },
+    { name: "Facebook Messenger", description: "Instant replies to every appliance repair enquiry on your Facebook page — your response badge stays at 'Usually replies instantly.'", href: "/ai-facebook-messenger-service-for-appliance-repair-engineers" },
+    { name: "Instagram DMs", description: "Instant replies to every appliance repair DM — including message requests from non-followers searching for local appliance repair engineers.", href: "/ai-instagram-messaging-service-for-appliance-repair-engineers" },
+    { name: "Google Business Profile", description: "Instant responses to appliance repair enquiries coming through Google Maps and 'washing machine repair near me' searches.", href: "/ai-google-business-service-for-appliance-repair-engineers" },
+    { name: "Website Live Chat", description: "A chat widget where Your AI receptionist has real conversations about appliance faults, error codes, and repair requirements — converting visitors into same-day bookings.", href: "/ai-website-chat-bot-for-appliance-repair-engineers" },
+  ],
+
+  foundersNote: "Appliance repair is a volume game. You might do 4-6 call-outs a day. Every missed call is a lost £80-200 job. Miss just one call per day and that's £2,000+ per month walking to someone else. Your AI receptionist catches every single call, captures the appliance details, and lets you arrive prepared with the right parts. The maths is simple: she pays for herself with one saved call per week.",
+
+  relatedProducts: [
+    { name: "Lead Generation Website For Appliance Repair", href: "/lead-generation-website-for-appliance-repair-engineers", description: "Rank for 'washing machine repair near me' and 'oven repair [your area]'." },
+    { name: "AI Marketing For Appliance Repair", href: "/ai-content-marketing-for-appliance-repair-engineers", description: "Error code content and repair guides that drive calls." },
+    { name: "Lead Generation For Appliance Repair", href: "/lead-generation-for-appliance-repair-engineers", description: "See the complete appliance repair lead generation system." },
+  ],
+
+  genericProductHref: "/ai-receptionist-for-tradesmen",
+  genericProductName: "AI Receptionist",
+
+  faqs: [
+    { question: "Does your AI receptionist know appliance brands?", answer: "Yes. Bosch, Siemens, Samsung, LG, Miele, Beko, Whirlpool, Hotpoint, Indesit, AEG, Neff, Smeg — she knows the brands and can capture model numbers from the rating plate." },
+    { question: "Can she capture error codes accurately?", answer: "Yes. Whether it's E18, F5, E24, or any other code, your AI receptionist asks the customer to read it exactly as displayed and records it precisely. You know the likely fault before you arrive." },
+    { question: "How does she prioritise different appliance failures?", answer: "A leaking washing machine (water damage occurring) and a dead fridge (food spoiling) get urgent priority. A noisy tumble dryer or slow dishwasher get standard queueing. Triage by actual impact." },
+    { question: "Can she handle multiple simultaneous calls?", answer: "Yes — unlimited. On Monday mornings when everyone discovers their appliance broke over the weekend, Your AI receptionist captures every call. No busy signals, no 'all agents are busy'." },
+    { question: "This is a volume business — does the pricing still work?", answer: "Absolutely. At £99/month, your AI receptionist pays for herself with one additional repair per month. If she saves you just 2 calls per week that you would have missed, she generates 8x her cost in revenue." },
+    { question: "Can I specialise in certain brands?", answer: "Yes. If you're a Samsung specialist or focus on Miele, Your AI receptionist can communicate your specialisation to customers calling about those brands." },
+    { question: "Does she handle commercial appliance repair enquiries?", answer: "Yes. Restaurant dishwashers, commercial ovens, industrial laundry equipment — commercial work commands higher rates. Your AI receptionist captures the business type and equipment details." },
+    { question: "Can she help with follow-up warranty calls?", answer: "Yes. When customers call back about issues within your warranty period, your AI receptionist recognises it's a follow-up and captures the current status." },
+    { question: "How fast is setup?", answer: "24 hours. We Configure Your AI Receptionist with your appliance specialisms, brands, and coverage area. She's answering your calls by tomorrow." },
+    { question: "What's the guarantee?", answer: "30-day full money back including setup fee. One missed call saved per week more than covers the cost. Risk-free." },
+    { question: "What is an AI receptionist for appliance repair engineers and how does it work?", answer: "An AI receptionist for appliance repair engineers is an artificial intelligence system that manages customer communications across nine business channels — phone calls, SMS, WhatsApp, email, website chat, Facebook Messenger, Instagram DMs, Google Business Profile messages, and missed call text-back. Using natural language processing trained on domestic appliance brands, error codes, and fault descriptions, your AI receptionist understands washing machine breakdowns, dishwasher faults, oven failures, and fridge-freezer issues. On phone calls and website chat, she holds detailed conversations about the appliance problem. On messaging channels, she sends professional acknowledgments and captures make, model, and fault details. The AI operates 24/7/365, ensuring your appliance repair business captures every urgent repair lead — particularly important in a trade where the first engineer to respond wins the booking." },
+    { question: "How does an AI receptionist help appliance repair engineers compete for urgent bookings?", answer: "Appliance repair is one of the most urgency-driven trades — a broken washing machine, dead fridge, or failed oven generates immediate action. Homeowners search 'washing machine repair near me', visit 2-3 websites, and contact the first business that engages. An AI receptionist ensures your business engages first across all nine channels. While you're repairing appliances at another property, Your AI receptionist answers phone calls instantly, responds to WhatsApp messages with fault details, captures Google Business leads, and engages website visitors through live chat. Her natural language processing recognises brands (Bosch, Miele, Samsung, LG, Hotpoint), error codes (E15, F21, OE), and fault descriptions — demonstrating professional understanding from the first interaction. At £99/month with average repair callouts at £80-150, capturing one additional booking per month covers the entire annual subscription." },
+    { question: "What makes an AI receptionist essential for growing an appliance repair business?", answer: "Appliance repair engineers face a scalability ceiling — you're busy enough with repairs to fill most days, but you miss new booking calls because you're working. You can't grow beyond your current capacity because you can't answer the phone while diagnosing a washing machine fault. An AI receptionist removes this ceiling at £99/month. Your AI receptionist captures every enquiry across all nine channels — phone calls during repairs, WhatsApp messages during transit, Google Business leads while you're on-site, Instagram DMs in the evenings, and email enquiries from property management companies. Her natural language processing captures appliance type, brand, model, fault description, and customer location — enabling you to batch callbacks efficiently between jobs. For appliance repair engineers looking to grow from 4-5 callouts per day to 7-8, an AI receptionist ensures every enquiry becomes a potential booking rather than a missed call." },
+  ],
+
+  widgetTrade: "appliance repair",
+  widgetGoal: "calls",
+};
+---
+
+<ProductTradeLayout frontmatter={frontmatter} />

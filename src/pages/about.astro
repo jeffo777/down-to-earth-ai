@@ -1,0 +1,57 @@
+---
+import CorePageLayout from '../layouts/CorePageLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
+import GuaranteeBadge from '../components/GuaranteeBadge.astro';
+
+const frontmatter = {
+  title: "About",
+  metaTitle: "About Down To Earth AI — Built By A Tradesman, For Tradesmen",
+  metaDescription: "Down To Earth AI was founded because tradesmen deserve better tools. We build AI that's practical, affordable, and designed for people who work with their hands.",
+  canonicalUrl: "https://downtoearthai.co.uk/about",
+  showHeroAI: false,
+  heroHeadline: "Built By A Tradesman. For Tradesmen.",
+  heroSubhead: "We're not a Silicon Valley startup. We understand your world because we've lived in it.",
+};
+---
+
+<CorePageLayout frontmatter={frontmatter}>
+
+  <section>
+    <div class="core-container--narrow">
+      <h2>The Story</h2>
+      <p style="line-height: 1.8; margin-bottom: 1.25rem;">Down To Earth AI started with a simple observation: tradesmen are losing work every single day — not because they aren't skilled, but because they can't answer the phone while they're on a job.</p>
+      <p style="line-height: 1.8; margin-bottom: 1.25rem;">I watched my mate — a brilliant plumber — lose three jobs in one week. Not because he did bad work. Not because he was expensive. Because he was under a sink when the phone rang, and by the time he called back, the customer had already booked someone else.</p>
+      <p style="line-height: 1.8; margin-bottom: 1.25rem;">That's when the idea was born. An AI receptionist that answers every call, every message, every enquiry — 24/7 — so tradesmen never miss another opportunity.</p>
+      <p style="line-height: 1.8; margin-bottom: 1.25rem;">But we didn't stop there. We realised that most tradesmen also have terrible websites (or no website at all), no marketing strategy, and no way to automate the admin that drowns them after every working day. So we built solutions for all of it.</p>
+    </div>
+  </section>
+
+  <section class="core-section--alt">
+    <div class="core-container--narrow">
+      <h2>What We Believe</h2>
+      <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">
+        <div style="padding: 1.5rem; background: var(--color-surface); border-radius: 1rem; border: 1px solid var(--color-border-subtle);">
+          <h3 style="color: var(--color-accent); font-size: 1.0625rem; margin-bottom: 0.5rem;">AI Should Be Practical</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.9375rem; line-height: 1.7;">We don't build AI for the sake of it. Every tool we create solves a real problem that real tradesmen deal with every single day. If it doesn't make your life easier, we don't build it.</p>
+        </div>
+        <div style="padding: 1.5rem; background: var(--color-surface); border-radius: 1rem; border: 1px solid var(--color-border-subtle);">
+          <h3 style="color: var(--color-accent); font-size: 1.0625rem; margin-bottom: 0.5rem;">Technology Should Be Affordable</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.9375rem; line-height: 1.7;">Enterprise businesses have had AI tools for years. Tradesmen deserve the same advantage — at prices that make sense for a one-person business or a small team.</p>
+        </div>
+        <div style="padding: 1.5rem; background: var(--color-surface); border-radius: 1rem; border: 1px solid var(--color-border-subtle);">
+          <h3 style="color: var(--color-accent); font-size: 1.0625rem; margin-bottom: 0.5rem;">Tradesmen Deserve Better</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.9375rem; line-height: 1.7;">Better tools, better support, better respect. You keep the country running — the least you deserve is technology that works as hard as you do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="core-container--narrow" style="text-align: center;">
+      <h2>Our Mission</h2>
+      <p style="font-size: 1.25rem; color: var(--color-text-primary); font-weight: 600; line-height: 1.5; max-width: 32rem; margin: 1rem auto 2rem;">To give every tradesman in the UK access to AI tools that help them win more work, save time, and grow their business — without needing to be a tech expert.</p>
+      <CTAButton buttonText="See How It Works" buttonLink="/how-it-works" size="large" />
+    </div>
+  </section>
+
+</CorePageLayout>

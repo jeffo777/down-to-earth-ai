@@ -1,0 +1,42 @@
+---
+import ProductTradeLayout from '../layouts/ProductTradeLayout.astro';
+const frontmatter = {
+  title: "Custom AI Automations For Plumbers", metaTitle: "Custom AI Automations For Plumbers | Down To Earth AI", metaDescription: "Custom AI automations for plumbing businesses. Automate quoting, scheduling, invoicing, and follow-ups. Reclaim 10+ hours per week. From £297/month.", canonicalUrl: "https://downtoearthai.co.uk/custom-ai-automations-for-plumbers",
+  heroHeadline: "Custom AI Automations For Plumbers", heroSubhead: "Quoting, scheduling, invoicing, follow-ups — the admin that drowns your plumbing business. Custom AI automations handle it all, so you can focus on the work that makes money.", heroAIText: "Ask me what plumbing admin AI can automate", showHeroAI: true, showPrice: true,
+  heroPrice: "£99/month", price: "From £297/month",
+  trade: "Plumbers", tradeSlug: "plumbers", tradeAdjective: "plumbing", productSlug: "custom-ai-automations", productName: "Custom AI Automations",
+  scenario: "\"It's 8pm. You've done five jobs today. You still need to send three quotes, update your calendar for tomorrow, invoice today's customers, and reply to four enquiry emails. You sit down with a cuppa — and by 10pm, you've done two quotes and fallen asleep on the sofa. Sound familiar? AI automations handle ALL of this while you sleep.\"",
+  step1Title: "We Audit Your Plumbing Admin", step1Text: "We map every admin task you currently do manually — quoting, scheduling, invoicing, follow-ups, parts ordering, van stock management. Every hour of admin you spend is an hour of plumbing you're not billing for.",
+  step2Title: "We Build Your Custom Automations", step2Text: "Tailored workflows that do the admin automatically. Quote request comes in → AI generates the quote → sends it to the customer → follows up if no response. Job completed → invoice sent → payment chased. All automatic.",
+  step3Title: "You Reclaim 10-15 Hours Per Week", step3Text: "Most plumbers spend 10-15 hours per week on admin. That's two days of billable work at £300+/day — £600+/week, £2,400+/month of lost revenue. Automations cost a fraction of that.",
+  features: [
+    { name: "Automated Quoting", description: "Job enquiry → AI generates a quote based on your pricing → sends it within minutes. No more spending evenings writing quotes." },
+    { name: "Smart Scheduling", description: "AI manages your calendar, optimises routes between jobs, and handles bookings. No more double-bookings or wasted drive time." },
+    { name: "Auto-Invoicing", description: "Job marked complete → invoice generated → sent to customer → payment chased at 7, 14, and 30 days. Zero effort." },
+    { name: "Follow-Up Sequences", description: "Customer hasn't booked their annual boiler service? AI sends them a reminder. Quote not accepted? Auto follow-up at 3, 7, and 14 days." },
+    { name: "Parts & Van Stock", description: "Track van stock levels. When parts run low, AI alerts you or auto-orders from your preferred supplier." },
+    { name: "Customer Communication", description: "Appointment reminders, on-my-way texts, completion confirmations — all automatic, all professional." },
+  ],
+  foundersNote: "I've watched plumbers spend their evenings doing admin that AI can handle in seconds. Quoting at 10pm. Invoicing at midnight. Chasing unpaid invoices over breakfast. That's not running a business — that's being a slave to admin. These automations give you your evenings back while actually improving how fast quotes and invoices go out.",
+  relatedProducts: [
+    { name: "AI Receptionist For Plumbers", href: "/ai-receptionist-for-plumbers", description: "Your AI receptionist captures every enquiry, then automation handles the rest." },
+    { name: "Lead Generation Website For Plumbers", href: "/lead-generation-website-for-plumbers", description: "More leads flowing in, all handled by automations." },
+    { name: "Lead Generation For Plumbers", href: "/lead-generation-for-plumbers", description: "The full plumbing lead system, end to end." },
+  ],
+  genericProductHref: "/custom-ai-automations-for-tradesmen", genericProductName: "Custom AI Automations",
+  faqs: [
+    { question: "What plumbing admin can AI actually automate?", answer: "Quoting, invoicing, scheduling, follow-ups, payment chasing, appointment reminders, review requests, service reminders — essentially everything you currently do on your phone at 10pm." },
+    { question: "How does automated quoting work?", answer: "You set your pricing rules. AI generates quotes based on the job type, area, and details captured by your AI receptionist or your enquiry form. The quote is sent within minutes of the enquiry." },
+    { question: "Will it chase unpaid invoices?", answer: "Yes. Automated follow-ups at 7, 14, and 30 days with increasing urgency. Polite but persistent — without you lifting a finger." },
+    { question: "Can it manage my calendar?", answer: "Yes. AI handles bookings, avoids double-bookings, optimises your route between jobs, and sends appointment reminders to customers." },
+    { question: "How much time will I actually save?", answer: "Most plumbers report saving 10-15 hours per week on admin. That's equivalent to £2,400+/month in billable time at standard plumber rates." },
+    { question: "Can it send 'on my way' texts?", answer: "Yes. When you leave for a job, AI sends the customer an 'on my way, arriving in X minutes' text. Professional, automatic, and customers love it." },
+    { question: "Will it request Google reviews?", answer: "Yes. After job completion, AI sends a polite review request with a direct link to your Google profile. Your review count grows on autopilot." },
+    { question: "Can it remind customers about annual boiler services?", answer: "Yes. AI tracks service dates and sends reminders when they're due. Turns one-off customers into recurring revenue." },
+    { question: "Is it hard to set up?", answer: "No. We build everything for you based on how you currently work. You don't need any tech knowledge — just tell us your process." },
+    { question: "What's the guarantee?", answer: "30-day money back. If automations don't save you time, full refund." },
+  ],
+  widgetTrade: "plumbing", widgetGoal: "automations",
+};
+---
+<ProductTradeLayout frontmatter={frontmatter} />

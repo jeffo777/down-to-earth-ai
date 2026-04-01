@@ -1,0 +1,78 @@
+---
+import LeadGenerationLayout from '../layouts/LeadGenerationLayout.astro';
+
+const frontmatter = {
+  title: "Lead Generation For Pest Control",
+  metaTitle: "Lead Generation For Pest Control — Get More Pest Control Leads | Down To Earth AI",
+  metaDescription: "A complete lead generation system for pest control businesses. Rank for urgent searches, answer every panicked call instantly, and build year-round business. 30-day guarantee.",
+  canonicalUrl: "https://downtoearthai.co.uk/lead-generation-for-pest-control",
+  heroHeadline: "Lead Generation For Pest Control",
+  heroSubhead: "A complete system that gets your pest control business found when someone discovers rats in the kitchen, answers every panicked call while you're laying bait, and keeps your schedule full across every season.",
+  heroAIText: "Learn about getting more pest control leads",
+
+  problemHeadline: "Panic Calls Don't Leave Voicemails",
+  problemText: "Someone's just found rat droppings in their kitchen cupboard. They're disgusted, panicking, and Googling 'pest control near me' on their phone. They call the first three numbers they find. Whoever answers first gets the job. They're not going to leave a voicemail and wait — they want someone NOW. If you're in a loft space setting traps or in a crawl space inspecting for mice, you physically can't answer. That customer — a £200-400 job — calls the next number. And the seasonal swings make it worse: wasp season is insane, rodent season is busy, and some months feel empty.",
+
+  receptionistLink: "/ai-receptionist-for-pest-control",
+  websiteLink: "/lead-generation-website-for-pest-control",
+  marketingLink: "/ai-content-marketing-for-pest-control",
+  automationsLink: "/custom-ai-automations-for-pest-control",
+
+  productCards: [
+    {
+      name: "AI Receptionist (your AI receptionist)",
+      description: "Setting traps in a crawl space? Your AI receptionist answers the frantic call. She calms the customer down, finds out the pest type and urgency, captures the address, and sends you the details. Panic handled professionally.",
+      price: "£299 setup · £99/month",
+      link: "/ai-receptionist-for-pest-control",
+      icon: "📞",
+    },
+    {
+      name: "Lead Generation Website",
+      description: "Pages for 'pest control near me', 'rat catcher [your area]', 'wasp nest removal [town]', 'bed bugs [city]'. Every pest, every season, every area — targeted.",
+      price: "From £997 one-off",
+      link: "/lead-generation-website-for-pest-control",
+      icon: "🌐",
+    },
+    {
+      name: "AI Marketing",
+      description: "Removed a wasp nest the size of a basketball? Cleared a rat infestation? (Tasteful) photos → content about pest problems in your area. Educational content that drives calls.",
+      price: "£199 setup · £99/month",
+      link: "/ai-content-marketing-for-pest-control",
+      icon: "📈",
+    },
+    {
+      name: "Custom AI Automations",
+      description: "Automated follow-up visits, proofing quote follow-ups, commercial pest control contract renewals, and seasonal pest alerts to previous customers. Recurring revenue from prevention.",
+      price: "Bespoke pricing",
+      link: "/custom-ai-automations-for-pest-control",
+      icon: "⚙️",
+    },
+  ],
+
+  foundersNote: "Pest control is the most emotionally-driven trade enquiry there is. People aren't calmly shopping around — they're panicking. A rat in the kitchen, a wasp nest above the bedroom, bedbugs in the hotel. The first company that answers with a calm, professional voice wins the job. That's why your AI receptionist was practically built for pest control — she handles the panic while you handle the pests.",
+
+  showTradeGrid: false,
+
+  faqs: [
+    { question: "How does your AI receptionist handle panicking callers?", answer: "With calm professionalism. When someone calls in a state about mice/rats/wasps, Your AI receptionist speaks calmly, addresses their immediate safety (e.g., 'don't approach the nest'), captures the pest type, address, and urgency, and reassures them that help is coming. It de-escalates the panic while securing the job." },
+    { question: "What kind of pest control work will this generate?", answer: "Rats, mice, wasps, hornets, ants, cockroaches, bed bugs, fleas, moths, squirrels, pigeons, foxes, moles, and commercial pest management. We target every pest type in every area you cover — including seasonal peaks." },
+    { question: "How does the system handle wasp season?", answer: "July-September your phone can ring 30-40 times a day for wasp nests. Your AI receptionist handles every single call simultaneously — 10, 20, 40 at once. She captures each one and you work through them systematically. No more missed calls during the rush." },
+    { question: "Can the website target commercial pest control?", answer: "Yes. Commercial pest control contracts — restaurants, hotels, food factories, offices — are high-value recurring work. We create pages targeting 'commercial pest control [area]', 'restaurant pest management', 'BPCA registered pest control'. These attract the contracts that provide stable income." },
+    { question: "How does AI marketing work for pest control?", answer: "Educational content about pest prevention generates calls. 'How to tell if you have mice' or 'What to do about wasps in August' — these pages rank on Google and bring in people who then call for professional help. The content is educational, not gross — we focus on the solution, not shock factor." },
+    { question: "Can the system help with follow-up visits?", answer: "Yes. Rodent control often requires 2-3 visits. The automation system schedules follow-up visits, reminds customers, and chases if they haven't booked their next appointment. Ensures treatment completion and maximises revenue per customer." },
+    { question: "What about proofing work?", answer: "Proofing (sealing entry points after rodent treatment) is high-value additional work. After pest treatment, the system can automatically follow up offering proofing services — turning a £200 treatment into a £500-800 job." },
+    { question: "How does seasonal targeting work?", answer: "Wasps: June-September content push. Rodents: October-March content focus. Bed bugs: year-round (hotel/hospitality focus). Moths: spring/summer. The content calendar aligns with seasonal pest patterns so you rank for the right terms at the right time." },
+    { question: "Can I target specific pest types?", answer: "Yes. If bed bugs are your speciality, or you focus on commercial rodent contracts, the content strategy weighs towards those terms. Specialisation means less competition and higher-value leads." },
+    { question: "Will your AI receptionist know the difference between pest types?", answer: "Yes. Your AI receptionist can discuss rats vs mice, wasps vs hornets, and understands that different pests require different urgency levels. A wasp nest above a child's bedroom is more urgent than a moth in the wardrobe. She triages accordingly." },
+    { question: "How do I generate recurring commercial contracts?", answer: "The website attracts initial enquiries. Your AI receptionist handles them professionally. You deliver excellent service. The automation system handles contract renewals and regular visit scheduling. Over time, commercial contracts become the backbone of your business." },
+    { question: "Is this BPCA or NPTA member-friendly?", answer: "Absolutely. If you're BPCA or NPTA registered, your accreditation is prominently displayed on the website and mentioned by your AI receptionist during calls. These are critical trust signals — customers actively look for qualified pest controllers." },
+    { question: "Can the system help with letting agent referrals?", answer: "Yes. Letting agents are a goldmine for pest controllers — regular call-outs across multiple properties. The website and your AI receptionist are configured to handle letting agent enquiries, and automation can manage multiple properties under one agent." },
+    { question: "How much does the system cost vs directory advertising?", answer: "Directories charge per lead (£10-30 each) and share those leads with competitors. Our system generates exclusive leads through your own channels. At £99/month for your AI receptionist, you only need 1-2 wasp nest removals to cover the cost — and those leads are exclusively yours." },
+    { question: "How quickly can I be up and running?", answer: "your AI receptionist: live within 24 hours — critical for pest control where immediate call answering wins jobs. Website: 2-4 weeks. AI Marketing: starts when your site launches. Start with your AI receptionist before wasp season and watch the difference." },
+  ],
+
+  widgetTrade: "pest control",
+};
+---
+
+<LeadGenerationLayout frontmatter={frontmatter} />

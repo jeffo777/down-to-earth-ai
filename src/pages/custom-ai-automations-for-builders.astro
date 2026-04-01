@@ -1,0 +1,42 @@
+---
+import ProductTradeLayout from '../layouts/ProductTradeLayout.astro';
+const frontmatter = {
+  title: "Custom AI Automations For Builders", metaTitle: "Custom AI Automations For Builders | Down To Earth AI", metaDescription: "Custom AI automations for building businesses. Project management, quoting, and subcontractor coordination — automated. From £297/month.", canonicalUrl: "https://downtoearthai.co.uk/custom-ai-automations-for-builders",
+  heroHeadline: "Custom AI Automations For Builders", heroSubhead: "Project quoting, subcontractor scheduling, material ordering, and client updates — building project admin that manages itself while you manage the build.", heroAIText: "Ask me how builder automations work", showHeroAI: true, showPrice: true,
+  heroPrice: "£99/month", price: "From £297/month",
+  trade: "Builders", tradeSlug: "builders", tradeAdjective: "building", productSlug: "custom-ai-automations", productName: "Custom AI Automations",
+  scenario: "\"You're running a kitchen extension. The electrician needs to come Tuesday, the plumber Wednesday, the plasterer is waiting for first fix to finish, and the customer keeps texting asking 'how's it going?' Your phone has 30 unread messages and 8 missed calls. Automations coordinate the subcontractors, update the customer with weekly progress, and manage the project timeline — so you can build.\"",
+  step1Title: "We Map Building Admin", step1Text: "Quoting, project scheduling, subcontractor coordination, material ordering, client communication — every admin process that pulls you off-site.",
+  step2Title: "We Build Project Automations", step2Text: "Quote accepted → project timeline created → subcontractors notified → materials ordered → customer updated weekly. The project manages itself.",
+  step3Title: "Build More, Admin Less", step3Text: "Run multiple projects simultaneously without drowning in scheduling, messaging, and coordination. Automations are your project manager.",
+  features: [
+    { name: "Project Timeline Management", description: "Milestones set → subcontractors scheduled → dependencies tracked. If the electrician delays, the entire timeline adjusts and everyone is notified." },
+    { name: "Subcontractor Coordination", description: "Automated notifications to subs: 'First fix ready for electrician on Tuesday'. Confirmations tracked. Replacements flagged if no response." },
+    { name: "Client Progress Updates", description: "Weekly photo updates and milestone notifications sent to customers automatically. No more 'how's it going?' texts." },
+    { name: "Material Ordering", description: "Phase-specific materials ordered at the right time. Bricks before groundworks. Joists before first fix. Timing optimised for delivery." },
+    { name: "Snag List Management", description: "Snagging items logged, assigned, and tracked to completion. Professional handover documentation generated." },
+    { name: "Multi-Project Dashboard", description: "Running three builds simultaneously? Each project tracked independently with aggregated scheduling view." },
+  ],
+  foundersNote: "Builders are project managers who also happen to build. The admin of coordinating 5-8 subcontractors, ordering materials in sequence, and keeping clients updated can consume more time than the actual building. Automations handle the coordination — you handle the construction.",
+  relatedProducts: [
+    { name: "AI Receptionist For Builders", href: "/ai-receptionist-for-builders", description: "Your AI receptionist captures enquiries while you're on site." },
+    { name: "Lead Generation Website For Builders", href: "/lead-generation-website-for-builders", description: "Generate project leads, automations manage them." },
+    { name: "Lead Generation For Builders", href: "/lead-generation-for-builders", description: "The full building lead system." },
+  ],
+  genericProductHref: "/custom-ai-automations-for-tradesmen", genericProductName: "Custom AI Automations",
+  faqs: [
+    { question: "How does subcontractor coordination work?", answer: "AI notifies subs when their phase is approaching, gets confirmations, and alerts you if anyone doesn't confirm. No chasing." },
+    { question: "Can it send client progress updates?", answer: "Yes. Weekly updates with photos and milestone status sent automatically. Clients feel informed without constant texting." },
+    { question: "How does material ordering work?", answer: "Materials for each build phase ordered at the optimal time — not too early (storage issues) and not too late (delays)." },
+    { question: "Can it handle project timeline adjustments?", answer: "Yes. If one phase delays, the entire timeline adjusts. All affected subcontractors and the customer notified automatically." },
+    { question: "Will it manage snagging?", answer: "Yes. Snag items logged during final inspection, assigned to relevant trades, and tracked to completion. Handover is clean." },
+    { question: "Can it run multiple projects?", answer: "Yes. Each project tracked independently. Aggregated view shows all active projects and upcoming milestones." },
+    { question: "How does quoting work?", answer: "AI generates detailed project quotes from your templates. Materials, labour, subcontractor costs, margins — all calculated." },
+    { question: "How much time saved?", answer: "10-20 hours per week on multi-project management. That's entire admin days reclaimed." },
+    { question: "Complicated setup?", answer: "No. We build it around your project management style." },
+    { question: "Guarantee?", answer: "30-day money back." },
+  ],
+  widgetTrade: "building", widgetGoal: "automations",
+};
+---
+<ProductTradeLayout frontmatter={frontmatter} />

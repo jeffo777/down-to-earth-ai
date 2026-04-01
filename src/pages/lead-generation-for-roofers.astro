@@ -1,0 +1,78 @@
+---
+import LeadGenerationLayout from '../layouts/LeadGenerationLayout.astro';
+
+const frontmatter = {
+  title: "Lead Generation For Roofers",
+  metaTitle: "Lead Generation For Roofers — Get More Roofing Leads | Down To Earth AI",
+  metaDescription: "A complete lead generation system for roofers. Rank for roofing searches, answer storm damage calls 24/7, and market every completed roof. 30-day guarantee.",
+  canonicalUrl: "https://downtoearthai.co.uk/lead-generation-for-roofers",
+  heroHeadline: "Lead Generation For Roofers",
+  heroSubhead: "A complete system that gets your roofing business found on Google, handles every storm-damage call while you're on the scaffolding, and turns every completed roof into marketing that brings in the next one.",
+  heroAIText: "Learn about getting more roofing leads",
+
+  problemHeadline: "You Can't Answer The Phone From A Roof",
+  problemText: "You're three storeys up, harness on, replacing ridge tiles in the wind. Your phone's ringing in your pocket but reaching for it isn't just inconvenient — it's dangerous. That call was a homeowner whose ceiling is leaking after last night's storm. They needed someone urgently. They tried you, got nothing, and called the next roofer on Google. By the time you climb down and call back, the job's gone. And the rest of the year? Feast or famine. Storm season is chaos — you're turning work away. Summer is slow — you're quoting garden rooms to fill the gaps.",
+
+  receptionistLink: "/ai-receptionist-for-roofers",
+  websiteLink: "/lead-generation-website-for-roofers",
+  marketingLink: "/ai-content-marketing-for-roofers",
+  automationsLink: "/custom-ai-automations-for-roofers",
+
+  productCards: [
+    {
+      name: "AI Receptionist (your AI receptionist)",
+      description: "You're on a scaffold — Your AI receptionist answers. Leaking roof emergency? She captures the address, the problem, and how urgent it is. Routine re-roof quote? She books the details. Every lead handled professionally.",
+      price: "£299 setup · £99/month",
+      link: "/ai-receptionist-for-roofers",
+      icon: "📞",
+    },
+    {
+      name: "Lead Generation Website",
+      description: "Pages for 'roofer near me', 'roof repair [your area]', 'flat roof [your town]', 'emergency roof leak'. Rank for every roofing search term in your coverage area.",
+      price: "From £997 one-off",
+      link: "/lead-generation-website-for-roofers",
+      icon: "🌐",
+    },
+    {
+      name: "AI Marketing",
+      description: "Drone shot of a completed slate roof? Before and after of a flat roof conversion? Photo → professional content that showcases your work across every platform.",
+      price: "£199 setup · £99/month",
+      link: "/ai-content-marketing-for-roofers",
+      icon: "📈",
+    },
+    {
+      name: "Custom AI Automations",
+      description: "Automated gutter clean reminders, roof inspection follow-ups, quote chasers for big jobs, and post-completion review requests. Keep past customers coming back.",
+      price: "Bespoke pricing",
+      link: "/custom-ai-automations-for-roofers",
+      icon: "⚙️",
+    },
+  ],
+
+  foundersNote: "Roofers have the unique problem of literally not being able to reach their phone safely during work. Every other trade can at least step away for a moment — you can't step away from a roof. The system exists because roofers lose more leads per working hour than almost any other trade, purely because of where the work happens.",
+
+  showTradeGrid: false,
+
+  faqs: [
+    { question: "How does this help during storm season?", answer: "January storms = phone ringing constantly. Your AI receptionist handles unlimited simultaneous calls — five storm damage enquiries at once isn't a problem. She captures each one, assesses urgency, and sends you prioritised details. Your website is already ranking for 'roof leak repair' and 'emergency roofer'." },
+    { question: "What kind of roofing work will this generate?", answer: "Roof repairs, re-roofs (slate, tile, flat), storm damage repair, emergency leak repair, chimney repairs, lead flashing, ridge and hip tiles, fascias/soffits/guttering, flat roof conversions, pitched roof installations, EPDM rubber roofing, GRP fibreglass roofing, commercial roofing, and roof inspections." },
+    { question: "Can the website generate leads for high-value re-roofs?", answer: "Yes. We create pages targeting 'new roof cost [your area]', 'roof replacement [town]', 're-roof quote'. These searches represent £5,000-15,000+ jobs. The website builds the trust and authority that wins premium work." },
+    { question: "How does drone photography work with AI marketing?", answer: "If you use a drone (or even just a long lens from the ground), roof completion photos make exceptional content. The AI turns them into detailed project case studies, before-and-after comparisons, and area-specific blog posts." },
+    { question: "I'm getting work but it's all small repairs — how do I get bigger jobs?", answer: "The content strategy can be weighted towards high-value terms: 'complete re-roof', 'flat-to-pitched conversion', 'commercial roofing contractor'. Position yourself as a specialist for larger projects through targeted content." },
+    { question: "Does your AI receptionist understand roofing emergencies?", answer: "Yes. She recognises 'roof leak', 'tiles blown off', 'storm damage', 'water coming through ceiling' as urgent. Emergency calls get fast-tracked with immediate priority alerts to you." },
+    { question: "Can the system help with seasonal work patterns?", answer: "Absolutely. Gutter clean reminders in autumn bring in scheduled work. Roof inspection promotions in spring generate survey leads. The content calendar keeps your business visible during quieter months." },
+    { question: "How does the quote follow-up work for big roofing jobs?", answer: "Re-roof quotes can take weeks for customers to decide. The automation system follows up at intervals you choose — keeping your proposal visible without you having to chase. Most roofers see a significant improvement in quote-to-job conversion." },
+    { question: "Will this help me get more commercial roofing work?", answer: "Yes. Commercial roofing pages target facilities managers, property management companies, and commercial landlords. Your AI receptionist handles commercial enquiries with appropriate professionalism, and AI marketing showcases your commercial portfolio." },
+    { question: "I work with a team — does this work for roofing companies?", answer: "Yes. Whether you're a solo roofer or a team of ten, the system scales. Your AI receptionist can route different types of calls to different team members, and the website can showcase your full team and capabilities." },
+    { question: "How do I get leads for guttering and fascia work?", answer: "Dedicated pages targeting 'guttering replacement near me', 'new fascias [area]', 'soffit repairs'. Guttering and fascias are consistent work with less competition than main roofing terms — easier to rank for, quicker results." },
+    { question: "What about insurance work and storm damage claims?", answer: "The website includes content about insurance-covered roof repairs, helping homeowners understand the process. Your AI receptionist can ask the right questions to identify potential insurance jobs during the first call." },
+    { question: "How much does the full system cost?", answer: "AI Receptionist: £299 setup + £99/month. Website: from £997 one-off. AI Marketing: £199 setup + £99/month. One decent roof repair per month covers everything. 30-day full money back guarantee." },
+    { question: "Can I start with just your AI receptionist during storm season?", answer: "Absolutely. Many roofers start with your AI receptionist in October/November because that's when missed calls hurt most. Then they add the website and marketing when they're ready. No commitment to buy everything at once." },
+    { question: "How quickly will I see more roofing leads?", answer: "Your AI receptionist captures leads from day one. Website traffic builds over 2-6 months depending on local competition. AI marketing compounds with every job. By your second storm season with the system, you'll see a dramatic difference." },
+  ],
+
+  widgetTrade: "roofing",
+};
+---
+
+<LeadGenerationLayout frontmatter={frontmatter} />

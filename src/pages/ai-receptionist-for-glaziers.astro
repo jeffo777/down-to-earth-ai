@@ -1,0 +1,76 @@
+---
+import ProductTradeLayout from '../layouts/ProductTradeLayout.astro';
+
+const frontmatter = {
+  title: "AI Receptionist For Glaziers",
+  metaTitle: "AI Receptionist For Glaziers — Answer Every Broken Glass Call | Down To Earth AI",
+  metaDescription: "AI receptionist for glaziers. Answers emergency boarding and glass replacement calls instantly while you're cutting glass. From £99/month. 30-day guarantee.",
+  canonicalUrl: "https://downtoearthai.co.uk/ai-receptionist-for-glaziers",
+  heroHeadline: "AI Receptionist For Glaziers",
+  heroSubhead: "Your AI receptionist answers every glass emergency — smashed windows, failed double glazing, and emergency boarding — while you're cutting, fitting, or on the road. Every pane of glass you'd miss, captured.",
+  heroAIText: "Tell me about your glazing business and I'll show you how I handle your calls",
+  showHeroAI: true, showPrice: true,
+  heroPrice: "£99/month",
+  price: "£299 setup · £99/month",
+  trade: "Glaziers", tradeSlug: "glaziers", tradeAdjective: "glazing",
+  productSlug: "ai-receptionist", productName: "AI Receptionist",
+
+  scenario: "\"It's Sunday morning. A homeowner wakes up to find their back door smashed — attempted break-in. They're shaken and need emergency boarding NOW. They Google 'emergency glazier near me' and call three numbers. You're already boarding up a shop front across town. Your phone rings, you can't answer with a sheet of glass in your hands. Job lost.\"",
+
+  step1Title: "Tell Us About Your Glazing Business",
+  step1Text: "Your services (emergency boarding, double glazing, commercial, mirrors, leaded lights), your coverage area, and whether you want your AI receptionist to handle pricing or keep it flexible.",
+  step2Title: "We Configure Your AI Receptionist For Glazing",
+  step2Text: "your AI receptionist learns glass types, frame types, and glazing terminology. She knows a smashed window after a break-in is an emergency and a misted double-glazed unit is planned work. Ready in 24 hours.",
+  step3Title: "You Handle The Glass, She Handles The Glass Calls",
+  step3Text: "Every emergency boarding call and glass replacement enquiry captured. Your AI receptionist gets the window dimensions, frame type, glass type, and urgency — sending you a complete brief to respond to.",
+
+  features: [
+    { name: "Emergency Boarding Response", description: "Smashed windows, break-in damage, storm damage — your AI receptionist treats these as urgent, captures accessibility details, and sends you a priority alert." },
+    { name: "Glass & Frame Knowledge", description: "your AI receptionist discusses toughened vs laminated, single vs double glazing, UPVC vs timber vs aluminium frames, and sealed unit failures with customers naturally." },
+    { name: "Measurement Capture", description: "She asks customers for approximate window dimensions (or offers to arrange an assessment visit), helping you prepare quotes and arrive with the right glass." },
+    { name: "Insurance Work Handling", description: "Many glazing jobs are insurance claims. Your AI receptionist captures policy details, claim references, and loss adjuster contacts where relevant." },
+    { name: "Commercial Glazing Enquiries", description: "Shop fronts, office partitions, safety glass — commercial work gets professional-grade capture with specifications and site details." },
+    { name: "24/7 Emergency Coverage", description: "Window emergencies happen at night, weekends, and holidays. Your AI receptionist is always there to take the call." },
+    { name: "Phone Answering", description: "Your AI receptionist answers glazing calls within seconds, discusses glass types, frame materials, and emergency boarding — then sends you a complete lead brief.", href: "/ai-phone-answering-service-for-glaziers" },
+    { name: "SMS Response", description: "Every text from a glazing customer gets one professional acknowledgment confirming you've received their glass emergency.", href: "/ai-sms-messaging-service-for-glaziers" },
+    { name: "WhatsApp Response", description: "Instant WhatsApp replies to glazing customers — they know you've seen their smashed window message and help is coming.", href: "/ai-whatsapp-messaging-service-for-glaziers" },
+    { name: "Email Response", description: "Professional email acknowledgment within seconds for every glazing enquiry that lands in your inbox.", href: "/ai-email-response-service-for-glaziers" },
+    { name: "Facebook Messenger", description: "Instant replies to every glazing enquiry on your Facebook page — your response badge stays at 'Usually replies instantly.'", href: "/ai-facebook-messenger-service-for-glaziers" },
+    { name: "Instagram DMs", description: "Instant replies to every glazing DM — including message requests from non-followers searching for local glaziers.", href: "/ai-instagram-messaging-service-for-glaziers" },
+    { name: "Google Business Profile", description: "Instant responses to glazing enquiries coming through Google Maps and 'glazier near me' searches.", href: "/ai-google-business-service-for-glaziers" },
+    { name: "Website Live Chat", description: "A chat widget where Your AI receptionist has real conversations about glass types, sealed units, and emergency boarding — converting frightened visitors into captured leads.", href: "/ai-website-chat-bot-for-glaziers" },
+  ],
+
+  foundersNote: "Glaziers work with their hands full — literally. You can't answer the phone while you're carrying a sheet of glass or using a glass cutter. And emergency boarding calls are the most time-sensitive in the trade. The first glazier to answer gets the job. Your AI receptionist makes sure that glazier is always you.",
+
+  relatedProducts: [
+    { name: "Lead Generation Website For Glaziers", href: "/lead-generation-website-for-glaziers", description: "Rank for 'glazier near me' and 'emergency glass replacement [your area]'." },
+    { name: "AI Marketing For Glaziers", href: "/ai-content-marketing-for-glaziers", description: "Showcase completed installations — bi-folds, skylights, shopfronts — as content that generates leads." },
+    { name: "Lead Generation For Glaziers", href: "/lead-generation-for-glaziers", description: "See how all our services work together for glaziers." },
+  ],
+
+  genericProductHref: "/ai-receptionist-for-tradesmen",
+  genericProductName: "AI Receptionist",
+
+  faqs: [
+    { question: "How does your AI receptionist handle break-in boarding calls?", answer: "With calm urgency. She captures the address, which windows/doors are damaged, security situation (are they safe?), and sends you an immediate alert. Customers are reassured help is coming." },
+    { question: "Can she discuss different glass types with customers?", answer: "Yes. Toughened, laminated, obscure, low-E, acoustic, fire-rated — your AI receptionist understands the terminology and captures the right specifications for each enquiry." },
+    { question: "Does she handle misted unit replacement enquiries?", answer: "Yes. Failed sealed units are routine but profitable work. Your AI receptionist captures how many units are affected, frame type, and approximate size — giving you everything for a quick quote." },
+    { question: "Can she handle commercial shop front glazing calls?", answer: "Yes. Shop front emergencies, office partitioning, and commercial glass replacement get professional handling with detailed specs captured." },
+    { question: "What about insurance-related glazing claims?", answer: "Your AI receptionist captures insurance company details, claim numbers, and crime references (for break-in related work). This streamlines the process for both you and the customer." },
+    { question: "Can your AI receptionist handle bi-fold and patio door enquiries?", answer: "Yes. These are high-value installations. She captures opening dimensions, material preference, and configuration details so you can prepare accurate quotes." },
+    { question: "Is she available for storm damage surges?", answer: "Yes. When a storm hits, call volume can spike dramatically. Your AI receptionist handles unlimited simultaneous calls — capturing every single one while you work through jobs systematically." },
+    { question: "Can she handle mirror and glass balustrade enquiries?", answer: "Yes. Decorative glass, mirrors, glass balustrades, splashbacks — Your AI receptionist captures dimensions, finish preferences, and installation requirements." },
+    { question: "How quickly is she set up?", answer: "24 hours. We'll Configure Your AI Receptionist with your glazing services, coverage area, and emergency response approach. She's answering calls by tomorrow." },
+    { question: "What's the guarantee?", answer: "30-day full money back — including setup fee. If Your AI receptionist isn't catching you more glazing work within a month, you get every penny refunded." },
+    { question: "What is an AI receptionist for glaziers and how does it work?", answer: "An AI receptionist for glaziers is an artificial intelligence platform that manages customer communications across nine business channels — phone calls, SMS, WhatsApp, email, website chat, Facebook Messenger, Instagram DMs, Google Business Profile messages, and missed call text-back. Using natural language processing trained on glazing terminology, your AI receptionist understands emergency boarding requests, double glazing enquiries, sealed unit replacements, and bespoke glass commissions. On phone calls and website chat, she holds detailed conversations about the glazing work needed. On messaging channels, she sends professional acknowledgments and captures lead details. The AI operates 24/7/365, ensuring your glazing business captures both emergency boarding leads and planned project enquiries at any hour." },
+    { question: "How does an AI receptionist help glaziers capture both emergency and planned work?", answer: "Glazing businesses operate across two distinct markets — high-urgency emergency boarding and considered, planned glazing projects. An AI receptionist handles both expertly. Emergency calls (smashed windows, break-ins, storm damage) receive immediate engagement and phone escalation. The AI's natural language processing detects urgency instantly and escalates within seconds. Planned project enquiries (double glazing quotes, bifold doors, conservatory roofs) receive detailed, conversational handling that captures specifications and builds trust. Across all nine channels — phone, WhatsApp, Google Business Profile, website chat, Instagram, Facebook Messenger, email, SMS, and missed call text-back — every lead type is handled appropriately. At £99/month, one additional emergency boarding job captured by the AI covers months of subscription cost." },
+    { question: "What makes an AI receptionist essential for a glazing business?", answer: "Glazing is a uniquely challenging trade for customer communications — you're often in work vans, on-site fitting glass that requires focus and steady hands, or measuring up at properties without phone signal. Meanwhile, emergency boarding calls come in at all hours, homeowners send WhatsApp photos of cracked sealed units, and Google Business messages arrive from 'glazier near me' searches. An AI receptionist ensures every one of these leads is captured professionally across all nine channels. Your AI receptionist's natural language processing understands the full glazing vocabulary — toughened, laminated, low-E, sealed units, secondary glazing, structural glass — and classifies each enquiry by type and urgency. For glazing businesses where emergency response speed directly determines who wins the job, 24/7 AI-powered coverage at £99/month is the most cost-effective competitive advantage available." },
+  ],
+
+  widgetTrade: "glazing",
+  widgetGoal: "calls",
+};
+---
+
+<ProductTradeLayout frontmatter={frontmatter} />

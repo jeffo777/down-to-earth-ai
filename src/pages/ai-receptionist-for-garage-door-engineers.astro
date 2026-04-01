@@ -1,0 +1,76 @@
+---
+import ProductTradeLayout from '../layouts/ProductTradeLayout.astro';
+
+const frontmatter = {
+  title: "AI Receptionist For Garage Door Engineers",
+  metaTitle: "AI Receptionist For Garage Door Engineers — Every Call Answered | Down To Earth AI",
+  metaDescription: "AI receptionist for garage door engineers. Answers calls about stuck doors, broken springs, and new installations while you're on a job. From £99/month.",
+  canonicalUrl: "https://downtoearthai.co.uk/ai-receptionist-for-garage-door-engineers",
+  heroHeadline: "AI Receptionist For Garage Door Engineers",
+  heroSubhead: "Your AI receptionist answers every garage door call — stuck doors, snapped springs, and new installation quotes — while you're replacing torsion springs or fitting a sectional door. Every garage door lead captured.",
+  heroAIText: "Tell me about your garage door business and I'll show you how I handle your calls",
+  showHeroAI: true, showPrice: true,
+  heroPrice: "£99/month",
+  price: "£299 setup · £99/month",
+  trade: "Garage Door Engineers", tradeSlug: "garage-door-engineers", tradeAdjective: "garage door",
+  productSlug: "ai-receptionist", productName: "AI Receptionist",
+
+  scenario: "\"You're replacing a torsion spring — the most dangerous part of a garage door. Both hands are on winding bars, under extreme tension. Your phone rings. You absolutely cannot answer it safely. It's a homeowner whose garage door is stuck wide open in the rain, car exposed, house unsecured. By the time you finish, clean up, and check your missed calls — they've already found another engineer.\"",
+
+  step1Title: "Tell Us About Your Garage Door Business",
+  step1Text: "Your services (repairs, installations, automation), the door types you work with, your coverage area, and how you'd like leads delivered.",
+  step2Title: "We Configure Your AI Receptionist For Garage Doors",
+  step2Text: "your AI receptionist learns door types (sectional, roller, up-and-over, side-hinged), mechanisms (springs, cables, operators), and urgency levels. A stuck-open door is urgent. A new door quote is planned. Live in 24 hours.",
+  step3Title: "You Fix Doors, She Fixes Your Pipeline",
+  step3Text: "Every garage door enquiry answered and captured. Emergency stuck doors get immediate alerts. New installation quotes and routine repairs are logged for your follow-up.",
+
+  features: [
+    { name: "Door Type Knowledge", description: "Sectional, roller, up-and-over, side-hinged, industrial — Your AI receptionist knows the door types and captures relevant details for each." },
+    { name: "Spring & Cable Awareness", description: "When customers describe the problem ('the cable has snapped', 'the spring broke'), your AI receptionist understands the context and flags it appropriately." },
+    { name: "Emergency Security Priority", description: "A garage door stuck open is a security risk. Your AI receptionist treats these as urgent and sends immediate alerts — the homeowner needs help fast." },
+    { name: "New Installation Lead Capture", description: "For new door installations (£800-3,000+), Your AI receptionist captures opening dimensions, current door type, preferred replacement type, and budget range." },
+    { name: "Automation Enquiry Handling", description: "Smart garage door openers, automated systems, app-controlled doors — growing demand. Your AI receptionist captures these leads with appropriate technical detail." },
+    { name: "24/7 Coverage", description: "Garage door emergencies don't wait for business hours. Your AI receptionist's there to answer whenever a door gets stuck." },
+    { name: "Phone Answering", description: "Your AI receptionist answers garage door calls within seconds, discusses door types, motor faults, and spring breakages — then sends you a complete lead brief.", href: "/ai-phone-answering-service-for-garage-door-engineers" },
+    { name: "SMS Response", description: "Every text from a garage door customer gets one professional acknowledgment confirming you've received their door repair enquiry.", href: "/ai-sms-messaging-service-for-garage-door-engineers" },
+    { name: "WhatsApp Response", description: "Instant WhatsApp replies to garage door customers — they know you've seen their stuck door message and will be in touch.", href: "/ai-whatsapp-messaging-service-for-garage-door-engineers" },
+    { name: "Email Response", description: "Professional email acknowledgment within seconds for every garage door enquiry that lands in your inbox.", href: "/ai-email-response-service-for-garage-door-engineers" },
+    { name: "Facebook Messenger", description: "Instant replies to every garage door enquiry on your Facebook page — your response badge stays at 'Usually replies instantly.'", href: "/ai-facebook-messenger-service-for-garage-door-engineers" },
+    { name: "Instagram DMs", description: "Instant replies to every garage door DM — including message requests from non-followers searching for local garage door engineers.", href: "/ai-instagram-messaging-service-for-garage-door-engineers" },
+    { name: "Google Business Profile", description: "Instant responses to garage door enquiries coming through Google Maps and 'garage door repair near me' searches.", href: "/ai-google-business-service-for-garage-door-engineers" },
+    { name: "Website Live Chat", description: "A chat widget where Your AI receptionist has real conversations about stuck doors, spring replacements, and new installations — converting visitors into captured leads.", href: "/ai-website-chat-bot-for-garage-door-engineers" },
+  ],
+
+  foundersNote: "Garage door engineering is a niche where missing a call hurts more than most trades. There aren't many of you, so every missed call represents a significant percentage of available work in your area. And the safety issue is real — you simply cannot answer the phone while working with torsion springs under tension. Your AI receptionist solves this perfectly.",
+
+  relatedProducts: [
+    { name: "Lead Generation Website For Garage Door Engineers", href: "/lead-generation-website-for-garage-door-engineers", description: "Rank for 'garage door repair near me' and 'new garage door [your area]'." },
+    { name: "AI Marketing For Garage Door Engineers", href: "/ai-content-marketing-for-garage-door-engineers", description: "Before/after installations turned into content that showcases your work." },
+    { name: "Lead Generation For Garage Door Engineers", href: "/lead-generation-for-garage-door-engineers", description: "See the complete garage door lead generation system." },
+  ],
+
+  genericProductHref: "/ai-receptionist-for-tradesmen",
+  genericProductName: "AI Receptionist",
+
+  faqs: [
+    { question: "Does your AI receptionist understand garage door mechanisms?", answer: "Yes. Torsion springs, extension springs, cables, operators, tracks, and panels — she understands the components and captures meaningful diagnostic information." },
+    { question: "How does she handle 'my door is stuck open' emergencies?", answer: "As urgent — the property isn't secure. She captures the address, door type, what happened, and sends you an immediate priority alert. The customer is reassured help is coming." },
+    { question: "Can she handle new installation enquiries properly?", answer: "Yes. She captures opening dimensions, current door type, preferred new door (sectional, roller, etc.), material preference, automation requirements, and budget range." },
+    { question: "What about commercial roller shutter enquiries?", answer: "Yes. Shop shutters, warehouse doors, loading bay doors — commercial work gets professional handling with specifications and access details captured." },
+    { question: "Can she differentiate between manual and electric door enquiries?", answer: "Yes. She asks whether the current door is manual or electric, and for electric doors, captures the brand and nature of the fault. This helps you arrive with the right parts." },
+    { question: "Does she handle after-hours calls?", answer: "Yes. A stuck garage door on a Saturday evening is still a security issue. Your AI receptionist captures the call 24/7 and can communicate your out-of-hours rates." },
+    { question: "Can she handle smart garage door enquiries?", answer: "Yes. App-controlled doors, WiFi-enabled openers, integration with smart home systems — she captures the tech requirements and customer preferences." },
+    { question: "What details does she capture for repair calls?", answer: "Door type, age (if known), specific problem, when it started, unusual noises, and what they've already tried. You arrive prepared rather than diagnosing blind." },
+    { question: "How quickly is she set up?", answer: "24 hours. Tell us about your garage door services and area coverage. Your AI receptionist is catching your calls by tomorrow." },
+    { question: "What's the guarantee?", answer: "30-day full refund including setup fee. If your AI receptionist doesn't work for your garage door business — for any reason — you get every penny back." },
+    { question: "What is an AI receptionist for garage door engineers and how does it work?", answer: "An AI receptionist for garage door engineers is an artificial intelligence system that manages customer communications across nine business channels — phone calls, SMS, WhatsApp, email, website chat, Facebook Messenger, Instagram DMs, Google Business Profile messages, and missed call text-back. Using natural language processing trained on garage door terminology, your AI receptionist understands broken spring emergencies, motor replacements, new door installations, automation upgrades, and security concerns about doors stuck open. On phone calls and website chat, she holds detailed conversations about the door problem or project. On messaging channels, she sends professional acknowledgments and captures door type, brand, and fault description. The AI operates 24/7/365, ensuring your garage door business captures every lead across every channel." },
+    { question: "How does an AI receptionist help garage door engineers capture more installation and repair work?", answer: "Garage door engineers split their time between installations (1-4 hours each) and repairs (30-90 minutes each). During every job, you're unavailable to answer calls, check WhatsApp, or respond to Google Business messages. Without an AI receptionist, those leads go to the next engineer who answers. Your AI receptionist captures every lead across all nine channels simultaneously — phone calls about jammed doors, WhatsApp photos of broken springs, Google Business messages from 'garage door repair near me' searches, and website chat enquiries about new installations. The AI's natural language processing recognises product types (Hormann, SWS, Garador, SeceuroGlide), fault descriptions, and urgency levels. Doors stuck open leaving properties insecure are escalated immediately. At £99/month, one additional repair or installation at £150-4,000 per month covers the entire annual subscription many times over." },
+    { question: "What makes an AI receptionist better than voicemail for a garage door business?", answer: "Garage door customers rarely leave voicemails — they call the next engineer listed on Google. An AI receptionist eliminates voicemail entirely across all nine channels. On phone, Your AI receptionist answers instantly with a professional, garage-door-aware greeting. On WhatsApp and Facebook Messenger, she responds to photos and descriptions of door problems within seconds. On Google Business Profile, she captures high-intent leads from 'garage door engineer near me' searches before competitors respond. Her natural language processing understands the full garage door vocabulary — torsion springs, sectional doors, roller shutters, up-and-over, operators, tracks, cables, remote controls — and classifies every lead by urgency and type. Emergency situations receive immediate phone escalation. At £99/month flat rate with unlimited interactions, the AI provides consistent, professional customer engagement that voicemail simply cannot." },
+  ],
+
+  widgetTrade: "garage door",
+  widgetGoal: "calls",
+};
+---
+
+<ProductTradeLayout frontmatter={frontmatter} />

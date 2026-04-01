@@ -1,0 +1,78 @@
+---
+import LeadGenerationLayout from '../layouts/LeadGenerationLayout.astro';
+
+const frontmatter = {
+  title: "Lead Generation For Electricians",
+  metaTitle: "Lead Generation For Electricians — Get More Electrical Leads | Down To Earth AI",
+  metaDescription: "A complete lead generation system for electricians. Website, AI receptionist, and automated marketing working together to fill your diary. 30-day money back guarantee.",
+  canonicalUrl: "https://downtoearthai.co.uk/lead-generation-for-electricians",
+  heroHeadline: "Lead Generation For Electricians",
+  heroSubhead: "A complete system that gets your electrical business found on Google, answers every enquiry while you're on a rewire, and turns every certificate into content that brings in the next job.",
+  heroAIText: "Learn about getting more electrical leads",
+
+  problemHeadline: "The Electrician's Dilemma",
+  problemText: "You're halfway through a consumer unit upgrade, isolating circuits, concentrating on not making a mistake that could kill someone. Your phone buzzes. You can't answer — and you shouldn't. By the time you're done and cleaned up, that customer has found another sparky who picked up. The irony is brutal: the better you are at your job, the harder it is to answer the phone. And every unanswered call is a rewire, an EICR, or a landlord certificate that goes to someone else.",
+
+  receptionistLink: "/ai-receptionist-for-electricians",
+  websiteLink: "/lead-generation-website-for-electricians",
+  marketingLink: "/ai-content-marketing-for-electricians",
+  automationsLink: "/custom-ai-automations-for-electricians",
+
+  productCards: [
+    {
+      name: "AI Receptionist (your AI receptionist)",
+      description: "While you're at the fuseboard, Your AI receptionist answers the phone. She knows the difference between an emergency power loss and a rewire quote. Lead captured, customer reassured, details sent to you.",
+      price: "£299 setup · £99/month",
+      link: "/ai-receptionist-for-electricians",
+      icon: "📞",
+    },
+    {
+      name: "Lead Generation Website",
+      description: "A website targeting searches like 'electrician near me', 'fuseboard upgrade [your area]', 'EICR certificate [your town]'. Every service, every area, every page optimised to rank.",
+      price: "From £997 one-off",
+      link: "/lead-generation-website-for-electricians",
+      icon: "🌐",
+    },
+    {
+      name: "AI Marketing",
+      description: "Finished a rewire? Photo of the DB board → blog post about rewiring in your area, social content showing your work, Google update. Your craftsmanship becomes your marketing.",
+      price: "£199 setup · £99/month",
+      link: "/ai-content-marketing-for-electricians",
+      icon: "📈",
+    },
+    {
+      name: "Custom AI Automations",
+      description: "Automated EICR reminders to previous customers, quote follow-ups, certificate delivery, and review requests after every job. Admin that handles itself.",
+      price: "Bespoke pricing",
+      link: "/custom-ai-automations-for-electricians",
+      icon: "⚙️",
+    },
+  ],
+
+  foundersNote: "Electricians have it worse than most trades when it comes to answering phones. You literally cannot stop what you're doing — it's dangerous. The work demands total concentration. But the phone keeps ringing, and every ring is £200, £500, sometimes £2,000 in work walking to someone else. This system was built to fix exactly that disconnect.",
+
+  showTradeGrid: false,
+
+  faqs: [
+    { question: "What kind of electrical work will this generate?", answer: "The full range — rewires, fuseboard/consumer unit upgrades, EICRs, landlord certificates, PAT testing, new builds, extensions, home automation, outdoor lighting, commercial electrical work. We target every search term that brings in paying customers." },
+    { question: "Does your AI receptionist understand electrical terminology?", answer: "Yes. Your AI receptionist is configured specifically for electricians. She knows what a consumer unit upgrade is, understands EICR requirements, and can handle conversations about Part P compliance, BS 7671, and certification — without confusing your customers." },
+    { question: "Can the system generate EICR leads specifically?", answer: "Absolutely. We create dedicated pages targeting 'EICR certificate [your area]', 'electrical inspection report [your town]', 'landlord electrical safety certificate [your location]'. These are high-value, recurring leads — especially from letting agents and landlords." },
+    { question: "How does AI marketing work for electrical jobs?", answer: "After completing a rewire or installation, take a photo of the DB board or finished work. AI generates a blog post like 'Full Rewire in [Your Area] — Before & After', plus social content and a Google update. Every job builds your online presence." },
+    { question: "I mostly get work through word of mouth — do I need this?", answer: "Word of mouth is brilliant — but it's unpredictable. This system doesn't replace it, it adds a consistent, controllable channel on top. When word of mouth goes quiet (and it always does eventually), your website is still generating leads." },
+    { question: "What if I only cover a small area?", answer: "That's actually ideal for local SEO. If you're an electrician in a specific town or city, there's less competition for those search terms. We'll build pages targeting your exact service area and you'll see results faster than someone targeting all of London." },
+    { question: "Can I automate EICR reminders to previous customers?", answer: "Yes — that's one of our most popular automations for electricians. When a certificate is due for renewal, the system automatically emails the customer reminding them to rebook. Recurring revenue on autopilot." },
+    { question: "How quickly will I see more electrical leads?", answer: "Your AI receptionist captures leads from day one. Website traffic builds over 2-6 months. AI marketing compounds with every job. By month 6, most electricians see a significant uplift in inbound enquiries from Google." },
+    { question: "Can the website target Part P and building regulations content?", answer: "Yes. Educational pages about Part P regulations, BS 7671 requirements, and building control notifications bring in homeowners who want to understand what's required — and then call a qualified electrician to do the work properly." },
+    { question: "What about solar panel and EV charger leads?", answer: "These are growing markets with premium pricing. We create pages targeting 'EV charger installation [area]', 'solar panel electrician [town]', and 'domestic EV charging point'. Early movers in these markets dominate local search results." },
+    { question: "Can the system help me target smart home installation work?", answer: "Yes. Smart lighting, smart switches, home automation wiring — these are premium jobs. Content targeting tech-savvy homeowners positions you as the modern electrician who understands both traditional wiring and smart technology." },
+    { question: "How does your AI receptionist handle emergency power loss calls?", answer: "Complete power loss is treated as urgent. Your AI receptionist captures the situation — partial outage, total outage, tripped RCD — sends you an immediate priority alert, and reassures the customer that help is on the way." },
+    { question: "Can I target commercial electrical work?", answer: "Yes. Commercial rewires, three-phase installations, emergency lighting, fire alarm testing, and periodic inspections are all high-value. The website targets commercial search terms and Your AI receptionist handles commercial enquiries with appropriate professionalism." },
+    { question: "Is my customer data secure?", answer: "Yes. Fully encrypted, fully GDPR compliant. Your customer database is yours — we never share it with competitors, other electricians, or third parties. Your data stays your data." },
+    { question: "How much does the system cost vs what I'm losing?", answer: "If you miss just 2 calls per week at an average of £300 per job, that's £2,400/month in lost revenue. The entire system costs roughly £198/month to run. The maths isn't even close — you're almost certainly losing more in missed calls than the system costs." },
+  ],
+
+  widgetTrade: "electrical",
+};
+---
+
+<LeadGenerationLayout frontmatter={frontmatter} />

@@ -1,0 +1,78 @@
+---
+import LeadGenerationLayout from '../layouts/LeadGenerationLayout.astro';
+
+const frontmatter = {
+  title: "Lead Generation For Plumbers",
+  metaTitle: "Lead Generation For Plumbers — Get More Plumbing Leads | Down To Earth AI",
+  metaDescription: "A complete lead generation system for plumbers. Website that ranks on Google, AI receptionist that answers every call, and marketing that runs itself. 30-day guarantee.",
+  canonicalUrl: "https://downtoearthai.co.uk/lead-generation-for-plumbers",
+  heroHeadline: "Lead Generation For Plumbers",
+  heroSubhead: "A complete system that gets your plumbing business found on Google, answers every call while you're under the sink, and turns every finished job into your next lead.",
+  heroAIText: "Learn about getting more plumbing leads",
+
+  problemHeadline: "Sound Familiar?",
+  problemText: "You're halfway through a boiler install, phone's ringing in your pocket. Someone's got a burst pipe and they need a plumber NOW. By the time you finish and call back, they've already found someone on Google who answered first. Next week, you're light on work. You put a post on Facebook, refresh Checkatrade, maybe drop a card through a few doors. Some months you're turning work away. Some months you're wondering whether to take a job two hours away because nothing local has come in. That's not a business — that's a lottery.",
+
+  receptionistLink: "/ai-receptionist-for-plumbers",
+  websiteLink: "/lead-generation-website-for-plumbers",
+  marketingLink: "/ai-content-marketing-for-plumbers",
+  automationsLink: "/custom-ai-automations-for-plumbers",
+
+  productCards: [
+    {
+      name: "AI Receptionist (your AI receptionist)",
+      description: "While you're elbow-deep in a boiler repair, Your AI receptionist answers the call. She knows the difference between a burst pipe emergency and a bathroom refit quote. Every lead captured, qualified, and sent to you.",
+      price: "£299 setup · £99/month",
+      link: "/ai-receptionist-for-plumbers",
+      icon: "📞",
+    },
+    {
+      name: "Lead Generation Website",
+      description: "A custom plumbing website with pages targeting every service in every area you cover. 'Emergency plumber in Leeds', 'Boiler installation Bradford' — you rank for the searches that matter.",
+      price: "From £997 one-off",
+      link: "/lead-generation-website-for-plumbers",
+      icon: "🌐",
+    },
+    {
+      name: "AI Marketing",
+      description: "Finish a boiler install? Take a photo. AI turns it into a blog post about boiler installations in your area, plus social media content and a Google update. Every job feeds the flywheel.",
+      price: "£199 setup · £99/month",
+      link: "/ai-content-marketing-for-plumbers",
+      icon: "📈",
+    },
+    {
+      name: "Custom AI Automations",
+      description: "Automated quote follow-ups, invoice reminders after you've fixed someone's tap, review requests, and job scheduling. The paperwork runs itself.",
+      price: "Bespoke pricing",
+      link: "/custom-ai-automations-for-plumbers",
+      icon: "⚙️",
+    },
+  ],
+
+  foundersNote: "My mate Dave's a plumber. Best one I know. He lost three jobs in one week because he was on jobs and couldn't answer his phone. Three families who needed a plumber, rang Dave's number, got nothing, and called someone else. That's what started all of this. Dave doesn't need a better website — he needs a system that works while he works. That's what we built.",
+
+  showTradeGrid: false,
+
+  faqs: [
+    { question: "How does this get me more plumbing leads?", answer: "Your website ranks on Google for searches like 'plumber near me', 'boiler repair [your area]', and 'emergency plumber [your town]'. When someone calls, Your AI receptionist answers instantly — even if you're mid-job. Every completed job creates new content that ranks for more searches. The system compounds over time." },
+    { question: "What kind of plumbing work does this generate?", answer: "Everything from emergency call-outs (burst pipes, blocked drains, no hot water) to planned work (bathroom renovations, boiler installations, central heading systems). The website targets the full range of plumbing services in your area." },
+    { question: "How does your AI receptionist handle plumbing emergencies?", answer: "your AI receptionist recognises urgency cues — 'burst pipe', 'flooding', 'no hot water'. She captures the details quickly, sends you an immediate alert, and reassures the customer that help is on the way. Emergency leads get prioritised in your notifications." },
+    { question: "Will my website rank for my specific area?", answer: "Yes. We build individual pages for every service in every area you cover. If you're a plumber in Leeds who also covers Bradford and Harrogate, you get pages targeting all three — for every service you offer." },
+    { question: "How is this different from Checkatrade or MyBuilder?", answer: "On Checkatrade, you share leads with other plumbers — you're competing for every job. Our system generates exclusive leads through your own website and phone number. Customers are calling you specifically because they found your business, not pulling your name from a list." },
+    { question: "What does it cost to run the full system?", answer: "AI Receptionist: £299 setup + £99/month. Website: from £997 one-off. AI Marketing: £199 setup + £99/month. That's roughly £1,495 upfront and £198/month. Most plumbers make that back with one or two boiler installs." },
+    { question: "I'm already busy — do I need more leads?", answer: "If you're turning work away already, this system helps you be selective — take better-paying jobs, focus on the work you enjoy, and build a waiting list that smooths out the quiet months. Consistent leads mean consistent income." },
+    { question: "Can I start with just the AI receptionist?", answer: "Absolutely. Most plumbers start with your AI receptionist because the results are immediate — she's answering calls within 24 hours. Then they add a website, then marketing. Build at your own pace." },
+    { question: "Does your AI receptionist understand plumbing terminology?", answer: "Yes. She knows the difference between a combi and a system boiler, understands what an unvented cylinder is, can discuss power flushing, and communicates competently about plumbing work. Customers feel like they're dealing with a professional operation." },
+    { question: "Can the website generate bathroom renovation leads?", answer: "Yes. Bathroom renovations are high-value plumbing jobs (£3,000-10,000+). We create dedicated pages targeting 'bathroom fitter [your area]', 'bathroom renovation [town]', 'bathroom installer near me'. These attract customers planning premium work." },
+    { question: "How does the review system help plumbers?", answer: "After every job, Your AI receptionist sends the customer a review request. Plumbing reviews mentioning specific work — 'fitted a new boiler', 'fixed a burst pipe within an hour' — are incredibly powerful for Google rankings and customer trust." },
+    { question: "Can your AI receptionist handle out-of-hours emergency calls?", answer: "Yes. Many plumbers charge higher rates for out-of-hours work. Your AI receptionist can communicate your emergency rates, capture the job, and send you priority alerts whether it's 6am or midnight." },
+    { question: "How does this help with Gas Safe and plumbing certification work?", answer: "If you're Gas Safe registered, Your AI receptionist can discuss your qualifications. The website highlights your accreditations on every page. Content about gas safety certificates and landlord requirements generates high-value recurring work." },
+    { question: "What if I want to grow and take on an apprentice?", answer: "The system scales with you. As you grow, Your AI receptionist can route different types of work to different team members. Your website expands to cover new areas. The flywheel gets stronger as your capacity increases." },
+    { question: "How quickly will I see results?", answer: "Your AI receptionist captures leads from day one — she's live within 24 hours. Website traffic builds over 2-6 months. AI marketing compounds with every job. Most plumbers see a noticeable difference within the first month (from your AI receptionist alone) and significant growth by month 6 (website + marketing combined)." },
+  ],
+
+  widgetTrade: "plumbing",
+};
+---
+
+<LeadGenerationLayout frontmatter={frontmatter} />

@@ -1,0 +1,121 @@
+---
+/**
+ * CTAButton.astro — Primary call-to-action button
+ * CTA always links to /get-started unless overridden.
+ */
+import GuaranteeBadge from './GuaranteeBadge.astro';
+
+interface Props {
+  buttonText?: string;
+  buttonLink?: string;
+  showGuarantee?: boolean;
+  showPrice?: boolean;
+  priceText?: string;
+  size?: 'default' | 'large';
+  guaranteeText?: string;
+  showJeffLine?: boolean;
+}
+
+const {
+  buttonText = 'Get Started',
+  buttonLink = '/get-started',
+  showGuarantee = false,
+  showPrice = false,
+  priceText = '',
+  size = 'default',
+  guaranteeText,
+  showJeffLine = true,
+} = Astro.props;
+---
+
+<div class="cta-wrapper">
+  <a
+    href={buttonLink}
+    class:list={['cta-btn', size === 'large' && 'cta-btn--large']}
+  >
+    {buttonText}
+  </a>
+  {showPrice && priceText && (
+    <p class="cta-price">{priceText}</p>
+  )}
+  {showJeffLine && (
+    <p class="cta-jeff-line">15 minute chat with Jeff. No obligation.</p>
+  )}
+  {showGuarantee && (
+    <div class="cta-guarantee">
+      <GuaranteeBadge guaranteeText={guaranteeText} />
+    </div>
+  )}
+</div>
+
+<style>
+  .cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 767px) {
+    .cta-wrapper { width: 100%; }
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    min-width: 200px;
+    min-height: 44px;
+    background: var(--color-accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    transition: background 150ms, transform 150ms, box-shadow 150ms;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+  }
+
+  @media (max-width: 767px) {
+    .cta-btn { width: 100%; }
+  }
+
+  .cta-btn:hover {
+    background: var(--color-accent-hover);
+    color: #fff;
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(232, 145, 58, 0.25);
+  }
+
+  .cta-btn:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  .cta-btn--large {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    min-width: 240px;
+    border-radius: 0.875rem;
+  }
+
+  .cta-price {
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    text-align: center;
+  }
+
+  .cta-jeff-line {
+    color: var(--color-text-secondary);
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .cta-guarantee {
+    display: flex;
+    justify-content: center;
+  }
+</style>

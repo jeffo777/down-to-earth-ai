@@ -1,0 +1,61 @@
+---
+import ProductMasterLayout from '../layouts/ProductMasterLayout.astro';
+
+const frontmatter = {
+  title: "AI Marketing For Tradesmen",
+  metaTitle: "AI Marketing For Tradesmen | Turn Completed Jobs Into Leads — Down To Earth AI",
+  metaDescription: "AI marketing for tradesmen. Your completed projects become blog posts, social media content, and Google updates — automatically. Two services, one photo. From £99/month.",
+  canonicalUrl: "https://downtoearthai.co.uk/ai-marketing-for-tradesmen",
+  heroHeadline: "Your Finished Jobs Are Your Best Marketing",
+  heroSubhead: "Send us a photo of your completed work. Our AI turns it into SEO-ranking blog content AND scroll-stopping social media posts — all within minutes. Two marketing services powered by one simple photo.",
+  heroAIText: "Learn about AI marketing for tradesmen",
+  showHeroAI: true,
+  showPrice: true,
+  heroPrice: "£99/month",
+  price: "£199 setup · £99/month",
+  productSlug: "ai-marketing",
+  productName: "AI Marketing",
+
+  step1Title: "Finish A Job. Take A Photo.",
+  step1Text: "You've just rewired a kitchen, fixed a boiler, or fitted a new lock. Take a quick photo of the finished work. That's all you need to do.",
+  step2Title: "Send It To Us",
+  step2Text: "WhatsApp, text, email — however is easiest. Send the photo and a one-line description. 'Boiler install, Headingley'. Done.",
+  step3Title: "AI Creates Your Marketing",
+  step3Text: "Within minutes, AI generates SEO-optimised blog posts for your website AND ready-to-post social media content for Instagram, Facebook, and LinkedIn. Two marketing channels from one photo.",
+
+  features: [
+    { name: "AI Content Marketing", description: "Every completed job becomes a detailed, SEO-optimised blog post on your website — building Google rankings and attracting local search traffic month after month.", href: "/ai-content-marketing-for-tradesmen" },
+    { name: "AI Social Media Marketing", description: "Every completed job becomes scroll-stopping social media content for Instagram, Facebook, and LinkedIn — with before/after carousels, professional captions, and strategic hashtags.", href: "/ai-social-media-marketing-for-tradesmen" },
+    { name: "Google Business Profile Updates", description: "Regular posts to your Google Business Profile keep your listing active, fresh, and ranking higher in local search results." },
+    { name: "Before & After Galleries", description: "AI organises your job photos into professional before-and-after galleries that showcase your quality across both website and social channels." },
+    { name: "Review Request Automation", description: "After every job, automatically send a personalised review request to your customer — building your reputation on autopilot." },
+    { name: "Content Calendar", description: "AI plans and schedules your content across blog and social channels so there's always something fresh going out — even when you're too busy to think about marketing." },
+    { name: "Local SEO Boost", description: "Every piece of content — blog post, social update, Google post — targets your trade + your area, building a web of local search authority over time." },
+  ],
+
+  foundersNote: "Tradesmen do incredible work every single day — and nobody sees it. A kitchen rewire, a perfect boiler install, a lock fitted in under ten minutes. This work deserves to be shown off. But who has time to write blog posts AND manage social media after a full day on the tools? That's why we built two AI marketing services — so your work markets itself across every channel.",
+
+  relatedProducts: [
+    { name: "AI Receptionist (your AI receptionist)", href: "/ai-receptionist-for-tradesmen", description: "Marketing brings the leads in. Your AI receptionist answers them. A complete growth system." },
+    { name: "Lead Generation Websites", href: "/lead-generation-websites-for-tradesmen", description: "The blog posts and content need somewhere to live — your lead generation website." },
+    { name: "Custom AI Automations", href: "/custom-ai-automations-for-tradesmen", description: "Automate follow-ups, invoicing, and review management alongside your marketing." },
+  ],
+
+  faqs: [
+    { question: "What's the difference between AI Content Marketing and AI Social Media Marketing?", answer: "Content marketing creates SEO-optimised blog posts for your website that rank on Google and attract search traffic over time. Social media marketing creates posts for Instagram, Facebook, and LinkedIn that generate immediate engagement and showcase your work visually. Both use the same source — your completed job photos — but serve completely different purposes. Most tradesmen use both." },
+    { question: "Do I need to use both services?", answer: "You can use either one independently, but they work best together. Content marketing builds long-term Google rankings. Social media marketing generates immediate visibility and social proof. Together, they cover every marketing channel from a single photo." },
+    { question: "How much effort does this take from me?", answer: "60 seconds per job. Take photos of the finished work, send them via WhatsApp with a couple of lines about what you did. That's it. AI handles everything else — blog posts, social media, Google updates." },
+    { question: "How quickly is the content created?", answer: "Typically within 30 minutes of receiving your photo and brief description. Blog posts go live on your website. Social media content is queued for posting or sent to you for approval — your choice." },
+    { question: "Can I approve content before it goes live?", answer: "Yes. You can choose to have everything auto-published or review each piece before it goes out. Most tradesmen start with approval mode and switch to auto once they're confident in the quality." },
+    { question: "Does this actually help with Google rankings?", answer: "Absolutely. Regular, fresh, locally-targeted content is one of the strongest signals Google uses to rank local businesses. Each blog post is another page targeting a specific search term in your area. Combined with an active social media presence, this compounds dramatically." },
+    { question: "What if I don't have a website?", answer: "We'll build you one. Our lead generation websites are designed to work perfectly with AI marketing — the blog posts feed directly into your site, building authority from day one." },
+    { question: "How is this different from hiring a marketing agency?", answer: "A marketing agency costs £500–2,000/month, needs constant briefing, and rarely understands your trade. Our AI marketing costs £99/month, works from a single photo, and generates content across all channels instantly. And it never takes a holiday." },
+    { question: "What's the guarantee?", answer: "30-day full money back including setup fee. If the content quality isn't up to standard or you're not satisfied, full refund. No questions, no hassle." },
+  ],
+
+  widgetTrade: "",
+  widgetGoal: "marketing",
+};
+---
+
+<ProductMasterLayout frontmatter={frontmatter} />

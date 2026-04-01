@@ -1,0 +1,404 @@
+---
+/**
+ * HeroJaina.astro — Stacked AI receptionist hero section
+ * Jaina headshot with CSS 3D "head turn" animation on page load.
+ * Falls back to SVG icon if image isn't available.
+ */
+interface Props {
+  showHeroAI?: boolean;
+  heroAIText?: string;
+  heroGreeting?: string;
+  heroPrice?: string;
+}
+
+const { showHeroAI = true, heroAIText = 'Tell me about your business and I\'ll show you how I handle your calls', heroGreeting = 'Questions? Chat with me 👋', heroPrice = '' } = Astro.props;
+---
+
+{showHeroAI && (
+  <div class="hero-jaina" id="hero-jaina-section">
+    <div class="hero-jaina__container">
+      <!-- Jaina Visual with 3D rotation -->
+      <div class="hero-jaina__visual">
+        <div class="hero-jaina__avatar-wrap">
+          <img
+            src="/assets/images/jaina-headshot.png"
+            alt="Jaina, your AI receptionist"
+            class="hero-jaina__avatar-img"
+            loading="eager"
+            decoding="async"
+          />
+          <div class="hero-jaina__avatar-glow"></div>
+        </div>
+      </div>
+
+      <!-- CTA Text + Buttons -->
+      <div class="hero-jaina__cta-area">
+        <p class="hero-jaina__greeting">{heroGreeting}</p>
+        <p class="hero-jaina__text">{heroAIText}</p>
+        <div class="hero-jaina__buttons">
+          <!-- TODO: Replace with GHL chat widget integration -->
+          <button type="button" class="hero-jaina__btn hero-jaina__btn--chat" id="hero-jaina-chat-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Chat with me
+          </button>
+          <!-- TODO: Replace with GHL voice AI integration -->
+          <button type="button" class="hero-jaina__btn hero-jaina__btn--call" id="hero-jaina-call-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call me
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Placeholder Popup -->
+    <div class="jaina-popup" id="jaina-chat-popup" aria-hidden="true">
+      <div class="jaina-popup__overlay" data-close-popup></div>
+      <div class="jaina-popup__content">
+        <button class="jaina-popup__close" data-close-popup aria-label="Close">&times;</button>
+        <div class="jaina-popup__avatar-small">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <p class="jaina-popup__title">Chat with me</p>
+        <p class="jaina-popup__text">Our chat is being set up and will be live soon. In the meantime, get started with a quick call with Jeff.</p>
+        <!-- TODO: Replace this entire popup with GHL chat widget integration -->
+        <a href="/get-started" class="jaina-popup__btn">Get Started →</a>
+      </div>
+    </div>
+
+    <!-- Call Placeholder Popup -->
+    <div class="jaina-popup" id="jaina-call-popup" aria-hidden="true">
+      <div class="jaina-popup__overlay" data-close-popup></div>
+      <div class="jaina-popup__content">
+        <button class="jaina-popup__close" data-close-popup aria-label="Close">&times;</button>
+        <div class="jaina-popup__avatar-small">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <p class="jaina-popup__title">Call me</p>
+        <p class="jaina-popup__text">Our voice line is being configured and will be live soon. In the meantime, get started with a quick call with Jeff.</p>
+        <!-- TODO: Replace this entire popup with GHL voice AI integration -->
+        <a href="/get-started" class="jaina-popup__btn">Get Started →</a>
+      </div>
+    </div>
+  </div>
+)}
+
+<style>
+  .hero-jaina__container {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .hero-jaina__container {
+      padding: 0 2rem;
+    }
+  }
+
+  /* Visual Area — stacked & centered */
+  .hero-jaina__visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  /* Avatar with 3D head-turn animation */
+  .hero-jaina__avatar-wrap {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    perspective: 800px;
+  }
+
+  @media (min-width: 768px) {
+    .hero-jaina__avatar-wrap {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-jaina__avatar-wrap {
+      width: 240px;
+      height: 240px;
+    }
+  }
+
+  .hero-jaina__avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    position: relative;
+    z-index: 2;
+    animation: jaina-head-turn 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    will-change: transform;
+  }
+
+  /* Soft glow behind the image */
+  .hero-jaina__avatar-glow {
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, transparent 70%);
+    z-index: 1;
+    animation: jaina-glow-pulse 3s ease-in-out infinite;
+  }
+
+  /* 3D Head Turn — starts rotated to the side, turns to face viewer */
+  @keyframes jaina-head-turn {
+    0% {
+      transform: rotateY(35deg) scale(0.95);
+      opacity: 0.7;
+    }
+    60% {
+      transform: rotateY(-3deg) scale(1.01);
+      opacity: 1;
+    }
+    100% {
+      transform: rotateY(0deg) scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes jaina-glow-pulse {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.03); }
+  }
+
+  /* CTA Area — centered underneath Jaina */
+  .hero-jaina__cta-area {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .hero-jaina__greeting {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .hero-jaina__text {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.25rem;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+  }
+
+  .hero-jaina__buttons {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-jaina__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 0.625rem;
+    text-decoration: none;
+    transition: all 150ms;
+    min-height: 44px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .hero-jaina__btn--chat {
+    background: var(--color-accent);
+    color: #fff;
+    border: none;
+  }
+
+  .hero-jaina__btn--chat:hover {
+    background: var(--color-accent-hover);
+    color: #fff;
+    transform: scale(1.02);
+  }
+
+  .hero-jaina__btn--call {
+    background: transparent;
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border-subtle);
+  }
+
+  .hero-jaina__btn--call:hover {
+    border-color: var(--color-text-muted);
+    color: var(--color-text-primary);
+  }
+
+  /* Price line */
+  .hero-jaina__price {
+    margin-top: 1.25rem;
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+
+  /* Guarantee badge — prominent in hero */
+  .hero-jaina__guarantee {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    color: var(--color-trust);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  /* Placeholder Popups */
+  .jaina-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .jaina-popup.active {
+    display: flex;
+  }
+
+  .jaina-popup__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+  }
+
+  .jaina-popup__content {
+    position: relative;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 1.25rem;
+    padding: 2.5rem 2rem;
+    max-width: 380px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+  }
+
+  .jaina-popup__close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: color 150ms, background 150ms;
+  }
+
+  .jaina-popup__close:hover {
+    color: var(--color-text-primary);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .jaina-popup__avatar-small {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, var(--color-secondary), var(--color-primary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    margin: 0 auto 1rem;
+  }
+
+  .jaina-popup__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .jaina-popup__text {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .jaina-popup__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    background: var(--color-accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    transition: background 150ms, transform 150ms;
+    min-width: 160px;
+  }
+
+  .jaina-popup__btn:hover {
+    background: var(--color-accent-hover);
+    color: #fff;
+    transform: scale(1.02);
+  }
+</style>
+
+<script>
+  // Chat popup
+  const chatBtn = document.getElementById('hero-jaina-chat-btn');
+  const chatPopup = document.getElementById('jaina-chat-popup');
+  // Call popup
+  const callBtn = document.getElementById('hero-jaina-call-btn');
+  const callPopup = document.getElementById('jaina-call-popup');
+
+  function openPopup(popup: HTMLElement | null) {
+    popup?.classList.add('active');
+    popup?.setAttribute('aria-hidden', 'false');
+  }
+
+  function closePopup(popup: HTMLElement | null) {
+    popup?.classList.remove('active');
+    popup?.setAttribute('aria-hidden', 'true');
+  }
+
+  chatBtn?.addEventListener('click', () => openPopup(chatPopup));
+  callBtn?.addEventListener('click', () => openPopup(callPopup));
+
+  // Close buttons
+  document.querySelectorAll('[data-close-popup]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const popup = (e.currentTarget as HTMLElement).closest('.jaina-popup');
+      closePopup(popup as HTMLElement);
+    });
+  });
+
+  // Escape closes all
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closePopup(chatPopup);
+      closePopup(callPopup);
+    }
+  });
+</script>

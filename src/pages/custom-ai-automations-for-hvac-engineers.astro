@@ -1,0 +1,42 @@
+---
+import ProductTradeLayout from '../layouts/ProductTradeLayout.astro';
+const frontmatter = {
+  title: "Custom AI Automations For HVAC Engineers", metaTitle: "Custom AI Automations For HVAC Engineers | Down To Earth AI", metaDescription: "Custom AI automations for HVAC businesses. Maintenance contracts, F-Gas logs, and seasonal scheduling — automated. From £297/month.", canonicalUrl: "https://downtoearthai.co.uk/custom-ai-automations-for-hvac-engineers",
+  heroHeadline: "Custom AI Automations For HVAC Engineers", heroSubhead: "Maintenance contracts, F-Gas compliance tracking, seasonal scheduling, and commissioning documentation — HVAC admin that runs itself.", heroAIText: "Ask me how HVAC automations work", showHeroAI: true, showPrice: true,
+  heroPrice: "£99/month", price: "From £297/month",
+  trade: "HVAC Engineers", tradeSlug: "hvac-engineers", tradeAdjective: "HVAC", productSlug: "custom-ai-automations", productName: "Custom AI Automations",
+  scenario: "\"You've just commissioned a 4-system VRF installation. The commissioning report needs completing, F-Gas refrigerant logs need updating, the maintenance contract needs setting up, and the customer needs their handover documents. That's 3 hours of admin after a week-long installation. Automations cut it to 30 minutes.\"",
+  step1Title: "We Map HVAC Admin", step1Text: "F-Gas logs, commissioning docs, maintenance contracts, seasonal scheduling — every HVAC admin process identified and prioritised.",
+  step2Title: "We Build HVAC Automations", step2Text: "System installed → commissioning report generated → F-Gas log updated → maintenance schedule created → customer documents sent. Automatically.",
+  step3Title: "Compliance On Autopilot", step3Text: "F-Gas requirements, maintenance schedules, and warranty tracking — all automated. Compliance without the admin headache.",
+  features: [
+    { name: "F-Gas Compliance Tracking", description: "Refrigerant quantities logged per system, leak checks scheduled, and compliance records maintained automatically." },
+    { name: "Maintenance Contract Management", description: "AC and heating maintenance contracts tracked. Service visits scheduled and reminded. Renewals prompted before expiry." },
+    { name: "Commissioning Documentation", description: "System commissioned → report generated with specs, settings, and handover information. Professional documentation, minimal admin." },
+    { name: "Seasonal Schedule Switching", description: "AC maintenance in spring, heating prep in autumn. AI shifts your schedule emphasis with the seasons." },
+    { name: "Warranty Registration", description: "Every system installed → manufacturer warranty registered → expiry tracked → renewal prompted." },
+    { name: "Energy Performance Reporting", description: "System performance tracked and reported to commercial clients. Value-add that strengthens contract retention." },
+  ],
+  foundersNote: "HVAC has the most compliance admin of any trade — F-Gas logs, commissioning reports, maintenance records. It's not optional, it's legal. Automating it doesn't just save time — it ensures you're always compliant, always documented, and always professional.",
+  relatedProducts: [
+    { name: "AI Receptionist For HVAC Engineers", href: "/ai-receptionist-for-hvac-engineers", description: "Your AI receptionist handles HVAC enquiries." },
+    { name: "Lead Generation Website For HVAC Engineers", href: "/lead-generation-website-for-hvac-engineers", description: "More leads, processed by automations." },
+    { name: "Lead Generation For HVAC Engineers", href: "/lead-generation-for-hvac-engineers", description: "The full HVAC lead system." },
+  ],
+  genericProductHref: "/custom-ai-automations-for-tradesmen", genericProductName: "Custom AI Automations",
+  faqs: [
+    { question: "How does F-Gas tracking work?", answer: "Refrigerant quantities logged per system. Leak checks scheduled at regulatory intervals. Records maintained for compliance audits." },
+    { question: "Can it manage maintenance contracts?", answer: "Yes. Service schedules tracked, reminders sent, visits booked, and renewals prompted before expiry." },
+    { question: "Will it generate commissioning reports?", answer: "Yes. System specs, settings, performance data — packaged into professional handover documentation." },
+    { question: "How does seasonal scheduling work?", answer: "AC maintenance scheduled for spring, heating prep for autumn. Your diary shifts emphasis with the season." },
+    { question: "Can it track warranties?", answer: "Yes. Every system's warranty registered and tracked. Customer notified before expiry." },
+    { question: "Will it handle energy reporting?", answer: "Yes. System performance data compiled for commercial clients — a value-add that strengthens retention." },
+    { question: "How much time saved?", answer: "8-12 hours per week. Commissioning docs alone save 2-3 hours per major installation." },
+    { question: "Can it handle multi-site contracts?", answer: "Yes. Commercial clients with multiple sites — each system tracked individually across the portfolio." },
+    { question: "Hard to set up?", answer: "No. We configure it around your existing HVAC workflow." },
+    { question: "Guarantee?", answer: "30-day money back." },
+  ],
+  widgetTrade: "HVAC", widgetGoal: "automations",
+};
+---
+<ProductTradeLayout frontmatter={frontmatter} />

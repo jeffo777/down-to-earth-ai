@@ -1,0 +1,76 @@
+---
+import ProductTradeLayout from '../layouts/ProductTradeLayout.astro';
+
+const frontmatter = {
+  title: "AI Receptionist For Builders",
+  metaTitle: "AI Receptionist For Builders — Never Miss A Building Lead | Down To Earth AI",
+  metaDescription: "AI receptionist for builders. Answers calls about extensions, renovations, and new builds while you're on the tools. From £99/month. 30-day guarantee.",
+  canonicalUrl: "https://downtoearthai.co.uk/ai-receptionist-for-builders",
+  heroHeadline: "AI Receptionist For Builders",
+  heroSubhead: "Your AI receptionist answers every building enquiry — extensions, loft conversions, and renovation quotes — while you're pouring concrete, fitting steels, or up on the scaffolding. Your next project, secured.",
+  heroAIText: "Tell me about your building business and I'll show you how I handle your calls",
+  showHeroAI: true, showPrice: true,
+  heroPrice: "£99/month",
+  price: "£299 setup · £99/month",
+  trade: "Builders", tradeSlug: "builders", tradeAdjective: "building",
+  productSlug: "ai-receptionist", productName: "AI Receptionist",
+
+  scenario: "\"You're six weeks into a kitchen extension. You've been focused on nothing else — foundations, blockwork, roof, first fix. Meanwhile, your phone has rung 25 times with new enquiries. You called back maybe 10. Five were already booked by the time you reached them. In two weeks, the extension finishes. And your diary has a gap. The feast-or-famine cycle continues because you were too busy building to answer the phone.\"",
+
+  step1Title: "Tell Us About Your Building Business",
+  step1Text: "Your specialisms (extensions, renovations, new builds), your team size, your coverage area, and what kind of work you want more of. A quick 15-minute chat.",
+  step2Title: "We Configure Your AI Receptionist For Building Work",
+  step2Text: "your AI receptionist learns your world — extensions, loft conversions, groundworks, structural alterations. She knows a kitchen extension enquiry is a £30,000+ lead worth capturing properly. Ready in 24 hours.",
+  step3Title: "You Build, She Builds Your Pipeline",
+  step3Text: "Every enquiry captured while you're on site. Extension quotes, renovation leads, and new build consultations — all logged with project scope, budget range, and timeline. No more diary gaps after a project ends.",
+
+  features: [
+    { name: "Project-Level Lead Capture", description: "Building leads are high-value and complex. Your AI receptionist captures project type, scope, approximate budget, desired timeline, and property details — not just a name and number." },
+    { name: "Extension & Conversion Knowledge", description: "your AI receptionist understands kitchen extensions, loft conversions, garage conversions, orangeries, and garden rooms. She speaks knowledgeably about each type." },
+    { name: "Budget Range Capture", description: "For high-value projects, your AI receptionist asks about budget range. This saves you from quoting £60,000 to someone expecting £20,000 — or underquoting premium work." },
+    { name: "Planning Permission Questions", description: "When customers ask about planning permission, Your AI receptionist can provide general guidance (permitted development, full planning) while directing them to you for specific advice." },
+    { name: "Lead Priority Scoring", description: "A £100,000 new build lead gets different treatment than a garden wall repair. Your AI receptionist assesses value and urgency, flagging premium leads for immediate follow-up." },
+    { name: "Pipeline Continuity", description: "By capturing every lead while you're on your current build, your AI receptionist ensures your diary is full when the current project ends. No more feast-or-famine." },
+    { name: "Phone Answering", description: "Your AI receptionist answers building enquiry calls within seconds, discusses extensions, loft conversions, and renovation projects — then sends you a complete project lead brief.", href: "/ai-phone-answering-service-for-builders" },
+    { name: "SMS Response", description: "Every text from a potential building customer gets one professional acknowledgment confirming you've received their project enquiry.", href: "/ai-sms-messaging-service-for-builders" },
+    { name: "WhatsApp Response", description: "Instant WhatsApp replies to building customers — they know you've seen their extension or renovation message and will be in touch.", href: "/ai-whatsapp-messaging-service-for-builders" },
+    { name: "Email Response", description: "Professional email acknowledgment within seconds for every building enquiry that lands in your inbox.", href: "/ai-email-response-service-for-builders" },
+    { name: "Facebook Messenger", description: "Instant replies to every building enquiry on your Facebook page — your response badge stays at 'Usually replies instantly.'", href: "/ai-facebook-messenger-service-for-builders" },
+    { name: "Instagram DMs", description: "Instant replies to every building DM — including message requests from non-followers who've seen your project portfolio.", href: "/ai-instagram-messaging-service-for-builders" },
+    { name: "Google Business Profile", description: "Instant responses to building enquiries coming through Google Maps and 'builder near me' searches.", href: "/ai-google-business-service-for-builders" },
+    { name: "Website Live Chat", description: "A chat widget where Your AI receptionist has real conversations about extensions, conversions, and renovation projects — converting visitors into high-value project leads.", href: "/ai-website-chat-bot-for-builders" },
+  ],
+
+  foundersNote: "The feast-or-famine cycle is the curse of every builder. While you're delivering a brilliant project, you're too busy to market your business or answer enquiries. When the project finishes, the pipeline is empty. Your AI receptionist breaks this cycle by capturing every lead while you build — so by the time you finish one project, the next three are already lined up.",
+
+  relatedProducts: [
+    { name: "Lead Generation Website For Builders", href: "/lead-generation-website-for-builders", description: "Rank for 'builder near me' and 'house extension [your area]'." },
+    { name: "AI Marketing For Builders", href: "/ai-content-marketing-for-builders", description: "Turn project progress photos into content that attracts more work." },
+    { name: "Lead Generation For Builders", href: "/lead-generation-for-builders", description: "See how our complete system breaks the feast-or-famine cycle." },
+  ],
+
+  genericProductHref: "/ai-receptionist-for-tradesmen",
+  genericProductName: "AI Receptionist",
+
+  faqs: [
+    { question: "Can your AI receptionist handle high-value extension enquiries?", answer: "Yes. Extensions are £30,000-100,000+ projects. Your AI receptionist captures the scope, property type, desired timeline, budget range, and planning status. You get a complete brief worth calling back for." },
+    { question: "Does she understand the feast-or-famine cycle?", answer: "She solves it. While you're on your current build (feast), she captures every incoming lead. When the current project finishes, you have a full pipeline instead of an empty diary." },
+    { question: "How does she handle loft conversion enquiries?", answer: "She captures property type, room type, dormer preferences, current head height (if known), and planning considerations. High-value leads handled with the detail they deserve." },
+    { question: "Can she capture enough detail for me to quote?", answer: "She captures scope, property details, desired timeline, and budget range. You'll still need to visit for an accurate quote, but you'll arrive with a clear understanding of what the customer wants." },
+    { question: "What about smaller jobs — garden walls, patching, repairs?", answer: "She handles these too, but flags them differently from extension leads. Small jobs are valuable for filling gaps, and Your AI receptionist captures them without giving them the same priority as a new build inquiry." },
+    { question: "Can your AI receptionist work with my existing answering service?", answer: "Yes. Many builders have a partner or admin who answers calls part-time. Your AI receptionist catches the calls they miss — evenings, weekends, and busy periods." },
+    { question: "How does she handle trade/subcontractor calls vs customer calls?", answer: "She distinguishes between new customer enquiries and existing contacts. Material deliveries, sub-contractor queries, and supply chain calls are handled differently from new leads." },
+    { question: "Does she handle new build enquiries?", answer: "Yes. Self-build, custom homes, and development projects get detailed capture — plot details, planning status, architectural involvement, and budget range." },
+    { question: "How fast is setup?", answer: "24 hours. Tell us about your building specialisms and coverage, and Your AI receptionist is answering extension leads and new build enquiries by tomorrow." },
+    { question: "What's the guarantee?", answer: "30-day full money back including setup fee. One additional project lead captured by Your AI receptionist will cover the entire setup cost many times over." },
+    { question: "What is an AI receptionist for builders and how does it work?", answer: "An AI receptionist for builders is an artificial intelligence platform that manages customer communications across nine business channels — phone calls, SMS, WhatsApp, email, website chat, Facebook Messenger, Instagram DMs, Google Business Profile messages, and missed call text-back. Using natural language processing trained on construction vocabulary, your AI receptionist understands extension enquiries, loft conversion requests, renovation assessments, new build schedules, and commercial fit-out specifications. On phone calls and website chat, she holds detailed, project-aware conversations. On messaging channels, she sends professional acknowledgments and captures comprehensive project details. The AI operates 24/7/365, ensuring your building business captures high-value project leads from every channel — including evenings and weekends when homeowners research and plan their projects." },
+    { question: "How does an AI receptionist help builders win high-value projects?", answer: "Building projects are the highest-value leads in the trades — individual extensions, loft conversions, and renovations run from £20,000 to £200,000+. When a homeowner is planning a major project, they research multiple builders, request quotes, and commit to whoever provides the best combination of response speed, professionalism, and confidence. An AI receptionist ensures your building business provides the fastest, most professional first contact across every channel. While you're on-site managing a build, Your AI receptionist answers phone calls about new projects, responds to detailed WhatsApp enquiries, captures Google Business leads, and engages potential clients through website chat. Her natural language processing understands construction phases, regulatory requirements, and project types — demonstrating professional credibility from the first interaction. At £99/month for projects worth tens of thousands, the AI's return on investment is extraordinary." },
+    { question: "What makes an AI receptionist essential for a growing building company?", answer: "Builders face a unique growth challenge — you need to be on-site supervising and working, but also need to respond to enquiries for future projects. Missing calls means empty diary months ahead. Hiring office staff costs £25,000+/year minimum. An AI receptionist bridges this gap at £99/month. Your AI receptionist captures every enquiry across all nine channels — phone calls during your busiest on-site hours, WhatsApp messages over weekends, Google Business leads from 'builder near me' searches, Instagram DMs responding to your project portfolio, and email enquiries from architects and developers. Her natural language processing captures project type, scope, planning status, and timescales — giving you complete context for your follow-up. For one-person or small building firms looking to grow from 2-3 projects per year to 6-8, an AI receptionist ensures no project lead falls through the cracks." },
+  ],
+
+  widgetTrade: "building",
+  widgetGoal: "calls",
+};
+---
+
+<ProductTradeLayout frontmatter={frontmatter} />

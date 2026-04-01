@@ -1,0 +1,139 @@
+---
+/**
+ * CookieConsent.astro — GDPR-compliant cookie consent banner
+ * Appears at bottom of screen on first visit.
+ * Stores preference in localStorage.
+ * TODO: Connect to analytics when GA4 is added
+ */
+---
+
+<div class="cookie-consent" id="cookie-consent" role="banner" aria-label="Cookie consent">
+  <div class="cookie-consent__inner">
+    <p class="cookie-consent__text">
+      We use cookies to improve your experience. See our <a href="/cookie-policy">cookie policy</a>.
+    </p>
+    <div class="cookie-consent__actions">
+      <button class="cookie-consent__btn cookie-consent__btn--accept" id="cookie-accept">Accept</button>
+      <button class="cookie-consent__btn cookie-consent__btn--decline" id="cookie-decline">Decline</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cookie-consent {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 45;
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border-subtle);
+    padding: 1rem;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .cookie-consent.visible {
+    display: block;
+  }
+
+  .cookie-consent__inner {
+    max-width: 72rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .cookie-consent__inner {
+      flex-direction: row;
+      justify-content: center;
+      text-align: left;
+      gap: 1.5rem;
+    }
+  }
+
+  .cookie-consent__text {
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  .cookie-consent__text a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .cookie-consent__text a:hover {
+    text-decoration: underline;
+  }
+
+  .cookie-consent__actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .cookie-consent__btn {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 150ms;
+    font-family: inherit;
+    min-height: 36px;
+  }
+
+  .cookie-consent__btn--accept {
+    background: var(--color-accent);
+    color: #fff;
+    border: none;
+  }
+
+  .cookie-consent__btn--accept:hover {
+    background: var(--color-accent-hover);
+  }
+
+  .cookie-consent__btn--decline {
+    background: transparent;
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border-subtle);
+  }
+
+  .cookie-consent__btn--decline:hover {
+    border-color: var(--color-text-muted);
+    color: var(--color-text-primary);
+  }
+</style>
+
+<script>
+  const banner = document.getElementById('cookie-consent');
+  const acceptBtn = document.getElementById('cookie-accept');
+  const declineBtn = document.getElementById('cookie-decline');
+
+  // Check if consent already given
+  const consent = localStorage.getItem('dte-cookie-consent');
+
+  if (!consent && banner) {
+    // Show banner after a short delay to not interfere with page load
+    setTimeout(() => {
+      banner.classList.add('visible');
+    }, 1000);
+  }
+
+  acceptBtn?.addEventListener('click', () => {
+    localStorage.setItem('dte-cookie-consent', 'accepted');
+    banner?.classList.remove('visible');
+    // TODO: Enable analytics cookies / load GA4 here
+  });
+
+  declineBtn?.addEventListener('click', () => {
+    localStorage.setItem('dte-cookie-consent', 'declined');
+    banner?.classList.remove('visible');
+    // TODO: Ensure analytics cookies are blocked
+  });
+</script>

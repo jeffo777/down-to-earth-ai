@@ -1,0 +1,15 @@
+[
+  { "name": "Plumbers", "slug": "plumbers", "adjective": "plumbing", "article": "a plumber", "widgetTrade": "plumbing" },
+  { "name": "Electricians", "slug": "electricians", "adjective": "electrical", "article": "an electrician", "widgetTrade": "electrical" },
+  { "name": "Locksmiths", "slug": "locksmiths", "adjective": "locksmith", "article": "a locksmith", "widgetTrade": "locksmith" },
+  { "name": "Gas Engineers", "slug": "gas-engineers", "adjective": "gas engineering", "article": "a gas engineer", "widgetTrade": "gas engineering" },
+  { "name": "Drainage Engineers", "slug": "drainage-engineers", "adjective": "drainage", "article": "a drainage engineer", "widgetTrade": "drainage" },
+  { "name": "Glaziers", "slug": "glaziers", "adjective": "glazing", "article": "a glazier", "widgetTrade": "glazing" },
+  { "name": "Roofers", "slug": "roofers", "adjective": "roofing", "article": "a roofer", "widgetTrade": "roofing" },
+  { "name": "HVAC Engineers", "slug": "hvac-engineers", "adjective": "HVAC", "article": "an HVAC engineer", "widgetTrade": "HVAC" },
+  { "name": "Alarm & Security Installers", "slug": "alarm-installers", "adjective": "alarm & security", "article": "an alarm installer", "widgetTrade": "alarm & security" },
+  { "name": "Pest Control", "slug": "pest-control", "adjective": "pest control", "article": "a pest controller", "widgetTrade": "pest control" },
+  { "name": "Garage Door Engineers", "slug": "garage-door-engineers", "adjective": "garage door", "article": "a garage door engineer", "widgetTrade": "garage door" },
+  { "name": "Builders", "slug": "builders", "adjective": "building", "article": "a builder", "widgetTrade": "building" },
+  { "name": "Appliance Repair Engineers", "slug": "appliance-repair-engineers", "adjective": "appliance repair", "article": "an appliance repair engineer", "widgetTrade": "appliance repair" }
+]

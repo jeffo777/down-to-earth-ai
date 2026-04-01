@@ -1,0 +1,374 @@
+---
+/**
+ * LeadGenerationLayout.astro
+ * Template for: 14 Lead Generation Solution pages
+ * These are "zoom out" hub pages showing how all 4 products 
+ * work together as a complete lead generation system (the flywheel).
+ */
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
+import HeroJaina from '../components/HeroJaina.astro';
+import WidgetJaina from '../components/WidgetJaina.astro';
+import CTAButton from '../components/CTAButton.astro';
+import GuaranteeBadge from '../components/GuaranteeBadge.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+
+interface Props {
+  frontmatter: {
+    title: string;
+    metaTitle: string;
+    metaDescription: string;
+    canonicalUrl?: string;
+    heroHeadline: string;
+    heroSubhead: string;
+    heroAIText: string;
+    // The Problem
+    problemHeadline: string;
+    problemText: string;
+    // Product links (trade-specific)
+    receptionistLink: string;
+    websiteLink: string;
+    marketingLink: string;
+    automationsLink: string;
+    // Product overview cards
+    productCards: Array<{
+      name: string;
+      description: string;
+      price: string;
+      link: string;
+      icon: string;
+    }>;
+    // Founder's note
+    foundersNote: string;
+    // Trade grid (master page only)
+    showTradeGrid?: boolean;
+    tradeLinks?: Array<{ name: string; href: string }>;
+    // FAQs
+    faqs: Array<{ question: string; answer: string }>;
+    widgetTrade?: string;
+  };
+}
+
+const { frontmatter } = Astro.props;
+const fm = frontmatter;
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{fm.metaTitle}</title>
+  <meta name="description" content={fm.metaDescription} />
+  {fm.canonicalUrl && <link rel="canonical" href={fm.canonicalUrl} />}
+  <meta property="og:title" content={fm.metaTitle} />
+  <meta property="og:description" content={fm.metaDescription} />
+  <meta property="og:url" content={fm.canonicalUrl} />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <Header />
+
+  <main id="main-content" style="padding-top: 64px;">
+
+    <!-- 1. HERO — Stacked -->
+    <section class="lg-hero">
+      <div class="lg-hero__inner">
+        <div class="lg-hero__stacked">
+          <h1>{fm.heroHeadline}</h1>
+          <p class="lg-hero__subhead">{fm.heroSubhead}</p>
+          <div class="lg-hero__trust-row">
+            <span class="lg-hero__done-tag">✓ 100% done for you</span>
+            <span class="lg-hero__price-tag">Only £99/month</span>
+            <span class="lg-hero__guarantee-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+              30-day money back guarantee
+            </span>
+          </div>
+          <div class="lg-hero__jaina">
+            <HeroJaina showHeroAI={true} heroAIText={fm.heroAIText} />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. THE PROBLEM -->
+    <section class="lg-section lg-section--alt">
+      <div class="lg-container lg-container--narrow">
+        <h2 class="lg-section__title">{fm.problemHeadline}</h2>
+        <p class="lg-problem-text">{fm.problemText}</p>
+      </div>
+    </section>
+
+    <!-- 3. THE FLYWHEEL — KEY SECTION -->
+    <section class="lg-section lg-flywheel-section">
+      <div class="lg-container">
+        <h2 class="lg-section__title">The Lead Generation Flywheel</h2>
+        <p class="lg-flywheel-intro">Every job you complete makes the next one easier to win. The system feeds itself.</p>
+
+        <div class="lg-flywheel">
+          <a href={fm.websiteLink} class="lg-flywheel__step">
+            <div class="lg-flywheel__icon">🌐</div>
+            <div class="lg-flywheel__label">Your Website</div>
+            <div class="lg-flywheel__desc">150-300+ pages rank on Google</div>
+          </a>
+          <div class="lg-flywheel__arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+          <div class="lg-flywheel__step lg-flywheel__step--passive">
+            <div class="lg-flywheel__icon">🔍</div>
+            <div class="lg-flywheel__label">Ranks On Google</div>
+            <div class="lg-flywheel__desc">Free organic traffic to your business</div>
+          </div>
+          <div class="lg-flywheel__arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+          <div class="lg-flywheel__step lg-flywheel__step--passive">
+            <div class="lg-flywheel__icon">📞</div>
+            <div class="lg-flywheel__label">Leads Come In</div>
+            <div class="lg-flywheel__desc">All 9 channels — phone, text, chat, social</div>
+          </div>
+          <div class="lg-flywheel__arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+          <a href={fm.receptionistLink} class="lg-flywheel__step">
+            <div class="lg-flywheel__icon">🤖</div>
+            <div class="lg-flywheel__label">Your AI Receptionist Answers Every Lead</div>
+            <div class="lg-flywheel__desc">24/7, across all channels, instantly</div>
+          </a>
+          <div class="lg-flywheel__arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+          <div class="lg-flywheel__step lg-flywheel__step--passive">
+            <div class="lg-flywheel__icon">🔧</div>
+            <div class="lg-flywheel__label">You Complete The Work</div>
+            <div class="lg-flywheel__desc">Focus on what you're best at</div>
+          </div>
+          <div class="lg-flywheel__arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+          <div class="lg-flywheel__step lg-flywheel__step--passive">
+            <div class="lg-flywheel__icon">📸</div>
+            <div class="lg-flywheel__label">Send Photos</div>
+            <div class="lg-flywheel__desc">30 seconds — that's all it takes</div>
+          </div>
+          <div class="lg-flywheel__arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+          <a href={fm.marketingLink} class="lg-flywheel__step">
+            <div class="lg-flywheel__icon">📈</div>
+            <div class="lg-flywheel__label">AI Creates Content Everywhere</div>
+            <div class="lg-flywheel__desc">Blog, social, Google — all automated</div>
+          </a>
+        </div>
+
+        <div class="lg-flywheel-loop">
+          <div class="lg-flywheel-loop__badge">♻️ More visibility → More leads → Repeat</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. THE FOUR PRODUCTS -->
+    <section class="lg-section lg-section--alt">
+      <div class="lg-container">
+        <h2 class="lg-section__title">The Complete System</h2>
+        <p style="text-align: center; color: var(--color-text-secondary); margin-bottom: 2rem; max-width: 36rem; margin-left: auto; margin-right: auto;">Four products that work together. Each one makes the others more powerful.</p>
+        <div class="lg-products">
+          {fm.productCards.map(card => (
+            <a href={card.link} class="lg-product-card">
+              <div class="lg-product-card__icon">{card.icon}</div>
+              <h3 class="lg-product-card__name">{card.name}</h3>
+              <p class="lg-product-card__desc">{card.description}</p>
+              <p class="lg-product-card__price">{card.price}</p>
+              <span class="lg-product-card__link">Learn more →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FOUNDER'S NOTE -->
+    <section class="lg-section">
+      <div class="lg-container lg-container--narrow">
+        <div class="lg-founders">
+          <div class="lg-founders__quote">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--color-accent)" opacity="0.3"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p>{fm.foundersNote}</p>
+            <cite>— Jeff, Founder</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. TRADE GRID (master page only) -->
+    {fm.showTradeGrid && fm.tradeLinks && (
+      <section class="lg-section lg-section--alt">
+        <div class="lg-container">
+          <h2 class="lg-section__title">Lead Generation For Your Trade</h2>
+          <div class="lg-trade-grid">
+            {fm.tradeLinks.map(trade => (
+              <a href={trade.href} class="lg-trade-card">
+                <span>{trade.name}</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- 7. FAQs -->
+    {fm.faqs && fm.faqs.length > 0 && (
+      <section class={`lg-section ${fm.showTradeGrid ? '' : 'lg-section--alt'}`}>
+        <div class="lg-container">
+          <h2 class="lg-section__title">Frequently Asked Questions</h2>
+          <FAQAccordion faqs={fm.faqs} />
+        </div>
+      </section>
+    )}
+
+    <!-- 8. CTA -->
+    <section class="lg-section" style="text-align: center;">
+      <div class="lg-container lg-container--narrow">
+        <h2>Ready To Stop Worrying About Where Your Next Job Is Coming From?</h2>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">30-day money back guarantee. No contracts. Set up in 24 hours.</p>
+        <CTAButton buttonText="Get Started" buttonLink="/get-started" showGuarantee={true} size="large" />
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+  <CookieConsent />
+  <WidgetJaina widgetTrade={fm.widgetTrade || ''} widgetGoal="leads" />
+</body>
+</html>
+
+<style>
+  /* Hero */
+  .lg-hero { background: var(--color-primary); padding: 3rem 1rem 2.5rem; }
+  .lg-hero__inner { max-width: 72rem; margin: 0 auto; }
+  .lg-hero__stacked { display: flex; flex-direction: column; align-items: center; text-align: center; }
+  @media (min-width: 1024px) { .lg-hero { padding: 4rem 2rem 2.5rem; } }
+  .lg-hero__subhead { font-size: 1.1rem; color: var(--color-text-secondary); margin-bottom: 1rem; max-width: 36rem; line-height: 1.6; }
+  .lg-hero__trust-row { display: flex; align-items: center; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+  .lg-hero__price-tag { font-size: 1.05rem; font-weight: 700; color: var(--color-text-primary); }
+  .lg-hero__done-tag { font-size: 0.95rem; font-weight: 600; color: var(--color-accent); }
+  .lg-hero__guarantee-tag { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.9rem; font-weight: 600; color: var(--color-trust); }
+
+  /* Sections */
+  .lg-section { padding: 3rem 1rem; }
+  @media (min-width: 768px) { .lg-section { padding: 5rem 2rem; } }
+  .lg-section--alt { background: var(--color-secondary); }
+  .lg-container { max-width: 72rem; margin: 0 auto; }
+  .lg-container--narrow { max-width: 42rem; margin: 0 auto; }
+  .lg-section__title { text-align: center; margin-bottom: 1rem; }
+
+  /* Problem */
+  .lg-problem-text { font-size: 1.125rem; color: var(--color-text-secondary); line-height: 1.7; text-align: center; }
+
+  /* Flywheel */
+  .lg-flywheel-section { text-align: center; }
+  .lg-flywheel-intro { color: var(--color-text-secondary); margin-bottom: 2.5rem; font-size: 1.0625rem; }
+
+  .lg-flywheel { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.5rem; }
+
+  .lg-flywheel__step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 1.25rem 1rem;
+    background: var(--color-surface);
+    border-radius: 1rem;
+    border: 1px solid var(--color-border-subtle);
+    min-width: 140px;
+    max-width: 160px;
+    text-decoration: none;
+    transition: border-color 150ms, transform 150ms;
+  }
+  a.lg-flywheel__step { border-color: var(--color-accent); }
+  a.lg-flywheel__step:hover { transform: translateY(-2px); }
+  .lg-flywheel__step--passive { opacity: 0.85; }
+  .lg-flywheel__icon { font-size: 1.5rem; }
+  .lg-flywheel__label { font-size: 0.8125rem; font-weight: 700; color: var(--color-text-primary); text-align: center; }
+  .lg-flywheel__desc { font-size: 0.6875rem; color: var(--color-text-muted); text-align: center; line-height: 1.3; }
+  .lg-flywheel__arrow { display: flex; align-items: center; }
+
+  @media (max-width: 767px) {
+    .lg-flywheel { flex-direction: column; gap: 0.75rem; }
+    .lg-flywheel__step { max-width: 200px; }
+    .lg-flywheel__arrow { transform: rotate(90deg); }
+  }
+
+  .lg-flywheel-loop { margin-top: 2rem; }
+  .lg-flywheel-loop__badge {
+    display: inline-block;
+    background: var(--color-accent);
+    color: #fff;
+    padding: 0.625rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+
+  /* Products */
+  .lg-products { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+  @media (min-width: 768px) { .lg-products { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .lg-products { grid-template-columns: repeat(4, 1fr); } }
+
+  .lg-product-card {
+    padding: 1.5rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 1rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 150ms, transform 150ms;
+  }
+  .lg-product-card:hover { border-color: var(--color-accent); transform: translateY(-2px); }
+  .lg-product-card__icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+  .lg-product-card__name { font-size: 1rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem; }
+  .lg-product-card__desc { font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 0.75rem; flex: 1; }
+  .lg-product-card__price { font-size: 0.875rem; font-weight: 700; color: var(--color-accent); margin-bottom: 0.75rem; }
+  .lg-product-card__link { font-size: 0.8125rem; color: var(--color-accent); font-weight: 600; }
+
+  /* Founder */
+  .lg-founders__quote {
+    position: relative;
+    padding: 2rem;
+    background: var(--color-surface);
+    border-radius: 1rem;
+    border-left: 3px solid var(--color-accent);
+  }
+  .lg-founders__quote svg { position: absolute; top: 1rem; left: 1rem; }
+  .lg-founders__quote p { font-size: 1.0625rem; color: var(--color-text-secondary); line-height: 1.7; padding-left: 2.5rem; }
+  .lg-founders__quote cite { display: block; padding-left: 2.5rem; margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-muted); font-style: normal; font-weight: 600; }
+
+  /* Trade Grid */
+  .lg-trade-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+  @media (min-width: 768px) { .lg-trade-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 1024px) { .lg-trade-grid { grid-template-columns: repeat(4, 1fr); } }
+
+  .lg-trade-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 0.75rem;
+    text-decoration: none;
+    color: var(--color-text-primary);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    transition: border-color 150ms;
+  }
+  .lg-trade-card:hover { border-color: var(--color-accent); }
+  .lg-trade-card svg { color: var(--color-accent); }
+</style>

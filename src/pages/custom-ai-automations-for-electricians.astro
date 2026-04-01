@@ -1,0 +1,42 @@
+---
+import ProductTradeLayout from '../layouts/ProductTradeLayout.astro';
+const frontmatter = {
+  title: "Custom AI Automations For Electricians", metaTitle: "Custom AI Automations For Electricians | Down To Earth AI", metaDescription: "Custom AI automations for electrical businesses. Automate certificates, quoting, and compliance tracking. From £297/month.", canonicalUrl: "https://downtoearthai.co.uk/custom-ai-automations-for-electricians",
+  heroHeadline: "Custom AI Automations For Electricians", heroSubhead: "Certificate generation, EICR scheduling, quote automation, and compliance tracking — the electrical admin that eats your evenings, handled by AI.", heroAIText: "Ask me what electrical admin AI can automate", showHeroAI: true, showPrice: true,
+  heroPrice: "£99/month", price: "From £297/month",
+  trade: "Electricians", tradeSlug: "electricians", tradeAdjective: "electrical", productSlug: "custom-ai-automations", productName: "Custom AI Automations",
+  scenario: "\"You've finished three EICRs today. Each needs its paperwork completed, sent to the customer, and logged. Tomorrow's rewire needs a materials list ordering. Three quotes are outstanding. Two invoices are overdue. And you haven't updated your schedule for next week. AI automations handle everything from EICR processing to material ordering — while you watch telly.\"",
+  step1Title: "We Audit Your Electrical Admin", step1Text: "Certificate completion, quoting, compliance tracking, NICEIC notifications, materials ordering — every admin task mapped and prioritised for automation.",
+  step2Title: "We Build Electrical Automations", step2Text: "EICR completed → certificate generated → emailed to client → logged in your system. Quote requested → AI generates based on your rates → sent automatically. Compliance tracking on autopilot.",
+  step3Title: "Compliance Without Stress", step3Text: "Building control notifications, certificate tracking, EICR renewal reminders — all automated. Never miss a compliance deadline again.",
+  features: [
+    { name: "Certificate Processing", description: "Test results entered → certificates generated → sent to client and building control (where required). Paperwork in minutes, not hours." },
+    { name: "EICR Renewal Tracking", description: "AI tracks when EICRs expire and reminds landlords before they're due. Recurring revenue generated automatically." },
+    { name: "Intelligent Quoting", description: "Job details → AI generates quote using your pricing structure → sends immediately. Complex jobs flagged for your manual review." },
+    { name: "Materials Management", description: "Track commonly used materials. When stock runs low, AI creates an order list or sends directly to your preferred wholesaler." },
+    { name: "Building Control Notifications", description: "Part P work completed → notification to building control generated automatically. Compliance box ticked without the hassle." },
+    { name: "Customer Lifecycle", description: "From first enquiry to final invoice to annual review reminder — the complete customer journey, automated." },
+  ],
+  foundersNote: "Electricians have more paperwork than almost any trade — certificates, building control notifications, NICEIC records. Every EICR generates a stack of admin. Automating this isn't just convenient — it's the difference between spending your evenings on paperwork or spending them with your family.",
+  relatedProducts: [
+    { name: "AI Receptionist For Electricians", href: "/ai-receptionist-for-electricians", description: "Your AI receptionist captures enquiries — automations handle everything after." },
+    { name: "Lead Generation Website For Electricians", href: "/lead-generation-website-for-electricians", description: "More leads, all processed by automations." },
+    { name: "Lead Generation For Electricians", href: "/lead-generation-for-electricians", description: "The full electrical lead system." },
+  ],
+  genericProductHref: "/custom-ai-automations-for-tradesmen", genericProductName: "Custom AI Automations",
+  faqs: [
+    { question: "Can it handle EICR certificate processing?", answer: "Yes. Enter your test results, and AI generates the certificate, emails it to the client, and logs it in your system. Hours of paperwork reduced to minutes." },
+    { question: "How does EICR renewal tracking work?", answer: "AI tracks every EICR you've issued. Before expiry, it emails the landlord with a renewal reminder and your booking link. Recurring revenue on autopilot." },
+    { question: "Can it notify building control for Part P work?", answer: "Yes. Notifications generated automatically after qualifying work is completed. Never miss a compliance requirement." },
+    { question: "How does the quoting system work?", answer: "Your pricing rules, your margins. AI generates quotes based on job type and scope. Simple jobs quoted instantly; complex ones flagged for your review." },
+    { question: "Will it chase overdue invoices?", answer: "Yes. Automated follow-ups at intervals you choose. Polite, professional, and persistent." },
+    { question: "Can it manage materials ordering?", answer: "Yes. Track common materials and cable types. When stock runs low, AI generates order lists for your wholesaler." },
+    { question: "How much time does this save?", answer: "Most electricians save 8-12 hours per week on admin, certificates, and paperwork. That's a full extra day of billable work." },
+    { question: "Will it work with my existing software?", answer: "We integrate with your current tools where possible — certification software, accounting packages, calendar systems." },
+    { question: "Is it hard to learn?", answer: "No. We build it around your existing processes. You don't need to change how you work — we automate what you already do." },
+    { question: "What's the guarantee?", answer: "30-day money back. If it doesn't save you time, full refund." },
+  ],
+  widgetTrade: "electrical", widgetGoal: "automations",
+};
+---
+<ProductTradeLayout frontmatter={frontmatter} />

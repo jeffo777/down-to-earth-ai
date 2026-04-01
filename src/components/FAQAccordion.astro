@@ -1,0 +1,232 @@
+---
+/**
+ * FAQAccordion.astro — Collapsible FAQ section with JSON-LD schema
+ * Supports keyboard navigation, single-open behaviour, smooth animation.
+ */
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  faqs: FAQ[];
+}
+
+const { faqs } = Astro.props;
+
+// Generate JSON-LD FAQ schema
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(faq => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
+---
+
+<section class="faq-section">
+  <div class="faq-accordion" data-faq-accordion>
+    {faqs.map((faq, index) => (
+      <div class="faq-item" data-faq-item>
+        <button
+          class="faq-item__question"
+          aria-expanded="false"
+          aria-controls={`faq-answer-${index}`}
+          id={`faq-question-${index}`}
+          data-faq-trigger
+        >
+          <span class="faq-item__question-text">{faq.question}</span>
+          <span class="faq-item__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19" class="faq-icon-v"/>
+              <line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+          </span>
+        </button>
+        <div
+          class="faq-item__answer"
+          id={`faq-answer-${index}`}
+          role="region"
+          aria-labelledby={`faq-question-${index}`}
+          hidden
+        >
+          <div class="faq-item__answer-inner">
+            <p>{faq.answer}</p>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<!-- JSON-LD FAQ Schema -->
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+<style>
+  .faq-section {
+    width: 100%;
+  }
+
+  .faq-accordion {
+    max-width: 56rem;
+    margin: 0 auto;
+  }
+
+  /* FAQ Item */
+  .faq-item {
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Question Button */
+  .faq-item__question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.125rem 0.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    transition: color 150ms;
+  }
+
+  .faq-item__question:hover {
+    color: var(--color-text-primary);
+  }
+
+  .faq-item__question-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    line-height: 1.4;
+  }
+
+  @media (min-width: 768px) {
+    .faq-item__question-text {
+      font-size: 1.0625rem;
+    }
+  }
+
+  /* Icon */
+  .faq-item__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    transition: color 200ms;
+  }
+
+  .faq-item__question:hover .faq-item__icon {
+    color: var(--color-accent);
+  }
+
+  .faq-icon-v {
+    transition: transform 250ms ease, opacity 250ms ease;
+    transform-origin: center;
+  }
+
+  .faq-item__question[aria-expanded="true"] .faq-icon-v {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+
+  .faq-item__question[aria-expanded="true"] .faq-item__icon {
+    color: var(--color-accent);
+  }
+
+  /* Answer */
+  .faq-item__answer {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 300ms ease;
+  }
+
+  .faq-item__answer[hidden] {
+    display: block;
+    max-height: 0;
+  }
+
+  .faq-item__answer.open {
+    max-height: 600px;
+  }
+
+  .faq-item__answer-inner {
+    padding: 0 0.25rem 1.25rem;
+  }
+
+  .faq-item__answer-inner p {
+    color: var(--color-text-secondary);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  @media (min-width: 768px) {
+    .faq-item__answer-inner p {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('[data-faq-accordion]').forEach(accordion => {
+    const triggers = accordion.querySelectorAll('[data-faq-trigger]');
+
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+        const answerId = trigger.getAttribute('aria-controls');
+        const answer = answerId ? document.getElementById(answerId) : null;
+
+        // Close all others (single-open behaviour)
+        triggers.forEach(otherTrigger => {
+          if (otherTrigger !== trigger) {
+            otherTrigger.setAttribute('aria-expanded', 'false');
+            const otherId = otherTrigger.getAttribute('aria-controls');
+            const otherAnswer = otherId ? document.getElementById(otherId) : null;
+            if (otherAnswer) {
+              otherAnswer.classList.remove('open');
+              // Re-add hidden after transition
+              setTimeout(() => {
+                if (!otherAnswer.classList.contains('open')) {
+                  otherAnswer.setAttribute('hidden', '');
+                }
+              }, 300);
+            }
+          }
+        });
+
+        // Toggle current
+        if (isExpanded) {
+          trigger.setAttribute('aria-expanded', 'false');
+          answer?.classList.remove('open');
+          setTimeout(() => {
+            if (!answer?.classList.contains('open')) {
+              answer?.setAttribute('hidden', '');
+            }
+          }, 300);
+        } else {
+          trigger.setAttribute('aria-expanded', 'true');
+          answer?.removeAttribute('hidden');
+          // Force reflow before adding class for transition
+          answer?.offsetHeight;
+          answer?.classList.add('open');
+        }
+      });
+    });
+  });
+</script>

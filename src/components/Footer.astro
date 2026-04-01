@@ -1,0 +1,185 @@
+---
+/**
+ * Footer.astro — Full site footer with 4 link columns
+ */
+import trades from '../data/trades.json';
+---
+
+<footer class="footer">
+  <div class="footer__inner">
+    <!-- Top: Logo + Tagline -->
+    <div class="footer__brand">
+      <a href="/" class="footer__logo">
+        Down To Earth <span class="footer__logo-accent">AI</span>
+      </a>
+      <p class="footer__tagline">AI That Works As Hard As You Do</p>
+    </div>
+
+    <!-- Link Columns -->
+    <div class="footer__columns">
+      <!-- Services -->
+      <div class="footer__col">
+        <h4 class="footer__col-title">Services</h4>
+        <ul class="footer__links">
+          <li><a href="/lead-generation-for-tradesmen">Lead Generation</a></li>
+          <li><a href="/ai-receptionist-for-tradesmen">AI Receptionist (Jaina)</a></li>
+          <li><a href="/lead-generation-websites-for-tradesmen">Lead Generation Websites</a></li>
+          <li><a href="/ai-marketing-for-tradesmen">AI Marketing</a></li>
+          <li><a href="/custom-ai-automations-for-tradesmen">Custom AI Automations</a></li>
+        </ul>
+      </div>
+
+      <!-- Trades -->
+      <div class="footer__col">
+        <h4 class="footer__col-title">Trades</h4>
+        <ul class="footer__links">
+          {trades.map(trade => (
+            <li><a href={`/ai-receptionist-for-${trade.slug}`}>{trade.name}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div class="footer__col">
+        <h4 class="footer__col-title">Company</h4>
+        <ul class="footer__links">
+          <li><a href="/about">About</a></li>
+          <li><a href="/how-it-works">How It Works</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div class="footer__col">
+        <h4 class="footer__col-title">Legal</h4>
+        <ul class="footer__links">
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+          <li><a href="/cookie-policy">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer__bottom">
+      <p class="footer__built">Built by a tradesman. For tradesmen.</p>
+      <p class="footer__copy">&copy; {new Date().getFullYear()} Down To Earth AI. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--color-primary);
+    border-top: 1px solid var(--color-border-subtle);
+    padding: 4rem 1rem 2rem;
+  }
+
+  .footer__inner {
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+
+  /* Brand */
+  .footer__brand {
+    margin-bottom: 2.5rem;
+  }
+
+  .footer__logo {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    text-decoration: none;
+  }
+
+  .footer__logo:hover { color: var(--color-text-primary); }
+
+  .footer__logo-accent { color: var(--color-accent); }
+
+  .footer__tagline {
+    margin-top: 0.5rem;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  /* Columns */
+  .footer__columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  @media (min-width: 640px) {
+    .footer__columns {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .footer__columns {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .footer__col-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+  }
+
+  .footer__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer__links a {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 150ms;
+  }
+
+  .footer__links a:hover {
+    color: var(--color-accent);
+  }
+
+  /* Bottom */
+  .footer__bottom {
+    border-top: 1px solid var(--color-border-subtle);
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .footer__bottom {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .footer__built {
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .footer__copy {
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+  }
+</style>

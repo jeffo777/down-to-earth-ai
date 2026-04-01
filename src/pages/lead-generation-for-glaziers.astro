@@ -1,0 +1,78 @@
+---
+import LeadGenerationLayout from '../layouts/LeadGenerationLayout.astro';
+
+const frontmatter = {
+  title: "Lead Generation For Glaziers",
+  metaTitle: "Lead Generation For Glaziers — Get More Glazing Leads | Down To Earth AI",
+  metaDescription: "A complete lead generation system for glaziers. Rank on Google for emergency board-ups and planned glazing work, answer every call 24/7. 30-day guarantee.",
+  canonicalUrl: "https://downtoearthai.co.uk/lead-generation-for-glaziers",
+  heroHeadline: "Lead Generation For Glaziers",
+  heroSubhead: "A complete system that gets your glazing business found for board-ups, double glazing, and shopfronts — answers every enquiry while you're cutting glass — and turns every installation into marketing for the next job.",
+  heroAIText: "Learn about getting more glazing leads",
+
+  problemHeadline: "Glass Doesn't Cut Itself",
+  problemText: "You're cutting a pane on the bench, both hands occupied, goggles on. Phone rings — it's a board-up emergency or a quote for new double glazing. You can't stop what you're doing. By the time you call back, they've moved on. And the planned work — conservatories, shopfronts, secondary glazing — comes in waves. Some weeks you're quoting four jobs a day. Some weeks you can hear the echo in your workshop. You need a system that captures every lead and keeps the work flowing steady.",
+
+  receptionistLink: "/ai-receptionist-for-glaziers",
+  websiteLink: "/lead-generation-website-for-glaziers",
+  marketingLink: "/ai-content-marketing-for-glaziers",
+  automationsLink: "/custom-ai-automations-for-glaziers",
+
+  productCards: [
+    {
+      name: "AI Receptionist (your AI receptionist)",
+      description: "Hands covered in putty, phone ringing? Your AI receptionist answers. She captures the glass size, type, urgency (board-up vs scheduled), and sends you everything. Emergency glass — answered in seconds.",
+      price: "£299 setup · £99/month",
+      link: "/ai-receptionist-for-glaziers",
+      icon: "📞",
+    },
+    {
+      name: "Lead Generation Website",
+      description: "Pages for 'emergency glazier [your area]', 'double glazing near me', 'glass replacement [your town]', 'shopfront glazing'. Every service and location targeted.",
+      price: "From £997 one-off",
+      link: "/lead-generation-website-for-glaziers",
+      icon: "🌐",
+    },
+    {
+      name: "AI Marketing",
+      description: "Finished a shopfront installation? A stunning conservatory? Photo → professional blog post, social media showcasing the quality of your work, Google Business update. Your portfolio markets itself.",
+      price: "£199 setup · £99/month",
+      link: "/ai-content-marketing-for-glaziers",
+      icon: "📈",
+    },
+    {
+      name: "Custom AI Automations",
+      description: "Automated quote follow-ups for large glazing jobs, satisfaction surveys after installations, and seasonal promotions for secondary glazing or draught-proofing.",
+      price: "Bespoke pricing",
+      link: "/custom-ai-automations-for-glaziers",
+      icon: "⚙️",
+    },
+  ],
+
+  foundersNote: "Glazing spans everything from a smashed window at 2am to a six-week conservatory project. The challenge is that both types of work need different marketing approaches — and both need to be answered instantly. Board-ups are won by whoever answers first. Conservatories are won by whoever builds the most trust. This system handles both.",
+
+  showTradeGrid: false,
+
+  faqs: [
+    { question: "How does this handle emergency board-up calls?", answer: "Emergency board-ups are the most time-sensitive glazing work. Your AI receptionist answers immediately, captures the location, what's happened (break-in, storm damage, accident), glass type and approximate size, and sends you a priority alert. The customer gets reassurance; you get the job." },
+    { question: "What kind of glazing work will this generate?", answer: "Emergency board-ups, single/double/triple glazing replacement, misted unit replacement, shopfront glazing, conservatory glass, secondary glazing, mirrors, glass balustrades, splashbacks, roof glazing, and commercial glazing. Every service targeted for your area." },
+    { question: "Can the website generate conservatory leads?", answer: "Yes. Conservatory glazing and repairs are high-value jobs. We create dedicated pages targeting 'conservatory repair [your area]', 'conservatory glass replacement near me', and similar long-tail searches that bring in premium work." },
+    { question: "How does AI marketing help sell glazing visually?", answer: "Glazing is one of the most visual trades. A finished shopfront, a perfect mirror install, new double glazing — these photograph beautifully. The AI turns your installation photos into content that showcases your craftsmanship and generates more enquiries." },
+    { question: "I get most emergency work from phone calls — does this help?", answer: "Absolutely. Your AI receptionist ensures you never miss an emergency call. She answers 24/7 — so that 2am break-in call gets handled whether you're asleep or on another job. And your website makes sure they find your number in the first place." },
+    { question: "Can the system handle both residential and commercial glazing enquiries?", answer: "Yes. Your AI receptionist adapts her conversation based on the enquiry type. A homeowner needing a window replaced gets a friendly, reassuring response. A facilities manager enquiring about a shopfront refit gets a professional, specifications-focused response." },
+    { question: "How does quoting follow-up work for large glazing jobs?", answer: "For bigger jobs like shopfronts or conservatories, the automation system follows up after you send a quote — 24 hours, 3 days, and 7 days later. It keeps your quote visible without you having to chase, improving your conversion rate." },
+    { question: "Will this help me rank for 'glazier near me'?", answer: "Yes. That's one of the primary search terms we target. Your website is built to rank for 'glazier near me', 'glass repair [area]', 'emergency glazier [town]', and dozens more variations — each on its own optimised page." },
+    { question: "Can I promote seasonal offers through the system?", answer: "Yes. Automations can send seasonal campaigns — secondary glazing promotions before winter, energy efficiency content about double glazing, or summer conservatory repair packages. Keep your business top-of-mind seasonally." },
+    { question: "What if I specialise in certain types of glazing?", answer: "The system adapts to your specialisation. If you focus on heritage glazing, leaded lights, or fire-rated glass, we weight the content and SEO strategy towards those high-value niches. Specialisation often means less competition and better leads." },
+    { question: "How does the system handle misted double glazing enquiries?", answer: "Misted sealed units are a consistent source of repeat work. The website targets 'misted double glazing [area]' searches, and the automation system can remind previous customers when their other units might need attention." },
+    { question: "Do I need my own workshop to use this?", answer: "No. Whether you work from a workshop, a van, or cut on-site, the system works the same. Your AI receptionist answers calls regardless of where you are. The website generates leads for your coverage area. AI marketing needs nothing more than a phone photo." },
+    { question: "How much does the full system cost for a glazier?", answer: "AI Receptionist: £299 setup + £99/month. Website: from £997 one-off. AI Marketing: £199 setup + £99/month. One emergency board-up per week more than covers everything. 30-day full money back guarantee." },
+    { question: "Can I start with just emergency work and add planned work later?", answer: "Yes. Start with your AI receptionist to capture emergency calls. Add the website when you're ready to target search traffic. Add marketing to build long-term visibility. There's no wrong order and no pressure to buy everything at once." },
+    { question: "How quickly can I be up and running?", answer: "Your AI receptionist can be live within 24 hours. A website takes 2-4 weeks to build. AI marketing starts the day your website goes live. Most glaziers see their first your AI receptionist-captured lead within the first 48 hours." },
+  ],
+
+  widgetTrade: "glazing",
+};
+---
+
+<LeadGenerationLayout frontmatter={frontmatter} />

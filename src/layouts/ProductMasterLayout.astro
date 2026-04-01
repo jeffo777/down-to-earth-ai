@@ -1,0 +1,373 @@
+---
+/**
+ * ProductMasterLayout.astro
+ * Template for: Product master pages (6 pages)
+ * e.g. /ai-receptionist-for-tradesmen, /lead-generation-websites-for-tradesmen
+ */
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
+import HeroJaina from '../components/HeroJaina.astro';
+import WidgetJaina from '../components/WidgetJaina.astro';
+import CTAButton from '../components/CTAButton.astro';
+import GuaranteeBadge from '../components/GuaranteeBadge.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+import trades from '../data/trades.json';
+
+interface Props {
+  frontmatter: {
+    title: string;
+    metaTitle: string;
+    metaDescription: string;
+    canonicalUrl?: string;
+    heroHeadline: string;
+    heroSubhead: string;
+    heroAIText: string;
+    heroGreeting?: string;
+    heroPrice?: string;
+    showHeroAI?: boolean;
+    showPrice?: boolean;
+    price?: string;
+    guaranteeText?: string;
+    productSlug: string;
+    productName: string;
+    // How It Works
+    step1Title: string; step1Text: string;
+    step2Title: string; step2Text: string;
+    step3Title: string; step3Text: string;
+    // Features
+    features?: Array<{ name: string; description: string; href?: string }>;
+    // Founder's Note
+    foundersNote: string;
+    // Related Products
+    relatedProducts?: Array<{ name: string; href: string; description: string }>;
+    // FAQs
+    faqs: Array<{ question: string; answer: string }>;
+    // Widget
+    widgetTrade?: string;
+    widgetGoal?: string;
+  };
+}
+
+const { frontmatter } = Astro.props;
+const fm = frontmatter;
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{fm.metaTitle}</title>
+  <meta name="description" content={fm.metaDescription} />
+  {fm.canonicalUrl && <link rel="canonical" href={fm.canonicalUrl} />}
+  <meta property="og:title" content={fm.metaTitle} />
+  <meta property="og:description" content={fm.metaDescription} />
+  <meta property="og:url" content={fm.canonicalUrl} />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <Header />
+
+  <main id="main-content" style="padding-top: 64px;">
+
+    <!-- 1. HERO — Tight stack: Title → Subtitle → Price+Guarantee → Headshot → CTA -->
+    <section class="pm-hero">
+      <div class="pm-hero__inner">
+        <div class="pm-hero__stacked">
+          <h1 class="pm-hero__headline">{fm.heroHeadline}</h1>
+          <p class="pm-hero__subhead">{fm.heroSubhead}</p>
+          {(fm.heroPrice || fm.showPrice) && (
+            <div class="pm-hero__trust-row">
+              <span class="pm-hero__done-tag">✓ 100% done for you</span>
+              {fm.heroPrice && (
+                <span class="pm-hero__price-tag">Only {fm.heroPrice}</span>
+              )}
+              <span class="pm-hero__guarantee-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                30-day money back guarantee
+              </span>
+            </div>
+          )}
+          <div class="pm-hero__jaina">
+            <HeroJaina showHeroAI={fm.showHeroAI !== false} heroAIText={fm.heroAIText} heroGreeting={fm.heroGreeting} />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. HOW IT WORKS -->
+    <section class="pm-section pm-section--alt">
+      <div class="pm-container">
+        <h2 class="pm-section__title">How It Works</h2>
+        <div class="pm-steps">
+          <div class="pm-step">
+            <div class="pm-step__num">1</div>
+            <h3 class="pm-step__title">{fm.step1Title}</h3>
+            <p class="pm-step__text">{fm.step1Text}</p>
+          </div>
+          <div class="pm-step">
+            <div class="pm-step__num">2</div>
+            <h3 class="pm-step__title">{fm.step2Title}</h3>
+            <p class="pm-step__text">{fm.step2Text}</p>
+          </div>
+          <div class="pm-step">
+            <div class="pm-step__num">3</div>
+            <h3 class="pm-step__title">{fm.step3Title}</h3>
+            <p class="pm-step__text">{fm.step3Text}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. FEATURES / WHAT'S INCLUDED -->
+    {fm.features && fm.features.length > 0 && (
+      <section class="pm-section">
+        <div class="pm-container">
+          <h2 class="pm-section__title">What's Included</h2>
+          <div class="pm-features">
+            {fm.features.map(feature => (
+              <div class="pm-feature">
+                <svg class="pm-feature__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <div>
+                  <h3 class="pm-feature__name">{feature.name}</h3>
+                  <p class="pm-feature__desc">{feature.description}</p>
+                  {feature.href && <a href={feature.href} class="pm-feature__link">See details →</a>}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- 4. WHO IT'S FOR — Trade Grid -->
+    <section class="pm-section pm-section--alt">
+      <div class="pm-container">
+        <h2 class="pm-section__title">Built For Every Trade</h2>
+        <div class="pm-trades">
+          {trades.map(trade => (
+            <a href={`/${fm.productSlug}-for-${trade.slug}`} class="pm-trade-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              <span>{fm.productName} for {trade.name}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FOUNDER'S NOTE -->
+    <section class="pm-section">
+      <div class="pm-container pm-container--narrow">
+        <div class="pm-founder">
+          <div class="pm-founder__avatar">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <blockquote><p>{fm.foundersNote}</p></blockquote>
+          <div style="margin-top: 1rem; display: flex; justify-content: center;">
+            <GuaranteeBadge />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SOCIAL PROOF -->
+    <section class="pm-section pm-section--alt">
+      <div class="pm-container" style="text-align: center;">
+        <h2 class="pm-section__title">What Tradesmen Are Saying</h2>
+        <p style="color: var(--color-text-muted);">Reviews and case studies coming soon.</p>
+      </div>
+    </section>
+
+    <!-- 7. FAQs -->
+    {fm.faqs && fm.faqs.length > 0 && (
+      <section class="pm-section">
+        <div class="pm-container">
+          <h2 class="pm-section__title">Frequently Asked Questions</h2>
+          <FAQAccordion faqs={fm.faqs} />
+        </div>
+      </section>
+    )}
+
+    <!-- 8. RELATED SERVICES -->
+    {fm.relatedProducts && fm.relatedProducts.length > 0 && (
+      <section class="pm-section pm-section--alt">
+        <div class="pm-container">
+          <h2 class="pm-section__title">You Might Also Need</h2>
+          <div class="pm-related">
+            {fm.relatedProducts.map(product => (
+              <a href={product.href} class="pm-related__card">
+                <h3 class="pm-related__name">{product.name}</h3>
+                <p class="pm-related__desc">{product.description}</p>
+                <span class="pm-related__link">Learn more →</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- 9. FINAL CTA -->
+    <section class="pm-section" style="text-align: center;">
+      <div class="pm-container pm-container--narrow">
+        <h2>Ready To Get Started?</h2>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">No contracts. No catches. 30-day money back guarantee.</p>
+        <CTAButton
+          buttonText="Get Started"
+          buttonLink="/get-started"
+          showPrice={fm.showPrice !== false}
+          priceText={fm.price}
+          showGuarantee={true}
+          size="large"
+        />
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+  <CookieConsent />
+  <WidgetJaina widgetTrade={fm.widgetTrade || ''} widgetGoal={fm.widgetGoal || ''} />
+</body>
+</html>
+
+<style>
+  .pm-hero { background: var(--color-primary); padding: 3rem 1rem 2rem; }
+  .pm-hero__inner { max-width: 72rem; margin: 0 auto; }
+  .pm-hero__stacked {
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+  }
+  .pm-hero__headline {
+    font-size: 2rem; line-height: 1.15; margin-bottom: 1rem; max-width: 48rem;
+  }
+  @media (min-width: 768px) {
+    .pm-hero__headline { font-size: 2.75rem; }
+  }
+  @media (min-width: 1024px) {
+    .pm-hero { padding: 4rem 2rem 2.5rem; }
+    .pm-hero__headline { font-size: 3.25rem; }
+  }
+  .pm-hero__subhead {
+    font-size: 1.1rem; color: var(--color-text-secondary);
+    margin-bottom: 1rem; max-width: 38rem; line-height: 1.6;
+  }
+  @media (min-width: 768px) {
+    .pm-hero__subhead { font-size: 1.2rem; }
+  }
+
+  /* Trust row: price + guarantee inline */
+  .pm-hero__trust-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+  }
+  .pm-hero__price-tag {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+  }
+  .pm-hero__done-tag {
+    font-size: 0.95rem; font-weight: 600; color: var(--color-accent);
+  }
+  .pm-hero__guarantee-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-trust);
+  }
+
+  .pm-section { padding: 3rem 1rem; }
+  @media (min-width: 768px) { .pm-section { padding: 5rem 2rem; } }
+  .pm-section--alt { background: var(--color-secondary); }
+  .pm-container { max-width: 72rem; margin: 0 auto; }
+  .pm-container--narrow { max-width: 42rem; margin: 0 auto; }
+  .pm-section__title { text-align: center; margin-bottom: 0.75rem; }
+
+  /* Steps */
+  .pm-steps {
+    display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2rem;
+  }
+  @media (min-width: 768px) { .pm-steps { grid-template-columns: repeat(3, 1fr); } }
+  .pm-step {
+    text-align: center; padding: 1.5rem; background: var(--color-surface);
+    border-radius: 1rem; border: 1px solid var(--color-border-subtle);
+  }
+  .pm-step__num {
+    width: 40px; height: 40px; border-radius: 50%; background: var(--color-accent);
+    color: #fff; font-weight: 800; font-size: 1.125rem;
+    display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;
+  }
+  .pm-step__title { margin-bottom: 0.5rem; font-size: 1.0625rem; }
+  .pm-step__text { color: var(--color-text-secondary); font-size: 0.9375rem; }
+
+  /* Features */
+  .pm-features {
+    display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem;
+  }
+  @media (min-width: 640px) { .pm-features { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .pm-features { grid-template-columns: repeat(3, 1fr); } }
+  .pm-feature {
+    display: flex; gap: 0.75rem; padding: 1rem; background: var(--color-surface);
+    border-radius: 0.75rem; border: 1px solid var(--color-border-subtle);
+  }
+  .pm-feature__icon { color: var(--color-accent); flex-shrink: 0; margin-top: 0.125rem; }
+  .pm-feature__name { font-size: 0.9rem; font-weight: 600; color: var(--color-text-primary); margin-bottom: 0.25rem; }
+  .pm-feature__desc { font-size: 0.825rem; color: var(--color-text-muted); }
+  .pm-feature__link { display: inline-block; margin-top: 0.375rem; font-size: 0.8rem; color: var(--color-accent); font-weight: 600; text-decoration: none; transition: color 150ms; }
+  .pm-feature__link:hover { color: var(--color-accent-hover); }
+
+  /* Trade links */
+  .pm-trades {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-top: 2rem;
+  }
+  @media (min-width: 640px) { .pm-trades { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 1024px) { .pm-trades { grid-template-columns: repeat(4, 1fr); } }
+  .pm-trade-link {
+    display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem;
+    background: var(--color-surface); border: 1px solid var(--color-border-subtle);
+    border-radius: 0.75rem; color: var(--color-text-secondary); font-size: 0.825rem;
+    font-weight: 500; text-decoration: none; transition: all 150ms;
+  }
+  .pm-trade-link:hover {
+    border-color: var(--color-accent); color: var(--color-text-primary);
+    background: rgba(232, 145, 58, 0.06);
+  }
+  .pm-trade-link svg { color: var(--color-accent); flex-shrink: 0; }
+
+  /* Founder */
+  .pm-founder {
+    text-align: center; padding: 2rem; background: var(--color-surface);
+    border-radius: 1rem; border: 1px solid var(--color-border-subtle);
+  }
+  .pm-founder__avatar {
+    width: 56px; height: 56px; border-radius: 50%; background: var(--color-secondary);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1rem; color: var(--color-accent);
+  }
+  .pm-founder blockquote p {
+    color: var(--color-text-secondary); font-style: italic; line-height: 1.7;
+  }
+
+  /* Related */
+  .pm-related {
+    display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem;
+  }
+  @media (min-width: 768px) { .pm-related { grid-template-columns: repeat(3, 1fr); } }
+  .pm-related__card {
+    padding: 1.5rem; background: var(--color-surface);
+    border: 1px solid var(--color-border-subtle); border-radius: 1rem;
+    text-decoration: none; transition: border-color 150ms;
+  }
+  .pm-related__card:hover { border-color: var(--color-accent); }
+  .pm-related__name { font-size: 1rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem; }
+  .pm-related__desc { font-size: 0.875rem; color: var(--color-text-secondary); margin-bottom: 0.75rem; }
+  .pm-related__link { font-size: 0.875rem; color: var(--color-accent); font-weight: 600; }
+</style>
