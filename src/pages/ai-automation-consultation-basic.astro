@@ -1,0 +1,102 @@
+---
+import CorePageLayout from '../layouts/CorePageLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
+import GuaranteeBadge from '../components/GuaranteeBadge.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+
+const frontmatter = {
+  title: "Basic AI Automation Consultation",
+  metaTitle: "Basic AI Automation Consultation For Tradesmen | Down To Earth AI",
+  metaDescription: "Start your AI journey with a focused 30-minute discovery call. Get a clear assessment of where AI can save you time and win you more work. Tailored for UK tradesmen.",
+  canonicalUrl: "https://downtoearthai.co.uk/ai-automation-consultation-basic",
+  showHeroAI: false,
+  heroHeadline: "Begin Your AI Journey — £290",
+  heroSubhead: "A focused discovery consultation designed to show you exactly where AI can make the biggest difference in your trade business. One-off fee, no ongoing commitment.",
+};
+
+const faqs = [
+  {
+    question: "What is the Basic AI Automation Consultation?",
+    answer: "A focused 30-minute discovery call with Jeff, followed by a thorough assessment of your trade business. You'll receive a clear report with specific recommendations for where AI can save you time and win you more work — no jargon, just practical advice tailored to your trade."
+  },
+  {
+    question: "Who is the Basic consultation best for?",
+    answer: "Tradesmen who are curious about AI but aren't sure where to start. If you're losing leads, drowning in admin, or just want to know what's possible — this is your entry point. Many tradesmen find this package gives them all the clarity they need."
+  },
+  {
+    question: "What happens during the discovery call?",
+    answer: "Jeff asks about your trade, your daily workflow, your biggest headaches, and your goals. He's spent 25 years running trade businesses himself — landscape gardening, building maintenance, and tree work — so he speaks your language. It's a conversation, not a sales pitch."
+  },
+  {
+    question: "Will I get a written report?",
+    answer: "Yes. After the call, Jeff dedicates focused research time to your specific business. You receive a concise, actionable report with tailored AI automation recommendations — what to automate, why, and what the expected impact would be."
+  },
+  {
+    question: "Do I have to buy anything after the consultation?",
+    answer: "No. The consultation stands on its own. Many tradesmen use the report as a roadmap and implement changes at their own pace. If you want us to build the automations, we can — but there's absolutely no obligation."
+  },
+  {
+    question: "Is this just for big trade businesses?",
+    answer: "Not at all. In fact, the Basic consultation is specifically popular with sole traders and small teams. Single-person businesses often benefit the most from AI automation because there's nobody else to handle the admin."
+  },
+  {
+    question: "How is this different from generic AI consulting?",
+    answer: "We don't give you a theoretical AI strategy deck. We give you specific, trade-relevant recommendations you can act on immediately. Jeff knows the trades — he's a qualified tree surgeon who ran trade businesses for 25 years. He'll tell you exactly what to automate and what to leave alone."
+  },
+  {
+    question: "Can the Basic consultation lead to a bigger project?",
+    answer: "Yes. If the assessment reveals multiple opportunities, you can upgrade to our Advanced or Premium consultations for deeper strategy work. Or you can jump straight into implementation with our AI receptionist, lead generation websites, or custom automations."
+  },
+];
+---
+
+<CorePageLayout frontmatter={frontmatter}>
+
+  <section>
+    <div class="core-container--narrow">
+      <h2>What's Included</h2>
+      <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">
+        <div style="padding: 1.5rem; background: var(--color-surface); border-radius: 1rem; border: 1px solid var(--color-border-subtle);">
+          <h3 style="color: var(--color-accent); font-size: 1.0625rem; margin-bottom: 0.5rem;">30-Minute Discovery Call</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.9375rem; line-height: 1.7;">A focused conversation with Jeff about your trade, your workflow, and your challenges. Jeff's spent 25 years in the trades himself — he understands your world and speaks your language.</p>
+        </div>
+        <div style="padding: 1.5rem; background: var(--color-surface); border-radius: 1rem; border: 1px solid var(--color-border-subtle);">
+          <h3 style="color: var(--color-accent); font-size: 1.0625rem; margin-bottom: 0.5rem;">Business Assessment</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.9375rem; line-height: 1.7;">After the call, we assess your current processes — how you handle enquiries, quotes, invoicing, follow-ups, and customer communication. We identify the quick wins and the bigger opportunities.</p>
+        </div>
+        <div style="padding: 1.5rem; background: var(--color-surface); border-radius: 1rem; border: 1px solid var(--color-border-subtle);">
+          <h3 style="color: var(--color-accent); font-size: 1.0625rem; margin-bottom: 0.5rem;">Personalised Report</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.9375rem; line-height: 1.7;">You receive a clear, jargon-free report with customised recommendations for your business. What to automate, what to leave alone, and what the expected impact would be.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="core-section--alt">
+    <div class="core-container--narrow" style="text-align: center;">
+      <h2>Who It's For</h2>
+      <p style="color: var(--color-text-secondary); font-size: 1.0625rem; line-height: 1.7; max-width: 36rem; margin: 1rem auto 2rem;">If you're a tradesman who knows AI could help your business but isn't sure where to start — this is your entry point. No commitment, no pressure. Just a clear conversation with someone who's been in your shoes.</p>
+      <CTAButton buttonText="Book Your Consultation" buttonLink="/get-started" size="large" />
+      <div style="margin-top: 1rem; display: flex; justify-content: center;"><GuaranteeBadge /></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="core-container--narrow" style="text-align: center;">
+      <h2>Want A Deeper Dive?</h2>
+      <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">If you need a more comprehensive strategy, consider our Advanced or Premium consultations.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <CTAButton buttonText="Advanced Consultation" buttonLink="/ai-automation-consultation-advanced" />
+        <CTAButton buttonText="Premium Consultation" buttonLink="/ai-automation-consultation-premium" />
+      </div>
+    </div>
+  </section>
+
+  <section class="core-section--alt">
+    <div class="core-container">
+      <h2 style="text-align: center; margin-bottom: 1.5rem;">Frequently Asked Questions</h2>
+      <FAQAccordion faqs={faqs} />
+    </div>
+  </section>
+
+</CorePageLayout>

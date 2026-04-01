@@ -4,6 +4,61 @@
             "source": "/book-a-demo",
             "destination": "/get-started",
             "permanent": true
+        },
+        {
+            "source": "/about-jeff-morton-small-business-ai-consultant",
+            "destination": "/about",
+            "permanent": true
+        },
+        {
+            "source": "/about-jeff-morton-small-business-ai-consultant/",
+            "destination": "/about",
+            "permanent": true
+        },
+        {
+            "source": "/ai-consulting-for-smbs-tailored-ai-services-to-boost-your-small-business",
+            "destination": "/ai-automation-consultation",
+            "permanent": true
+        },
+        {
+            "source": "/ai-consulting-for-smbs-tailored-ai-services-to-boost-your-small-business/",
+            "destination": "/ai-automation-consultation",
+            "permanent": true
+        },
+        {
+            "source": "/contact/",
+            "destination": "/contact",
+            "permanent": true
+        },
+        {
+            "source": "/product/basic-ai-discovery-consultation-package-small_business-smb",
+            "destination": "/ai-automation-consultation-basic",
+            "permanent": true
+        },
+        {
+            "source": "/product/basic-ai-discovery-consultation-package-small_business-smb/",
+            "destination": "/ai-automation-consultation-basic",
+            "permanent": true
+        },
+        {
+            "source": "/product/advanced-ai-discovery-consultation-package-small-business-smb",
+            "destination": "/ai-automation-consultation-advanced",
+            "permanent": true
+        },
+        {
+            "source": "/product/advanced-ai-discovery-consultation-package-small-business-smb/",
+            "destination": "/ai-automation-consultation-advanced",
+            "permanent": true
+        },
+        {
+            "source": "/product/premium-ai-discovery-consultation-package-small-business-smb",
+            "destination": "/ai-automation-consultation-premium",
+            "permanent": true
+        },
+        {
+            "source": "/product/premium-ai-discovery-consultation-package-small-business-smb/",
+            "destination": "/ai-automation-consultation-premium",
+            "permanent": true
         }
     ],
     "headers": [

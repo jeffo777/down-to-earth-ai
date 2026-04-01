@@ -2,16 +2,44 @@
 import CorePageLayout from '../layouts/CorePageLayout.astro';
 import CTAButton from '../components/CTAButton.astro';
 import GuaranteeBadge from '../components/GuaranteeBadge.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
 
 const frontmatter = {
   title: "About",
-  metaTitle: "About Down To Earth AI — Built By A Tradesman, For Tradesmen",
-  metaDescription: "Down To Earth AI was founded because tradesmen deserve better tools. We build AI that's practical, affordable, and designed for people who work with their hands.",
+  metaTitle: "About Jeff Morton — Down To Earth AI Founder | 25 Years In The Trades",
+  metaDescription: "Jeff Morton ran landscape gardening, building maintenance, and tree work businesses for 25 years. He built Down To Earth AI because he knows what it's like to lose sleep over leads.",
   canonicalUrl: "https://downtoearthai.co.uk/about",
   showHeroAI: false,
   heroHeadline: "Built By A Tradesman. For Tradesmen.",
   heroSubhead: "We're not a Silicon Valley startup. We understand your world because we've lived in it.",
 };
+
+const aboutFaqs = [
+  {
+    question: "Who is Jeff Morton?",
+    answer: "Jeff Morton is the founder of Down To Earth AI. He's a qualified tree surgeon who ran landscape gardening, building maintenance, landscape construction, and tree work businesses for 25 years. After decades of living the reality of trade work — the early starts, the physical graft, and the constant worry about where the next lead was coming from — he built Down To Earth AI as the system he wished he'd had back then."
+  },
+  {
+    question: "Why did Jeff build Down To Earth AI?",
+    answer: "After 25 years in the trades, Jeff knows the sleepless nights worrying about leads. The anxiety of not knowing if there was enough work coming in to pay the bills and the wages for the lads at the end of the month — it literally drove him to drink and had some bad outcomes. He got into digital marketing to solve it for himself, then into lead generation, and eventually built AI tools so other tradesmen wouldn't have to go through the same thing. The technology to solve these problems simply didn't exist back then. It does now."
+  },
+  {
+    question: "Is Down To Earth AI just another tech company?",
+    answer: "No. It was founded by someone who's spent 25 years in the trades — running landscape gardening crews, managing building maintenance contracts, and climbing trees as a qualified tree surgeon. Jeff understands the reality — the early mornings, the physical work, the cash flow pressure, the worry about having enough work. Every tool Down To Earth AI builds comes from that understanding. It's not tech for tech's sake — it's practical solutions for real problems."
+  },
+  {
+    question: "What's Jeff's background in AI and technology?",
+    answer: "Jeff transitioned from 25 years in the trades into digital marketing and lead generation, then into artificial intelligence. He's active in the AI community on LinkedIn and the OpenAI forums, helping others understand how AI can be applied practically in business. His approach has always been the same — cut through the complexity and deliver practical solutions without the tech jargon."
+  },
+  {
+    question: "Where is Down To Earth AI based?",
+    answer: "Bournemouth, UK. Jeff lives near Hengistbury Head and the New Forest — a constant reminder to keep things grounded and practical. When things get too tech-heavy, Hengistbury Head beach is his go-to spot for blowing away the cobwebs and getting some quiet reflection. The company serves tradesmen across the entire UK."
+  },
+  {
+    question: "Does Jeff still work with small businesses directly?",
+    answer: "Yes. Jeff personally handles every initial consultation. He believes in human connection first — understanding your trade, your area, your challenges — before recommending any technology. That's the 'down to earth' part. Whether you've got a specific AI-powered goal for your business or you're just getting your bearings, Jeff's here to meet you right where you are."
+  },
+];
 ---
 
 <CorePageLayout frontmatter={frontmatter}>
@@ -19,10 +47,13 @@ const frontmatter = {
   <section>
     <div class="core-container--narrow">
       <h2>The Story</h2>
-      <p style="line-height: 1.8; margin-bottom: 1.25rem;">Down To Earth AI started with a simple observation: tradesmen are losing work every single day — not because they aren't skilled, but because they can't answer the phone while they're on a job.</p>
-      <p style="line-height: 1.8; margin-bottom: 1.25rem;">I watched my mate — a brilliant plumber — lose three jobs in one week. Not because he did bad work. Not because he was expensive. Because he was under a sink when the phone rang, and by the time he called back, the customer had already booked someone else.</p>
-      <p style="line-height: 1.8; margin-bottom: 1.25rem;">That's when the idea was born. An AI receptionist that answers every call, every message, every enquiry — 24/7 — so tradesmen never miss another opportunity.</p>
-      <p style="line-height: 1.8; margin-bottom: 1.25rem;">But we didn't stop there. We realised that most tradesmen also have terrible websites (or no website at all), no marketing strategy, and no way to automate the admin that drowns them after every working day. So we built solutions for all of it.</p>
+      <p style="line-height: 1.8; margin-bottom: 1.25rem;">I'm Jeff Morton. I ran landscape gardening, building maintenance, landscape construction, and tree work businesses for 25 years. I'm also a qualified tree surgeon. I know the trades inside and out — the early starts, the hard graft, the satisfaction of a job well done.</p>
+      <p style="line-height: 1.8; margin-bottom: 1.25rem;">But the thing that kept me up at night wasn't the physical work. It was worrying about having enough leads to get enough work in to pay the bills at the end of the month — and the wages for the lads. That anxiety was relentless. It literally drove me to drink, and it had some bad outcomes I'm not proud of.</p>
+      <p style="line-height: 1.8; margin-bottom: 1.25rem;">That's what got me into digital marketing. Then into lead generation. And eventually, into building AI tools. Because I realised the system I desperately needed back then simply didn't exist. The technology wasn't there.</p>
+      <p style="line-height: 1.8; margin-bottom: 1.25rem;">It is now.</p>
+      <p style="line-height: 1.8; margin-bottom: 1.25rem;">Down To Earth AI is the system I wish I'd had. An AI receptionist that never misses a call. Lead generation that works while you're on the tools. Marketing that runs itself. Automations that handle the admin so you can focus on the work.</p>
+      <p style="line-height: 1.8; margin-bottom: 1.25rem;">I watched my mate — a brilliant plumber — lose three jobs in one week. Not because he did bad work. Not because he was expensive. Because he was under a sink when the phone rang, and by the time he called back, the customer had already booked someone else. I've lived that exact same pain for 25 years. And I built this so no tradesman has to live it again.</p>
+      <p style="line-height: 1.8; margin-bottom: 1.25rem;">I'm still based in Bournemouth, UK — near Hengistbury Head, my go-to spot for blowing away the cobwebs. I'm passionate about the AI community and active on LinkedIn and the OpenAI forums, helping others understand how AI can be applied practically. But my real passion is making sure every tradesman who's ever lost sleep over where the next job is coming from has access to tools that solve that problem — permanently.</p>
     </div>
   </section>
 
@@ -51,6 +82,13 @@ const frontmatter = {
       <h2>Our Mission</h2>
       <p style="font-size: 1.25rem; color: var(--color-text-primary); font-weight: 600; line-height: 1.5; max-width: 32rem; margin: 1rem auto 2rem;">To give every tradesman in the UK access to AI tools that help them win more work, save time, and grow their business — without needing to be a tech expert.</p>
       <CTAButton buttonText="See How It Works" buttonLink="/how-it-works" size="large" />
+    </div>
+  </section>
+
+  <section class="core-section--alt">
+    <div class="core-container">
+      <h2 style="text-align: center; margin-bottom: 1.5rem;">About Down To Earth AI</h2>
+      <FAQAccordion faqs={aboutFaqs} />
     </div>
   </section>
 

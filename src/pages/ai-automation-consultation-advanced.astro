@@ -1,0 +1,106 @@
+---
+import CorePageLayout from '../layouts/CorePageLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
+import GuaranteeBadge from '../components/GuaranteeBadge.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+
+const frontmatter = {
+  title: "Advanced AI Automation Consultation",
+  metaTitle: "Advanced AI Automation Consultation For Tradesmen | Down To Earth AI",
+  metaDescription: "A comprehensive AI strategy consultation for trade businesses. 60-minute deep dive, up to 4 hours of research, and a detailed strategy report with ROI analysis.",
+  canonicalUrl: "https://downtoearthai.co.uk/ai-automation-consultation-advanced",
+  showHeroAI: false,
+  heroHeadline: "Develop Your AI Strategy — £490",
+  heroSubhead: "A comprehensive consultation that maps your entire business workflow and identifies every opportunity where AI can save you time, win more work, and increase revenue. One-off fee, no ongoing commitment.",
+};
+
+const faqs = [
+  {
+    question: "What's included in the Advanced consultation?",
+    answer: "A comprehensive 60-minute deep dive with Jeff, followed by up to 4 hours of dedicated research into your trade business. You receive a detailed strategy report covering multiple automation opportunities with projected ROI for each."
+  },
+  {
+    question: "How is the Advanced different from the Basic?",
+    answer: "The Basic identifies quick wins. The Advanced goes deeper — mapping your entire business workflow, analysing multiple automation opportunities, and producing a prioritised strategy with ROI projections. It's for tradesmen who want a complete picture of what AI can do for their business."
+  },
+  {
+    question: "What does the strategy report include?",
+    answer: "Your report covers: current workflow analysis, identified automation opportunities ranked by impact, projected time savings and ROI for each, recommended implementation sequence, technology recommendations, and a timeline for getting everything live."
+  },
+  {
+    question: "Can the Advanced consultation cover multiple services?",
+    answer: "Yes. The extended research time means we can assess AI opportunities across your entire business — lead capture, customer communication, quoting, invoicing, marketing, review management, and scheduling. Nothing is off the table."
+  },
+  {
+    question: "Do you analyse my current technology setup?",
+    answer: "Yes. Part of the Advanced consultation involves reviewing the tools and systems you already use. We identify what's working, what could be improved, and where AI can integrate without disrupting your existing processes."
+  },
+  {
+    question: "Is this suitable for a trade business with employees?",
+    answer: "Absolutely. The Advanced consultation is often chosen by trade businesses with 2-10 employees who need to systematise operations. The strategy considers team workflows, not just sole-trader operations."
+  },
+  {
+    question: "What kind of ROI can I expect?",
+    answer: "It varies by trade and situation, but most tradesmen see the biggest returns from eliminating missed calls (typically worth £500+ per lost job), automating quote follow-ups (improving conversion by 20-30%), and streamlining invoicing (reducing payment times by days or weeks)."
+  },
+  {
+    question: "Can I implement the recommendations myself?",
+    answer: "You can try, but most tradesmen prefer us to build it. The report gives you everything you need to understand what's being built and why — but implementation typically requires technical expertise we provide through our other services."
+  },
+];
+---
+
+<CorePageLayout frontmatter={frontmatter}>
+
+  <section>
+    <div class="core-container--narrow">
+      <h2>What's Included</h2>
+      <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">
+        <div style="padding: 1.5rem; background: var(--color-surface); border-radius: 1rem; border: 1px solid var(--color-border-subtle);">
+          <h3 style="color: var(--color-accent); font-size: 1.0625rem; margin-bottom: 0.5rem;">60-Minute Deep Dive</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.9375rem; line-height: 1.7;">A comprehensive discussion about your trade business, your workflow, your pain points, and your growth ambitions. Jeff maps your entire operation to identify every automation opportunity.</p>
+        </div>
+        <div style="padding: 1.5rem; background: var(--color-surface); border-radius: 1rem; border: 1px solid var(--color-border-subtle);">
+          <h3 style="color: var(--color-accent); font-size: 1.0625rem; margin-bottom: 0.5rem;">Up To 4 Hours Of Research</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.9375rem; line-height: 1.7;">Dedicated research into your specific trade, your area, and your competitive landscape. We analyse every aspect of your business where AI could make an impact.</p>
+        </div>
+        <div style="padding: 1.5rem; background: var(--color-surface); border-radius: 1rem; border: 1px solid var(--color-border-subtle);">
+          <h3 style="color: var(--color-accent); font-size: 1.0625rem; margin-bottom: 0.5rem;">Detailed Strategy Report</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.9375rem; line-height: 1.7;">A comprehensive report with prioritised automation recommendations, ROI projections, technology suggestions, and a clear implementation roadmap aligned with your business objectives.</p>
+        </div>
+        <div style="padding: 1.5rem; background: var(--color-surface); border-radius: 1rem; border: 1px solid var(--color-border-subtle);">
+          <h3 style="color: var(--color-accent); font-size: 1.0625rem; margin-bottom: 0.5rem;">Multi-Channel Analysis</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.9375rem; line-height: 1.7;">We assess AI opportunities across every channel — lead capture, phone, text, email, social media, quoting, invoicing, marketing, and review management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="core-section--alt">
+    <div class="core-container--narrow" style="text-align: center;">
+      <h2>Who It's For</h2>
+      <p style="color: var(--color-text-secondary); font-size: 1.0625rem; line-height: 1.7; max-width: 36rem; margin: 1rem auto 2rem;">Trade businesses ready for a strategic approach to AI. You know there's potential — you want a clear, detailed plan for exactly how to capture it. Often this package serves as an all-encompassing solution for immediate strategic needs, while paving the way for longer-term AI integration.</p>
+      <CTAButton buttonText="Book Your Consultation" buttonLink="/get-started" size="large" />
+      <div style="margin-top: 1rem; display: flex; justify-content: center;"><GuaranteeBadge /></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="core-container--narrow" style="text-align: center;">
+      <h2>Other Consultation Options</h2>
+      <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">Choose the consultation level that matches your needs.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <CTAButton buttonText="Basic Consultation" buttonLink="/ai-automation-consultation-basic" />
+        <CTAButton buttonText="Premium Consultation" buttonLink="/ai-automation-consultation-premium" />
+      </div>
+    </div>
+  </section>
+
+  <section class="core-section--alt">
+    <div class="core-container">
+      <h2 style="text-align: center; margin-bottom: 1.5rem;">Frequently Asked Questions</h2>
+      <FAQAccordion faqs={faqs} />
+    </div>
+  </section>
+
+</CorePageLayout>

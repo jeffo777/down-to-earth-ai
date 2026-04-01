@@ -1,0 +1,241 @@
+---
+import CorePageLayout from '../layouts/CorePageLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
+import GuaranteeBadge from '../components/GuaranteeBadge.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+
+const frontmatter = {
+  title: "AI Automation Consultation",
+  metaTitle: "AI Automation Consultation For Tradesmen | Tailored AI Services | Down To Earth AI",
+  metaDescription: "Book an AI automation consultation tailored to your trade business. Choose from Basic, Advanced, or Premium packages. Get a clear strategy for where AI can save you time and win you more work.",
+  canonicalUrl: "https://downtoearthai.co.uk/ai-automation-consultation",
+  showHeroAI: false,
+  heroHeadline: "AI Automation Consultation",
+  heroSubhead: "Not sure where to start with AI? Book a consultation with Jeff and get a clear, practical strategy tailored to your trade — no jargon, no fluff, just actionable advice.",
+};
+
+const faqs = [
+  {
+    question: "What are your AI consultation services?",
+    answer: "We offer tailored AI consultation services specifically for tradesmen and small trade businesses. Unlike generic AI consultancies that serve any industry, our consultations are built around the reality of trade work — missed calls on site, quote follow-ups that slip through the cracks, marketing that never gets done. Jeff personally conducts every consultation, bringing 25 years of hands-on trade experience to every recommendation."
+  },
+  {
+    question: "How do you tailor AI services to boost my small business?",
+    answer: "Every consultation starts with understanding your specific trade, your area, and your daily workflow. We then identify the highest-impact opportunities for AI automation — whether that's an AI receptionist to catch missed calls, automated quote follow-ups, review collection, or marketing that runs itself. The recommendations are prioritised by ROI so you know exactly where to invest first."
+  },
+  {
+    question: "Do you conduct an AI readiness assessment?",
+    answer: "Yes. Every consultation includes an assessment of your current business processes and technology. We evaluate how you handle enquiries, quotes, invoicing, follow-ups, and customer communication. This tells us exactly where AI can step in and make the biggest difference — without disrupting what already works well."
+  },
+  {
+    question: "Can you help develop a custom AI strategy for my business?",
+    answer: "Absolutely. Our Advanced and Premium consultations include comprehensive strategy development. We map your entire business workflow, analyse your competitive landscape, and create a practical AI roadmap with clear implementation priorities and projected ROI. It's not a generic template — it's built specifically for your trade."
+  },
+  {
+    question: "What kind of AI solutions can a consultation uncover?",
+    answer: "Consultations typically reveal opportunities you hadn't considered — from AI receptionists that answer every call 24/7, to automated quote follow-ups that improve conversion by 20-30%, to review collection systems that boost your Google rankings, to marketing automation that generates leads while you're on the tools. Sometimes the biggest wins are the ones you didn't know existed."
+  },
+  {
+    question: "I'm not very tech-savvy — will I understand the consultation?",
+    answer: "Yes. Jeff spent 25 years as a tradesman before getting into AI — he knows how to explain technology in plain English. Every consultation is jargon-free. You'll walk away understanding exactly what's being recommended and why, in terms that make sense for your business."
+  },
+  {
+    question: "How does your consultation compare to enterprise AI consulting?",
+    answer: "Enterprise AI consultancies charge thousands and deliver theoretical strategy documents. We deliver practical, trade-specific recommendations at a fraction of the cost. And if you want us to actually build the automations afterwards, we can — you're not left with a PDF and no way forward."
+  },
+  {
+    question: "What ongoing support is available after the consultation?",
+    answer: "All consultation packages include the strategy and recommendations. If you want us to implement the automations, we offer our full range of services — AI receptionist, lead generation websites, AI marketing, and custom automations. Many tradesmen move straight from consultation to implementation because the ROI case is so clear."
+  },
+];
+---
+
+<CorePageLayout frontmatter={frontmatter}>
+
+  <section>
+    <div class="core-container--narrow" style="text-align: center;">
+      <h2>Choose Your Consultation</h2>
+      <p style="color: var(--color-text-secondary); font-size: 1.0625rem; line-height: 1.7; max-width: 36rem; margin: 0.75rem auto 2.5rem;">Every consultation is conducted personally by Jeff — a qualified tree surgeon who ran trade businesses for 25 years. Pick the level that suits where you are right now.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="consultation-grid">
+
+      <!-- Basic -->
+      <div class="consultation-card">
+        <div class="consultation-card__badge">Entry Point</div>
+        <h3 class="consultation-card__title">Basic</h3>
+        <div class="consultation-card__price">£290</div>
+        <p class="consultation-card__subtitle">One-off fee · No ongoing commitment</p>
+        <ul class="consultation-card__features">
+          <li>30-minute discovery call with Jeff</li>
+          <li>Business process assessment</li>
+          <li>Quick-win automation identification</li>
+          <li>Personalised action report</li>
+        </ul>
+        <div class="consultation-card__cta">
+          <CTAButton buttonText="Learn More" buttonLink="/ai-automation-consultation-basic" size="medium" />
+        </div>
+      </div>
+
+      <!-- Advanced -->
+      <div class="consultation-card consultation-card--featured">
+        <div class="consultation-card__badge consultation-card__badge--featured">Most Popular</div>
+        <h3 class="consultation-card__title">Advanced</h3>
+        <div class="consultation-card__price">£490</div>
+        <p class="consultation-card__subtitle">One-off fee · No ongoing commitment</p>
+        <ul class="consultation-card__features">
+          <li>60-minute deep-dive consultation</li>
+          <li>Up to 4 hours of dedicated research</li>
+          <li>Multi-channel automation analysis</li>
+          <li>Detailed strategy report with ROI</li>
+          <li>Technology recommendations</li>
+        </ul>
+        <div class="consultation-card__cta">
+          <CTAButton buttonText="Learn More" buttonLink="/ai-automation-consultation-advanced" size="medium" />
+        </div>
+      </div>
+
+      <!-- Premium -->
+      <div class="consultation-card">
+        <div class="consultation-card__badge">Full Transformation</div>
+        <h3 class="consultation-card__title">Premium</h3>
+        <div class="consultation-card__price">£990</div>
+        <p class="consultation-card__subtitle">One-off fee · No ongoing commitment</p>
+        <ul class="consultation-card__features">
+          <li>Two in-depth consultation calls</li>
+          <li>Up to 8 hours of dedicated research</li>
+          <li>Competitive analysis for your area</li>
+          <li>Comprehensive strategy report</li>
+          <li>Full implementation roadmap</li>
+          <li>Resource &amp; timeline planning</li>
+        </ul>
+        <div class="consultation-card__cta">
+          <CTAButton buttonText="Learn More" buttonLink="/ai-automation-consultation-premium" size="medium" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="core-section--alt">
+    <div class="core-container--narrow" style="text-align: center;">
+      <h2>Not Sure Which Package?</h2>
+      <p style="color: var(--color-text-secondary); font-size: 1.0625rem; line-height: 1.7; max-width: 36rem; margin: 0.75rem auto 2rem;">Book a free 15-minute call with Jeff. He'll listen to your situation and honestly recommend the right package — or tell you if a consultation isn't what you need right now.</p>
+      <CTAButton buttonText="Book A Free Call" buttonLink="/get-started" size="large" />
+      <div style="margin-top: 1rem; display: flex; justify-content: center;"><GuaranteeBadge /></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="core-container">
+      <h2 style="text-align: center; margin-bottom: 1.5rem;">Common Questions About AI Consultations</h2>
+      <FAQAccordion faqs={faqs} />
+    </div>
+  </section>
+
+</CorePageLayout>
+
+<style>
+  .consultation-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .consultation-grid {
+      grid-template-columns: repeat(3, 1fr);
+      align-items: start;
+    }
+  }
+
+  .consultation-card {
+    position: relative;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 1.25rem;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .consultation-card--featured {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 1px var(--color-accent), 0 8px 32px rgba(99, 102, 241, 0.15);
+  }
+
+  @media (min-width: 768px) {
+    .consultation-card--featured {
+      transform: scale(1.04);
+    }
+  }
+
+  .consultation-card__badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .consultation-card__badge--featured {
+    color: var(--color-accent);
+  }
+
+  .consultation-card__title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .consultation-card__price {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    margin-bottom: 0.25rem;
+  }
+
+  .consultation-card__subtitle {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .consultation-card__features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    flex-grow: 1;
+  }
+
+  .consultation-card__features li {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .consultation-card__features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .consultation-card__cta {
+    margin-top: auto;
+  }
+</style>

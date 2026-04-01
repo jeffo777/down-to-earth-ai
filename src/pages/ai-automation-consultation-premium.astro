@@ -1,0 +1,110 @@
+---
+import CorePageLayout from '../layouts/CorePageLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
+import GuaranteeBadge from '../components/GuaranteeBadge.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+
+const frontmatter = {
+  title: "Premium AI Automation Consultation",
+  metaTitle: "Premium AI Automation Consultation For Tradesmen | Down To Earth AI",
+  metaDescription: "A complete AI transformation blueprint for your trade business. Two in-depth calls, up to 8 hours of research, competitive analysis, and a full implementation roadmap.",
+  canonicalUrl: "https://downtoearthai.co.uk/ai-automation-consultation-premium",
+  showHeroAI: false,
+  heroHeadline: "Engineer Your AI Revolution — £990",
+  heroSubhead: "A complete business transformation blueprint — covering every area where AI can help you win more work, save time, and grow revenue. One-off fee, no ongoing commitment.",
+};
+
+const faqs = [
+  {
+    question: "What makes the Premium consultation different?",
+    answer: "It's a complete business transformation blueprint. Two in-depth calls with Jeff, up to 8 hours of dedicated research, and a comprehensive report covering every area of your trade business where AI can make an impact — from lead generation to job completion to getting paid."
+  },
+  {
+    question: "Who should choose the Premium package?",
+    answer: "Trade businesses ready for a serious step-change. If you're turning over decent money but know you're leaving revenue on the table — through missed leads, slow invoicing, inconsistent marketing, or manual admin — the Premium consultation maps out your complete AI-powered future."
+  },
+  {
+    question: "What does the comprehensive report cover?",
+    answer: "Everything: full business process audit, competitive analysis for your trade and area, complete automation strategy with implementation priorities, technology recommendations, ROI projections, resource planning, timeline, and a step-by-step roadmap from where you are now to where you want to be."
+  },
+  {
+    question: "Why are there two consultation calls?",
+    answer: "The first call is discovery — Jeff learns your business inside and out. The second call, after the research phase, is strategy presentation — Jeff walks you through every recommendation, answers your questions, and helps you prioritise. Two calls means no gap between understanding and action."
+  },
+  {
+    question: "Does the Premium include implementation?",
+    answer: "The Premium consultation produces the strategy and roadmap. Implementation is quoted separately once you've reviewed and approved the plan. Many Premium clients go straight into full implementation because the ROI case is so clear by that point."
+  },
+  {
+    question: "Can this help me scale from a one-man business to a team?",
+    answer: "Yes. The Premium consultation specifically addresses scaling — what systems you need before hiring, how to maintain service quality with a team, and how AI can manage the operational complexity that comes with growth."
+  },
+  {
+    question: "How does the competitive analysis work?",
+    answer: "We research your direct competitors in your area — their online presence, their response times, their marketing, their Google rankings. This shows you exactly where you have advantages and where AI can help you pull ahead."
+  },
+  {
+    question: "Is 8 hours of research really necessary?",
+    answer: "For complex trade businesses, absolutely. That depth of research means we uncover opportunities you'd never think of — like automated seasonal marketing campaigns, smart scheduling that reduces fuel costs, or review strategies that dominate local search results."
+  },
+];
+---
+
+<CorePageLayout frontmatter={frontmatter}>
+
+  <section>
+    <div class="core-container--narrow">
+      <h2>What's Included</h2>
+      <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">
+        <div style="padding: 1.5rem; background: var(--color-surface); border-radius: 1rem; border: 1px solid var(--color-border-subtle);">
+          <h3 style="color: var(--color-accent); font-size: 1.0625rem; margin-bottom: 0.5rem;">Two In-Depth Consultation Calls</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.9375rem; line-height: 1.7;">The first call is pure discovery — Jeff learns your business inside and out. The second call presents your strategy, walks you through every recommendation, and helps you prioritise implementation.</p>
+        </div>
+        <div style="padding: 1.5rem; background: var(--color-surface); border-radius: 1rem; border: 1px solid var(--color-border-subtle);">
+          <h3 style="color: var(--color-accent); font-size: 1.0625rem; margin-bottom: 0.5rem;">Up To 8 Hours Of Dedicated Research</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.9375rem; line-height: 1.7;">Deep research into your trade, your area, your competitors, and your market. We leave no stone unturned — identifying every opportunity where AI can give you an edge.</p>
+        </div>
+        <div style="padding: 1.5rem; background: var(--color-surface); border-radius: 1rem; border: 1px solid var(--color-border-subtle);">
+          <h3 style="color: var(--color-accent); font-size: 1.0625rem; margin-bottom: 0.5rem;">Comprehensive Strategy Report</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.9375rem; line-height: 1.7;">A thorough report encompassing strategic planning, actionable insights, full business process audit, ROI projections, and a step-by-step implementation roadmap.</p>
+        </div>
+        <div style="padding: 1.5rem; background: var(--color-surface); border-radius: 1rem; border: 1px solid var(--color-border-subtle);">
+          <h3 style="color: var(--color-accent); font-size: 1.0625rem; margin-bottom: 0.5rem;">Competitive Analysis</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.9375rem; line-height: 1.7;">We research your direct competitors — their online presence, response times, marketing, and Google rankings. See exactly where you can pull ahead with the right AI tools.</p>
+        </div>
+        <div style="padding: 1.5rem; background: var(--color-surface); border-radius: 1rem; border: 1px solid var(--color-border-subtle);">
+          <h3 style="color: var(--color-accent); font-size: 1.0625rem; margin-bottom: 0.5rem;">Full Implementation Roadmap</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.9375rem; line-height: 1.7;">Not just recommendations — a complete roadmap with priorities, timelines, resource planning, and a clear path from where you are now to where you want to be.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="core-section--alt">
+    <div class="core-container--narrow" style="text-align: center;">
+      <h2>Who It's For</h2>
+      <p style="color: var(--color-text-secondary); font-size: 1.0625rem; line-height: 1.7; max-width: 36rem; margin: 1rem auto 2rem;">Forward-thinking trade businesses ready to integrate AI at a core level. This premium offering provides robust, tailor-made AI strategies right out of the gate — for more complex projects that need a comprehensive approach.</p>
+      <CTAButton buttonText="Book Your Consultation" buttonLink="/get-started" size="large" />
+      <div style="margin-top: 1rem; display: flex; justify-content: center;"><GuaranteeBadge /></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="core-container--narrow" style="text-align: center;">
+      <h2>Other Consultation Options</h2>
+      <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">Choose the consultation level that matches your needs.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <CTAButton buttonText="Basic Consultation" buttonLink="/ai-automation-consultation-basic" />
+        <CTAButton buttonText="Advanced Consultation" buttonLink="/ai-automation-consultation-advanced" />
+      </div>
+    </div>
+  </section>
+
+  <section class="core-section--alt">
+    <div class="core-container">
+      <h2 style="text-align: center; margin-bottom: 1.5rem;">Frequently Asked Questions</h2>
+      <FAQAccordion faqs={faqs} />
+    </div>
+  </section>
+
+</CorePageLayout>
