@@ -21,7 +21,7 @@ Every single page on the Down To Earth AI website MUST contain **100% unique, AI
 - Unique FAQs (10 per Trade × Channel page, 15 per Lead Generation page) — no duplicates across pages
 - UK English spelling and terminology throughout (e.g. "colour" not "color", "recognise" not "recognize")
 - UK-specific references: Gas Safe, NICEIC, NAPIT, BPCA, Part P, EICRs, stopcocks, consumer units, letting agents, EPC, etc.
-- Real Yorkshire locations and postcodes (LS6, LS8, Headingley, Roundhay, Chapel Allerton, etc.)
+- **Varied UK locations** — use a mix of Yorkshire, other UK regions, and no-location references. Do NOT over-index on Yorkshire/Leeds in FAQs as this signals geographic limitation to Google. Scenarios can use Yorkshire but FAQs should vary widely (e.g. some with no location, some with general UK references, occasional Yorkshire mentions)
 - Prices in GBP (£)
 
 ### Quality Bar:
