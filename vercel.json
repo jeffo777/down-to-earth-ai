@@ -199,6 +199,146 @@
             "source": "/lead-generation-website-for-pest-control/",
             "destination": "/ai-lead-generation-website-for-pest-control",
             "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-tradesmen",
+            "destination": "/ai-lead-generation-for-tradesmen",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-tradesmen/",
+            "destination": "/ai-lead-generation-for-tradesmen",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-plumbers",
+            "destination": "/ai-lead-generation-for-plumbers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-plumbers/",
+            "destination": "/ai-lead-generation-for-plumbers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-electricians",
+            "destination": "/ai-lead-generation-for-electricians",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-electricians/",
+            "destination": "/ai-lead-generation-for-electricians",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-builders",
+            "destination": "/ai-lead-generation-for-builders",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-builders/",
+            "destination": "/ai-lead-generation-for-builders",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-locksmiths",
+            "destination": "/ai-lead-generation-for-locksmiths",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-locksmiths/",
+            "destination": "/ai-lead-generation-for-locksmiths",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-roofers",
+            "destination": "/ai-lead-generation-for-roofers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-roofers/",
+            "destination": "/ai-lead-generation-for-roofers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-drainage-engineers",
+            "destination": "/ai-lead-generation-for-drainage-engineers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-drainage-engineers/",
+            "destination": "/ai-lead-generation-for-drainage-engineers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-glaziers",
+            "destination": "/ai-lead-generation-for-glaziers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-glaziers/",
+            "destination": "/ai-lead-generation-for-glaziers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-gas-engineers",
+            "destination": "/ai-lead-generation-for-gas-engineers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-gas-engineers/",
+            "destination": "/ai-lead-generation-for-gas-engineers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-hvac-engineers",
+            "destination": "/ai-lead-generation-for-hvac-engineers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-hvac-engineers/",
+            "destination": "/ai-lead-generation-for-hvac-engineers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-pest-control",
+            "destination": "/ai-lead-generation-for-pest-control",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-pest-control/",
+            "destination": "/ai-lead-generation-for-pest-control",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-alarm-installers",
+            "destination": "/ai-lead-generation-for-alarm-installers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-alarm-installers/",
+            "destination": "/ai-lead-generation-for-alarm-installers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-appliance-repair-engineers",
+            "destination": "/ai-lead-generation-for-appliance-repair-engineers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-appliance-repair-engineers/",
+            "destination": "/ai-lead-generation-for-appliance-repair-engineers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-garage-door-engineers",
+            "destination": "/ai-lead-generation-for-garage-door-engineers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-for-garage-door-engineers/",
+            "destination": "/ai-lead-generation-for-garage-door-engineers",
+            "permanent": true
         }
     ],
     "headers": [
