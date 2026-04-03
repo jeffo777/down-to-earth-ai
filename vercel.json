@@ -59,6 +59,146 @@
             "source": "/product/premium-ai-discovery-consultation-package-small-business-smb/",
             "destination": "/ai-automation-consultation-premium",
             "permanent": true
+        },
+        {
+            "source": "/lead-generation-websites-for-tradesmen",
+            "destination": "/ai-lead-generation-websites-for-tradesmen",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-websites-for-tradesmen/",
+            "destination": "/ai-lead-generation-websites-for-tradesmen",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-plumbers",
+            "destination": "/ai-lead-generation-website-for-plumbers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-plumbers/",
+            "destination": "/ai-lead-generation-website-for-plumbers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-electricians",
+            "destination": "/ai-lead-generation-website-for-electricians",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-electricians/",
+            "destination": "/ai-lead-generation-website-for-electricians",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-builders",
+            "destination": "/ai-lead-generation-website-for-builders",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-builders/",
+            "destination": "/ai-lead-generation-website-for-builders",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-locksmiths",
+            "destination": "/ai-lead-generation-website-for-locksmiths",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-locksmiths/",
+            "destination": "/ai-lead-generation-website-for-locksmiths",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-drainage-engineers",
+            "destination": "/ai-lead-generation-website-for-drainage-engineers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-drainage-engineers/",
+            "destination": "/ai-lead-generation-website-for-drainage-engineers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-glaziers",
+            "destination": "/ai-lead-generation-website-for-glaziers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-glaziers/",
+            "destination": "/ai-lead-generation-website-for-glaziers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-roofers",
+            "destination": "/ai-lead-generation-website-for-roofers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-roofers/",
+            "destination": "/ai-lead-generation-website-for-roofers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-gas-engineers",
+            "destination": "/ai-lead-generation-website-for-gas-engineers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-gas-engineers/",
+            "destination": "/ai-lead-generation-website-for-gas-engineers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-alarm-installers",
+            "destination": "/ai-lead-generation-website-for-alarm-installers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-alarm-installers/",
+            "destination": "/ai-lead-generation-website-for-alarm-installers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-appliance-repair-engineers",
+            "destination": "/ai-lead-generation-website-for-appliance-repair-engineers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-appliance-repair-engineers/",
+            "destination": "/ai-lead-generation-website-for-appliance-repair-engineers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-garage-door-engineers",
+            "destination": "/ai-lead-generation-website-for-garage-door-engineers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-garage-door-engineers/",
+            "destination": "/ai-lead-generation-website-for-garage-door-engineers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-hvac-engineers",
+            "destination": "/ai-lead-generation-website-for-hvac-engineers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-hvac-engineers/",
+            "destination": "/ai-lead-generation-website-for-hvac-engineers",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-pest-control",
+            "destination": "/ai-lead-generation-website-for-pest-control",
+            "permanent": true
+        },
+        {
+            "source": "/lead-generation-website-for-pest-control/",
+            "destination": "/ai-lead-generation-website-for-pest-control",
+            "permanent": true
         }
     ],
     "headers": [
