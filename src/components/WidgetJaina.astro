@@ -3,12 +3,15 @@
  * WidgetJaina.astro — Persistent bottom-right chat widget
  * Hides when HeroJaina section is in viewport via IntersectionObserver.
  */
+import { SITE_CONFIG } from '../config/site.js';
+
 interface Props {
   widgetTrade?: string;
   widgetGoal?: string;
 }
 
 const { widgetTrade = '', widgetGoal = '' } = Astro.props;
+const aiActive = SITE_CONFIG.aiActive;
 
 // Build dynamic text
 let widgetText = 'Chat with our team';
@@ -68,7 +71,7 @@ if (widgetTrade && widgetGoal) {
     </div>
   </div>
 
-  <!-- Widget Chat Placeholder Popup -->
+  <!-- Widget Chat Popup -->
   <div class="jaina-popup" id="widget-chat-popup" aria-hidden="true">
     <div class="jaina-popup__overlay" data-close-widget-popup></div>
     <div class="jaina-popup__content">
@@ -78,14 +81,23 @@ if (widgetTrade && widgetGoal) {
           <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
         </svg>
       </div>
-      <p class="jaina-popup__title">Chat with us</p>
-      <p class="jaina-popup__text">Our chat is being set up and will be live soon. In the meantime, get started with a quick call with Jeff.</p>
-      <!-- TODO: Replace this entire popup with GHL chat widget integration -->
-      <a href="/get-started" class="jaina-popup__btn">Get Started →</a>
+      {aiActive ? (
+        <Fragment>
+          <p class="jaina-popup__title">Chat with us</p>
+          <p class="jaina-popup__text">Our chat is being set up and will be live soon. In the meantime, get started with a quick call with Jeff.</p>
+          <a href="/get-started" class="jaina-popup__btn">Get Started →</a>
+        </Fragment>
+      ) : (
+        <Fragment>
+          <p class="jaina-popup__title">Contact Jeff</p>
+          <p class="jaina-popup__text">Drop Jeff a message and he'll get back to you within 24 hours. No obligation, no hard sell.</p>
+          <a href="/get-started" class="jaina-popup__btn">Contact Jeff →</a>
+        </Fragment>
+      )}
     </div>
   </div>
 
-  <!-- Widget Call Placeholder Popup -->
+  <!-- Widget Call Popup -->
   <div class="jaina-popup" id="widget-call-popup" aria-hidden="true">
     <div class="jaina-popup__overlay" data-close-widget-popup></div>
     <div class="jaina-popup__content">
@@ -94,10 +106,19 @@ if (widgetTrade && widgetGoal) {
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       </div>
-      <p class="jaina-popup__title">Call us</p>
-      <p class="jaina-popup__text">Our voice line is being configured and will be live soon. In the meantime, get started with a quick call with Jeff.</p>
-      <!-- TODO: Replace this entire popup with GHL voice AI integration -->
-      <a href="/get-started" class="jaina-popup__btn">Get Started →</a>
+      {aiActive ? (
+        <Fragment>
+          <p class="jaina-popup__title">Call us</p>
+          <p class="jaina-popup__text">Our voice line is being configured and will be live soon. In the meantime, get started with a quick call with Jeff.</p>
+          <a href="/get-started" class="jaina-popup__btn">Get Started →</a>
+        </Fragment>
+      ) : (
+        <Fragment>
+          <p class="jaina-popup__title">Contact Jeff</p>
+          <p class="jaina-popup__text">Drop Jeff a message and he'll get back to you within 24 hours. No obligation, no hard sell.</p>
+          <a href="/get-started" class="jaina-popup__btn">Contact Jeff →</a>
+        </Fragment>
+      )}
     </div>
   </div>
 </div>
