@@ -13,12 +13,12 @@ const frontmatter = {
 };
 
 const posts = [
-  { title: "Why Tradesmen Lose 3-5 Jobs A Week (And How To Fix It)", href: "/blog/why-tradesmen-lose-jobs", excerpt: "Every missed call is a missed job. Here's what's actually happening — and the simple fix that stops the bleeding.", date: "March 2026" },
-  { title: "The Lead Generation Flywheel Explained", href: "/blog/lead-generation-flywheel-explained", excerpt: "How a website, AI receptionist, and content marketing work together to create a self-reinforcing lead machine.", date: "March 2026" },
-  { title: "AI vs Human Receptionist: Which Is Better For Tradesmen?", href: "/blog/ai-vs-human-receptionist", excerpt: "We compare cost, availability, consistency, and results. The answer might surprise you.", date: "March 2026" },
-  { title: "How To Get More Plumbing Leads Without Paying For Ads", href: "/blog/more-plumbing-leads-without-ads", excerpt: "Seven proven strategies for generating consistent plumbing leads through SEO, content, and AI — no ad budget required.", date: "March 2026" },
-  { title: "What Makes A Good Tradesman Website?", href: "/blog/what-makes-good-tradesman-website", excerpt: "Most tradesman websites are brochures that generate zero leads. Here's what actually works.", date: "March 2026" },
-  { title: "The Real Cost Of Missing Calls", href: "/blog/real-cost-of-missing-calls", excerpt: "We did the maths. If you miss just 2 calls a week, here's what it's costing your business per year.", date: "March 2026" },
+  { title: "Why Tradesmen Lose 3-5 Jobs A Week (And How To Fix It)", href: "/blog/why-tradesmen-lose-jobs", excerpt: "Every missed call is a missed job. Here's what's actually happening — and the simple fix that stops the bleeding.", date: "March 2026", image: "/assets/images/blog/why-tradesmen-lose-jobs.png" },
+  { title: "The Lead Generation Flywheel Explained", href: "/blog/lead-generation-flywheel-explained", excerpt: "How a website, AI receptionist, and content marketing work together to create a self-reinforcing lead machine.", date: "March 2026", image: "/assets/images/blog/lead-generation-flywheel-explained.png" },
+  { title: "AI vs Human Receptionist: Which Is Better For Tradesmen?", href: "/blog/ai-vs-human-receptionist", excerpt: "We compare cost, availability, consistency, and results. The answer might surprise you.", date: "March 2026", image: "/assets/images/blog/ai-vs-human-receptionist.png" },
+  { title: "How To Get More Plumbing Leads Without Paying For Ads", href: "/blog/more-plumbing-leads-without-ads", excerpt: "Seven proven strategies for generating consistent plumbing leads through SEO, content, and AI — no ad budget required.", date: "March 2026", image: "/assets/images/blog/more-plumbing-leads-without-ads.png" },
+  { title: "What Makes A Good Tradesman Website?", href: "/blog/what-makes-good-tradesman-website", excerpt: "Most tradesman websites are brochures that generate zero leads. Here's what actually works.", date: "March 2026", image: "/assets/images/blog/what-makes-good-tradesman-website.png" },
+  { title: "The Real Cost Of Missing Calls", href: "/blog/real-cost-of-missing-calls", excerpt: "We did the maths. If you miss just 2 calls a week, here's what it's costing your business per year.", date: "March 2026", image: "/assets/images/blog/real-cost-of-missing-calls.png" },
 ];
 ---
 
@@ -29,10 +29,13 @@ const posts = [
       <div class="blog-grid">
         {posts.map(post => (
           <a href={post.href} class="blog-card">
-            <div class="blog-card__meta">{post.date}</div>
-            <h2 class="blog-card__title">{post.title}</h2>
-            <p class="blog-card__excerpt">{post.excerpt}</p>
-            <span class="blog-card__link">Read article →</span>
+            {post.image && <img src={post.image} alt={post.title} class="blog-card__image" loading="lazy" />}
+            <div class="blog-card__body">
+              <div class="blog-card__meta">{post.date}</div>
+              <h2 class="blog-card__title">{post.title}</h2>
+              <p class="blog-card__excerpt">{post.excerpt}</p>
+              <span class="blog-card__link">Read article →</span>
+            </div>
           </a>
         ))}
       </div>
@@ -55,7 +58,6 @@ const posts = [
   @media (min-width: 1024px) { .blog-grid { grid-template-columns: repeat(3, 1fr); } }
 
   .blog-card {
-    padding: 1.5rem;
     background: var(--color-surface);
     border: 1px solid var(--color-border-subtle);
     border-radius: 1rem;
@@ -63,8 +65,11 @@ const posts = [
     display: flex;
     flex-direction: column;
     transition: border-color 150ms, transform 150ms;
+    overflow: hidden;
   }
   .blog-card:hover { border-color: var(--color-accent); transform: translateY(-2px); }
+  .blog-card__image { width: 100%; height: 200px; object-fit: cover; }
+  .blog-card__body { padding: 1.25rem; display: flex; flex-direction: column; flex: 1; }
   .blog-card__meta { font-size: 0.75rem; color: var(--color-text-muted); margin-bottom: 0.5rem; }
   .blog-card__title { font-size: 1.0625rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem; line-height: 1.4; }
   .blog-card__excerpt { font-size: 0.875rem; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 0.75rem; flex: 1; }

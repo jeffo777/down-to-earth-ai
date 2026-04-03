@@ -1,0 +1,159 @@
+---
+import BlogPostLayout from '../../layouts/BlogPostLayout.astro';
+
+const frontmatter = {
+  title: "The Real Cost Of Missing Calls",
+  metaTitle: "The Real Cost Of Missing Calls — We Did The Maths For Tradesmen | Down To Earth AI",
+  metaDescription: "We calculated exactly how much missed calls cost tradesmen per year. If you miss just 2 calls a week, the numbers will shock you.",
+  canonicalUrl: "https://downtoearthai.co.uk/blog/real-cost-of-missing-calls",
+  heroHeadline: "The Real Cost Of Missing Calls",
+  date: "March 2026",
+  readTime: "6 min",
+  heroAIText: "Ask about our AI receptionist",
+
+  faqs: [
+    { question: "How much revenue does a tradesman lose from one missed call?", answer: "The revenue loss from a single missed call depends on two factors: your average job value and the probability that the call represented a genuine new enquiry. Industry data suggests that approximately fifty to sixty percent of incoming calls to trade businesses are new enquiry calls rather than existing customers, suppliers, or spam. Taking the conservative end — fifty percent — means every two missed calls represent one lost potential job. For a plumber with an average job value of three hundred pounds, one missed new enquiry costs three hundred pounds in potential revenue. For an electrician averaging four hundred pounds per job, the figure is four hundred pounds. For a builder averaging two thousand pounds per project, a single missed genuine enquiry represents two thousand pounds. Of course, not every enquiry converts to a booked job — conversion rates typically run between forty and seventy percent depending on trade and demand. Even at a conservative forty percent conversion rate, a plumber missing five genuine enquiry calls per week loses six hundred pounds in weekly revenue — over thirty thousand pounds per year. The maths becomes inescapable at every level of calculation." },
+    { question: "What percentage of callers actually leave a voicemail?", answer: "Research consistently shows that fewer than twenty percent of callers leave a voicemail when they reach a trade business answering machine. The figure drops below ten percent for emergency or urgent enquiries where the customer needs immediate help. The reasons are well-documented: callers feel that voicemail is a dead end, they doubt whether anyone will listen to or return the message, and they have instant access to alternative tradesmen via Google. The psychology is simple — the customer had a burst of motivation to call and solve a problem. Reaching voicemail breaks that momentum. Rather than articulating their issue to a machine and waiting hours or days for a response that may never come, they hang up and dial the next result. Within sixty seconds, they are speaking to your competitor. This behaviour is amplified by the smartphone era where the next option is literally one tap away. For tradesmen, this means that relying on voicemail to capture leads is equivalent to accepting that eighty percent of your missed calls — genuine paying customers who chose your number — will disappear forever without you ever knowing they called." },
+    { question: "Is it worth paying for call answering when I only miss a few calls a week?", answer: "Let us do the calculation directly. Suppose you miss just three calls per week that represent genuine new enquiries. At a conservative average job value of three hundred pounds and a fifty percent conversion rate, those three missed calls cost you four hundred and fifty pounds per week — nineteen thousand five hundred pounds per year. An AI receptionist costs ninety-nine pounds per month — one thousand one hundred and eighty-eight pounds per year. If the AI receptionist captures even one additional job per month that you would have otherwise missed, the service pays for itself. In practice, most tradesmen report capturing eight to fifteen additional leads per month once nothing goes to voicemail. The return on investment is not marginal — it is typically thirty to fifty times the cost of the service. Even if you only miss two calls per week, the maths holds. Two missed calls at three hundred pounds average value with fifty percent conversion equals three hundred pounds lost per week. That is thirteen thousand pounds per year. Spending twelve hundred pounds to recover thirteen thousand is the definition of a sensible business investment." }
+  ],
+
+  relatedPosts: [
+    { title: "Why Tradesmen Lose 3-5 Jobs A Week", href: "/blog/why-tradesmen-lose-jobs", excerpt: "The broader picture of how missed calls cost you work." },
+    { title: "AI vs Human Receptionist", href: "/blog/ai-vs-human-receptionist", excerpt: "Comparing your options for never missing a call again." },
+    { title: "The Lead Generation Flywheel Explained", href: "/blog/lead-generation-flywheel-explained", excerpt: "Answering calls is step one. Here's the complete system." }
+  ],
+
+  widgetTrade: "",
+  widgetGoal: "",
+};
+---
+
+<BlogPostLayout frontmatter={frontmatter}>
+
+  <img src="/assets/images/blog/real-cost-of-missing-calls.png" alt="Tradesman beside his work van checking missed calls on his phone" style="width: 100%; border-radius: 1rem; margin-bottom: 2rem;" />
+
+  <p>We're going to do something uncomfortable. We're going to calculate exactly how much money you're losing from <a href="/blog/why-tradesmen-lose-jobs">missed calls</a>. Not a vague estimate — the actual maths, applied to your trade.</p>
+
+  <p><strong>Fair warning: the numbers are bigger than you think.</strong></p>
+
+  <h2>The Formula</h2>
+
+  <p>The calculation is straightforward:</p>
+
+  <p style="text-align: center; font-size: 1.25rem; font-weight: 700; padding: 1.5rem; background: var(--color-surface); border-radius: 0.75rem; border: 1px solid var(--color-border-subtle);">
+    Missed calls per week × % that are genuine enquiries × conversion rate × average job value = <strong>Lost revenue per week</strong>
+  </p>
+
+  <p>Let's run the numbers for different scenarios.</p>
+
+  <h2>Scenario 1: "I Only Miss A Couple Of Calls"</h2>
+
+  <p>You think you only miss two or three calls a week. You're probably being optimistic — most tradesmen underestimate their missed calls by half — but let's use your number.</p>
+
+  <ul>
+    <li>Missed calls: <strong>3 per week</strong></li>
+    <li>Genuine new enquiries: <strong>50%</strong> (1.5 calls)</li>
+    <li>Would have converted: <strong>60%</strong> (0.9 jobs)</li>
+    <li>Average job value: <strong>£350</strong></li>
+  </ul>
+
+  <p><strong>Lost revenue: £315 per week. £16,380 per year.</strong></p>
+
+  <p>That's a decent used van. A family holiday. A year's worth of materials. Gone, because three calls went to voicemail.</p>
+
+  <h2>Scenario 2: "I'm Busy, I Miss Quite A Few"</h2>
+
+  <p>You're on jobs from 8am to 5pm most days. You're honest with yourself — you probably miss five to eight calls a day during busy periods.</p>
+
+  <ul>
+    <li>Missed calls: <strong>8 per week</strong></li>
+    <li>Genuine new enquiries: <strong>50%</strong> (4 calls)</li>
+    <li>Would have converted: <strong>60%</strong> (2.4 jobs)</li>
+    <li>Average job value: <strong>£350</strong></li>
+  </ul>
+
+  <p><strong>Lost revenue: £840 per week. £43,680 per year.</strong></p>
+
+  <p>Forty-three thousand pounds. That's more than many tradesmen's entire annual profit. Being unreachable for eight hours a day is costing you a second income.</p>
+
+  <h2>Scenario 3: The Emergency Trade Premium</h2>
+
+  <p>If you're a <a href="/ai-receptionist-for-plumbers">plumber</a>, <a href="/ai-receptionist-for-electricians">electrician</a>, <a href="/ai-receptionist-for-locksmiths">locksmith</a>, or <a href="/ai-receptionist-for-gas-engineers">gas engineer</a>, the numbers get worse because emergency work carries a premium.</p>
+
+  <ul>
+    <li>Missed calls: <strong>5 per week</strong></li>
+    <li>Genuine emergency enquiries: <strong>40%</strong> (2 calls)</li>
+    <li>Emergency job value: <strong>£250-500</strong></li>
+    <li>Conversion if answered: <strong>80%</strong> (emergencies nearly always convert)</li>
+  </ul>
+
+  <p><strong>Lost emergency revenue: £400-800 per week. £20,800-41,600 per year.</strong></p>
+
+  <p>Emergency customers don't leave voicemails. They call the next tradesman immediately. If you miss an emergency call, that job is gone — there is zero chance of recovering it with a callback.</p>
+
+  <h2>The Hidden Costs You're Not Counting</h2>
+
+  <p>The maths above only counts the immediate revenue loss. There are hidden costs that compound:</p>
+
+  <h3>Lost Reviews</h3>
+  <p>Every missed job is a Google review you never received. Reviews build your Google rankings. Fewer reviews means lower rankings means fewer future calls. <strong>Missing calls today costs you leads tomorrow.</strong></p>
+
+  <h3>Lost Referrals</h3>
+  <p>A customer you never served is a customer who never recommends you to their neighbours, friends, and family. Word of mouth — the most powerful marketing for tradesmen — requires completed jobs to generate referrals.</p>
+
+  <h3>Lost Content</h3>
+  <p>If you're using <a href="/ai-marketing-for-tradesmen">AI marketing</a> to turn completed jobs into website content and social media posts, every missed job is content that was never created — a blog post that never ranked, a social post that never built your reputation.</p>
+
+  <h3>The Feast-Or-Famine Cycle</h3>
+  <p>The cruelest irony: you miss the most calls during your busiest weeks. Those missed calls represent the work that would have filled your quiet weeks two or three weeks later. <strong>Missing calls during busy periods directly causes quiet periods.</strong></p>
+
+  <h2>The Fix Costs Less Than You Think</h2>
+
+  <p>An <a href="/ai-receptionist-for-tradesmen">AI receptionist</a> costs £99 per month. Let's put that against the numbers:</p>
+
+  <table style="width: 100%; border-collapse: collapse; margin-bottom: 1.5rem;">
+    <thead>
+      <tr style="border-bottom: 2px solid var(--color-border-subtle);">
+        <th style="text-align: left; padding: 0.75rem;">Scenario</th>
+        <th style="text-align: left; padding: 0.75rem;">Annual Loss</th>
+        <th style="text-align: left; padding: 0.75rem;">AI Cost</th>
+        <th style="text-align: left; padding: 0.75rem;">ROI</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid var(--color-border-subtle);">
+        <td style="padding: 0.75rem;">Miss 3 calls/week</td>
+        <td style="padding: 0.75rem;">£16,380</td>
+        <td style="padding: 0.75rem;">£1,188</td>
+        <td style="padding: 0.75rem;"><strong>1,379%</strong></td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--color-border-subtle);">
+        <td style="padding: 0.75rem;">Miss 8 calls/week</td>
+        <td style="padding: 0.75rem;">£43,680</td>
+        <td style="padding: 0.75rem;">£1,188</td>
+        <td style="padding: 0.75rem;"><strong>3,677%</strong></td>
+      </tr>
+      <tr>
+        <td style="padding: 0.75rem;">Emergency trades</td>
+        <td style="padding: 0.75rem;">£31,200</td>
+        <td style="padding: 0.75rem;">£1,188</td>
+        <td style="padding: 0.75rem;"><strong>2,627%</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Even in the most conservative scenario — missing just three calls a week — the <a href="/ai-receptionist-for-tradesmen">AI receptionist</a> delivers over <strong>thirteen times its cost in recovered revenue</strong>.</p>
+
+  <p>One captured emergency call-out pays for three months of the service. One captured boiler installation pays for a full year.</p>
+
+  <h2>Count Your Missed Calls This Week</h2>
+
+  <p>Here's a challenge. This week, write down every missed call. Just look at your phone's call history each evening and count the ones you didn't answer. At the end of the week, do the maths.</p>
+
+  <p>Then ask yourself: <strong>how long are you willing to keep losing this money?</strong></p>
+
+  <p>The <a href="/ai-lead-generation-for-tradesmen">complete lead generation system</a> starts with answering every call. From there, a <a href="/ai-lead-generation-websites-for-tradesmen">lead generation website</a> brings in more calls, and <a href="/ai-marketing-for-tradesmen">AI marketing</a> compounds your growth. But none of it matters if the phone rings and nobody answers.</p>
+
+  <p><strong>Fix that first. Everything else follows.</strong></p>
+
+</BlogPostLayout>
