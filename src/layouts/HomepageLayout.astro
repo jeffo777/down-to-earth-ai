@@ -39,7 +39,7 @@ interface Props {
     // The Problem
     problemText: string;
     // What's Included channels
-    channels: Array<{ name: string; description: string; icon: string }>;
+    channels: Array<{ name: string; description: string; icon: string; link?: string }>;
     // Founder's Note
     foundersNote: string;
     founderName?: string;
@@ -133,15 +133,27 @@ const fm = frontmatter;
           <h2 class="hp-section__title">What's Included</h2>
           <div class="hp-channels">
             {fm.channels.map(channel => (
-              <div class="hp-channel">
-                <div class="hp-channel__icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              channel.link ? (
+                <a href={channel.link} class="hp-channel hp-channel--link">
+                  <div class="hp-channel__icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <div>
+                    <h3 class="hp-channel__name">{channel.name}</h3>
+                    <p class="hp-channel__desc">{channel.description}</p>
+                  </div>
+                </a>
+              ) : (
+                <div class="hp-channel">
+                  <div class="hp-channel__icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <div>
+                    <h3 class="hp-channel__name">{channel.name}</h3>
+                    <p class="hp-channel__desc">{channel.description}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 class="hp-channel__name">{channel.name}</h3>
-                  <p class="hp-channel__desc">{channel.description}</p>
-                </div>
-              </div>
+              )
             ))}
           </div>
         </div>
@@ -380,6 +392,16 @@ const fm = frontmatter;
     margin-bottom: 0.25rem;
   }
   .hp-channel__desc { font-size: 0.8rem; color: var(--color-text-muted); }
+  a.hp-channel--link {
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 150ms, transform 150ms, background 150ms;
+  }
+  a.hp-channel--link:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+    background: rgba(232, 145, 58, 0.06);
+  }
 
   /* Founder */
   .hp-founder {
