@@ -77,32 +77,32 @@ const navLinks = [
       </button>
     </div>
   </div>
-
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <nav class="mobile-menu__nav" aria-label="Mobile navigation">
-      {navLinks.map(link => (
-        link.children ? (
-          <Fragment>
-            <span class="mobile-menu__label">{link.label}</span>
-            <div class="mobile-menu__sub">
-              {link.children.map(child => (
-                child.label === 'divider' ? (
-                  <div class="mobile-menu__divider"></div>
-                ) : (
-                  <a href={child.href} class={`mobile-menu__link mobile-menu__link--sub ${child.overview ? 'mobile-menu__link--overview' : ''}`}>{child.label}</a>
-                )
-              ))}
-            </div>
-          </Fragment>
-        ) : (
-          <a href={link.href} class="mobile-menu__link">{link.label}</a>
-        )
-      ))}
-      <a href="/get-started" class="mobile-menu__cta">Get Started</a>
-    </nav>
-  </div>
 </header>
+
+<!-- Mobile Menu — must be outside <header> so backdrop-filter doesn't trap fixed positioning -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+    {navLinks.map(link => (
+      link.children ? (
+        <>
+          <span class="mobile-menu__label">{link.label}</span>
+          <div class="mobile-menu__sub">
+            {link.children.map(child => (
+              child.label === 'divider' ? (
+                <div class="mobile-menu__divider"></div>
+              ) : (
+                <a href={child.href} class={`mobile-menu__link mobile-menu__link--sub ${child.overview ? 'mobile-menu__link--overview' : ''}`}>{child.label}</a>
+              )
+            ))}
+          </div>
+        </>
+      ) : (
+        <a href={link.href} class="mobile-menu__link">{link.label}</a>
+      )
+    ))}
+    <a href="/get-started" class="mobile-menu__cta">Get Started</a>
+  </nav>
+</div>
 
 <style>
   /* Header Base */
@@ -301,10 +301,11 @@ const navLinks = [
 
   .header__hamburger-line {
     display: block;
-    width: 100%;
+    width: 22px;
     height: 2px;
-    background: var(--color-text-secondary);
+    background: #a0a8b8;
     border-radius: 2px;
+    flex-shrink: 0;
     transition: transform 300ms, opacity 200ms;
   }
 
