@@ -83,7 +83,7 @@ const navLinks = [
     <nav class="mobile-menu__nav" aria-label="Mobile navigation">
       {navLinks.map(link => (
         link.children ? (
-          <>
+          <Fragment>
             <span class="mobile-menu__label">{link.label}</span>
             <div class="mobile-menu__sub">
               {link.children.map(child => (
@@ -94,7 +94,7 @@ const navLinks = [
                 )
               ))}
             </div>
-          </>
+          </Fragment>
         ) : (
           <a href={link.href} class="mobile-menu__link">{link.label}</a>
         )
