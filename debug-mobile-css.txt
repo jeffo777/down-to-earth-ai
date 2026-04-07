@@ -1,0 +1,42 @@
+.header[data-astro-cid-3ef6ksr2]{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(15,17,23,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--color-border-subtle);height:64px}.header__inner[data-astro-cid-3ef6ksr2]{max-width:72rem;margin:0 auto;padding:0 1rem;height:100%;display:flex;align-items:center;justify-content:space-between}.header__logo[data-astro-cid-3ef6ksr2]{display:flex;align-items:center;gap:0.5rem;color:var(--color-text-primary);font-weight:800;font-size:1.125rem;text-decoration:none;flex-shrink:0}.header__logo[data-astro-cid-3ef6ksr2]:hover{color:var(--color-text-primary)}.header__logo-accent[data-astro-cid-3ef6ksr2]{color:var(--color-accent)}.header__nav[data-astro-cid-3ef6ksr2]{display:none;align-items:center;gap:0.25rem}@media (min-width: 1024px){.header__nav[data-astro-cid-3ef6ksr2]{display:flex}}.header__nav-link[data-astro-cid-3ef6ksr2]{color:var(--color-text-secondary);padding:0.5rem 0.75rem;font-size:0.9rem;font-weight:500;border-radius:0.5rem;transition:color 150ms,background 150ms;text-decoration:none;cursor:pointer;background:none;border:none;font-family:inherit;display:flex;align-items:center;gap:0.25rem}.header__nav-link[data-astro-cid-3ef6ksr2]:hover{color:var(--color-text-primary);background:rgba(255,255,255,0.05)}.header__dropdown[data-astro-cid-3ef6ksr2]{position:relative}.header__chevron[data-astro-cid-3ef6ksr2]{transition:transform 200ms}.header__dropdown[data-astro-cid-3ef6ksr2]:hover .header__chevron[data-astro-cid-3ef6ksr2]{transform:rotate(180deg)}.header__dropdown-menu[data-astro-cid-3ef6ksr2]{position:absolute;top:100%;left:0;min-width:240px;padding:0.5rem;background:var(--color-secondary);border:1px solid var(--color-border-subtle);border-radius:0.75rem;box-shadow:0 20px 40px rgba(0,0,0,0.4);opacity:0;visibility:hidden;transform:translateY(4px);transition:opacity 200ms,transform 200ms,visibility 200ms}.header__dropdown[data-astro-cid-3ef6ksr2]:hover .header__dropdown-menu[data-astro-cid-3ef6ksr2]{opacity:1;visibility:visible;transform:translateY(0)}.header__dropdown-item[data-astro-cid-3ef6ksr2]{display:block;padding:0.625rem 0.875rem;color:var(--color-text-secondary);font-size:0.875rem;font-weight:500;border-radius:0.5rem;transition:color 150ms,background 150ms;text-decoration:none}.header__dropdown-item--overview[data-astro-cid-3ef6ksr2]{display:flex;flex-direction:column;gap:0.125rem;color:var(--color-accent);font-weight:600}.header__dropdown-subtitle[data-astro-cid-3ef6ksr2]{font-size:0.7rem;font-weight:400;color:var(--color-text-muted)}.header__dropdown-divider[data-astro-cid-3ef6ksr2]{height:1px;background:var(--color-border-subtle);margin:0.375rem 0.5rem}.header__dropdown-item[data-astro-cid-3ef6ksr2]:hover{color:var(--color-text-primary);background:rgba(255,255,255,0.05)}.header__actions[data-astro-cid-3ef6ksr2]{display:flex;align-items:center;gap:0.75rem}.header__cta[data-astro-cid-3ef6ksr2]{display:inline-flex;align-items:center;padding:0.5rem 1.25rem;background:var(--color-accent);color:#fff;font-weight:600;font-size:0.875rem;border-radius:0.5rem;text-decoration:none;transition:background 150ms,transform 150ms}.header__cta[data-astro-cid-3ef6ksr2]:hover{background:var(--color-accent-hover);color:#fff;transform:scale(1.02)}.header__hamburger[data-astro-cid-3ef6ksr2]{display:flex;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:10px;background:none;border:none;cursor:pointer}@media (min-width: 1024px){.header__hamburger[data-astro-cid-3ef6ksr2]{display:none}}.header__hamburger-line[data-astro-cid-3ef6ksr2]{display:block;width:100%;height:2px;background:var(--color-text-secondary);border-radius:2px;transition:transform 300ms,opacity 200ms}.mobile-menu[data-astro-cid-3ef6ksr2]{position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--color-primary);padding:1.5rem;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity 250ms,transform 250ms,visibility 250ms;z-index:49;overflow-y:auto}.mobile-menu__nav[data-astro-cid-3ef6ksr2]{display:flex;flex-direction:column;gap:0.25rem}.mobile-menu__link[data-astro-cid-3ef6ksr2]{display:block;padding:0.875rem 0.75rem;color:var(--color-text-primary);font-size:1.125rem;font-weight:600;border-radius:0.5rem;text-decoration:none;transition:background 150ms}.mobile-menu__link[data-astro-cid-3ef6ksr2]:hover{background:rgba(255,255,255,0.05);color:var(--color-text-primary)}.mobile-menu__label[data-astro-cid-3ef6ksr2]{display:block;padding:0.875rem 0.75rem 0.25rem;color:var(--color-text-muted);font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em}.mobile-menu__link--overview[data-astro-cid-3ef6ksr2]{color:var(--color-accent)!important;font-weight:600!important}.mobile-menu__divider[data-astro-cid-3ef6ksr2]{height:1px;background:var(--color-border-subtle);margin:0.25rem 1rem}.mobile-menu__link--sub[data-astro-cid-3ef6ksr2]{font-size:1rem;font-weight:500;color:var(--color-text-secondary);padding-left:1.5rem}.mobile-menu__cta[data-astro-cid-3ef6ksr2]{display:block;margin-top:1rem;padding:1rem;background:var(--color-accent);color:#fff;font-weight:700;font-size:1.125rem;text-align:center;border-radius:0.75rem;text-decoration:none;transition:background 150ms}.mobile-menu__cta[data-astro-cid-3ef6ksr2]:hover{background:var(--color-accent-hover);color:#fff}
+
+---SEPARATOR---
+
+/* JS-toggled states — must be unscoped so dynamically-added classes work */
+  #hamburger-btn.active .header__hamburger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  #hamburger-btn.active .header__hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+  #hamburger-btn.active .header__hamburger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  #mobile-menu.open {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+  }
+
+  @media (min-width: 1024px) {
+    #mobile-menu {
+      display: none !important;
+    }
+    #mobile-menu.open {
+      display: none !important;
+    }
+  }
+
+  .header__dropdown.open .header__chevron {
+    transform: rotate(180deg);
+  }
+  .header__dropdown.open .header__dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+---SEPARATOR---
+

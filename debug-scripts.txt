@@ -1,0 +1,36 @@
+
+Script src: /@vite/client
+
+Script src: /@id/astro/runtime/client/dev-toolbar/entrypoint.js
+
+Script src: /src/styles/global.css
+
+Script src: /src/components/Header.astro?astro&type=style&index=0&lang.css
+
+Script src: /src/components/Header.astro?astro&type=style&index=1&lang.css
+
+Script src: /src/components/Footer.astro?astro&type=style&index=0&lang.css
+
+Script src: /src/components/CookieConsent.astro?astro&type=style&index=0&lang.css
+
+Script src: /src/components/HeroJaina.astro?astro&type=style&index=0&lang.css
+
+Script src: /src/components/WidgetJaina.astro?astro&type=style&index=0&lang.css
+
+Script src: /src/components/GuaranteeBadge.astro?astro&type=style&index=0&lang.css
+
+Script src: /src/components/CTAButton.astro?astro&type=style&index=0&lang.css
+
+Script src: /src/components/FAQAccordion.astro?astro&type=style&index=0&lang.css
+
+Script src: /src/layouts/HomepageLayout.astro?astro&type=style&index=0&lang.css
+
+Script src: /src/components/Header.astro?astro&type=script&index=0&lang.ts
+
+Script src: /src/components/HeroJaina.astro?astro&type=script&index=0&lang.ts
+
+Script src: /src/components/FAQAccordion.astro?astro&type=script&index=0&lang.ts
+
+Script src: /src/components/CookieConsent.astro?astro&type=script&index=0&lang.ts
+
+Script src: /src/components/WidgetJaina.astro?astro&type=script&index=0&lang.ts
