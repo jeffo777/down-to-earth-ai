@@ -12,6 +12,7 @@ import WidgetJaina from '../components/WidgetJaina.astro';
 import CTAButton from '../components/CTAButton.astro';
 import GuaranteeBadge from '../components/GuaranteeBadge.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
+import TestimonialSlider from '../components/TestimonialSlider.astro';
 import CookieConsent from '../components/CookieConsent.astro';
 
 interface Props {
@@ -164,6 +165,13 @@ const fm = frontmatter;
           <blockquote><p>{fm.foundersNote}</p></blockquote>
           <div style="margin-top: 1rem; display: flex; justify-content: center;"><GuaranteeBadge /></div>
         </div>
+      </div>
+    </section>
+
+    <!-- 5b. SOCIAL PROOF -->
+    <section class="pt-section pt-section--alt">
+      <div class="pt-container">
+        <TestimonialSlider />
       </div>
     </section>
 

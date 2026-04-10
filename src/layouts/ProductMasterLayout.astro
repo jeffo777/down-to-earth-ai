@@ -13,6 +13,7 @@ import WidgetJaina from '../components/WidgetJaina.astro';
 import CTAButton from '../components/CTAButton.astro';
 import GuaranteeBadge from '../components/GuaranteeBadge.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
+import TestimonialSlider from '../components/TestimonialSlider.astro';
 import trades from '../data/trades.json';
 
 interface Props {
@@ -176,9 +177,8 @@ const fm = frontmatter;
 
     <!-- 6. SOCIAL PROOF -->
     <section class="pm-section pm-section--alt">
-      <div class="pm-container" style="text-align: center;">
-        <h2 class="pm-section__title">What Tradesmen Are Saying</h2>
-        <p style="color: var(--color-text-muted);">Reviews and case studies coming soon.</p>
+      <div class="pm-container">
+        <TestimonialSlider />
       </div>
     </section>
 

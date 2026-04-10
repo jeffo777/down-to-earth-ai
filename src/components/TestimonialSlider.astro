@@ -1,0 +1,502 @@
+---
+/**
+ * TestimonialSlider.astro — Global social-proof slider component
+ * Two tabs: "AI Websites" and "Other Lead Gen"
+ * Auto-rotating, swipeable, keyboard accessible
+ */
+
+const websiteTestimonials = [
+  {
+    quote: "I have received 4 responses back from the 6 sent to me by you... it's going in the right direction. Thanks.",
+    attribution: "Owner, Contracting Business",
+  },
+  {
+    quote: "I am over the moon with the web site and I know that this web site was not the norm... I think you have done a brilliant job.",
+    attribution: "Director, UK Roofing Company",
+  },
+  {
+    quote: "It's reassuring that you have my back and trying everything for me. Cheers Jeff.",
+    attribution: "UK Small Contractor",
+  },
+  {
+    quote: "That's fantastic Jeff, it looks like your hard work is coming to a brilliant website.",
+    attribution: "UK Self-Employed Contractor",
+  },
+  {
+    quote: "I am happy with everything Jeff, the good thing it seems to be working and I am happy with that. Hopefully I can get some work from the leads.",
+    attribution: "UK Roof Cleaning Contractor",
+  },
+];
+
+const leadgenTestimonials = [
+  {
+    quote: "We've worked with similar agencies in the past. Jeff is different. He's thoughtful, collaborative, professional, and easy to work with. Within a short period, he became one of our most valuable business partners.",
+    attribution: "CEO, UK Services Business",
+  },
+  {
+    quote: "For years I've been looking for someone to prospect for my business. I was never successful in finding anyone like that, until I met Jeff.",
+    attribution: "CEO, UK National Service Business",
+  },
+  {
+    quote: "Jeff has gone about this with enthusiasm, perseverance and doggedness — which are all fantastic traits in this particular line of work. He's generated well over 50 established leads for us, including some very big name clients.",
+    attribution: "Managing Director, UK Services Business",
+  },
+  {
+    quote: "We've worked with Jeff for over a year now, and he's developed and overseen the outreach programme to generate quality leads for a client. I wouldn't hesitate to recommend him.",
+    attribution: "CEO, UK National Service Business",
+  },
+  {
+    quote: "Jeff has been invaluable to growing our business, by providing excellent well-targeted leads for us.",
+    attribution: "Managing Director, International Company",
+  },
+];
+---
+
+<section class="ts-section" data-testimonial-slider>
+  <div class="ts-container">
+    <h2 class="ts-title">Trusted by Tradesmen &amp; Business Owners</h2>
+    <p class="ts-subtitle">Genuine feedback from real clients</p>
+
+    <!-- Tabs -->
+    <div class="ts-tabs" role="tablist">
+      <button
+        class="ts-tab ts-tab--active"
+        role="tab"
+        aria-selected="true"
+        data-tab="websites"
+        id="tab-websites"
+        aria-controls="panel-websites"
+      >AI Websites</button>
+      <button
+        class="ts-tab"
+        role="tab"
+        aria-selected="false"
+        data-tab="leadgen"
+        id="tab-leadgen"
+        aria-controls="panel-leadgen"
+      >Lead Generation</button>
+    </div>
+
+    <!-- Panel: AI Websites -->
+    <div
+      class="ts-panel ts-panel--active"
+      role="tabpanel"
+      id="panel-websites"
+      aria-labelledby="tab-websites"
+      data-panel="websites"
+    >
+      <div class="ts-track" data-track>
+        {websiteTestimonials.map((t, i) => (
+          <div class={`ts-slide ${i === 0 ? 'ts-slide--active' : ''}`} data-slide={i}>
+            <div class="ts-card">
+              <svg class="ts-quote-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.15"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"/></svg>
+              <blockquote class="ts-card__quote">
+                <p>"{t.quote}"</p>
+              </blockquote>
+              <cite class="ts-card__cite">{t.attribution}</cite>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="ts-dots" data-dots>
+        {websiteTestimonials.map((_, i) => (
+          <button
+            class={`ts-dot ${i === 0 ? 'ts-dot--active' : ''}`}
+            data-dot={i}
+            aria-label={`Go to testimonial ${i + 1}`}
+          ></button>
+        ))}
+      </div>
+    </div>
+
+    <!-- Panel: Lead Gen -->
+    <div
+      class="ts-panel"
+      role="tabpanel"
+      id="panel-leadgen"
+      aria-labelledby="tab-leadgen"
+      data-panel="leadgen"
+      hidden
+    >
+      <div class="ts-track" data-track>
+        {leadgenTestimonials.map((t, i) => (
+          <div class={`ts-slide ${i === 0 ? 'ts-slide--active' : ''}`} data-slide={i}>
+            <div class="ts-card">
+              <svg class="ts-quote-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.15"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"/></svg>
+              <blockquote class="ts-card__quote">
+                <p>"{t.quote}"</p>
+              </blockquote>
+              <cite class="ts-card__cite">{t.attribution}</cite>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="ts-dots" data-dots>
+        {leadgenTestimonials.map((_, i) => (
+          <button
+            class={`ts-dot ${i === 0 ? 'ts-dot--active' : ''}`}
+            data-dot={i}
+            aria-label={`Go to testimonial ${i + 1}`}
+          ></button>
+        ))}
+      </div>
+    </div>
+
+    <!-- Nav arrows -->
+    <div class="ts-nav">
+      <button class="ts-arrow ts-arrow--prev" data-prev aria-label="Previous testimonial">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="ts-arrow ts-arrow--next" data-next aria-label="Next testimonial">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ts-section {
+    width: 100%;
+  }
+
+  .ts-container {
+    max-width: 56rem;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .ts-title {
+    text-align: center;
+    margin-bottom: 0.25rem;
+  }
+
+  .ts-subtitle {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+    margin-bottom: 1.75rem;
+  }
+
+  /* Tabs */
+  .ts-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+    margin-bottom: 1.75rem;
+    background: var(--color-surface);
+    border-radius: 0.75rem;
+    padding: 0.25rem;
+    max-width: 22rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ts-tab {
+    flex: 1;
+    padding: 0.625rem 1rem;
+    border: none;
+    background: transparent;
+    color: var(--color-text-muted);
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 200ms ease;
+  }
+
+  .ts-tab:hover {
+    color: var(--color-text-secondary);
+  }
+
+  .ts-tab--active {
+    background: var(--color-accent);
+    color: #fff;
+  }
+
+  .ts-tab--active:hover {
+    color: #fff;
+  }
+
+  /* Panels */
+  .ts-panel {
+    position: relative;
+    min-height: 11rem;
+  }
+
+  .ts-panel[hidden] {
+    display: none;
+  }
+
+  /* Track & Slides */
+  .ts-track {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ts-slide {
+    display: none;
+    animation: tsFadeIn 400ms ease;
+  }
+
+  .ts-slide--active {
+    display: block;
+  }
+
+  @keyframes tsFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Card */
+  .ts-card {
+    position: relative;
+    padding: 2rem 2rem 1.5rem;
+    background: linear-gradient(135deg, rgba(37, 40, 48, 0.8), rgba(26, 29, 39, 0.9));
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
+    text-align: center;
+  }
+
+  .ts-quote-icon {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    color: var(--color-accent);
+  }
+
+  .ts-card__quote p {
+    color: var(--color-text-primary);
+    font-size: 1.0625rem;
+    font-style: italic;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    .ts-card__quote p {
+      font-size: 1.125rem;
+    }
+    .ts-card {
+      padding: 2.5rem 3rem 2rem;
+    }
+  }
+
+  .ts-card__cite {
+    display: block;
+    margin-top: 1.25rem;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-accent);
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+  }
+
+  /* Dots */
+  .ts-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+  }
+
+  .ts-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: var(--color-border-subtle);
+    cursor: pointer;
+    padding: 0;
+    transition: all 250ms ease;
+  }
+
+  .ts-dot:hover {
+    background: var(--color-text-muted);
+  }
+
+  .ts-dot--active {
+    background: var(--color-accent);
+    width: 24px;
+    border-radius: 4px;
+  }
+
+  /* Arrows */
+  .ts-nav {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .ts-nav {
+      display: block;
+    }
+
+    .ts-arrow {
+      position: absolute;
+      top: 55%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--color-border-subtle);
+      background: var(--color-surface);
+      color: var(--color-text-muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 200ms ease;
+      z-index: 2;
+    }
+
+    .ts-arrow:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+      background: rgba(232, 145, 58, 0.08);
+    }
+
+    .ts-arrow--prev {
+      left: -3.25rem;
+    }
+
+    .ts-arrow--next {
+      right: -3.25rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .ts-arrow--prev { left: -4rem; }
+    .ts-arrow--next { right: -4rem; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('[data-testimonial-slider]').forEach(slider => {
+    const tabs = slider.querySelectorAll('[role="tab"]');
+    const panels = slider.querySelectorAll('[role="tabpanel"]');
+    const prevBtn = slider.querySelector('[data-prev]');
+    const nextBtn = slider.querySelector('[data-next]');
+    let autoPlayTimer: ReturnType<typeof setInterval> | null = null;
+
+    function getActivePanel(): Element | null {
+      return slider.querySelector('.ts-panel--active') || slider.querySelector('[role="tabpanel"]:not([hidden])');
+    }
+
+    function getSlideCount(panel: Element): number {
+      return panel.querySelectorAll('[data-slide]').length;
+    }
+
+    function getCurrentIndex(panel: Element): number {
+      const active = panel.querySelector('.ts-slide--active');
+      return active ? parseInt(active.getAttribute('data-slide') || '0') : 0;
+    }
+
+    function goToSlide(panel: Element, index: number) {
+      const slides = panel.querySelectorAll('[data-slide]');
+      const dots = panel.querySelectorAll('[data-dot]');
+      const count = slides.length;
+      const target = ((index % count) + count) % count; // wrap around
+
+      slides.forEach(s => s.classList.remove('ts-slide--active'));
+      dots.forEach(d => d.classList.remove('ts-dot--active'));
+
+      slides[target]?.classList.add('ts-slide--active');
+      dots[target]?.classList.add('ts-dot--active');
+    }
+
+    function next() {
+      const panel = getActivePanel();
+      if (!panel) return;
+      goToSlide(panel, getCurrentIndex(panel) + 1);
+    }
+
+    function prev() {
+      const panel = getActivePanel();
+      if (!panel) return;
+      goToSlide(panel, getCurrentIndex(panel) - 1);
+    }
+
+    function startAutoPlay() {
+      stopAutoPlay();
+      autoPlayTimer = setInterval(next, 6000);
+    }
+
+    function stopAutoPlay() {
+      if (autoPlayTimer) {
+        clearInterval(autoPlayTimer);
+        autoPlayTimer = null;
+      }
+    }
+
+    // Tab switching
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetPanel = tab.getAttribute('data-tab');
+
+        tabs.forEach(t => {
+          t.classList.remove('ts-tab--active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('ts-tab--active');
+        tab.setAttribute('aria-selected', 'true');
+
+        panels.forEach(p => {
+          const panelId = (p as HTMLElement).getAttribute('data-panel');
+          if (panelId === targetPanel) {
+            (p as HTMLElement).hidden = false;
+            p.classList.add('ts-panel--active');
+            // Reset to first slide
+            goToSlide(p, 0);
+          } else {
+            (p as HTMLElement).hidden = true;
+            p.classList.remove('ts-panel--active');
+          }
+        });
+
+        startAutoPlay();
+      });
+    });
+
+    // Dot clicks
+    panels.forEach(panel => {
+      panel.querySelectorAll('[data-dot]').forEach(dot => {
+        dot.addEventListener('click', () => {
+          const index = parseInt(dot.getAttribute('data-dot') || '0');
+          goToSlide(panel, index);
+          startAutoPlay(); // reset timer
+        });
+      });
+    });
+
+    // Arrow clicks
+    prevBtn?.addEventListener('click', () => { prev(); startAutoPlay(); });
+    nextBtn?.addEventListener('click', () => { next(); startAutoPlay(); });
+
+    // Touch/swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const track = slider as HTMLElement;
+    
+    track.addEventListener('touchstart', (e: Event) => {
+      touchStartX = (e as TouchEvent).changedTouches[0].screenX;
+    }, { passive: true });
+
+    track.addEventListener('touchend', (e: Event) => {
+      touchEndX = (e as TouchEvent).changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) { next(); } else { prev(); }
+        startAutoPlay();
+      }
+    }, { passive: true });
+
+    // Pause on hover
+    slider.addEventListener('mouseenter', stopAutoPlay);
+    slider.addEventListener('mouseleave', startAutoPlay);
+
+    // Start autoplay
+    startAutoPlay();
+  });
+</script>

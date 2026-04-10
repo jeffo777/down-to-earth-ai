@@ -13,6 +13,7 @@ import WidgetJaina from '../components/WidgetJaina.astro';
 import CTAButton from '../components/CTAButton.astro';
 import GuaranteeBadge from '../components/GuaranteeBadge.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
+import TestimonialSlider from '../components/TestimonialSlider.astro';
 import trades from '../data/trades.json';
 
 interface Props {
@@ -181,8 +182,7 @@ const fm = frontmatter;
     <!-- 6. SOCIAL PROOF -->
     <section class="hp-section hp-section--alt">
       <div class="hp-container">
-        <h2 class="hp-section__title">Trusted by Tradesmen</h2>
-        <p class="hp-section__subtitle">Reviews and case studies coming soon.</p>
+        <TestimonialSlider />
       </div>
     </section>
 

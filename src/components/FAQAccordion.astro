@@ -56,7 +56,20 @@ const faqSchema = {
           hidden
         >
           <div class="faq-item__answer-inner">
-            <p>{faq.answer}</p>
+            {(() => {
+              const text = faq.answer;
+              const sentences = text.match(/[^.!?]+[.!?]+(?:\s|$)/g) || [text];
+              const paragraphs: string[] = [];
+              let current = '';
+              sentences.forEach((s: string, i: number) => {
+                current += s;
+                if ((i + 1) % 3 === 0 || i === sentences.length - 1) {
+                  paragraphs.push(current.trim());
+                  current = '';
+                }
+              });
+              return paragraphs.map((p: string) => <p>{p}</p>);
+            })()}
           </div>
         </div>
       </div>
@@ -153,16 +166,12 @@ const faqSchema = {
   .faq-item__answer {
     overflow: hidden;
     max-height: 0;
-    transition: max-height 300ms ease;
+    transition: max-height 400ms ease;
   }
 
   .faq-item__answer[hidden] {
     display: block;
     max-height: 0;
-  }
-
-  .faq-item__answer.open {
-    max-height: 600px;
   }
 
   .faq-item__answer-inner {
@@ -173,6 +182,11 @@ const faqSchema = {
     color: var(--color-text-secondary);
     font-size: 0.9375rem;
     line-height: 1.7;
+    margin-bottom: 0.75em;
+  }
+
+  .faq-item__answer-inner p:last-child {
+    margin-bottom: 0;
   }
 
   @media (min-width: 768px) {
@@ -190,22 +204,22 @@ const faqSchema = {
       trigger.addEventListener('click', () => {
         const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
         const answerId = trigger.getAttribute('aria-controls');
-        const answer = answerId ? document.getElementById(answerId) : null;
+        const answer = answerId ? document.getElementById(answerId) as HTMLElement | null : null;
 
         // Close all others (single-open behaviour)
         triggers.forEach(otherTrigger => {
           if (otherTrigger !== trigger) {
             otherTrigger.setAttribute('aria-expanded', 'false');
             const otherId = otherTrigger.getAttribute('aria-controls');
-            const otherAnswer = otherId ? document.getElementById(otherId) : null;
+            const otherAnswer = otherId ? document.getElementById(otherId) as HTMLElement | null : null;
             if (otherAnswer) {
+              otherAnswer.style.maxHeight = '0';
               otherAnswer.classList.remove('open');
-              // Re-add hidden after transition
               setTimeout(() => {
                 if (!otherAnswer.classList.contains('open')) {
                   otherAnswer.setAttribute('hidden', '');
                 }
-              }, 300);
+              }, 400);
             }
           }
         });
@@ -213,18 +227,23 @@ const faqSchema = {
         // Toggle current
         if (isExpanded) {
           trigger.setAttribute('aria-expanded', 'false');
-          answer?.classList.remove('open');
-          setTimeout(() => {
-            if (!answer?.classList.contains('open')) {
-              answer?.setAttribute('hidden', '');
-            }
-          }, 300);
+          if (answer) {
+            answer.style.maxHeight = '0';
+            answer.classList.remove('open');
+            setTimeout(() => {
+              if (!answer.classList.contains('open')) {
+                answer.setAttribute('hidden', '');
+              }
+            }, 400);
+          }
         } else {
           trigger.setAttribute('aria-expanded', 'true');
-          answer?.removeAttribute('hidden');
-          // Force reflow before adding class for transition
-          answer?.offsetHeight;
-          answer?.classList.add('open');
+          if (answer) {
+            answer.removeAttribute('hidden');
+            // Measure actual content height — no fixed cap
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+            answer.classList.add('open');
+          }
         }
       });
     });
