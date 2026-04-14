@@ -11,6 +11,7 @@ import Footer from '../components/Footer.astro';
 import CookieConsent from '../components/CookieConsent.astro';
 import HeroJaina from '../components/HeroJaina.astro';
 import WidgetJaina from '../components/WidgetJaina.astro';
+import SchemaOrg from '../components/SchemaOrg.astro';
 
 interface Props {
   frontmatter: {
@@ -46,6 +47,12 @@ const showJaina = fm.showHeroAI === true;
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <SchemaOrg
+    type="core"
+    pageTitle={fm.title}
+    pageDescription={fm.metaDescription}
+    pageUrl={fm.canonicalUrl}
+  />
 </head>
 <body>
   <Header />

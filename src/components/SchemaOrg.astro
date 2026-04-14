@@ -1,0 +1,173 @@
+---
+/**
+ * SchemaOrg.astro — Generates JSON-LD structured data for SEO
+ * Supports: Organization, WebSite, Service, BreadcrumbList, Article
+ * Usage: Add to <head> in each layout, passing relevant props.
+ */
+
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+interface Props {
+  // Page basics
+  pageTitle: string;
+  pageDescription: string;
+  pageUrl?: string;
+  // Schema types to include
+  type: 'homepage' | 'service' | 'article' | 'core';
+  // Service schema
+  serviceName?: string;
+  serviceDescription?: string;
+  price?: string;        // e.g. "99"
+  audience?: string;     // e.g. "Plumbers"
+  parentService?: string; // e.g. "AI Receptionist for Tradesmen"
+  parentServiceUrl?: string;
+  // Breadcrumbs
+  breadcrumbs?: BreadcrumbItem[];
+  // Article schema
+  articleDate?: string;
+  articleAuthor?: string;
+}
+
+const {
+  pageTitle,
+  pageDescription,
+  pageUrl,
+  type,
+  serviceName,
+  serviceDescription,
+  price,
+  audience,
+  parentService,
+  parentServiceUrl,
+  breadcrumbs,
+  articleDate,
+  articleAuthor,
+} = Astro.props;
+
+const SITE_URL = 'https://downtoearthai.co.uk';
+const fullUrl = pageUrl || SITE_URL;
+
+// 1. Organization — always present
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${SITE_URL}/#organization`,
+  name: 'Down To Earth AI',
+  url: SITE_URL,
+  description: 'AI receptionist and lead generation services built specifically for UK tradesmen. Never miss another lead.',
+  areaServed: {
+    '@type': 'Country',
+    name: 'United Kingdom',
+  },
+  founder: {
+    '@type': 'Person',
+    name: 'Jeff',
+    jobTitle: 'Founder',
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'sales',
+    url: `${SITE_URL}/get-started`,
+    availableLanguage: 'English',
+  },
+  sameAs: [],
+};
+
+// 2. WebSite — homepage only
+const websiteSchema = type === 'homepage' ? {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${SITE_URL}/#website`,
+  name: 'Down To Earth AI',
+  url: SITE_URL,
+  description: pageDescription,
+  publisher: { '@id': `${SITE_URL}/#organization` },
+} : null;
+
+// 3. Service — service pages
+const serviceSchema = (type === 'service' && serviceName) ? (() => {
+  const schema: Record<string, any> = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: serviceName,
+    description: serviceDescription || pageDescription,
+    provider: { '@id': `${SITE_URL}/#organization` },
+    areaServed: {
+      '@type': 'Country',
+      name: 'United Kingdom',
+    },
+    serviceType: 'AI Business Automation',
+  };
+
+  if (audience) {
+    schema.audience = {
+      '@type': 'Audience',
+      audienceType: audience,
+    };
+  }
+
+  if (price) {
+    schema.offers = {
+      '@type': 'Offer',
+      price: price,
+      priceCurrency: 'GBP',
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        price: price,
+        priceCurrency: 'GBP',
+        billingDuration: 'P1M',
+        unitText: 'month',
+      },
+      availability: 'https://schema.org/InStock',
+      url: `${SITE_URL}/get-started`,
+    };
+  }
+
+  if (parentService && parentServiceUrl) {
+    schema.isRelatedTo = {
+      '@type': 'Service',
+      name: parentService,
+      url: parentServiceUrl.startsWith('http') ? parentServiceUrl : `${SITE_URL}${parentServiceUrl}`,
+    };
+  }
+
+  return schema;
+})() : null;
+
+// 4. BreadcrumbList — service and article pages
+const breadcrumbSchema = (breadcrumbs && breadcrumbs.length > 0) ? {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbs.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url.startsWith('http') ? item.url : `${SITE_URL}${item.url}`,
+  })),
+} : null;
+
+// 5. Article — blog posts
+const articleSchema = (type === 'article') ? {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: pageTitle,
+  description: pageDescription,
+  url: fullUrl,
+  datePublished: articleDate || new Date().toISOString().split('T')[0],
+  author: {
+    '@type': 'Person',
+    name: articleAuthor || 'Jeff',
+  },
+  publisher: { '@id': `${SITE_URL}/#organization` },
+} : null;
+
+// Collect all schemas
+const schemas = [orgSchema, websiteSchema, serviceSchema, breadcrumbSchema, articleSchema].filter(Boolean);
+---
+
+{schemas.map(schema => (
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+))}

@@ -14,6 +14,7 @@ import CTAButton from '../components/CTAButton.astro';
 import GuaranteeBadge from '../components/GuaranteeBadge.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
 import TestimonialSlider from '../components/TestimonialSlider.astro';
+import SchemaOrg from '../components/SchemaOrg.astro';
 import trades from '../data/trades.json';
 
 interface Props {
@@ -69,6 +70,19 @@ const fm = frontmatter;
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <SchemaOrg
+    type="service"
+    pageTitle={fm.title}
+    pageDescription={fm.metaDescription}
+    pageUrl={fm.canonicalUrl}
+    serviceName={fm.productName + ' for Tradesmen'}
+    serviceDescription={fm.metaDescription}
+    price="99"
+    breadcrumbs={[
+      { name: 'Home', url: '/' },
+      { name: fm.productName, url: fm.canonicalUrl || '' },
+    ]}
+  />
 </head>
 <body>
   <Header />

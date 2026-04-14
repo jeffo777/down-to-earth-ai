@@ -12,7 +12,17 @@ interface Props {
   faqs: FAQ[];
 }
 
-const { faqs } = Astro.props;
+const { faqs: pageFaqs } = Astro.props;
+
+// Global GDPR FAQ — auto-appended to every page
+const gdprFaq: FAQ = {
+  question: "Is my data GDPR compliant and secure with Down To Earth AI?",
+  answer: "Yes. GDPR-compliant data handling is built into every part of our service. All customer data collected through your AI receptionist, lead generation website, marketing, and automation channels is processed and stored in full compliance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018. Data is encrypted both in transit and at rest. We never share your customer data with third parties, never use it for our own marketing purposes, and never sell it. Your customer information is used solely to serve your business — capturing leads, managing communications, and delivering the service you're paying for. You retain full ownership of all data collected through your channels. If you cancel your subscription, your data is returned to you and securely deleted from our systems within the statutory period. We maintain appropriate technical and organisational measures to protect against unauthorised access, accidental loss, or destruction. For tradesmen handling sensitive customer information — home addresses, phone numbers, property access details, security system specifications — this level of data protection isn't optional, it's essential. We treat your customers' data with the same care you'd expect from any professional service handling personal information in the UK."
+};
+
+// Merge page FAQs with global GDPR FAQ (avoid duplicate if page already has one)
+const hasGdprFaq = pageFaqs.some(f => f.question.toLowerCase().includes('gdpr'));
+const faqs = hasGdprFaq ? pageFaqs : [...pageFaqs, gdprFaq];
 
 // Generate JSON-LD FAQ schema
 const faqSchema = {

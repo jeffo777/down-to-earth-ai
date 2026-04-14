@@ -12,6 +12,7 @@ import HeroJaina from '../components/HeroJaina.astro';
 import WidgetJaina from '../components/WidgetJaina.astro';
 import CTAButton from '../components/CTAButton.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
+import SchemaOrg from '../components/SchemaOrg.astro';
 
 interface Props {
   frontmatter: {
@@ -62,6 +63,24 @@ const fm = frontmatter;
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <SchemaOrg
+    type="service"
+    pageTitle={fm.title}
+    pageDescription={fm.metaDescription}
+    pageUrl={fm.canonicalUrl}
+    serviceName={fm.channelName + ' for ' + fm.trade}
+    serviceDescription={fm.metaDescription}
+    price="99"
+    audience={fm.trade}
+    parentService={'AI Receptionist for ' + fm.trade}
+    parentServiceUrl={fm.tradeHubHref}
+    breadcrumbs={[
+      { name: 'Home', url: '/' },
+      { name: 'AI Receptionist', url: '/ai-receptionist-for-tradesmen' },
+      { name: 'AI Receptionist for ' + fm.trade, url: fm.tradeHubHref },
+      { name: fm.channelName, url: fm.canonicalUrl || '' },
+    ]}
+  />
 </head>
 <body>
   <Header />
