@@ -1,0 +1,190 @@
+# Down To Earth AI
+
+> AI receptionist and lead generation services built specifically for UK tradesmen. Founded by Jeff — 25 years in the trade. Every service is £99/month, no contracts, 30-day money-back guarantee. Based in the UK, serving UK tradesmen only.
+
+Down To Earth AI was built by someone who ran trade businesses for 25 years — landscape gardening, building maintenance, and tree work. Every tool is designed for how tradesmen actually work — on site, hands dirty, phone buzzing in your pocket. We keep things simple, practical, and affordable. No tech jargon, no complexity, just solutions that work.
+
+We provide four core products for 13 trade specialisms across the United Kingdom. All services are done-for-you, GDPR compliant, and designed for sole traders and small trade businesses. We handle all setup, configuration, and ongoing management.
+
+Website: https://downtoearthai.co.uk
+
+## Company Overview
+
+Down To Earth AI solves one core problem for UK tradesmen: losing jobs because you can't answer the phone while you're on a job. A plumber under a sink, an electrician up a ladder, a roofer three storeys up — none of them can take a call. By the time they call back, the customer has already booked someone else.
+
+Our AI receptionist answers every call, text, WhatsApp, email, and social media message within seconds — 24/7, 365 days a year. She captures the lead details and delivers them instantly. The tradesman finishes their current job, checks their phone, and the lead is waiting.
+
+### Founder
+Jeff — 25 years running trade businesses (landscape gardening, building maintenance, tree work). Built Down To Earth AI because he watched tradesmen lose jobs every day simply because they couldn't answer the phone.
+
+### Target Market
+- UK sole traders and small trade businesses (1-10 employees)
+- 13 specific trades: plumbers, electricians, locksmiths, gas engineers, drainage engineers, glaziers, roofers, HVAC engineers, alarm & security installers, pest control, garage door engineers, builders, appliance repair engineers
+- Tradesmen who are too busy doing the work to handle their own admin
+
+### USPs
+- Built by a tradesman, for tradesmen
+- £99/month, no contracts, cancel anytime
+- 30-day full money-back guarantee (including setup fee)
+- 100% done-for-you setup and management
+- 24/7/365 coverage
+- GDPR-compliant data handling
+- UK-based, UK-focused
+
+## Products
+
+### AI Receptionist — £99/month (£299 setup)
+The flagship product. A 9-channel AI receptionist that answers calls, texts, and messages using the tradesman's business name.
+
+**What's Included:**
+- 9 channels covered: phone, SMS, WhatsApp, email, website chat, Facebook Messenger, Instagram DMs, missed call text-back, Google Business
+- 5 hours talk time included per month (20p/minute after)
+- 24/7 coverage — weekends, bank holidays, 3am
+- Lead capture, qualification, and instant delivery
+- Human backup for complex situations
+- Configured specifically for each trade
+- No contracts or minimum terms
+
+**How It Works:**
+1. We set up the AI receptionist for you — tell us your trade, services, and preferred style. Configured and live in under 24 hours.
+2. The AI receptionist answers everything — all 9 channels, capturing every lead with contact details, job description, and urgency level.
+3. You close the job — finish your current work, check your phone, the lead is waiting.
+
+**9 AI Receptionist Channels:**
+
+1. **AI Phone Answering** — Voice AI answers calls within seconds using the tradesman's business name. Understands the job, captures details, handles emergencies. Natural UK voice with regional accent options.
+2. **AI Missed Call Text-Back** — If a call is missed, an automatic text goes out within seconds acknowledging the enquiry.
+3. **AI SMS Messaging** — Professional SMS reply acknowledging the enquiry and letting the customer know the tradesman will be in touch.
+4. **AI Email Response** — Professional email acknowledgment so the customer knows their enquiry has been received.
+5. **AI Website Chat** — Live chat widget with real AI conversations that capture leads directly from the tradesman's website.
+6. **AI WhatsApp Messaging** — Instant professional WhatsApp replies on the channel customers actually use.
+7. **AI Facebook Messenger** — Instant responses to Facebook page messages, 24/7.
+8. **AI Instagram DMs** — Handles enquiries through Instagram direct messages.
+9. **AI Lead Capture & Qualification** — Every lead is captured with contact details, job description, and urgency level, then delivered instantly.
+
+**Additional Features:**
+- AI Voicemail — Intelligent voicemail that captures details when the AI can't resolve.
+- AI Receptionist with Human Backup — Urgent enquiries are escalated to a professional human receptionist who calls the customer.
+
+### Lead Generation Websites — From £997 (one-off build)
+150-300 page SEO websites that rank on Google for local trade searches.
+
+**What's Included:**
+- Custom design for each trade
+- Local SEO optimisation
+- Mobile-first, lightning-fast performance
+- Google Business integration
+- Conversion-focused layout
+- The tradesman owns everything
+
+### AI Marketing — £99/month (£199 setup)
+Photos-in, content-out marketing automation.
+
+**What's Included:**
+- Send job photos, AI creates blog posts
+- Social media content generation
+- Google Business updates
+- Review request automation
+- Content calendar management
+- Local SEO boost
+
+### Custom AI Automations — Bespoke pricing
+Bespoke AI workflows built around how each trade business operates.
+
+**What's Included:**
+- Automated follow-ups
+- Invoice and payment reminders
+- Quote follow-up sequences
+- Customer database
+- Reporting and insights
+- Integrates with existing tools
+
+### AI Lead Generation System
+How all four products work together as a complete lead generation flywheel — the AI receptionist captures leads, the lead gen website brings in organic traffic, the AI marketing builds visibility, and the custom automations keep the pipeline moving.
+
+## Trades Served
+
+Down To Earth AI serves 13 UK trades. Each trade gets its own AI configuration with trade-specific language, urgency levels, service types, and conversation flows.
+
+1. **Plumbers** — Emergency vs scheduled work, boiler servicing, bathroom fitting, leak detection
+2. **Electricians** — Emergency callouts, rewiring, consumer unit upgrades, testing & inspection
+3. **Locksmiths** — Emergency lockouts (highest urgency), lock changes, security upgrades, access control
+4. **Gas Engineers** — Boiler installation, servicing, Gas Safe requirements, emergency gas leaks
+5. **Drainage Engineers** — Blocked drains, CCTV surveys, drain relining, emergency flooding
+6. **Glaziers** — Emergency boarding, double glazing, window repairs, conservatories
+7. **Roofers** — Emergency leak repairs, roof replacements, flat roofing, guttering
+8. **HVAC Engineers** — Air conditioning, ventilation, heating systems, commercial and residential
+9. **Alarm & Security Installers** — Intruder alarms, CCTV, access control, smart home security
+10. **Pest Control** — Emergency pest removal, prevention contracts, commercial and residential
+11. **Garage Door Engineers** — Emergency repairs, new installations, automated doors, maintenance
+12. **Builders** — Extensions, renovations, new builds, structural work
+13. **Appliance Repair Engineers** — Washing machines, dishwashers, ovens, fridge-freezers, emergency repairs
+
+## Pricing Summary
+
+| Product | Setup | Monthly | Contract |
+|---------|-------|---------|----------|
+| AI Receptionist | £299 | £99 | No contract |
+| Lead Gen Website | From £997 | — | One-off build |
+| AI Marketing | £199 | £99 | No contract |
+| Custom Automations | Bespoke | Bespoke | No contract |
+
+- All products come with a 30-day full money-back guarantee
+- No hidden fees, no minimum terms
+- Cancel anytime, no penalties
+- Bundle pricing available for multiple services
+- 5 hours talk time included with AI Receptionist (20p/minute after)
+
+## Frequently Asked Questions
+
+**How does the AI receptionist actually work?**
+When a customer contacts you — by phone, text, WhatsApp, email, or any of 9 channels — the AI receptionist responds instantly. On phone and website chat, she has a full conversation. On text-based channels like WhatsApp, email, and social media, she sends one professional reply acknowledging the enquiry. For urgent jobs, she escalates to you or a human receptionist. Every lead is captured and delivered to you. No app to install. No equipment needed. Works with your existing number.
+
+**Is the AI receptionist a chatbot or a real person?**
+The AI receptionist is an AI receptionist — not a robotic chatbot. She understands context, speaks naturally, and knows the difference between a burst pipe emergency and a general enquiry. On phone calls and website chat she has a real conversation. On text channels she sends one professional reply. Urgent enquiries are escalated to you or a human receptionist who calls the customer.
+
+**How much does it cost?**
+£299 one-off setup, then £99 per month. That includes 5 hours of talk time. After that it's 20p per minute. No contracts, no minimum terms. And there's a 30-day full money back guarantee — so if it's not for you, you get every penny back.
+
+**What trades does the AI receptionist work with?**
+The AI receptionist is configured for 13 trades: plumbers, electricians, locksmiths, gas engineers, drainage engineers, glaziers, roofers, HVAC engineers, alarm and security installers, pest control, garage door engineers, builders, and appliance repair engineers. Each configuration is tailored to the specific language, urgency levels, and service types of that trade.
+
+**Can I try it risk-free?**
+Yes. There's a 30-day full money back guarantee. If the AI receptionist doesn't work for you — for any reason — you get a complete refund. No questions, no hassle, no fine print.
+
+**Do I need to install anything?**
+No. The AI receptionist works with your existing phone number and business setup. We handle all the configuration during onboarding. There's nothing for you to install, download, or maintain.
+
+**What happens outside business hours?**
+The AI receptionist works 24/7, 365 days a year. She never sleeps, never takes a holiday, and never calls in sick. Whether a customer calls at 2am about an emergency or at 6pm on a Sunday about a quote, the AI receptionist answers.
+
+**How quickly can I get set up?**
+Typically under 24 hours. We collect your business details, configure the AI receptionist for your specific trade, connect your channels, and you're live. Most tradesmen are up and running the same day.
+
+**Can AI really help a one-person trade business?**
+Absolutely. In fact, that's where AI makes the biggest difference. A plumber or electrician working alone can't answer the phone while they're on a job, can't do marketing in the evenings, and can't chase quotes while they're fitting a boiler. AI handles all of that — giving you the operational capability of a much larger company without the overhead.
+
+**What makes Down To Earth AI different from other AI companies?**
+We're not a generic AI consultancy. Down To Earth AI was built by someone who ran trade businesses for 25 years. Every tool is designed for how tradesmen actually work — on site, hands dirty, phone buzzing in your pocket. We keep things simple, practical, and affordable. No tech jargon, no complexity, just solutions that work.
+
+**Are there any hidden fees?**
+No. The prices shown are the prices you pay. Setup fee, monthly fee, and any usage charges are clearly stated upfront. No surprises on your invoice, ever.
+
+**Is my data safe?**
+Yes. Down To Earth AI ensures full GDPR-compliant data handling. All customer data is encrypted in transit and at rest, never shared with third parties, and you retain full ownership of your data at all times. We handle sensitive customer information with the same care and confidentiality you'd expect from any professional service.
+
+## Key Pages
+
+- **Get Started**: https://downtoearthai.co.uk/get-started — Start your 30-day risk-free trial
+- **Pricing**: https://downtoearthai.co.uk/pricing — Full pricing breakdown
+- **How It Works**: https://downtoearthai.co.uk/how-it-works — Setup process and what's included
+- **FAQ**: https://downtoearthai.co.uk/faq — Common questions answered
+- **Contact**: https://downtoearthai.co.uk/contact — Get in touch
+- **About**: https://downtoearthai.co.uk/about — Our story and values
+- **Blog**: https://downtoearthai.co.uk/blog — Articles about AI for tradesmen
+
+## Legal
+
+- **Privacy Policy**: https://downtoearthai.co.uk/privacy-policy — GDPR-compliant privacy policy
+- **Terms of Service**: https://downtoearthai.co.uk/terms-of-service — Service terms and conditions
+- **Cookie Policy**: https://downtoearthai.co.uk/cookie-policy — Cookie usage information
