@@ -5,6 +5,7 @@
  * e.g. /ai-receptionist-for-plumbers, /ai-lead-generation-website-for-electricians
  */
 import '../styles/global.css';
+import pricing from '../data/pricing.json';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import HeroJaina from '../components/HeroJaina.astro';
@@ -82,7 +83,7 @@ const fm = frontmatter;
     pageUrl={fm.canonicalUrl}
     serviceName={fm.productName + ' for ' + fm.trade}
     serviceDescription={fm.metaDescription}
-    price="99"
+    price={String(pricing.receptionist.monthlyPrice)}
     audience={fm.trade}
     parentService={fm.genericProductName + ' for Tradesmen'}
     parentServiceUrl={fm.genericProductHref}

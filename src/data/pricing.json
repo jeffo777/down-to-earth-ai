@@ -1,0 +1,55 @@
+{
+  "receptionist": {
+    "name": "AI Receptionist",
+    "monthlyPrice": 45,
+    "setupFee": 299,
+    "talkTimeMinutes": 100,
+    "overagePerMinute": 0.20,
+    "extraChannelPrice": 23,
+    "baseChannels": ["AI Phone Answering", "Website Chat"],
+    "extraChannels": ["WhatsApp", "SMS", "Email", "Facebook Messenger", "Instagram DMs", "Google Business Profile", "Missed Call Text-Back"],
+    "formatted": {
+      "monthly": "£45/month",
+      "monthlyShort": "£45/mo",
+      "setup": "£299 setup",
+      "setupMonthly": "£299 setup · £45/month",
+      "talkTime": "100 minutes",
+      "talkTimeDesc": "100 minutes talk time included",
+      "overage": "20p per minute",
+      "overageDesc": "20p per minute after that",
+      "extraChannel": "£23 per channel",
+      "extraChannelDesc": "£23/month per additional channel"
+    }
+  },
+  "website": {
+    "name": "Lead Generation Website",
+    "price": 997,
+    "formatted": {
+      "price": "From £997",
+      "priceDetail": "From £997 one-off",
+      "priceDesc": "One-off build"
+    }
+  },
+  "marketing": {
+    "name": "AI Marketing",
+    "monthlyPrice": 99,
+    "setupFee": 199,
+    "formatted": {
+      "monthly": "£99/month",
+      "monthlyShort": "£99/mo",
+      "setup": "£199 setup",
+      "setupMonthly": "£199 setup · £99/month"
+    }
+  },
+  "automations": {
+    "name": "Custom AI Automations",
+    "formatted": {
+      "price": "Bespoke",
+      "priceDetail": "Bespoke pricing",
+      "priceDesc": "Depends on complexity"
+    }
+  },
+  "guarantee": "30-day money back guarantee",
+  "contracts": "No contracts",
+  "guaranteeDesc": "30-day full money back guarantee"
+}

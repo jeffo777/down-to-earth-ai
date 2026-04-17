@@ -80,3 +80,50 @@ Active leaks, safety concerns, gas smells, electrical hazards, vulnerable occupa
 - ❌ Diagnoses faults remotely
 - ❌ Discusses product specifications or recommendations
 - ❌ Has extended multi-message text conversations (phone and website chat only)
+
+## CRITICAL: Pricing Architecture — Centralised JSON Config
+
+### Single Source of Truth: `src/data/pricing.json`
+
+All pricing across the entire site is managed from one file: `src/data/pricing.json`. This file contains every price, fee, minute limit, overage rate, and channel cost. When prices change, update this file first — layouts and the pricing page will automatically reflect the change.
+
+### Current Pricing Model (April 2026)
+
+| Product | Setup | Monthly | Notes |
+|---------|-------|---------|-------|
+| **AI Receptionist (base)** | £299 | **£45/month** | Includes AI Phone Answering + Website Chat |
+| **Additional channels** | — | **£23/month each** | WhatsApp, SMS, Email, Facebook, Instagram, GBP, MCTB |
+| **Talk time** | — | 100 minutes included | 20p/min overage |
+| **AI Marketing** | £199 | £99/month | Photos-in, content-out |
+| **Lead Gen Website** | From £997 | — | One-off build |
+| **Custom Automations** | Bespoke | Bespoke | — |
+
+### How Pricing Flows Through the Site
+
+1. **Layouts** (6 total) import `pricing.json` and inject values into:
+   - SchemaOrg structured data (`price` attribute)
+   - Hero price badges (e.g., "Only £45/month")
+   - CTA button fallback text (e.g., "£299 setup · £45/month")
+
+2. **Pricing page** (`pricing.astro`) imports `pricing.json` directly — every price, feature line, and FAQ answer is dynamic.
+
+3. **Individual pages** (200+) have prices in their frontmatter (`heroPrice`, `price` fields) and FAQ prose — these are **hardcoded strings** for SEO purposes but must match `pricing.json` values.
+
+### Rules for Referencing Prices in Content
+
+- **AI Receptionist**: Always say "£45/month" or "£45/mo", never "£99/month" (that's the old price)
+- **Base plan includes**: "AI Phone Answering and Website Chat" — always mention both
+- **Additional channels**: Always say "£23/month per channel" or "£23 per channel"
+- **Talk time**: Always say "100 minutes" — never "5 hours" (old model)
+- **Overage**: Always say "20p per minute" or "20p/min"
+- **AI Marketing**: "£99/month" is correct — this is the marketing product, NOT the receptionist
+- **Setup fee**: "£299" for receptionist, "£199" for marketing
+- **No contracts, 30-day money-back guarantee** — always include
+
+### Updating Prices in the Future
+
+1. Edit `src/data/pricing.json` — layouts and pricing page auto-update
+2. Run a PowerShell bulk-replace for meta titles, descriptions, and frontmatter (`heroPrice`, `price` fields) across all 200+ pages
+3. Manually review and update FAQ prose that mentions specific prices
+4. Rebuild: `npx astro build`
+

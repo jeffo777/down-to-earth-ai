@@ -5,6 +5,7 @@
  * e.g. /ai-phone-answering-for-plumbers
  */
 import '../styles/global.css';
+import pricing from '../data/pricing.json';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CookieConsent from '../components/CookieConsent.astro';
@@ -70,7 +71,7 @@ const fm = frontmatter;
     pageUrl={fm.canonicalUrl}
     serviceName={fm.channelName + ' for ' + fm.trade}
     serviceDescription={fm.metaDescription}
-    price="99"
+    price={String(pricing.receptionist.monthlyPrice)}
     audience={fm.trade}
     parentService={'AI Receptionist for ' + fm.trade}
     parentServiceUrl={fm.tradeHubHref}
@@ -95,7 +96,7 @@ const fm = frontmatter;
           <p class="tc-hero__subhead">{fm.heroSubhead}</p>
           <div class="tc-hero__trust-row">
             <span class="tc-hero__done-tag">✓ 100% done for you</span>
-            <span class="tc-hero__price-tag">Only £99/month</span>
+            <span class="tc-hero__price-tag">Only {pricing.receptionist.formatted.monthly}</span>
             <span class="tc-hero__guarantee-tag">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
               30-day money back guarantee
@@ -140,7 +141,7 @@ const fm = frontmatter;
       <div class="tc-container tc-container--narrow">
         <h2>Ready To Get Started?</h2>
         <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">30-day money back guarantee. No contracts.</p>
-        <CTAButton buttonText="Get Started" buttonLink="/get-started" showPrice={true} priceText={fm.price || '£299 setup · £99/month'} showGuarantee={true} size="large" />
+        <CTAButton buttonText="Get Started" buttonLink="/get-started" showPrice={true} priceText={fm.price || pricing.receptionist.formatted.setupMonthly} showGuarantee={true} size="large" />
       </div>
     </section>
 

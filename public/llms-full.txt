@@ -1,6 +1,6 @@
 # Down To Earth AI
 
-> AI receptionist and lead generation services built specifically for UK tradesmen. Founded by Jeff — 25 years in the trade. Every service is £99/month, no contracts, 30-day money-back guarantee. Based in the UK, serving UK tradesmen only.
+> AI receptionist and lead generation services built specifically for UK tradesmen. Founded by Jeff — 25 years in the trade. AI receptionist from £45/month with phone answering and web chat included, additional channels £23/month each. No contracts, 30-day money-back guarantee. Based in the UK, serving UK tradesmen only.
 
 Down To Earth AI was built by someone who ran trade businesses for 25 years — landscape gardening, building maintenance, and tree work. Every tool is designed for how tradesmen actually work — on site, hands dirty, phone buzzing in your pocket. We keep things simple, practical, and affordable. No tech jargon, no complexity, just solutions that work.
 
@@ -24,7 +24,10 @@ Jeff — 25 years running trade businesses (landscape gardening, building mainte
 
 ### USPs
 - Built by a tradesman, for tradesmen
-- £99/month, no contracts, cancel anytime
+- AI receptionist from £45/month (phone + web chat included)
+- Additional channels £23/month each (WhatsApp, SMS, email, socials, etc.)
+- 100 minutes talk time included (20p/min after)
+- No contracts, cancel anytime
 - 30-day full money-back guarantee (including setup fee)
 - 100% done-for-you setup and management
 - 24/7/365 coverage
@@ -33,34 +36,44 @@ Jeff — 25 years running trade businesses (landscape gardening, building mainte
 
 ## Products
 
-### AI Receptionist — £99/month (£299 setup)
-The flagship product. A 9-channel AI receptionist that answers calls, texts, and messages using the tradesman's business name.
+### AI Receptionist — £45/month (£299 setup)
+The flagship product. An AI receptionist with phone answering and website chat included in the base plan, with additional channels available at £23/month each.
 
-**What's Included:**
-- 9 channels covered: phone, SMS, WhatsApp, email, website chat, Facebook Messenger, Instagram DMs, missed call text-back, Google Business
-- 5 hours talk time included per month (20p/minute after)
+**Base Plan — £45/month:**
+- AI Phone Answering (included)
+- AI Website Chat (included)
+- 100 minutes talk time included per month (20p/minute after)
 - 24/7 coverage — weekends, bank holidays, 3am
 - Lead capture, qualification, and instant delivery
 - Human backup for complex situations
 - Configured specifically for each trade
 - No contracts or minimum terms
 
+**Additional Channels — £23/month each:**
+- AI WhatsApp Messaging
+- AI SMS Messaging
+- AI Email Response
+- AI Facebook Messenger
+- AI Instagram DMs
+- AI Google Business Profile
+- AI Missed Call Text-Back
+
 **How It Works:**
 1. We set up the AI receptionist for you — tell us your trade, services, and preferred style. Configured and live in under 24 hours.
-2. The AI receptionist answers everything — all 9 channels, capturing every lead with contact details, job description, and urgency level.
+2. The AI receptionist answers everything — phone calls and website chat conversations are included. Add WhatsApp, SMS, email, or social channels as needed.
 3. You close the job — finish your current work, check your phone, the lead is waiting.
 
-**9 AI Receptionist Channels:**
+**Channel Details:**
 
-1. **AI Phone Answering** — Voice AI answers calls within seconds using the tradesman's business name. Understands the job, captures details, handles emergencies. Natural UK voice with regional accent options.
-2. **AI Missed Call Text-Back** — If a call is missed, an automatic text goes out within seconds acknowledging the enquiry.
-3. **AI SMS Messaging** — Professional SMS reply acknowledging the enquiry and letting the customer know the tradesman will be in touch.
-4. **AI Email Response** — Professional email acknowledgment so the customer knows their enquiry has been received.
-5. **AI Website Chat** — Live chat widget with real AI conversations that capture leads directly from the tradesman's website.
-6. **AI WhatsApp Messaging** — Instant professional WhatsApp replies on the channel customers actually use.
-7. **AI Facebook Messenger** — Instant responses to Facebook page messages, 24/7.
-8. **AI Instagram DMs** — Handles enquiries through Instagram direct messages.
-9. **AI Lead Capture & Qualification** — Every lead is captured with contact details, job description, and urgency level, then delivered instantly.
+1. **AI Phone Answering** (included in base) — Voice AI answers calls within seconds using the tradesman's business name. Understands the job, captures details, handles emergencies. Natural UK voice with regional accent options.
+2. **AI Website Chat** (included in base) — Live chat widget with real AI conversations that capture leads directly from the tradesman's website.
+3. **AI WhatsApp Messaging** (£23/mo add-on) — Instant professional WhatsApp replies on the channel customers actually use.
+4. **AI SMS Messaging** (£23/mo add-on) — Professional SMS reply acknowledging the enquiry and letting the customer know the tradesman will be in touch.
+5. **AI Email Response** (£23/mo add-on) — Professional email acknowledgment so the customer knows their enquiry has been received.
+6. **AI Facebook Messenger** (£23/mo add-on) — Instant responses to Facebook page messages, 24/7.
+7. **AI Instagram DMs** (£23/mo add-on) — Handles enquiries through Instagram direct messages.
+8. **AI Google Business Profile** (£23/mo add-on) — Profile optimization, review generation, and local SEO.
+9. **AI Missed Call Text-Back** (£23/mo add-on) — If a call is missed, an automatic text goes out within seconds acknowledging the enquiry.
 
 **Additional Features:**
 - AI Voicemail — Intelligent voicemail that captures details when the AI can't resolve.
@@ -122,29 +135,34 @@ Down To Earth AI serves 13 UK trades. Each trade gets its own AI configuration w
 
 ## Pricing Summary
 
-| Product | Setup | Monthly | Contract |
-|---------|-------|---------|----------|
-| AI Receptionist | £299 | £99 | No contract |
-| Lead Gen Website | From £997 | — | One-off build |
-| AI Marketing | £199 | £99 | No contract |
-| Custom Automations | Bespoke | Bespoke | No contract |
+| Product | Setup | Monthly | Included | Contract |
+|---------|-------|---------|----------|----------|
+| AI Receptionist (base) | £299 | £45 | Phone + Web Chat, 100 mins talk time | No contract |
+| Additional channels | — | £23 each | WhatsApp, SMS, Email, FB, Insta, GBP, MCTB | No contract |
+| Lead Gen Website | From £997 | — | One-off build, you own everything | One-off |
+| AI Marketing | £199 | £99 | Photos-in, content-out automation | No contract |
+| Custom Automations | Bespoke | Bespoke | Tailored AI workflows | No contract |
 
 - All products come with a 30-day full money-back guarantee
 - No hidden fees, no minimum terms
 - Cancel anytime, no penalties
 - Bundle pricing available for multiple services
-- 5 hours talk time included with AI Receptionist (20p/minute after)
+- 100 minutes talk time included with AI Receptionist (20p/minute after)
+- Additional channels are £23/month each — add or remove anytime
 
 ## Frequently Asked Questions
 
 **How does the AI receptionist actually work?**
-When a customer contacts you — by phone, text, WhatsApp, email, or any of 9 channels — the AI receptionist responds instantly. On phone and website chat, she has a full conversation. On text-based channels like WhatsApp, email, and social media, she sends one professional reply acknowledging the enquiry. For urgent jobs, she escalates to you or a human receptionist. Every lead is captured and delivered to you. No app to install. No equipment needed. Works with your existing number.
+When a customer contacts you — by phone or website chat (included), or via any additional channel you've added — the AI receptionist responds instantly. On phone and website chat, she has a full conversation. On text-based channels like WhatsApp, email, and social media, she sends one professional reply acknowledging the enquiry. For urgent jobs, she escalates to you or a human receptionist. Every lead is captured and delivered to you. No app to install. No equipment needed. Works with your existing number.
+
+**What's included in the £45/month base plan?**
+The base plan includes AI Phone Answering and AI Website Chat — the two most important channels for capturing leads. You get 100 minutes of talk time per month. After that it's 20p per minute. Most tradesmen never exceed 100 minutes. You can add any additional channel (WhatsApp, SMS, email, Facebook, Instagram, Google Business, missed call text-back) for £23/month each.
 
 **Is the AI receptionist a chatbot or a real person?**
 The AI receptionist is an AI receptionist — not a robotic chatbot. She understands context, speaks naturally, and knows the difference between a burst pipe emergency and a general enquiry. On phone calls and website chat she has a real conversation. On text channels she sends one professional reply. Urgent enquiries are escalated to you or a human receptionist who calls the customer.
 
 **How much does it cost?**
-£299 one-off setup, then £99 per month. That includes 5 hours of talk time. After that it's 20p per minute. No contracts, no minimum terms. And there's a 30-day full money back guarantee — so if it's not for you, you get every penny back.
+£299 one-off setup, then £45 per month. That includes AI phone answering, website chat, and 100 minutes of talk time. After that it's 20p per minute. Additional channels like WhatsApp, SMS, email, and social media are £23 per channel per month. No contracts, no minimum terms. And there's a 30-day full money back guarantee — so if it's not for you, you get every penny back.
 
 **What trades does the AI receptionist work with?**
 The AI receptionist is configured for 13 trades: plumbers, electricians, locksmiths, gas engineers, drainage engineers, glaziers, roofers, HVAC engineers, alarm and security installers, pest control, garage door engineers, builders, and appliance repair engineers. Each configuration is tailored to the specific language, urgency levels, and service types of that trade.

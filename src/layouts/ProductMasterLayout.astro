@@ -5,6 +5,7 @@
  * e.g. /ai-receptionist-for-tradesmen, /ai-lead-generation-websites-for-tradesmen
  */
 import '../styles/global.css';
+import pricing from '../data/pricing.json';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CookieConsent from '../components/CookieConsent.astro';
@@ -77,7 +78,7 @@ const fm = frontmatter;
     pageUrl={fm.canonicalUrl}
     serviceName={fm.productName + ' for Tradesmen'}
     serviceDescription={fm.metaDescription}
-    price="99"
+    price={String(pricing.receptionist.monthlyPrice)}
     breadcrumbs={[
       { name: 'Home', url: '/' },
       { name: fm.productName, url: fm.canonicalUrl || '' },

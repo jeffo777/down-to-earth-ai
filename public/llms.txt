@@ -1,28 +1,28 @@
 # Down To Earth AI
 
-> AI receptionist and lead generation services built specifically for UK tradesmen. Founded by Jeff — 25 years in the trade. Every service is £99/month, no contracts, 30-day money-back guarantee. Based in the UK, serving UK tradesmen only.
+> AI receptionist and lead generation services built specifically for UK tradesmen. Founded by Jeff — 25 years in the trade. Every service is affordable with no contracts, 30-day money-back guarantee. Based in the UK, serving UK tradesmen only.
 
-Down To Earth AI provides four core products for 13 trade specialisms: AI Receptionist (9-channel phone/chat/social coverage), Lead Generation Websites (150-300 page SEO sites), AI Marketing (photos-in, content-out), and Custom AI Automations. All services are done-for-you, GDPR compliant, and designed for sole traders and small trade businesses.
+Down To Earth AI provides four core products for 13 trade specialisms: AI Receptionist (phone answering + website chat included, additional channels available), Lead Generation Websites (150-300 page SEO sites), AI Marketing (photos-in, content-out), and Custom AI Automations. All services are done-for-you, GDPR compliant, and designed for sole traders and small trade businesses.
 
 ## Core Products
 
-- [AI Receptionist for Tradesmen](https://downtoearthai.co.uk/ai-receptionist-for-tradesmen): 9-channel AI receptionist — phone, WhatsApp, SMS, email, web chat, Facebook, Instagram, Google Business, missed call text-back. £99/mo.
-- [Lead Generation Websites for Tradesmen](https://downtoearthai.co.uk/ai-lead-generation-websites-for-tradesmen): 150-300 page SEO websites that rank on Google for local trade searches. £99/mo.
+- [AI Receptionist for Tradesmen](https://downtoearthai.co.uk/ai-receptionist-for-tradesmen): AI receptionist with phone answering and website chat included. Additional channels (WhatsApp, SMS, email, social media, missed call text-back) available at £23/channel. £45/mo, 100 minutes talk time included.
+- [Lead Generation Websites for Tradesmen](https://downtoearthai.co.uk/ai-lead-generation-websites-for-tradesmen): 150-300 page SEO websites that rank on Google for local trade searches. From £997 one-off.
 - [AI Marketing for Tradesmen](https://downtoearthai.co.uk/ai-marketing-for-tradesmen): Send job photos, AI creates blog posts, social media content, and Google Business updates. £99/mo.
-- [Custom AI Automations for Tradesmen](https://downtoearthai.co.uk/custom-ai-automations-for-tradesmen): Bespoke AI workflows built around how your trade business operates. £99/mo.
+- [Custom AI Automations for Tradesmen](https://downtoearthai.co.uk/custom-ai-automations-for-tradesmen): Bespoke AI workflows built around how your trade business operates. Bespoke pricing.
 - [AI Lead Generation System](https://downtoearthai.co.uk/ai-lead-generation-for-tradesmen): How all four products work together as a complete lead generation flywheel.
 
 ## AI Receptionist Channels
 
-- [AI Phone Answering](https://downtoearthai.co.uk/ai-phone-answering-service-for-tradesmen): Voice AI answers calls within seconds using your business name
-- [AI WhatsApp Messaging](https://downtoearthai.co.uk/ai-whatsapp-messaging-service-for-tradesmen): Instant professional WhatsApp replies
-- [AI SMS Messaging](https://downtoearthai.co.uk/ai-sms-messaging-service-for-tradesmen): Professional SMS acknowledgments
-- [AI Email Response](https://downtoearthai.co.uk/ai-email-response-service-for-tradesmen): Instant email acknowledgments
-- [AI Website Chat](https://downtoearthai.co.uk/ai-website-chat-bot-for-tradesmen): Live chat widget with AI conversations
-- [AI Facebook Messenger](https://downtoearthai.co.uk/ai-facebook-messenger-service-for-tradesmen): Instant Facebook page message replies
-- [AI Instagram DMs](https://downtoearthai.co.uk/ai-instagram-messaging-service-for-tradesmen): Instant Instagram DM replies
-- [AI Google Business Profile](https://downtoearthai.co.uk/ai-google-business-profile-optimization-for-tradesmen): Profile optimization and review generation
-- [AI Missed Call Text-Back](https://downtoearthai.co.uk/ai-missed-call-text-back-for-tradesmen): Automatic text when calls are missed
+- [AI Phone Answering](https://downtoearthai.co.uk/ai-phone-answering-service-for-tradesmen): Voice AI answers calls within seconds using your business name (included in base plan)
+- [AI Website Chat](https://downtoearthai.co.uk/ai-website-chat-bot-for-tradesmen): Live chat widget with AI conversations (included in base plan)
+- [AI WhatsApp Messaging](https://downtoearthai.co.uk/ai-whatsapp-messaging-service-for-tradesmen): Instant professional WhatsApp replies (£23/mo add-on)
+- [AI SMS Messaging](https://downtoearthai.co.uk/ai-sms-messaging-service-for-tradesmen): Professional SMS acknowledgments (£23/mo add-on)
+- [AI Email Response](https://downtoearthai.co.uk/ai-email-response-service-for-tradesmen): Instant email acknowledgments (£23/mo add-on)
+- [AI Facebook Messenger](https://downtoearthai.co.uk/ai-facebook-messenger-service-for-tradesmen): Instant Facebook page message replies (£23/mo add-on)
+- [AI Instagram DMs](https://downtoearthai.co.uk/ai-instagram-messaging-service-for-tradesmen): Instant Instagram DM replies (£23/mo add-on)
+- [AI Google Business Profile](https://downtoearthai.co.uk/ai-google-business-profile-optimization-for-tradesmen): Profile optimization and review generation (£23/mo add-on)
+- [AI Missed Call Text-Back](https://downtoearthai.co.uk/ai-missed-call-text-back-for-tradesmen): Automatic text when calls are missed (£23/mo add-on)
 
 ## Trades Served
 
@@ -42,7 +42,7 @@ Down To Earth AI provides four core products for 13 trade specialisms: AI Recept
 
 ## Key Information
 
-- [Pricing](https://downtoearthai.co.uk/pricing): All products £99/month, £299 setup, no contracts
+- [Pricing](https://downtoearthai.co.uk/pricing): AI Receptionist from £45/month, additional channels £23/mo each, no contracts
 - [How It Works](https://downtoearthai.co.uk/how-it-works): Setup process and what's included
 - [FAQ](https://downtoearthai.co.uk/faq): Common questions answered
 - [Get Started](https://downtoearthai.co.uk/get-started): Start your 30-day risk-free trial

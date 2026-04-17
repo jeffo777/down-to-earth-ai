@@ -5,6 +5,7 @@
  * e.g. /ai-lead-generation-for-plumbers, /tradesmen-missing-calls
  */
 import '../styles/global.css';
+import pricing from '../data/pricing.json';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CookieConsent from '../components/CookieConsent.astro';
@@ -69,7 +70,7 @@ const fm = frontmatter;
     pageUrl={fm.canonicalUrl}
     serviceName={fm.title}
     serviceDescription={fm.metaDescription}
-    price="99"
+    price={String(pricing.receptionist.monthlyPrice)}
     breadcrumbs={[
       { name: 'Home', url: '/' },
       { name: fm.title, url: fm.canonicalUrl || '' },
@@ -89,7 +90,7 @@ const fm = frontmatter;
           <p class="sp-hero__subhead">{fm.heroSubhead}</p>
           <div class="sp-hero__trust-row">
             <span class="sp-hero__done-tag">✓ 100% done for you</span>
-            <span class="sp-hero__price-tag">Only £99/month</span>
+            <span class="sp-hero__price-tag">Only {pricing.receptionist.formatted.monthly}</span>
             <span class="sp-hero__guarantee-tag">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
               30-day money back guarantee
