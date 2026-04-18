@@ -27,7 +27,7 @@ Every single page on the Down To Earth AI website MUST contain **100% unique, AI
 ### Quality Bar:
 Each page should read as if it were hand-written by a copywriter who deeply understands that specific trade. A plumber's page should feel different to read than an electrician's page — different language, different concerns, different scenarios.
 
-## CRITICAL: Jaina's Actual Capabilities — DO NOT HALLUCINATE
+## CRITICAL: AI Receptionist Actual Capabilities — DO NOT HALLUCINATE
 
 ### Core Interaction Flow (ALL Channels)
 Every interaction follows this sequence:
@@ -59,8 +59,8 @@ Every interaction follows this sequence:
 - **Does NOT**: quote prices, give technical advice, book appointments, diagnose faults, discuss specifications
 
 ### Tier 3: FALLBACK — Missed Call Text Back
-- Jaina answers every call via AI Phone Answering — MCTB is the safety net
-- Activates ONLY if: the customer hangs up before Jaina answers, or the call gets disconnected
+- The AI receptionist answers every call via AI Phone Answering — MCTB is the safety net
+- Activates ONLY if: the customer hangs up before the AI receptionist answers, or the call gets disconnected
 - Sends ONE text acknowledging the call: currently busy on a job, will be in touch when finished
 - **NO conversation, NO back-and-forth, NO detail capture, NO diagnosis, NO scheduling**
 
@@ -73,7 +73,7 @@ Every interaction follows this sequence:
 ### Urgent Triggers Include:
 Active leaks, safety concerns, gas smells, electrical hazards, vulnerable occupants (elderly, children, disabled), insurance compliance deadlines, business-critical breakdowns, security breaches, customer explicitly requesting a human.
 
-### What Jaina NEVER Does (on any channel)
+### What the AI Receptionist NEVER Does (on any channel)
 - ❌ Provides pricing or quotes
 - ❌ Gives technical or trade-specific advice
 - ❌ Books appointments or schedules visits
