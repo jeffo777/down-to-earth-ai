@@ -8,6 +8,18 @@
     "extraChannelPrice": 23,
     "baseChannels": ["AI Phone Answering", "Website Chat"],
     "extraChannels": ["WhatsApp", "SMS", "Email", "Facebook Messenger", "Instagram DMs", "Google Business Profile", "Missed Call Text-Back"],
+    "allChannelsUnlimitedMessages": true,
+    "channels": {
+      "ai-phone-answering-service": { "name": "AI Phone Answering", "type": "base", "included": "100 minutes talk time, 20p/min overage" },
+      "ai-website-chat-bot": { "name": "Website Chat", "type": "base", "included": "Unlimited messages" },
+      "ai-whatsapp-messaging-service": { "name": "WhatsApp", "type": "addon", "included": "Unlimited messages" },
+      "ai-sms-messaging-service": { "name": "SMS", "type": "addon", "included": "Unlimited messages" },
+      "ai-email-response-service": { "name": "Email", "type": "addon", "included": "Unlimited messages" },
+      "ai-facebook-messenger-service": { "name": "Facebook Messenger", "type": "addon", "included": "Unlimited messages" },
+      "ai-instagram-messaging-service": { "name": "Instagram DMs", "type": "addon", "included": "Unlimited messages" },
+      "ai-google-business-profile-optimization": { "name": "Google Business Profile", "type": "addon", "included": "Unlimited messages" },
+      "ai-missed-call-text-back": { "name": "Missed Call Text-Back", "type": "addon", "included": "Unlimited messages" }
+    },
     "formatted": {
       "monthly": "£45/month",
       "monthlyShort": "£45/mo",
@@ -18,7 +30,9 @@
       "overage": "20p per minute",
       "overageDesc": "20p per minute after that",
       "extraChannel": "£23 per channel",
-      "extraChannelDesc": "£23/month per additional channel"
+      "extraChannelShort": "£23/mo",
+      "extraChannelDesc": "£23/month per additional channel",
+      "unlimitedMessages": "Unlimited messages"
     }
   },
   "website": {

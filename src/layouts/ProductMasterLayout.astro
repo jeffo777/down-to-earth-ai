@@ -1,4 +1,4 @@
-﻿---
+---
 /**
  * ProductMasterLayout.astro
  * Template for: Product master pages (6 pages)
@@ -55,6 +55,14 @@ interface Props {
 
 const { frontmatter } = Astro.props;
 const fm = frontmatter;
+
+// Pre-compute channel entries for template rendering
+const channelEntries = Object.entries(pricing.receptionist.channels || {}).map(([slug, ch]: [string, any]) => ({
+  slug,
+  name: ch.name as string,
+  type: ch.type as string,
+  included: ch.included as string,
+}));
 ---
 
 <html lang="en">
@@ -155,6 +163,28 @@ const fm = frontmatter;
                   {feature.href && <a href={feature.href} class="pm-feature__link">See details →</a>}
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- 3b. CHANNEL PRICING CARDS — AI Receptionist only -->
+    {fm.productSlug === 'ai-receptionist' && (
+      <section class="pm-section pm-section--alt">
+        <div class="pm-container">
+          <h2 class="pm-section__title">Available Channels & Pricing</h2>
+          <p class="pm-section__subtitle">Your AI receptionist base plan ({pricing.receptionist.formatted.monthly}) includes Phone Answering and Website Chat. Add extra channels for {pricing.receptionist.formatted.extraChannelShort} each — all with unlimited messages.</p>
+          <div class="pm-channels">
+            {channelEntries.map((ch) => (
+              <a href={'/' + ch.slug + '-for-tradesmen'} class={ch.type === 'base' ? 'pm-channel pm-channel--base' : 'pm-channel pm-channel--addon'}>
+                <span class={ch.type === 'base' ? 'pm-channel__badge pm-channel__badge--base' : 'pm-channel__badge pm-channel__badge--addon'}>
+                  {ch.type === 'base' ? 'Included' : pricing.receptionist.formatted.extraChannelShort}
+                </span>
+                <h3 class="pm-channel__name">{ch.name}</h3>
+                <p class="pm-channel__included">{ch.included}</p>
+                <span class="pm-channel__link">See details →</span>
+              </a>
             ))}
           </div>
         </div>
@@ -386,4 +416,31 @@ const fm = frontmatter;
   .pm-related__name { font-size: 1rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem; }
   .pm-related__desc { font-size: 0.875rem; color: var(--color-text-secondary); margin-bottom: 0.75rem; }
   .pm-related__link { font-size: 0.875rem; color: var(--color-accent); font-weight: 600; }
+
+  /* Channel pricing cards */
+  .pm-section__subtitle { text-align: center; color: var(--color-text-muted); margin-bottom: 2rem; max-width: 42rem; margin-left: auto; margin-right: auto; }
+  .pm-channels {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem;
+  }
+  @media (min-width: 640px) { .pm-channels { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 1024px) { .pm-channels { grid-template-columns: repeat(3, 1fr); } }
+  .pm-channel {
+    position: relative; display: flex; flex-direction: column; align-items: center;
+    text-align: center; padding: 1.5rem 1rem 1.25rem; background: var(--color-surface);
+    border: 1px solid var(--color-border-subtle); border-radius: 1rem;
+    text-decoration: none; transition: all 200ms;
+  }
+  .pm-channel:hover { border-color: var(--color-accent); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .pm-channel--base { border-color: rgba(34, 197, 94, 0.3); }
+  .pm-channel--addon { border-color: rgba(232, 145, 58, 0.3); }
+  .pm-channel__badge {
+    display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px;
+    font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+    margin-bottom: 0.75rem;
+  }
+  .pm-channel__badge--base { background: rgba(34, 197, 94, 0.12); color: #16a34a; }
+  .pm-channel__badge--addon { background: rgba(232, 145, 58, 0.12); color: var(--color-accent); }
+  .pm-channel__name { font-size: 0.95rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.25rem; }
+  .pm-channel__included { font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 0.5rem; }
+  .pm-channel__link { font-size: 0.8rem; color: var(--color-accent); font-weight: 600; margin-top: auto; }
 </style>

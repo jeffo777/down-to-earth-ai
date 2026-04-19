@@ -15,6 +15,10 @@ const frontmatter = {
   heroSubhead: `${pricing.contracts}. No hidden fees. No minimum terms. Every plan comes with a ${pricing.guaranteeDesc}.`,
 };
 
+const channels = pricing.receptionist.channels as Record<string, { name: string; type: string; included: string }>;
+const baseChannels = Object.entries(channels).filter(([, ch]) => ch.type === 'base');
+const addonChannels = Object.entries(channels).filter(([, ch]) => ch.type === 'addon');
+
 const pricingFaqs = [
   { question: "Are there any hidden fees?", answer: "No. The prices shown are the prices you pay. Setup fee, monthly fee, and any usage charges are clearly stated upfront. No surprises on your invoice, ever." },
   { question: "Do I have to sign a contract?", answer: "No. All our services are pay-monthly with no minimum terms. You can cancel anytime — no penalties, no notice period, no questions asked." },
@@ -22,29 +26,40 @@ const pricingFaqs = [
   { question: "Can I bundle services for a discount?", answer: "Yes. If you're using multiple services (say AI Receptionist plus a Lead Gen Website), we offer bundle pricing. Get in touch and we'll put together a package that makes sense for your business." },
   { question: `What counts towards the ${pricing.receptionist.formatted.talkTime} talk time?`, answer: `Only active call time. Hold time, ring time, and setup don't count. Most tradesmen never exceed ${pricing.receptionist.formatted.talkTime} per month, but if you do, the overage rate is just ${pricing.receptionist.formatted.overage}.` },
   { question: "Can I upgrade or downgrade anytime?", answer: "Yes. Moving between plans or adding services is instant. Downgrading takes effect at your next billing date. No penalties either way." },
+  { question: "How much does each add-on channel cost?", answer: `Each additional channel costs ${pricing.receptionist.formatted.extraChannelShort} with unlimited messages. You only pay for the channels you need — add or remove them anytime.` },
 ];
 ---
 
 <CorePageLayout frontmatter={frontmatter}>
 
-  <!-- AI RECEPTIONIST -->
+  <!-- AI RECEPTIONIST — Main Product -->
   <section>
     <div class="core-container">
-      <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 60rem; margin: 0 auto;">
+      <div style="max-width: 60rem; margin: 0 auto;">
 
-        <div class="pricing-card" style="border-color: var(--color-accent);">
+        <!-- Base Plan Card -->
+        <div class="pricing-card pricing-card--featured" style="border-color: var(--color-accent);">
           <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.05em;">Most Popular</span>
           </div>
           <p class="pricing-card__name">AI Receptionist</p>
           <p class="pricing-card__price">{pricing.receptionist.formatted.monthly}</p>
-          <p style="color: var(--color-text-muted); font-size: 0.875rem; margin-bottom: 1.25rem;">{pricing.receptionist.formatted.setup} fee</p>
+          <p style="color: var(--color-text-muted); font-size: 0.875rem; margin-bottom: 1.25rem;">{pricing.receptionist.formatted.setup} one-off fee</p>
+
+          <!-- Base channels included -->
+          <div class="pricing-base">
+            <p class="pricing-base__label">Included in base plan:</p>
+            {baseChannels.map(([, ch]) => (
+              <div class="pricing-base__item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>{ch.name}</span>
+                <span class="pricing-base__detail">{ch.included}</span>
+              </div>
+            ))}
+          </div>
+
           <ul class="pricing-card__features">
-            <li>Phone answering + website chat included</li>
-            <li>Additional channels {pricing.receptionist.formatted.extraChannel} extra</li>
-            <li>{pricing.receptionist.formatted.talkTimeDesc}</li>
-            <li>{pricing.receptionist.formatted.overageDesc}</li>
             <li>24/7 coverage — weekends, bank holidays, 3am</li>
             <li>Lead capture, qualification & instant delivery</li>
             <li>Human backup for complex situations</li>
@@ -57,7 +72,31 @@ const pricingFaqs = [
           </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
+        <!-- Add-on Channels Section -->
+        <div class="pricing-addons">
+          <h2 class="pricing-addons__title">Add-On Channels — {pricing.receptionist.formatted.extraChannelShort} each</h2>
+          <p class="pricing-addons__subtitle">Expand your AI receptionist with additional messaging channels. All include unlimited messages. Add or remove anytime.</p>
+          <div class="pricing-addons__grid">
+            {addonChannels.map(([slug, ch]) => (
+              <a href={`/${slug}-for-tradesmen`} class="pricing-addon-card">
+                <span class="pricing-addon-card__price">{pricing.receptionist.formatted.extraChannelShort}</span>
+                <h3 class="pricing-addon-card__name">{ch.name}</h3>
+                <p class="pricing-addon-card__detail">{ch.included}</p>
+                <span class="pricing-addon-card__link">Learn more →</span>
+              </a>
+            ))}
+          </div>
+
+          <!-- Example bundle -->
+          <div class="pricing-bundle">
+            <p class="pricing-bundle__title">Example: AI Receptionist + WhatsApp + SMS</p>
+            <p class="pricing-bundle__calc">{pricing.receptionist.formatted.monthly} + {pricing.receptionist.formatted.extraChannelShort} + {pricing.receptionist.formatted.extraChannelShort} = <strong>£{pricing.receptionist.monthlyPrice + pricing.receptionist.extraChannelPrice * 2}/month</strong></p>
+            <p class="pricing-bundle__note">All channels include unlimited messages. {pricing.contracts}.</p>
+          </div>
+        </div>
+
+        <!-- Other Products -->
+        <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 3rem;">
           <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem;">
 
             <div class="pricing-card">
@@ -142,4 +181,37 @@ const pricingFaqs = [
       grid-template-columns: 1fr !important;
     }
   }
+
+  /* Base channels in receptionist card */
+  .pricing-base { margin-bottom: 1.25rem; padding: 1rem; background: rgba(34, 197, 94, 0.05); border-radius: 0.75rem; border: 1px solid rgba(34, 197, 94, 0.15); }
+  .pricing-base__label { font-size: 0.8rem; font-weight: 700; color: #16a34a; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.5rem; }
+  .pricing-base__item { display: flex; align-items: center; gap: 0.5rem; padding: 0.3rem 0; font-size: 0.875rem; color: var(--color-text-primary); }
+  .pricing-base__detail { font-size: 0.75rem; color: var(--color-text-muted); margin-left: auto; }
+
+  /* Add-on channels section */
+  .pricing-addons { margin-top: 2.5rem; }
+  .pricing-addons__title { text-align: center; font-size: 1.5rem; margin-bottom: 0.5rem; }
+  .pricing-addons__subtitle { text-align: center; color: var(--color-text-muted); margin-bottom: 2rem; max-width: 36rem; margin-left: auto; margin-right: auto; }
+  .pricing-addons__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  @media (min-width: 640px) { .pricing-addons__grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 900px) { .pricing-addons__grid { grid-template-columns: repeat(4, 1fr); } }
+
+  .pricing-addon-card {
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    padding: 1.25rem 0.75rem; background: var(--color-surface);
+    border: 1px solid rgba(232, 145, 58, 0.25); border-radius: 1rem;
+    text-decoration: none; transition: all 200ms;
+  }
+  .pricing-addon-card:hover { border-color: var(--color-accent); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .pricing-addon-card__price { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; background: rgba(232, 145, 58, 0.12); color: var(--color-accent); margin-bottom: 0.5rem; }
+  .pricing-addon-card__name { font-size: 0.9rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.25rem; }
+  .pricing-addon-card__detail { font-size: 0.75rem; color: var(--color-text-muted); margin-bottom: 0.5rem; }
+  .pricing-addon-card__link { font-size: 0.75rem; color: var(--color-accent); font-weight: 600; margin-top: auto; }
+
+  /* Bundle example */
+  .pricing-bundle { margin-top: 1.5rem; padding: 1.25rem; background: var(--color-surface); border: 1px dashed var(--color-border-subtle); border-radius: 1rem; text-align: center; }
+  .pricing-bundle__title { font-size: 0.9rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.25rem; }
+  .pricing-bundle__calc { font-size: 1rem; color: var(--color-text-secondary); margin-bottom: 0.25rem; }
+  .pricing-bundle__calc strong { color: var(--color-accent); font-size: 1.125rem; }
+  .pricing-bundle__note { font-size: 0.8rem; color: var(--color-text-muted); }
 </style>
