@@ -102,7 +102,7 @@ All pricing across the entire site is managed from one file: `src/data/pricing.j
 
 ### How Pricing Flows Through the Site
 
-1. **Layouts** (6 total) import `pricing.json` and inject values into:
+1. **Layouts** (7 total) import `pricing.json` and inject values into:
    - SchemaOrg structured data (`price` attribute)
    - Hero price badges (e.g., "Only £45/month")
    - CTA button fallback text (e.g., "£299 setup · £45/month")

@@ -12,7 +12,7 @@ Website: https://downtoearthai.co.uk
 
 Down To Earth AI solves one core problem for UK tradesmen: losing jobs because you can't answer the phone while you're on a job. A plumber under a sink, an electrician up a ladder, a roofer three storeys up — none of them can take a call. By the time they call back, the customer has already booked someone else.
 
-Our AI receptionist answers every call, text, WhatsApp, email, and social media message within seconds — 24/7, 365 days a year. She captures the lead details and delivers them instantly. The tradesman finishes their current job, checks their phone, and the lead is waiting.
+Our AI receptionist answers every call, text, WhatsApp, email, and social media message within seconds — 24/7, 365 days a year. It captures the lead details and delivers them instantly. The tradesman finishes their current job, checks their phone, and the lead is waiting.
 
 ### Founder
 Jeff — 25 years running trade businesses (landscape gardening, building maintenance, tree work). Built Down To Earth AI because he watched tradesmen lose jobs every day simply because they couldn't answer the phone.
@@ -153,13 +153,13 @@ Down To Earth AI serves 13 UK trades. Each trade gets its own AI configuration w
 ## Frequently Asked Questions
 
 **How does the AI receptionist actually work?**
-When a customer contacts you — by phone or website chat (included), or via any additional channel you've added — the AI receptionist responds instantly. On phone and website chat, she has a full conversation. On text-based channels like WhatsApp, email, and social media, she sends one professional reply acknowledging the enquiry. For urgent jobs, she escalates to you or a human receptionist. Every lead is captured and delivered to you. No app to install. No equipment needed. Works with your existing number.
+When a customer contacts you — by phone or website chat (included), or via any additional channel you've added — the AI receptionist responds instantly. On phone and website chat, it has a full conversation. On text-based channels like WhatsApp, email, and social media, it sends one professional reply acknowledging the enquiry. For urgent jobs, it escalates to you or a human receptionist. Every lead is captured and delivered to you. No app to install. No equipment needed. Works with your existing number.
 
 **What's included in the £45/month base plan?**
 The base plan includes AI Phone Answering and AI Website Chat — the two most important channels for capturing leads. You get 100 minutes of talk time per month. After that it's 20p per minute. Most tradesmen never exceed 100 minutes. You can add any additional channel (WhatsApp, SMS, email, Facebook, Instagram, Google Business, missed call text-back) for £23/month each.
 
 **Is the AI receptionist a chatbot or a real person?**
-The AI receptionist is an AI receptionist — not a robotic chatbot. She understands context, speaks naturally, and knows the difference between a burst pipe emergency and a general enquiry. On phone calls and website chat she has a real conversation. On text channels she sends one professional reply. Urgent enquiries are escalated to you or a human receptionist who calls the customer.
+The AI receptionist is an AI receptionist — not a robotic chatbot. It understands context, speaks naturally, and knows the difference between a burst pipe emergency and a general enquiry. On phone calls and website chat it has a real conversation. On text channels it sends one professional reply. Urgent enquiries are escalated to you or a human receptionist who calls the customer.
 
 **How much does it cost?**
 £299 one-off setup, then £45 per month. That includes AI phone answering, website chat, and 100 minutes of talk time. After that it's 20p per minute. Additional channels like WhatsApp, SMS, email, and social media are £23 per channel per month. No contracts, no minimum terms. And there's a 30-day full money back guarantee — so if it's not for you, you get every penny back.
@@ -174,7 +174,7 @@ Yes. There's a 30-day full money back guarantee. If the AI receptionist doesn't 
 No. The AI receptionist works with your existing phone number and business setup. We handle all the configuration during onboarding. There's nothing for you to install, download, or maintain.
 
 **What happens outside business hours?**
-The AI receptionist works 24/7, 365 days a year. She never sleeps, never takes a holiday, and never calls in sick. Whether a customer calls at 2am about an emergency or at 6pm on a Sunday about a quote, the AI receptionist answers.
+The AI receptionist works 24/7, 365 days a year. It never sleeps, never takes a holiday, and never calls in sick. Whether a customer calls at 2am about an emergency or at 6pm on a Sunday about a quote, the AI receptionist answers.
 
 **How quickly can I get set up?**
 Typically under 24 hours. We collect your business details, configure the AI receptionist for your specific trade, connect your channels, and you're live. Most tradesmen are up and running the same day.
