@@ -37,11 +37,11 @@ Jeff — 25 years running trade businesses (landscape gardening, building mainte
 ## Products
 
 ### AI Receptionist — £45/month (£299 setup)
-The flagship product. An AI receptionist with phone answering and website chat included in the base plan, with additional channels available at £23/month each.
+The flagship product. An AI receptionist with phone answering and website chat included in the base plan, with additional channels available at £23/month each. All messaging channels include unlimited messages.
 
 **Base Plan — £45/month:**
-- AI Phone Answering (included)
-- AI Website Chat (included)
+- AI Phone Answering (included, 100 minutes talk time)
+- AI Website Chat (included, unlimited messages)
 - 100 minutes talk time included per month (20p/minute after)
 - 24/7 coverage — weekends, bank holidays, 3am
 - Lead capture, qualification, and instant delivery
@@ -49,14 +49,14 @@ The flagship product. An AI receptionist with phone answering and website chat i
 - Configured specifically for each trade
 - No contracts or minimum terms
 
-**Additional Channels — £23/month each:**
-- AI WhatsApp Messaging
-- AI SMS Messaging
-- AI Email Response
-- AI Facebook Messenger
-- AI Instagram DMs
-- AI Google Business Profile
-- AI Missed Call Text-Back
+**Additional Channels — £23/month each (all include unlimited messages):**
+- AI WhatsApp Messaging — unlimited messages
+- AI SMS Messaging — unlimited messages
+- AI Email Response — unlimited messages
+- AI Facebook Messenger — unlimited messages
+- AI Instagram DMs — unlimited messages
+- AI Google Business Profile — unlimited messages
+- AI Missed Call Text-Back — unlimited messages
 
 **How It Works:**
 1. We set up the AI receptionist for you — tell us your trade, services, and preferred style. Configured and live in under 24 hours.
@@ -137,8 +137,8 @@ Down To Earth AI serves 13 UK trades. Each trade gets its own AI configuration w
 
 | Product | Setup | Monthly | Included | Contract |
 |---------|-------|---------|----------|----------|
-| AI Receptionist (base) | £299 | £45 | Phone + Web Chat, 100 mins talk time | No contract |
-| Additional channels | — | £23 each | WhatsApp, SMS, Email, FB, Insta, GBP, MCTB | No contract |
+| AI Receptionist (base) | £299 | £45 | Phone (100 mins) + Web Chat (unlimited), 24/7 | No contract |
+| Additional channels | — | £23 each | WhatsApp, SMS, Email, FB, Insta, GBP, MCTB — all unlimited messages | No contract |
 | Lead Gen Website | From £997 | — | One-off build, you own everything | One-off |
 | AI Marketing | £199 | £99 | Photos-in, content-out automation | No contract |
 | Custom Automations | Bespoke | Bespoke | Tailored AI workflows | No contract |
