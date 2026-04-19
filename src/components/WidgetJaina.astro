@@ -42,8 +42,6 @@ if (widgetTrade && widgetGoal) {
         decoding="async"
       />
     </div>
-    <span class="widget-jaina__pulse"></span>
-    <span class="widget-jaina__pulse widget-jaina__pulse--delayed"></span>
   </button>
 
   <!-- Expanded: Panel -->
@@ -143,18 +141,16 @@ if (widgetTrade && widgetGoal) {
   /* Trigger — receptionist headshot */
   .widget-jaina__trigger {
     position: relative;
-    width: 64px;
-    height: 64px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    background: transparent;
-    border: 3px solid var(--color-accent);
+    border: 2.5px solid var(--color-accent);
+    background: var(--color-surface);
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
+    box-shadow: 0 4px 20px rgba(232, 145, 58, 0.3);
     transition: transform 200ms, box-shadow 200ms;
-    box-shadow: 0 4px 20px rgba(232, 145, 58, 0.35);
+    padding: 0;
+    animation: widget-border-pulse 3s ease-in-out infinite;
   }
 
   .widget-jaina__trigger:hover {
@@ -184,29 +180,15 @@ if (widgetTrade && widgetGoal) {
     border-radius: 50%;
   }
 
-  /* Pulsing orange ring */
-  .widget-jaina__pulse {
-    position: absolute;
-    inset: -6px;
-    border-radius: 50%;
-    border: 2.5px solid var(--color-accent);
-    animation: widget-pulse-ring 3s ease-in-out infinite;
-    pointer-events: none;
-  }
-
-  .widget-jaina__pulse--delayed {
-    animation-delay: 1.25s;
-  }
-
-  @keyframes widget-pulse-ring {
-    0% {
-      opacity: 0.2;
+  /* Border pulse — matches hero style */
+  @keyframes widget-border-pulse {
+    0%, 100% {
+      border-color: rgba(232, 145, 58, 0.4);
+      box-shadow: 0 4px 20px rgba(232, 145, 58, 0.15);
     }
     50% {
-      opacity: 0.8;
-    }
-    100% {
-      opacity: 0.2;
+      border-color: rgba(232, 145, 58, 1);
+      box-shadow: 0 4px 20px rgba(232, 145, 58, 0.4);
     }
   }
 
