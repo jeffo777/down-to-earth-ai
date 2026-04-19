@@ -1,43 +1,50 @@
-# Astro Starter Kit: Minimal
+# Down To Earth AI — Website
 
-```sh
-npm create astro@latest -- --template minimal
-```
+> **UK business. Built by a tradesman with 25 years in the trade.**
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+AI receptionist and lead generation services built exclusively for **UK tradesmen**. This is the Astro-based website at [downtoearthai.co.uk](https://downtoearthai.co.uk).
 
-## 🚀 Project Structure
+## Critical Rules for All Agents
 
-Inside of your Astro project, you'll see the following folders and files:
+1. **UK focus is non-negotiable** — Every page, every piece of content must make it obvious this service is for UK tradesmen. "UK" must appear above the fold in either the `heroHeadline` or `heroSubhead` on every service page.
+2. **Never use "Jaina"** — The AI receptionist is called "AI receptionist" or "Down To Earth AI receptionist". The name "Jaina" has been retired from all user-facing content.
+3. **All content must be unique** — No programmatic content, no template spinning, no copy-pasting between pages. Every page is hand-crafted.
+4. **Pricing comes from one source** — `src/data/pricing.json` is the single source of truth. Never hardcode prices.
+5. **Read the full content rules** — See `.agent/workflows/content-rules.md` for complete guidelines before creating or editing any content.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Tech Stack
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- **Framework:** [Astro](https://astro.build) (static site generator)
+- **Hosting:** Vercel
+- **Domain:** downtoearthai.co.uk
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Commands
 
-Any static assets, like images, can be placed in the `public/` directory.
+| Command | Action |
+| :--- | :--- |
+| `npm install` | Install dependencies |
+| `npm run dev` | Start dev server at `localhost:4321` |
+| `npm run build` | Build production site to `./dist/` (must produce 248 pages, 0 errors) |
+| `npm run preview` | Preview production build locally |
 
-## 🧞 Commands
+## Key Files
 
-All commands are run from the root of the project, from a terminal:
+| File | Purpose |
+| :--- | :--- |
+| `src/data/pricing.json` | Single source of truth for all prices |
+| `.agent/workflows/content-rules.md` | Content rules for all agents |
+| `public/llms.txt` | AI-discoverable business summary |
+| `public/llms-full.txt` | Comprehensive AI-discoverable documentation |
+| `src/layouts/` | 7 layout templates (all include UK trust badge) |
+| `src/components/Footer.astro` | Shared footer with UK business tagline |
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Products
 
-## 👀 Want to learn more?
+- **AI Receptionist** — £45/mo, phone + web chat included, +£23/channel add-ons
+- **Lead Generation Websites** — From £997 one-off
+- **AI Marketing** — £99/mo
+- **Custom AI Automations** — Bespoke pricing
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Trades Served (13)
+
+Plumbers, Electricians, Locksmiths, Gas Engineers, Drainage Engineers, Glaziers, Roofers, HVAC Engineers, Alarm & Security Installers, Pest Control, Garage Door Engineers, Builders, Appliance Repair Engineers
