@@ -164,45 +164,48 @@ const channelEntries = Object.entries(pricing.receptionist.channels || {}).map((
       </div>
     </section>
 
-    <!-- 4. FEATURES -->
+    <!-- 4. WHAT'S INCLUDED — Capabilities + Channel Pricing Cards -->
     {fm.features && fm.features.length > 0 && (
       <section class="pt-section pt-section--alt">
         <div class="pt-container">
           <h2 class="pt-section__title">What's Included</h2>
+
+          {/* Trade-Specific AI Capabilities — no channelSlug */}
           <div class="pt-features">
-            {fm.features.map(f => (
+            {fm.features.filter((f: any) => !f.channelSlug).map((f: any) => (
               <div class="pt-feature">
                 <svg class="pt-feature__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                 <div>
                   <h3 class="pt-feature__name">{f.name}</h3>
                   <p class="pt-feature__desc">{f.description}</p>
-                  {f.href && <a href={f.href} class="pt-feature__link">See details →</a>}
                 </div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-    )}
 
-    <!-- 4b. CHANNEL PRICING CARDS — AI Receptionist only -->
-    {fm.productSlug === 'ai-receptionist' && (
-      <section class="pt-section">
-        <div class="pt-container">
-          <h2 class="pt-section__title">Available Channels & Pricing</h2>
-          <p class="pt-section__subtitle">Base plan ({pricing.receptionist.formatted.monthly}) includes Phone Answering and Website Chat. Add extra channels for {pricing.receptionist.formatted.extraChannelShort} each — unlimited messages.</p>
-          <div class="pt-channels">
-            {channelEntries.map((ch) => (
-              <a href={'/' + ch.slug + '-for-' + fm.tradeSlug} class={ch.type === 'base' ? 'pt-channel pt-channel--base' : 'pt-channel pt-channel--addon'}>
-                <span class={ch.type === 'base' ? 'pt-channel__badge pt-channel__badge--base' : 'pt-channel__badge pt-channel__badge--addon'}>
-                  {ch.type === 'base' ? 'Included' : pricing.receptionist.formatted.extraChannelShort}
-                </span>
-                <h3 class="pt-channel__name">{ch.name}</h3>
-                <p class="pt-channel__included">{ch.included}</p>
-                <span class="pt-channel__link">See details →</span>
-              </a>
-            ))}
-          </div>
+          {/* Channel Pricing Cards — items with channelSlug */}
+          {fm.productSlug === 'ai-receptionist' && fm.features.some((f: any) => f.channelSlug) && (
+            <div style="margin-top: 2.5rem;">
+              <h3 class="pt-section__title" style="font-size: 1.25rem;">Available Channels & Pricing</h3>
+              <p class="pt-section__subtitle">Base plan ({pricing.receptionist.formatted.monthly}) includes Phone Answering and Website Chat. Add extra channels for {pricing.receptionist.formatted.extraChannelShort} each — unlimited messages.</p>
+              <div class="pt-channels">
+                {fm.features.filter((f: any) => f.channelSlug).map((f: any) => {
+                  const chInfo = channelEntries.find(c => c.slug === f.channelSlug);
+                  const isBase = chInfo ? chInfo.type === 'base' : false;
+                  return (
+                    <a href={f.href} class={isBase ? 'pt-channel pt-channel--base' : 'pt-channel pt-channel--addon'}>
+                      <span class={isBase ? 'pt-channel__badge pt-channel__badge--base' : 'pt-channel__badge pt-channel__badge--addon'}>
+                        {isBase ? 'Included' : pricing.receptionist.formatted.extraChannelShort}
+                      </span>
+                      <h3 class="pt-channel__name">{f.name}</h3>
+                      <p class="pt-channel__desc">{f.description}</p>
+                      <span class="pt-channel__link">See details →</span>
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
       </section>
     )}
@@ -378,5 +381,6 @@ const channelEntries = Object.entries(pricing.receptionist.channels || {}).map((
   .pt-channel__badge--addon { background: rgba(232, 145, 58, 0.12); color: var(--color-accent); }
   .pt-channel__name { font-size: 0.95rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.25rem; }
   .pt-channel__included { font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 0.5rem; }
+  .pt-channel__desc { font-size: 0.8rem; color: var(--color-text-secondary); margin-bottom: 0.5rem; line-height: 1.5; }
   .pt-channel__link { font-size: 0.8rem; color: var(--color-accent); font-weight: 600; margin-top: auto; }
 </style>
