@@ -148,45 +148,48 @@ const channelEntries = Object.entries(pricing.receptionist.channels || {}).map((
       </div>
     </section>
 
-    <!-- 3. FEATURES / WHAT'S INCLUDED -->
+    <!-- 3. WHAT'S INCLUDED — Capabilities + Channel Pricing Cards -->
     {fm.features && fm.features.length > 0 && (
       <section class="pm-section">
         <div class="pm-container">
           <h2 class="pm-section__title">What's Included</h2>
+
+          {/* Capabilities — no channelSlug */}
           <div class="pm-features">
-            {fm.features.map(feature => (
+            {fm.features.filter((f: any) => !f.channelSlug).map((f: any) => (
               <div class="pm-feature">
                 <svg class="pm-feature__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 <div>
-                  <h3 class="pm-feature__name">{feature.name}</h3>
-                  <p class="pm-feature__desc">{feature.description}</p>
-                  {feature.href && <a href={feature.href} class="pm-feature__link">See details →</a>}
+                  <h3 class="pm-feature__name">{f.name}</h3>
+                  <p class="pm-feature__desc">{f.description}</p>
                 </div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-    )}
 
-    <!-- 3b. CHANNEL PRICING CARDS — AI Receptionist only -->
-    {fm.productSlug === 'ai-receptionist' && (
-      <section class="pm-section pm-section--alt">
-        <div class="pm-container">
-          <h2 class="pm-section__title">Available Channels & Pricing</h2>
-          <p class="pm-section__subtitle">Your AI receptionist base plan ({pricing.receptionist.formatted.monthly}) includes Phone Answering and Website Chat. Add extra channels for {pricing.receptionist.formatted.extraChannelShort} each — all with unlimited messages.</p>
-          <div class="pm-channels">
-            {channelEntries.map((ch) => (
-              <a href={'/' + ch.slug + '-for-tradesmen'} class={ch.type === 'base' ? 'pm-channel pm-channel--base' : 'pm-channel pm-channel--addon'}>
-                <span class={ch.type === 'base' ? 'pm-channel__badge pm-channel__badge--base' : 'pm-channel__badge pm-channel__badge--addon'}>
-                  {ch.type === 'base' ? 'Included' : pricing.receptionist.formatted.extraChannelShort}
-                </span>
-                <h3 class="pm-channel__name">{ch.name}</h3>
-                <p class="pm-channel__included">{ch.included}</p>
-                <span class="pm-channel__link">See details →</span>
-              </a>
-            ))}
-          </div>
+          {/* Channel Pricing Cards — items with channelSlug */}
+          {fm.productSlug === 'ai-receptionist' && fm.features.some((f: any) => f.channelSlug) && (
+            <div style="margin-top: 2.5rem;">
+              <h3 class="pm-section__title" style="font-size: 1.25rem;">Available Channels & Pricing</h3>
+              <p class="pm-section__subtitle">Your AI receptionist base plan ({pricing.receptionist.formatted.monthly}) includes Phone Answering and Website Chat. Add extra channels for {pricing.receptionist.formatted.extraChannelShort} each — all with unlimited messages.</p>
+              <div class="pm-channels">
+                {fm.features.filter((f: any) => f.channelSlug).map((f: any) => {
+                  const chInfo = channelEntries.find(c => c.slug === f.channelSlug);
+                  const isBase = chInfo ? chInfo.type === 'base' : false;
+                  return (
+                    <a href={f.href} class={isBase ? 'pm-channel pm-channel--base' : 'pm-channel pm-channel--addon'}>
+                      <span class={isBase ? 'pm-channel__badge pm-channel__badge--base' : 'pm-channel__badge pm-channel__badge--addon'}>
+                        {isBase ? 'Included' : pricing.receptionist.formatted.extraChannelShort}
+                      </span>
+                      <h3 class="pm-channel__name">{f.name}</h3>
+                      <p class="pm-channel__desc">{f.description}</p>
+                      <span class="pm-channel__link">See details →</span>
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
       </section>
     )}
