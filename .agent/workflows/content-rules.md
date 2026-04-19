@@ -17,6 +17,7 @@ Every single page on the Down To Earth AI website MUST contain **100% unique, AI
 ### Required For Every Page:
 - **"UK" must appear above the fold** — every page must mention "UK" in either the `heroHeadline` or `heroSubhead`. For hub pages use "for UK [Trade]" in the headline (e.g. "AI Receptionist For UK Plumbers"). For channel pages with creative headlines, end the subhead with "Built for UK tradesmen." This is non-negotiable.
 - **Never use the name "Jaina"** — the AI receptionist is called "AI receptionist" or "Down To Earth AI receptionist". The name "Jaina" has been retired from all user-facing content.
+- **No gendered pronouns for the AI receptionist** — never use "she", "her", "he", or "him" when referring to the AI receptionist. Use "it", "its", "your AI receptionist", or rephrase the sentence. Gendered pronouns are fine for customer characters in scenarios.
 - Unique headline and subhead that speaks directly to the specific trade + channel combination
 - Unique real-world scenario set in Yorkshire/Leeds with trade-specific terminology
 - Unique 3-step "How It Works" section with trade-relevant details
