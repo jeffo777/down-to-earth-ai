@@ -2,6 +2,7 @@
 /**
  * HeroJaina.astro — Stacked AI receptionist hero section
  * Jaina headshot with CSS 3D "head turn" animation on page load.
+ * Pulsing orange ring + "Ready" label at bottom.
  * Falls back to SVG icon if image isn't available.
  */
 import { SITE_CONFIG } from '../config/site.js';
@@ -20,7 +21,7 @@ const aiActive = SITE_CONFIG.aiActive;
 {showHeroAI && (
   <div class="hero-jaina" id="hero-jaina-section">
     <div class="hero-jaina__container">
-      <!-- Jaina Visual with 3D rotation -->
+      <!-- Jaina Visual with 3D rotation + pulsing orange ring -->
       <div class="hero-jaina__visual">
         <div class="hero-jaina__avatar-wrap">
           <img
@@ -31,6 +32,14 @@ const aiActive = SITE_CONFIG.aiActive;
             decoding="async"
           />
           <div class="hero-jaina__avatar-glow"></div>
+          <!-- Pulsing orange ring -->
+          <span class="hero-jaina__pulse-ring"></span>
+          <span class="hero-jaina__pulse-ring hero-jaina__pulse-ring--delayed"></span>
+          <!-- Ready badge -->
+          <div class="hero-jaina__ready-badge">
+            <span class="hero-jaina__ready-dot"></span>
+            Ready
+          </div>
         </div>
       </div>
 
@@ -59,9 +68,7 @@ const aiActive = SITE_CONFIG.aiActive;
       <div class="jaina-popup__content">
         <button class="jaina-popup__close" data-close-popup aria-label="Close">&times;</button>
         <div class="jaina-popup__avatar-small">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-          </svg>
+          <img src="/assets/images/jaina-headshot.png" alt="Your AI receptionist" class="jaina-popup__avatar-small-img" />
         </div>
         {aiActive ? (
           <Fragment>
@@ -86,8 +93,7 @@ const aiActive = SITE_CONFIG.aiActive;
       <div class="jaina-popup__content">
         <button class="jaina-popup__close" data-close-popup aria-label="Close">&times;</button>
         <div class="jaina-popup__avatar-small">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <img src="/assets/images/jaina-headshot.png" alt="Your AI receptionist" class="jaina-popup__avatar-small-img" />
         </div>
         {aiActive ? (
           <Fragment>
@@ -161,6 +167,7 @@ const aiActive = SITE_CONFIG.aiActive;
     z-index: 2;
     animation: jaina-head-turn 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     will-change: transform;
+    border: 3px solid var(--color-accent);
   }
 
   /* Soft glow behind the image */
@@ -168,9 +175,89 @@ const aiActive = SITE_CONFIG.aiActive;
     position: absolute;
     inset: -8px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(232, 145, 58, 0.35) 0%, transparent 70%);
     z-index: 1;
     animation: jaina-glow-pulse 3s ease-in-out infinite;
+  }
+
+  /* Pulsing orange ring */
+  .hero-jaina__pulse-ring {
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: 2.5px solid var(--color-accent);
+    z-index: 3;
+    pointer-events: none;
+    animation: hero-pulse-ring 2.5s ease-out infinite;
+    animation-delay: 1.5s; /* Start after head-turn finishes */
+  }
+
+  .hero-jaina__pulse-ring--delayed {
+    animation-delay: 2.75s;
+  }
+
+  @keyframes hero-pulse-ring {
+    0% {
+      opacity: 0.6;
+      transform: scale(1);
+    }
+    70% {
+      opacity: 0;
+      transform: scale(1.4);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.4);
+    }
+  }
+
+  /* Ready badge — positioned at bottom of avatar */
+  .hero-jaina__ready-badge {
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: rgba(20, 20, 30, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1.5px solid var(--color-accent);
+    border-radius: 2rem;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    animation: ready-fade-in 0.5s ease 1.6s both;
+    white-space: nowrap;
+  }
+
+  .hero-jaina__ready-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    animation: ready-dot-pulse 1.5s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes ready-fade-in {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+
+  @keyframes ready-dot-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.75); }
   }
 
   /* 3D Head Turn — starts rotated to the side, turns to face viewer */
@@ -273,7 +360,7 @@ const aiActive = SITE_CONFIG.aiActive;
     letter-spacing: 0.01em;
   }
 
-  /* Guarantee badge — prominent in hero */
+  /* Guarantee badge */
   .hero-jaina__guarantee {
     display: inline-flex;
     align-items: center;
@@ -344,12 +431,16 @@ const aiActive = SITE_CONFIG.aiActive;
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background: linear-gradient(145deg, var(--color-secondary), var(--color-primary));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-accent);
+    overflow: hidden;
+    border: 2px solid var(--color-accent);
     margin: 0 auto 1rem;
+  }
+
+  .jaina-popup__avatar-small-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
   }
 
   .jaina-popup__title {
