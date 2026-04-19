@@ -1,4 +1,4 @@
----
+﻿---
 /**
  * ProductMasterLayout.astro
  * Template for: Product master pages (6 pages)
@@ -99,6 +99,7 @@ const fm = frontmatter;
           {(fm.heroPrice || fm.showPrice) && (
             <div class="pm-hero__trust-row">
               <span class="pm-hero__done-tag">✓ 100% done for you</span>
+            <span class="pm-hero__done-tag">🇬🇧 UK business</span>
               {fm.heroPrice && (
                 <span class="pm-hero__price-tag">Only {fm.heroPrice}</span>
               )}
