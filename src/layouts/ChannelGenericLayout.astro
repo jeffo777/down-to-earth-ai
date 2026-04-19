@@ -84,7 +84,10 @@ const fm = frontmatter;
       <div class="cg-hero__inner">
         <div class="cg-hero__stacked">
           <h1>{fm.heroHeadline}</h1>
-          <p class="cg-hero__subhead">{fm.heroSubhead}</p>
+          <p class="cg-hero__subhead">{fm.heroSubhead}</p>          <div class="cg-hero__jaina">
+            <HeroJaina showHeroAI={true} heroAIText={fm.heroAIText} />
+          </div>
+
           <div class="cg-hero__trust-row">
             <span class="cg-hero__done-tag">✓ 100% done for you</span>
             <span class="cg-hero__done-tag">🇬🇧 UK business</span>
@@ -93,9 +96,6 @@ const fm = frontmatter;
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
               30-day money back guarantee
             </span>
-          </div>
-          <div class="cg-hero__jaina">
-            <HeroJaina showHeroAI={true} heroAIText={fm.heroAIText} />
           </div>
         </div>
       </div>

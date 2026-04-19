@@ -1,4 +1,4 @@
-﻿---
+---
 /**
  * ProductMasterLayout.astro
  * Template for: Product master pages (6 pages)
@@ -96,10 +96,13 @@ const fm = frontmatter;
         <div class="pm-hero__stacked">
           <h1 class="pm-hero__headline">{fm.heroHeadline}</h1>
           <p class="pm-hero__subhead">{fm.heroSubhead}</p>
+          <div class="pm-hero__jaina">
+            <HeroJaina showHeroAI={fm.showHeroAI !== false} heroAIText={fm.heroAIText} heroGreeting={fm.heroGreeting} />
+          </div>
           {(fm.heroPrice || fm.showPrice) && (
             <div class="pm-hero__trust-row">
               <span class="pm-hero__done-tag">✓ 100% done for you</span>
-            <span class="pm-hero__done-tag">🇬🇧 UK business</span>
+              <span class="pm-hero__done-tag">🇬🇧 UK business</span>
               {fm.heroPrice && (
                 <span class="pm-hero__price-tag">Only {fm.heroPrice}</span>
               )}
@@ -109,9 +112,6 @@ const fm = frontmatter;
               </span>
             </div>
           )}
-          <div class="pm-hero__jaina">
-            <HeroJaina showHeroAI={fm.showHeroAI !== false} heroAIText={fm.heroAIText} heroGreeting={fm.heroGreeting} />
-          </div>
         </div>
       </div>
     </section>

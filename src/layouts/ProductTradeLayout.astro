@@ -1,4 +1,4 @@
-﻿---
+---
 /**
  * ProductTradeLayout.astro
  * Template for: Product × Trade pages (78 pages)
@@ -105,10 +105,13 @@ const fm = frontmatter;
         <div class="pt-hero__stacked">
           <h1 class="pt-hero__headline">{fm.heroHeadline}</h1>
           <p class="pt-hero__subhead">{fm.heroSubhead}</p>
+          <div class="pt-hero__jaina">
+            <HeroJaina showHeroAI={fm.showHeroAI !== false} heroAIText={fm.heroAIText} heroGreeting={fm.heroGreeting} />
+          </div>
           {(fm.heroPrice || fm.showPrice) && (
             <div class="pt-hero__trust-row">
               <span class="pt-hero__done-tag">✓ 100% done for you</span>
-            <span class="pt-hero__done-tag">🇬🇧 UK business</span>
+              <span class="pt-hero__done-tag">🇬🇧 UK business</span>
               {fm.heroPrice && (
                 <span class="pt-hero__price-tag">Only {fm.heroPrice}</span>
               )}
@@ -118,9 +121,6 @@ const fm = frontmatter;
               </span>
             </div>
           )}
-          <div class="pt-hero__jaina">
-            <HeroJaina showHeroAI={fm.showHeroAI !== false} heroAIText={fm.heroAIText} heroGreeting={fm.heroGreeting} />
-          </div>
         </div>
       </div>
     </section>
