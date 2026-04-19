@@ -148,15 +148,39 @@ const channelEntries = Object.entries(pricing.receptionist.channels || {}).map((
       </div>
     </section>
 
-    <!-- 3. WHAT'S INCLUDED — Capabilities + Channel Pricing Cards -->
-    {fm.features && fm.features.length > 0 && (
+    <!-- 3. EVERY CHANNEL, COVERED — AI Receptionist only -->
+    {fm.productSlug === 'ai-receptionist' && fm.features && fm.features.some((f: any) => f.channelSlug) && (
+      <section class="pm-section">
+        <div class="pm-container">
+          <h2 class="pm-section__title">Every Channel, Covered</h2>
+          <p class="pm-section__subtitle">Your base plan ({pricing.receptionist.formatted.monthly}) includes Phone Answering and Website Chat. Add extra channels for {pricing.receptionist.formatted.extraChannelShort} each — all with unlimited messages, lead capture with urgency triage, and human escalation for emergencies.</p>
+          <div class="pm-channels">
+            {fm.features.filter((f: any) => f.channelSlug).map((f: any) => {
+              const chInfo = channelEntries.find(c => c.slug === f.channelSlug);
+              const isBase = chInfo ? chInfo.type === 'base' : false;
+              return (
+                <a href={f.href} class={isBase ? 'pm-channel pm-channel--base' : 'pm-channel pm-channel--addon'}>
+                  <span class={isBase ? 'pm-channel__badge pm-channel__badge--base' : 'pm-channel__badge pm-channel__badge--addon'}>
+                    {isBase ? 'Included' : pricing.receptionist.formatted.extraChannelShort}
+                  </span>
+                  <h3 class="pm-channel__name">{f.name}</h3>
+                  <p class="pm-channel__desc">{f.description}</p>
+                  <span class="pm-channel__link">See details →</span>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- 3b. NON-RECEPTIONIST FEATURES — Other products only -->
+    {fm.productSlug !== 'ai-receptionist' && fm.features && fm.features.length > 0 && (
       <section class="pm-section">
         <div class="pm-container">
           <h2 class="pm-section__title">What's Included</h2>
-
-          {/* Capabilities — no channelSlug */}
           <div class="pm-features">
-            {fm.features.filter((f: any) => !f.channelSlug).map((f: any) => (
+            {fm.features.map((f: any) => (
               <div class="pm-feature">
                 <svg class="pm-feature__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 <div>
@@ -166,30 +190,6 @@ const channelEntries = Object.entries(pricing.receptionist.channels || {}).map((
               </div>
             ))}
           </div>
-
-          {/* Channel Pricing Cards — items with channelSlug */}
-          {fm.productSlug === 'ai-receptionist' && fm.features.some((f: any) => f.channelSlug) && (
-            <div style="margin-top: 2.5rem;">
-              <h3 class="pm-section__title" style="font-size: 1.25rem;">Available Channels & Pricing</h3>
-              <p class="pm-section__subtitle">Your AI receptionist base plan ({pricing.receptionist.formatted.monthly}) includes Phone Answering and Website Chat. Add extra channels for {pricing.receptionist.formatted.extraChannelShort} each — all with unlimited messages.</p>
-              <div class="pm-channels">
-                {fm.features.filter((f: any) => f.channelSlug).map((f: any) => {
-                  const chInfo = channelEntries.find(c => c.slug === f.channelSlug);
-                  const isBase = chInfo ? chInfo.type === 'base' : false;
-                  return (
-                    <a href={f.href} class={isBase ? 'pm-channel pm-channel--base' : 'pm-channel pm-channel--addon'}>
-                      <span class={isBase ? 'pm-channel__badge pm-channel__badge--base' : 'pm-channel__badge pm-channel__badge--addon'}>
-                        {isBase ? 'Included' : pricing.receptionist.formatted.extraChannelShort}
-                      </span>
-                      <h3 class="pm-channel__name">{f.name}</h3>
-                      <p class="pm-channel__desc">{f.description}</p>
-                      <span class="pm-channel__link">See details →</span>
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
-          )}
         </div>
       </section>
     )}
@@ -435,15 +435,16 @@ const channelEntries = Object.entries(pricing.receptionist.channels || {}).map((
   }
   .pm-channel:hover { border-color: var(--color-accent); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
   .pm-channel--base { border-color: rgba(34, 197, 94, 0.3); }
-  .pm-channel--addon { border-color: rgba(232, 145, 58, 0.3); }
+  .pm-channel--addon { border-color: var(--color-border-subtle); }
   .pm-channel__badge {
     display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px;
     font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
     margin-bottom: 0.75rem;
   }
-  .pm-channel__badge--base { background: rgba(34, 197, 94, 0.12); color: #16a34a; }
-  .pm-channel__badge--addon { background: rgba(232, 145, 58, 0.12); color: var(--color-accent); }
+  .pm-channel__badge--base { background: rgba(34, 197, 94, 0.12); color: #22c55e; }
+  .pm-channel__badge--addon { background: rgba(148, 163, 184, 0.12); color: #94a3b8; }
   .pm-channel__name { font-size: 0.95rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.25rem; }
+  .pm-channel__desc { font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
   .pm-channel__included { font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 0.5rem; }
   .pm-channel__link { font-size: 0.8rem; color: var(--color-accent); font-weight: 600; margin-top: auto; }
 </style>
