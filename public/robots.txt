@@ -1,0 +1,11 @@
+# Down To Earth AI — robots.txt
+# https://downtoearthai.co.uk
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://downtoearthai.co.uk/sitemap-index.xml
+
+# LLM documentation
+# See also: /llms.txt and /llms-full.txt
