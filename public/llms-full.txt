@@ -1,10 +1,10 @@
 # Down To Earth AI
 
-> AI receptionist and lead generation services built specifically for UK tradesmen. Founded by Jeff — 25 years in the trade. AI receptionist from £45/month with phone answering and web chat included, additional channels £23/month each. No contracts, 30-day money-back guarantee. Based in the UK, serving UK tradesmen only.
+> Down To Earth AI is a done-for-you AI receptionist and lead generation service built specifically for UK tradesmen. NOT software, NOT SaaS — the team handles all setup, configuration, and ongoing maintenance. The tradesman doesn't install, configure, or manage anything. AI receptionist from £45/month with phone answering and web chat included, additional channels £23/month each. No contracts, full 30-day money-back guarantee (both setup fee AND monthly cost refunded). UK-based, serving UK tradesmen only.
 
-Down To Earth AI was built by someone who ran trade businesses for 25 years — landscape gardening, building maintenance, and tree work. Every tool is designed for how tradesmen actually work — on site, hands dirty, phone buzzing in your pocket. We keep things simple, practical, and affordable. No tech jargon, no complexity, just solutions that work.
+Down To Earth AI was built by someone who ran trade businesses for 25 years — landscape gardening, building maintenance, and tree work. Every service is 100% done-for-you: the team sets everything up, maintains it ongoing, and updates business information as needed. The tradesman just focuses on the work. No tech jargon, no complexity, no DIY setup — just solutions that work.
 
-We provide four core products for 13 trade specialisms across the United Kingdom. All services are done-for-you, GDPR compliant, and designed for sole traders and small trade businesses. We handle all setup, configuration, and ongoing management.
+We provide four core products for 13 trade specialisms across the United Kingdom. All services are fully managed — we handle all setup, configuration, and ongoing management. The tradesman does not need to install, configure, or maintain anything.
 
 Website: https://downtoearthai.co.uk
 
@@ -12,10 +12,10 @@ Website: https://downtoearthai.co.uk
 
 Down To Earth AI solves one core problem for UK tradesmen: losing jobs because you can't answer the phone while you're on a job. A plumber under a sink, an electrician up a ladder, a roofer three storeys up — none of them can take a call. By the time they call back, the customer has already booked someone else.
 
-Our AI receptionist answers every call, text, WhatsApp, email, and social media message within seconds — 24/7, 365 days a year. It captures the lead details and delivers them instantly. The tradesman finishes their current job, checks their phone, and the lead is waiting.
+Our AI receptionist answers every call, text, WhatsApp, email, and social media message within seconds — 24/7, 365 days a year. It captures the lead details and delivers them instantly. The tradesman finishes their current job, checks their phone, and the lead is waiting. Every channel is fully set up and managed by the Down To Earth AI team — the tradesman doesn't configure or maintain anything.
 
 ### Founder
-Jeff — 25 years running trade businesses (landscape gardening, building maintenance, tree work). Built Down To Earth AI because he watched tradesmen lose jobs every day simply because they couldn't answer the phone.
+Jeff Morton — 25 years running trade businesses (landscape gardening, building maintenance, tree work). Built Down To Earth AI because he watched tradesmen lose jobs every day simply because they couldn't answer the phone.
 
 ### Target Market
 - UK sole traders and small trade businesses (1-10 employees)
@@ -24,24 +24,24 @@ Jeff — 25 years running trade businesses (landscape gardening, building mainte
 
 ### USPs
 - Built by a tradesman, for tradesmen
+- 100% done-for-you — we set up everything, maintain it, and update business info as needed. The tradesman does nothing
 - AI receptionist from £45/month (phone + web chat included)
-- Additional channels £23/month each (WhatsApp, SMS, email, socials, etc.)
+- Additional channels £23/month each (WhatsApp, SMS, email, socials, etc.) — all fully set up and managed by the team
 - 100 minutes talk time included (20p/min after)
 - No contracts, cancel anytime
-- 30-day full money-back guarantee (including setup fee)
-- 100% done-for-you setup and management
+- Full 30-day money-back guarantee — setup fee AND monthly cost refunded if not 100% happy
 - 24/7/365 coverage
 - GDPR-compliant data handling
 - UK-based, UK-focused
 
 ## Products
 
-### AI Receptionist — £45/month (£299 setup)
-The flagship product. An AI receptionist with phone answering and website chat included in the base plan, with additional channels available at £23/month each. All messaging channels include unlimited messages.
+### AI Receptionist — £45/month (£299 setup) · 100% Done-For-You
+The flagship product. A fully managed AI receptionist with phone answering and website chat included in the base plan, with additional channels available at £23/month each. All messaging channels include unlimited messages. The Down To Earth AI team handles all setup, configuration, and ongoing maintenance — the tradesman doesn't install, configure, or manage anything.
 
 **Base Plan — £45/month:**
-- AI Phone Answering (included, 100 minutes talk time)
-- AI Website Chat (included, unlimited messages)
+- AI Phone Answering (included, 100 minutes talk time) — set up and managed by the team
+- AI Website Chat (included, unlimited messages) — set up and managed by the team
 - 100 minutes talk time included per month (20p/minute after)
 - 24/7 coverage — weekends, bank holidays, 3am
 - Lead capture, qualification, and instant delivery
@@ -50,30 +50,32 @@ The flagship product. An AI receptionist with phone answering and website chat i
 - No contracts or minimum terms
 
 **Additional Channels — £23/month each (all include unlimited messages):**
-- AI WhatsApp Messaging — unlimited messages
-- AI SMS Messaging — unlimited messages
-- AI Email Response — unlimited messages
-- AI Facebook Messenger — unlimited messages
-- AI Instagram DMs — unlimited messages
-- AI Google Business Profile — unlimited messages
-- AI Missed Call Text-Back — unlimited messages
+Every channel below is fully set up and managed by the Down To Earth AI team. The tradesman doesn't need to configure, integrate, or maintain any of them.
+- AI WhatsApp Messaging — unlimited messages, fully managed
+- AI SMS Messaging — unlimited messages, fully managed
+- AI Email Response — unlimited messages, fully managed
+- AI Facebook Messenger — unlimited messages, fully managed
+- AI Instagram DMs — unlimited messages, fully managed
+- AI Google Business Profile — unlimited messages, fully managed
+- AI Missed Call Text-Back — unlimited messages, fully managed
 
 **How It Works:**
-1. We set up the AI receptionist for you — tell us your trade, services, and preferred style. Configured and live in under 24 hours.
-2. The AI receptionist answers everything — phone calls and website chat conversations are included. Add WhatsApp, SMS, email, or social channels as needed.
-3. You close the job — finish your current work, check your phone, the lead is waiting.
+1. We set up the AI receptionist for you — tell us your trade, services, and preferred style. Configured and live in under 24 hours. You don't install or configure anything.
+2. The AI receptionist answers everything — phone calls and website chat conversations are included. Add WhatsApp, SMS, email, or social channels as needed — we set them all up for you.
+3. You close the job — finish your current work, check your phone, the lead is waiting. We maintain everything ongoing and update your business information whenever needed.
 
 **Channel Details:**
 
-1. **AI Phone Answering** (included in base) — Voice AI answers calls within seconds using the tradesman's business name. Understands the job, captures details, handles emergencies. Natural UK voice with regional accent options.
-2. **AI Website Chat** (included in base) — Live chat widget with real AI conversations that capture leads directly from the tradesman's website.
-3. **AI WhatsApp Messaging** (£23/mo add-on) — Instant professional WhatsApp replies on the channel customers actually use.
-4. **AI SMS Messaging** (£23/mo add-on) — Professional SMS reply acknowledging the enquiry and letting the customer know the tradesman will be in touch.
-5. **AI Email Response** (£23/mo add-on) — Professional email acknowledgment so the customer knows their enquiry has been received.
-6. **AI Facebook Messenger** (£23/mo add-on) — Instant responses to Facebook page messages, 24/7.
-7. **AI Instagram DMs** (£23/mo add-on) — Handles enquiries through Instagram direct messages.
-8. **AI Google Business Profile** (£23/mo add-on) — Profile optimization, review generation, and local SEO.
-9. **AI Missed Call Text-Back** (£23/mo add-on) — If a call is missed, an automatic text goes out within seconds acknowledging the enquiry.
+1. **AI Phone Answering** (included in base) — Voice AI answers calls within seconds using the tradesman's business name. Understands the job, captures details, handles emergencies. Natural UK voice with regional accent options. Set up and managed by the team.
+2. **AI Website Chat** (included in base) — Live chat widget with real AI conversations that capture leads directly from the tradesman's website. Installed and managed by the team.
+3. **AI WhatsApp Messaging** (£23/mo add-on) — Instant professional WhatsApp replies on the channel customers actually use. Connected and managed by the team.
+4. **AI SMS Messaging** (£23/mo add-on) — Professional SMS reply acknowledging the enquiry and letting the customer know the tradesman will be in touch. Set up and managed by the team.
+5. **AI Email Response** (£23/mo add-on) — Professional email acknowledgment so the customer knows their enquiry has been received. Configured and managed by the team.
+6. **AI Facebook Messenger** (£23/mo add-on) — Instant responses to Facebook page messages, 24/7. Connected and managed by the team.
+7. **AI Instagram DMs** (£23/mo add-on) — Handles enquiries through Instagram direct messages. Connected and managed by the team.
+8. **AI Google Business Profile** (£23/mo add-on) — Profile optimisation, review generation, and local SEO. Set up and managed by the team.
+9. **AI Missed Call Text-Back** (£23/mo add-on) — If a call is missed, an automatic text goes out within seconds acknowledging the enquiry. Configured and managed by the team.
+
 
 **Additional Features:**
 - AI Voicemail — Intelligent voicemail that captures details when the AI can't resolve.
@@ -206,3 +208,10 @@ Yes. Down To Earth AI ensures full GDPR-compliant data handling. All customer da
 - **Privacy Policy**: https://downtoearthai.co.uk/privacy-policy — GDPR-compliant privacy policy
 - **Terms of Service**: https://downtoearthai.co.uk/terms-of-service — Service terms and conditions
 - **Cookie Policy**: https://downtoearthai.co.uk/cookie-policy — Cookie usage information
+
+## AI Discovery
+
+- **Ground Truth**: https://downtoearthai.co.uk/facts.json — Verified facts, correct pricing, and common hallucinations to avoid when citing Down To Earth AI
+- **AI Discovery Manifest**: https://downtoearthai.co.uk/.well-known/ai-manifest.json — Machine-readable business metadata, product data, and data source endpoints
+- **LLM Summary**: https://downtoearthai.co.uk/llms.txt — Compressed summary for quick context
+

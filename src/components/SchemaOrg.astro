@@ -1,7 +1,8 @@
 ---
 /**
- * SchemaOrg.astro — Generates JSON-LD structured data for SEO
- * Supports: Organization, WebSite, Service, BreadcrumbList, Article
+ * SchemaOrg.astro — Generates JSON-LD structured data for SEO & AI discoverability
+ * Supports: Organization, Person (Founder), WebSite, Service, BreadcrumbList, Article
+ * All entities are cross-linked via @id anchors to form a traversable knowledge graph.
  * Usage: Add to <head> in each layout, passing relevant props.
  */
 
@@ -50,33 +51,63 @@ const {
 const SITE_URL = 'https://downtoearthai.co.uk';
 const fullUrl = pageUrl || SITE_URL;
 
-// 1. Organization — always present
+// 1. Organization — always present, linked to founder via @id
 const orgSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   '@id': `${SITE_URL}/#organization`,
   name: 'Down To Earth AI',
   url: SITE_URL,
-  description: 'AI receptionist and lead generation services built specifically for UK tradesmen. Never miss another lead.',
+  description: 'Done-for-you AI receptionist and lead generation service built specifically for UK tradesmen. Not software — we handle all setup, configuration, and ongoing maintenance. 30-day full money-back guarantee including setup fee.',
+  slogan: 'AI That Works As Hard As You Do',
+  foundingLocation: {
+    '@type': 'Place',
+    name: 'Bournemouth, United Kingdom',
+  },
   areaServed: {
     '@type': 'Country',
     name: 'United Kingdom',
   },
-  founder: {
-    '@type': 'Person',
-    name: 'Jeff',
-    jobTitle: 'Founder',
-  },
+  founder: { '@id': `${SITE_URL}/#founder` },
+  knowsAbout: [
+    'AI receptionist for tradesmen',
+    'Generative AI for small businesses',
+    'Lead generation for UK trades',
+    'AI phone answering',
+    'AI marketing automation',
+    'Custom AI automations for tradesmen',
+  ],
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'sales',
     url: `${SITE_URL}/get-started`,
     availableLanguage: 'English',
   },
-  sameAs: [],
+  sameAs: ['https://www.linkedin.com/in/jeff-morton-contractor-leads/'],
 };
 
-// 2. WebSite — homepage only
+// 2. Person (Founder) — always present, anchored with @id
+const founderSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': `${SITE_URL}/#founder`,
+  name: 'Jeff Morton',
+  jobTitle: 'Founder',
+  description: 'Tradesman with 25 years of experience in landscape gardening, building maintenance, and tree surgery. Qualified tree surgeon. Built Down To Earth AI to help UK tradesmen never miss another lead.',
+  worksFor: { '@id': `${SITE_URL}/#organization` },
+  url: 'https://www.linkedin.com/in/jeff-morton-contractor-leads/',
+  sameAs: ['https://www.linkedin.com/in/jeff-morton-contractor-leads/'],
+  knowsAbout: [
+    'Trade businesses',
+    'AI for small businesses',
+    'Lead generation',
+    'Landscape gardening',
+    'Building maintenance',
+    'Tree surgery',
+  ],
+};
+
+// 3. WebSite — homepage only, linked to publisher org
 const websiteSchema = type === 'homepage' ? {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -85,13 +116,17 @@ const websiteSchema = type === 'homepage' ? {
   url: SITE_URL,
   description: pageDescription,
   publisher: { '@id': `${SITE_URL}/#organization` },
+  inLanguage: 'en-GB',
 } : null;
 
-// 3. Service — service pages
+// 4. Service — service pages, with @id and linked to org and parent service
 const serviceSchema = (type === 'service' && serviceName) ? (() => {
+  // Create a URL-safe slug for the service @id
+  const serviceSlug = serviceName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   const schema: Record<string, any> = {
     '@context': 'https://schema.org',
     '@type': 'Service',
+    '@id': `${SITE_URL}/#service-${serviceSlug}`,
     name: serviceName,
     description: serviceDescription || pageDescription,
     provider: { '@id': `${SITE_URL}/#organization` },
@@ -127,8 +162,10 @@ const serviceSchema = (type === 'service' && serviceName) ? (() => {
   }
 
   if (parentService && parentServiceUrl) {
+    const parentSlug = parentService.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
     schema.isRelatedTo = {
       '@type': 'Service',
+      '@id': `${SITE_URL}/#service-${parentSlug}`,
       name: parentService,
       url: parentServiceUrl.startsWith('http') ? parentServiceUrl : `${SITE_URL}${parentServiceUrl}`,
     };
@@ -137,7 +174,7 @@ const serviceSchema = (type === 'service' && serviceName) ? (() => {
   return schema;
 })() : null;
 
-// 4. BreadcrumbList — service and article pages
+// 5. BreadcrumbList — service and article pages
 const breadcrumbSchema = (breadcrumbs && breadcrumbs.length > 0) ? {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -149,7 +186,7 @@ const breadcrumbSchema = (breadcrumbs && breadcrumbs.length > 0) ? {
   })),
 } : null;
 
-// 5. Article — blog posts
+// 6. Article — blog posts, linked to founder via @id
 const articleSchema = (type === 'article') ? {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -157,15 +194,13 @@ const articleSchema = (type === 'article') ? {
   description: pageDescription,
   url: fullUrl,
   datePublished: articleDate || new Date().toISOString().split('T')[0],
-  author: {
-    '@type': 'Person',
-    name: articleAuthor || 'Jeff',
-  },
+  author: { '@id': `${SITE_URL}/#founder` },
   publisher: { '@id': `${SITE_URL}/#organization` },
+  inLanguage: 'en-GB',
 } : null;
 
 // Collect all schemas
-const schemas = [orgSchema, websiteSchema, serviceSchema, breadcrumbSchema, articleSchema].filter(Boolean);
+const schemas = [orgSchema, founderSchema, websiteSchema, serviceSchema, breadcrumbSchema, articleSchema].filter(Boolean);
 ---
 
 {schemas.map(schema => (

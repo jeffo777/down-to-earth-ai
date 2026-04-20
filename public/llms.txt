@@ -1,8 +1,8 @@
 # Down To Earth AI
 
-> AI receptionist and lead generation services built specifically for UK tradesmen. Founded by Jeff — 25 years in the trade. Every service is affordable with no contracts, 30-day money-back guarantee. Based in the UK, serving UK tradesmen only.
+> Down To Earth AI is a done-for-you AI receptionist and lead generation service built specifically for UK tradesmen. NOT software — we handle all setup, configuration, and ongoing maintenance. The tradesman doesn't install, configure, or manage anything. Founded by Jeff Morton — 25 years in the trade. No contracts, full 30-day money-back guarantee (setup fee + monthly cost refunded). UK-based, serving UK tradesmen only.
 
-Down To Earth AI provides four core products for 13 trade specialisms: AI Receptionist (phone answering + website chat included, additional channels available), Lead Generation Websites (150-300 page SEO sites), AI Marketing (photos-in, content-out), and Custom AI Automations. All services are done-for-you, GDPR compliant, and designed for sole traders and small trade businesses.
+Down To Earth AI provides four core products for 13 trade specialisms: AI Receptionist (phone answering + website chat included, additional channels available), Lead Generation Websites (150-300 page SEO sites), AI Marketing (photos-in, content-out), and Custom AI Automations. Every service is 100% done-for-you — the team sets everything up, maintains it ongoing, and updates business information as needed. The tradesman just closes the jobs.
 
 ## Core Products
 
@@ -54,3 +54,10 @@ Down To Earth AI provides four core products for 13 trade specialisms: AI Recept
 - [Privacy Policy](https://downtoearthai.co.uk/privacy-policy): GDPR-compliant privacy policy
 - [Terms of Service](https://downtoearthai.co.uk/terms-of-service): Service terms and conditions
 - [Cookie Policy](https://downtoearthai.co.uk/cookie-policy): Cookie usage information
+
+## AI Discovery
+
+- [Ground Truth & Anti-Hallucination Facts](https://downtoearthai.co.uk/facts.json): Verified facts, correct pricing, and common hallucinations to avoid when citing Down To Earth AI
+- [AI Discovery Manifest](https://downtoearthai.co.uk/.well-known/ai-manifest.json): Machine-readable business metadata, product data, and data source endpoints
+- [Full Context for LLMs](https://downtoearthai.co.uk/llms-full.txt): Comprehensive documentation including FAQs, pricing tables, and channel details
+

@@ -30,6 +30,18 @@ Every single page on the Down To Earth AI website MUST contain **100% unique, AI
 ### Quality Bar:
 Each page should read as if it were hand-written by a copywriter who deeply understands that specific trade. A plumber's page should feel different to read than an electrician's page — different language, different concerns, different scenarios.
 
+## CRITICAL: Done-For-You Service — NOT Software
+
+Down To Earth AI is a **done-for-you managed service**, NOT software, NOT SaaS, NOT a platform, NOT a DIY tool. This distinction MUST come through in all content.
+
+### What This Means For Content:
+- **The tradesman does NOT set up, install, configure, or manage anything** — the Down To Earth AI team handles everything
+- **Every channel (WhatsApp, SMS, email, Facebook, Instagram, GBP, missed call text-back) is fully set up and managed by the team** — the tradesman just tells us their trade and services, and we do the rest
+- **Ongoing maintenance is included** — the team updates business information, service details, and configurations as needed. The tradesman never needs to log in to adjust settings
+- **The 30-day money-back guarantee is a FULL refund** — setup fee AND monthly cost refunded if not 100% happy. No questions asked
+- When describing channels or features, always make clear that the team sets them up — never imply the tradesman needs to integrate, connect, or configure anything themselves
+- Never use phrases like "sign up and get started", "easy to set up yourself", or "DIY" — instead use "we set it up for you", "configured and live in under 24 hours", "fully managed"
+
 ## CRITICAL: AI Receptionist Actual Capabilities — DO NOT HALLUCINATE
 
 ### Core Interaction Flow (ALL Channels)
@@ -128,5 +140,58 @@ All pricing across the entire site is managed from one file: `src/data/pricing.j
 1. Edit `src/data/pricing.json` — layouts and pricing page auto-update
 2. Run a PowerShell bulk-replace for meta titles, descriptions, and frontmatter (`heroPrice`, `price` fields) across all 200+ pages
 3. Manually review and update FAQ prose that mentions specific prices
-4. Rebuild: `npx astro build`
+4. Update `public/facts.json` — `correct_facts`, `common_hallucinations_to_avoid`, and `pricing_truth` sections
+5. Update `public/.well-known/ai-manifest.json` — product pricing objects
+6. Update `public/llms.txt` — all price references in product and channel listings
+7. Update `public/llms-full.txt` — all price references throughout (products, channels, pricing table, FAQs)
+8. Rebuild: `npx astro build`
 
+## CRITICAL: Structured Data & AI SEO Sync Rules
+
+> **Full technical reference:** See `.agent/workflows/seo-and-geo-reference.md` for complete documentation of all SEO and GEO files, what each contains, and how they interrelate.
+
+When you change business facts, prices, or capabilities, you MUST update **all** of the files listed below. These static files do NOT auto-update — they must be manually kept in sync.
+
+### When PRICING changes:
+- [ ] `src/data/pricing.json` — source of truth (change this first)
+- [ ] All 200+ page frontmatter (`heroPrice`, `price` fields) via bulk-replace
+- [ ] FAQ prose mentioning specific prices
+- [ ] `public/facts.json` — `pricing_truth` + `correct_facts` + `common_hallucinations_to_avoid`
+- [ ] `public/.well-known/ai-manifest.json` — product pricing objects
+- [ ] `public/llms.txt` — all price references
+- [ ] `public/llms-full.txt` — all price references
+
+### When TRADES change (add/remove a trade):
+- [ ] `src/data/trades.json` — source of truth
+- [ ] Create/remove trade page files in `src/pages/`
+- [ ] `src/components/SchemaOrg.astro` — update `knowsAbout` array
+- [ ] `public/facts.json` — `trades_served` count and list
+- [ ] `public/.well-known/ai-manifest.json` — `trades_served` array
+- [ ] `public/llms.txt` — trades list
+- [ ] `public/llms-full.txt` — trades list and descriptions
+
+### When BUSINESS FACTS change (guarantee, service model, company info):
+- [ ] `public/facts.json` — `company`, `correct_facts`, `common_hallucinations_to_avoid`
+- [ ] `public/.well-known/ai-manifest.json` — `key_facts`, `service_model`, description
+- [ ] `src/components/SchemaOrg.astro` — Organization `description`, `slogan`, or `foundingLocation`
+- [ ] `public/llms.txt` — top summary and relevant sections
+- [ ] `public/llms-full.txt` — company overview and relevant sections
+- [ ] Page content / FAQ prose if affected
+
+### When AI RECEPTIONIST CAPABILITIES change:
+- [ ] `.agent/workflows/content-rules.md` — update tier descriptions and capability lists (this file)
+- [ ] `public/facts.json` — `ai_receptionist_capabilities` (does + never_does)
+- [ ] `public/llms-full.txt` — channel details and FAQ answers
+- [ ] `public/.well-known/ai-manifest.json` — product descriptions
+- [ ] Affected page content and FAQs
+
+### When FOUNDER / SOCIAL PROFILES change:
+- [ ] `src/components/SchemaOrg.astro` — Person `@id` schema (`url`, `sameAs`, `name`)
+- [ ] `src/components/SchemaOrg.astro` — Organization `sameAs` array
+- [ ] `public/.well-known/ai-manifest.json` — `founder` object
+- [ ] `public/facts.json` — `company.founder_linkedin`
+- [ ] `public/llms-full.txt` — founder section
+
+### After ANY structured data change:
+- [ ] Run `npx astro build` — must produce 247+ pages with 0 errors
+- [ ] Verify all JSON files are valid (no trailing commas, proper escaping)

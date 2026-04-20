@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "name": "Down To Earth AI",
+  "description": "Done-for-you AI receptionist and lead generation service built specifically for UK tradesmen. Down To Earth AI is NOT software — the team handles all setup, configuration, and ongoing maintenance. The tradesman does not install, configure, or manage anything.",
+  "url": "https://downtoearthai.co.uk",
+  "type": "done-for-you managed service",
+  "industry": "AI Business Automation for Tradesmen",
+  "country": "GB",
+  "language": "en-GB",
+  "currency": "GBP",
+  "service_model": {
+    "type": "done-for-you",
+    "description": "Down To Earth AI is a fully managed service. The team sets everything up, maintains it, and updates business information as needed on an ongoing basis. The tradesman does not need to install, configure, or manage anything.",
+    "setup": "Configured and live in under 24 hours",
+    "maintenance": "Ongoing — the team updates business information, service details, and configurations as needed"
+  },
+  "contact": {
+    "type": "sales",
+    "url": "https://downtoearthai.co.uk/get-started"
+  },
+  "founder": {
+    "name": "Jeff Morton",
+    "role": "Founder",
+    "experience": "25 years running UK trade businesses (landscape gardening, building maintenance, tree surgery)",
+    "linkedin": "https://www.linkedin.com/in/jeff-morton-contractor-leads/"
+  },
+  "data_sources": {
+    "llms_summary": "/llms.txt",
+    "llms_full": "/llms-full.txt",
+    "ground_truth": "/facts.json",
+    "sitemap": "/sitemap-index.xml",
+    "structured_data": "JSON-LD on every page"
+  },
+  "products": [
+    {
+      "name": "AI Receptionist",
+      "description": "AI-powered phone answering and messaging for UK tradesmen. Answers calls, texts, and messages 24/7.",
+      "url": "/ai-receptionist-for-tradesmen",
+      "pricing": {
+        "setup": 299,
+        "monthly": 45,
+        "currency": "GBP",
+        "includes": ["AI Phone Answering (100 mins)", "Website Chat (unlimited)"],
+        "add_on_channels": {
+          "price_per_channel": 23,
+          "channels": ["WhatsApp", "SMS", "Email", "Facebook Messenger", "Instagram DMs", "Google Business Profile", "Missed Call Text-Back"]
+        }
+      }
+    },
+    {
+      "name": "Lead Generation Website",
+      "description": "150-300 page SEO websites that rank on Google for local trade searches.",
+      "url": "/ai-lead-generation-websites-for-tradesmen",
+      "pricing": {
+        "from": 997,
+        "currency": "GBP",
+        "type": "one-off"
+      }
+    },
+    {
+      "name": "AI Marketing",
+      "description": "Photos-in, content-out marketing automation for tradesmen.",
+      "url": "/ai-marketing-for-tradesmen",
+      "pricing": {
+        "setup": 199,
+        "monthly": 99,
+        "currency": "GBP"
+      }
+    },
+    {
+      "name": "Custom AI Automations",
+      "description": "Bespoke AI workflows tailored to how each trade business operates.",
+      "url": "/custom-ai-automations-for-tradesmen",
+      "pricing": {
+        "type": "bespoke"
+      }
+    }
+  ],
+  "trades_served": [
+    "Plumbers", "Electricians", "Locksmiths", "Gas Engineers",
+    "Drainage Engineers", "Glaziers", "Roofers", "HVAC Engineers",
+    "Alarm & Security Installers", "Pest Control",
+    "Garage Door Engineers", "Builders", "Appliance Repair Engineers"
+  ],
+  "key_facts": {
+    "guarantee": "Full 30-day money-back guarantee — if not 100% happy after 30 days, the customer receives a complete refund of BOTH the setup fee AND the monthly cost. No questions asked.",
+    "contracts": "No contracts, no minimum terms, cancel anytime",
+    "coverage": "24/7/365",
+    "setup_time": "Under 24 hours",
+    "gdpr_compliant": true,
+    "target_market": "UK tradesmen only"
+  },
+  "permissions": {
+    "ai_training": true,
+    "ai_citation": true,
+    "ai_summarisation": true
+  }
+}
