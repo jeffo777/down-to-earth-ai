@@ -69,6 +69,10 @@ import trades from '../data/trades.json';
       <p class="footer__built">UK business. Built by a tradesman with 25 years in the trade.</p>
       <p class="footer__copy">&copy; {new Date().getFullYear()} Down To Earth AI. All rights reserved.</p>
     </div>
+
+    <div class="footer__credit">
+      <p>Website designed by <a href="/contact">Down To Earth AI</a></p>
+    </div>
   </div>
 </footer>
 
@@ -182,5 +186,29 @@ import trades from '../data/trades.json';
   .footer__copy {
     color: var(--color-text-muted);
     font-size: 0.8rem;
+  }
+
+  /* Designer credit */
+  .footer__credit {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border-subtle);
+    text-align: center;
+  }
+
+  .footer__credit p {
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+  }
+
+  .footer__credit a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 150ms;
+  }
+
+  .footer__credit a:hover {
+    color: var(--color-accent);
   }
 </style>
