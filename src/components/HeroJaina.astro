@@ -41,10 +41,8 @@ const aiActive = SITE_CONFIG.aiActive;
         </div>
       </div>
 
-      <!-- CTA Text + Buttons -->
+      <!-- CTA Buttons (directly below avatar — no intermediate text) -->
       <div class="hero-jaina__cta-area">
-        {!aiActive && <p class="hero-jaina__demo-label">Try a live demo 👋</p>}
-        <p class="hero-jaina__text">{heroAIText}</p>
         <div class="hero-jaina__buttons">
           {aiActive ? (
             <button type="button" class="hero-jaina__btn hero-jaina__btn--voice" id="hero-jaina-voice-btn">
@@ -253,7 +251,7 @@ const aiActive = SITE_CONFIG.aiActive;
 
   .hero-jaina__cta-area {
     text-align: center;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
   }
 
   .hero-jaina__demo-label {
