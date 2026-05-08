@@ -485,13 +485,14 @@ DO NOT:
 
           const source = this._playbackContext.createBufferSource();
           source.buffer = audioBuffer;
+          source.playbackRate.value = 1.1; // Slightly faster/brighter voice
           source.connect(this._playbackContext.destination);
 
           // Schedule gapless playback — each chunk starts exactly when the previous ends
           const now = this._playbackContext.currentTime;
           const startTime = Math.max(now, this._nextPlayTime);
           source.start(startTime);
-          this._nextPlayTime = startTime + audioBuffer.duration;
+          this._nextPlayTime = startTime + (audioBuffer.duration / 1.1);
 
           // Track active source for barge-in (user starts talking)
           this._activeSources = this._activeSources || [];
