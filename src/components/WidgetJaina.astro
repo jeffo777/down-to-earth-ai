@@ -116,29 +116,31 @@ if (widgetTrade && widgetGoal) {
     </Fragment>
   )}
 
-  <!-- Voice Session Modal (shared by widget + hero) -->
-  {aiActive && (
-    <div class="voice-session" id="voice-session-modal" data-status="idle" data-trade={widgetTrade}>
-      <div class="voice-session__overlay" id="voice-session-overlay"></div>
-      <div class="voice-session__content">
-        <button class="voice-session__close" id="voice-session-close" aria-label="End call">&times;</button>
-        <div class="voice-session__avatar">
-          <div class="voice-session__ring"></div>
-          <img src="/assets/images/jaina-headshot.png" alt="Down To Earth AI receptionist" class="voice-session__avatar-img" />
-        </div>
-        <div class="voice-session__status" id="voice-session-status">Connecting…</div>
-        <div class="voice-session__transcript" id="voice-session-transcript"></div>
-        <div class="voice-session__controls" id="voice-session-controls">
-          <button type="button" class="voice-session__hangup" id="voice-session-hangup">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Hang up
-          </button>
-        </div>
-        <div class="voice-session__error" id="voice-session-error" style="display:none;"></div>
-      </div>
-    </div>
-  )}
+
 </div>
+
+<!-- Voice Session Modal (rendered at page level, outside widget container) -->
+{aiActive && (
+  <div class="voice-session" id="voice-session-modal" data-status="idle" data-trade={widgetTrade}>
+    <div class="voice-session__overlay" id="voice-session-overlay"></div>
+    <div class="voice-session__content">
+      <button class="voice-session__close" id="voice-session-close" aria-label="End call">&times;</button>
+      <div class="voice-session__avatar">
+        <div class="voice-session__ring"></div>
+        <img src="/assets/images/jaina-headshot.png" alt="Down To Earth AI receptionist" class="voice-session__avatar-img" />
+      </div>
+      <div class="voice-session__status" id="voice-session-status">Connecting…</div>
+      <div class="voice-session__transcript" id="voice-session-transcript"></div>
+      <div class="voice-session__controls" id="voice-session-controls">
+        <button type="button" class="voice-session__hangup" id="voice-session-hangup">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Hang up
+        </button>
+      </div>
+      <div class="voice-session__error" id="voice-session-error" style="display:none;"></div>
+    </div>
+  </div>
+)}
 
 <style>
   .widget-jaina {
