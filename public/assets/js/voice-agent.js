@@ -374,56 +374,58 @@ DO NOT:
     }
 
     // ── Audio Playback ─────────────────────────────────────────────────────
-    async _handleAudioBlob(blob) {
-      const arrayBuffer = await blob.arrayBuffer();
-      this._playbackQueue.push(arrayBuffer);
-      if (!this._isPlaying) {
-        this._playNextChunk();
-      }
-    }
+    _handleAudioBlob(blob) {
+      blob.arrayBuffer().then((buffer) => {
+        try {
+          // Create playback AudioContext if needed
+          if (!this._playbackContext) {
+            this._playbackContext = new (window.AudioContext || window.webkitAudioContext)({
+              sampleRate: OUTPUT_SAMPLE_RATE,
+            });
+            this._nextPlayTime = 0;
+          }
 
-    async _playNextChunk() {
-      if (this._playbackQueue.length === 0) {
-        this._isPlaying = false;
-        return;
-      }
+          // Convert Int16 PCM to Float32
+          const int16 = new Int16Array(buffer);
+          const float32 = new Float32Array(int16.length);
+          for (let i = 0; i < int16.length; i++) {
+            float32[i] = int16[i] / 32768;
+          }
 
-      this._isPlaying = true;
-      const buffer = this._playbackQueue.shift();
+          // Create audio buffer
+          const audioBuffer = this._playbackContext.createBuffer(1, float32.length, OUTPUT_SAMPLE_RATE);
+          audioBuffer.getChannelData(0).set(float32);
 
-      try {
-        // Create playback AudioContext if needed (may differ from input context)
-        if (!this._playbackContext) {
-          this._playbackContext = new (window.AudioContext || window.webkitAudioContext)({
-            sampleRate: OUTPUT_SAMPLE_RATE,
-          });
+          const source = this._playbackContext.createBufferSource();
+          source.buffer = audioBuffer;
+          source.connect(this._playbackContext.destination);
+
+          // Schedule gapless playback — each chunk starts exactly when the previous ends
+          const now = this._playbackContext.currentTime;
+          const startTime = Math.max(now, this._nextPlayTime);
+          source.start(startTime);
+          this._nextPlayTime = startTime + audioBuffer.duration;
+
+          // Track active source for barge-in (user starts talking)
+          this._activeSources = this._activeSources || [];
+          this._activeSources.push(source);
+          source.onended = () => {
+            const idx = this._activeSources.indexOf(source);
+            if (idx > -1) this._activeSources.splice(idx, 1);
+          };
+        } catch (err) {
+          console.error('[VoiceAgent] Playback error:', err);
         }
-
-        // Convert Int16 PCM to Float32
-        const int16 = new Int16Array(buffer);
-        const float32 = new Float32Array(int16.length);
-        for (let i = 0; i < int16.length; i++) {
-          float32[i] = int16[i] / 32768;
-        }
-
-        // Create audio buffer and play
-        const audioBuffer = this._playbackContext.createBuffer(1, float32.length, OUTPUT_SAMPLE_RATE);
-        audioBuffer.getChannelData(0).set(float32);
-
-        const source = this._playbackContext.createBufferSource();
-        source.buffer = audioBuffer;
-        source.connect(this._playbackContext.destination);
-        source.onended = () => this._playNextChunk();
-        source.start();
-      } catch (err) {
-        console.error('[VoiceAgent] Playback error:', err);
-        this._playNextChunk(); // Skip to next chunk
-      }
+      });
     }
 
     _stopPlayback() {
-      this._playbackQueue = [];
-      this._isPlaying = false;
+      // Stop all currently scheduled/playing audio sources
+      if (this._activeSources) {
+        this._activeSources.forEach(s => { try { s.stop(); } catch (e) { /* ignore */ } });
+        this._activeSources = [];
+      }
+      this._nextPlayTime = 0;
     }
 
     // ── Idle Timer ─────────────────────────────────────────────────────────
