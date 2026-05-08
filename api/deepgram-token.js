@@ -1,9 +1,15 @@
 /**
  * Vercel Serverless Function — /api/deepgram-token
  * 
- * Creates short-lived Deepgram API tokens for browser-based voice agent sessions.
- * This keeps the main API key secure on the server while giving the browser
- * a temporary token that expires after 60 seconds.
+ * Returns a Deepgram API key for browser-based voice agent sessions.
+ * The browser uses this with Sec-WebSocket-Protocol to authenticate
+ * the WebSocket connection to Deepgram's Voice Agent API.
+ * 
+ * Security notes:
+ * - CORS-restricted to our domain only
+ * - The API key is exposed to the browser, but this is the documented
+ *   approach for client-side WebSocket connections per Deepgram docs.
+ * - Consider creating a scoped, limited API key for this purpose.
  * 
  * Environment variable required:
  *   DEEPGRAM_API_KEY — your Deepgram API key (set in Vercel dashboard)
@@ -42,29 +48,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Voice service not configured' });
   }
 
-  try {
-    // Request a temporary JWT token from Deepgram (TTL: 60 seconds)
-    const response = await fetch('https://api.deepgram.com/v1/auth/grant', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Token ${apiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        ttl_seconds: 60,
-      }),
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('Deepgram token error:', response.status, errorText);
-      return res.status(502).json({ error: 'Failed to create voice session' });
-    }
-
-    const data = await response.json();
-    return res.status(200).json({ token: data.access_token });
-  } catch (err) {
-    console.error('Token generation error:', err);
-    return res.status(500).json({ error: 'Internal server error' });
-  }
+  // Return the API key directly — the browser will pass it via
+  // Sec-WebSocket-Protocol header as documented by Deepgram.
+  return res.status(200).json({ token: apiKey });
 }
