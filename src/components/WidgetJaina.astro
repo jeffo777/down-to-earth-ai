@@ -539,12 +539,12 @@ if (widgetTrade && widgetGoal) {
     cssLink.rel = 'stylesheet';
     // ⚠️ CACHE-BUST REMINDER: If you edit voice-agent.js or voice-agent-ui.css,
     // you MUST bump the ?v= version string below, otherwise Vercel CDN will serve stale cached files.
-    cssLink.href = '/assets/css/voice-agent-ui.css?v=20260508b';
+    cssLink.href = '/assets/css/voice-agent-ui.css?v=20260508c';
     document.head.appendChild(cssLink);
 
     const script = document.createElement('script');
     // ⚠️ CACHE-BUST: Bump this version when voice-agent.js changes (see comment above)
-    script.src = '/assets/js/voice-agent.js?v=20260508b';
+    script.src = '/assets/js/voice-agent.js?v=20260508c';
     script.onload = () => initVoiceSession();
     document.head.appendChild(script);
   }
