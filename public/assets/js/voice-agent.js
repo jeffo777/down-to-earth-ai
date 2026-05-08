@@ -392,7 +392,7 @@ DO NOT:
           speak: {
             provider: {
               type: 'deepgram',
-              model: 'aura-2-pandora-en',
+              model: 'aura-2-draco-en',
             },
           },
           greeting: buildGreeting(this.trade),
