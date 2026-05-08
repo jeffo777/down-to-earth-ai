@@ -305,7 +305,7 @@ DO NOT:
           speak: {
             provider: {
               type: 'deepgram',
-              model: 'aura-2-thalia-en',
+              model: 'aura-2-pandora-en',
             },
           },
           greeting: buildGreeting(this.trade),
