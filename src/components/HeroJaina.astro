@@ -46,68 +46,58 @@ const aiActive = SITE_CONFIG.aiActive;
         <p class="hero-jaina__demo-label">Try a live demo 👋</p>
         <p class="hero-jaina__text">{heroAIText}</p>
         <div class="hero-jaina__buttons">
-          <button type="button" class="hero-jaina__btn hero-jaina__btn--chat" id="hero-jaina-chat-btn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            Chat with me
-          </button>
-          <button type="button" class="hero-jaina__btn hero-jaina__btn--call" id="hero-jaina-call-btn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call me
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Chat Popup -->
-    <div class="jaina-popup" id="jaina-chat-popup" aria-hidden="true">
-      <div class="jaina-popup__overlay" data-close-popup></div>
-      <div class="jaina-popup__content">
-        <button class="jaina-popup__close" data-close-popup aria-label="Close">&times;</button>
-        <div class="jaina-popup__avatar-small">
-          <img src="/assets/images/jaina-headshot.png" alt="Down To Earth AI receptionist" class="jaina-popup__avatar-small-img" />
-        </div>
-        {aiActive ? (
-          <Fragment>
-            <p class="jaina-popup__title">Chat with me</p>
-            <p class="jaina-popup__text">Our chat feature is coming soon. In the meantime, try our live voice demo or get started with a quick call with Jeff.</p>
-            <a href="/get-started" class="jaina-popup__btn">Get Started →</a>
-          </Fragment>
-        ) : (
-          <Fragment>
-            <p class="jaina-popup__title">Contact Jeff</p>
-            <p class="jaina-popup__text">Contact Jeff for a quick demo. No obligation, no hard sell.</p>
-            <a href="/get-started" class="jaina-popup__btn">Contact Jeff →</a>
-          </Fragment>
-        )}
-      </div>
-    </div>
-
-    <!-- Call Popup -->
-    <div class="jaina-popup" id="jaina-call-popup" aria-hidden="true">
-      <div class="jaina-popup__overlay" data-close-popup></div>
-      <div class="jaina-popup__content">
-        <button class="jaina-popup__close" data-close-popup aria-label="Close">&times;</button>
-        <div class="jaina-popup__avatar-small">
-          <img src="/assets/images/jaina-headshot.png" alt="Down To Earth AI receptionist" class="jaina-popup__avatar-small-img" />
-        </div>
-        {aiActive ? (
-          <Fragment>
-            <p class="jaina-popup__title">Call me</p>
-            <p class="jaina-popup__text">Tap below to start a live voice conversation with our AI receptionist. You'll need to allow microphone access.</p>
-            <button type="button" class="jaina-popup__btn" id="hero-start-voice-btn">
+          {aiActive ? (
+            <button type="button" class="hero-jaina__btn hero-jaina__btn--call" id="hero-jaina-voice-btn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-              Start Voice Demo →
+              Try me live
             </button>
-          </Fragment>
-        ) : (
-          <Fragment>
+          ) : (
+            <Fragment>
+              <button type="button" class="hero-jaina__btn hero-jaina__btn--chat" id="hero-jaina-chat-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Chat with me
+              </button>
+              <button type="button" class="hero-jaina__btn hero-jaina__btn--call" id="hero-jaina-call-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Call me
+              </button>
+            </Fragment>
+          )}
+        </div>
+      </div>
+    </div>
+
+    {!aiActive && (
+      <Fragment>
+        <!-- Chat Popup (only when AI is off) -->
+        <div class="jaina-popup" id="jaina-chat-popup" aria-hidden="true">
+          <div class="jaina-popup__overlay" data-close-popup></div>
+          <div class="jaina-popup__content">
+            <button class="jaina-popup__close" data-close-popup aria-label="Close">&times;</button>
+            <div class="jaina-popup__avatar-small">
+              <img src="/assets/images/jaina-headshot.png" alt="Down To Earth AI receptionist" class="jaina-popup__avatar-small-img" />
+            </div>
             <p class="jaina-popup__title">Contact Jeff</p>
             <p class="jaina-popup__text">Contact Jeff for a quick demo. No obligation, no hard sell.</p>
             <a href="/get-started" class="jaina-popup__btn">Contact Jeff →</a>
-          </Fragment>
-        )}
-      </div>
-    </div>
+          </div>
+        </div>
+
+        <!-- Call Popup (only when AI is off) -->
+        <div class="jaina-popup" id="jaina-call-popup" aria-hidden="true">
+          <div class="jaina-popup__overlay" data-close-popup></div>
+          <div class="jaina-popup__content">
+            <button class="jaina-popup__close" data-close-popup aria-label="Close">&times;</button>
+            <div class="jaina-popup__avatar-small">
+              <img src="/assets/images/jaina-headshot.png" alt="Down To Earth AI receptionist" class="jaina-popup__avatar-small-img" />
+            </div>
+            <p class="jaina-popup__title">Contact Jeff</p>
+            <p class="jaina-popup__text">Contact Jeff for a quick demo. No obligation, no hard sell.</p>
+            <a href="/get-started" class="jaina-popup__btn">Contact Jeff →</a>
+          </div>
+        </div>
+      </Fragment>
+    )}
   </div>
 )}
 
@@ -459,10 +449,9 @@ const aiActive = SITE_CONFIG.aiActive;
 </style>
 
 <script>
-  // Chat popup
+  // Popup functionality (only used when AI is off)
   const chatBtn = document.getElementById('hero-jaina-chat-btn');
   const chatPopup = document.getElementById('jaina-chat-popup');
-  // Call popup
   const callBtn = document.getElementById('hero-jaina-call-btn');
   const callPopup = document.getElementById('jaina-call-popup');
 
@@ -495,17 +484,11 @@ const aiActive = SITE_CONFIG.aiActive;
     }
   });
 
-  // ── Hero Voice Button → opens shared voice modal from WidgetJaina ──────
-  const heroStartVoiceBtn = document.getElementById('hero-start-voice-btn');
-  heroStartVoiceBtn?.addEventListener('click', () => {
-    // Close the hero call popup first
-    closePopup(callPopup);
-    // The voice modal is rendered by WidgetJaina — trigger it via the shared function
-    // The WidgetJaina script also listens for hero-jaina-call-btn clicks,
-    // but this button is a separate element inside the popup, so we open directly:
+  // ── Hero Voice Button → opens voice modal directly (no popup step) ────
+  const heroVoiceBtn = document.getElementById('hero-jaina-voice-btn');
+  heroVoiceBtn?.addEventListener('click', () => {
     const voiceModal = document.getElementById('voice-session-modal');
-    if (voiceModal && voiceModal.classList) {
-      // Dispatch a custom event that the widget script listens for
+    if (voiceModal) {
       voiceModal.dispatchEvent(new CustomEvent('start-voice'));
     }
   });
