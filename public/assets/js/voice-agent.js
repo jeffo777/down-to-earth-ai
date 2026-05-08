@@ -104,19 +104,29 @@ DO NOT:
 
     // ── Public API ─────────────────────────────────────────────────────────
     async start() {
-      if (this._status !== 'idle' && this._status !== 'error') return;
+      console.log('[VoiceAgent] start() called, current status:', this._status);
+      if (this._status !== 'idle' && this._status !== 'error') {
+        console.warn('[VoiceAgent] Cannot start — status is', this._status, '(must be idle or error)');
+        return;
+      }
       this._setStatus('connecting');
 
       try {
         // 1. Get temporary token
+        console.log('[VoiceAgent] Step 1: Fetching token...');
         const token = await this._fetchToken();
         if (!token) throw new Error('Could not obtain voice session token');
+        console.log('[VoiceAgent] Step 1 OK: Token received (length:', token.length, ')');
 
         // 2. Get microphone access
+        console.log('[VoiceAgent] Step 2: Requesting microphone...');
         await this._setupMicrophone();
+        console.log('[VoiceAgent] Step 2 OK: Microphone active');
 
         // 3. Connect to Deepgram
+        console.log('[VoiceAgent] Step 3: Connecting WebSocket...');
         await this._connectWebSocket(token);
+        console.log('[VoiceAgent] Step 3 OK: WebSocket connected');
       } catch (err) {
         console.error('[VoiceAgent] Start error:', err);
         this._handleError(err.message || 'Could not start voice session');
@@ -124,6 +134,7 @@ DO NOT:
     }
 
     stop() {
+      console.log('[VoiceAgent] stop() called');
       this._cleanup();
       this._setStatus('idle');
     }
@@ -131,12 +142,16 @@ DO NOT:
     // ── Token Fetching ─────────────────────────────────────────────────────
     async _fetchToken() {
       try {
+        console.log('[VoiceAgent] Fetching token from /api/deepgram-token...');
         const resp = await fetch('/api/deepgram-token', { method: 'POST' });
+        console.log('[VoiceAgent] Token response status:', resp.status);
         if (!resp.ok) {
           const data = await resp.json().catch(() => ({}));
+          console.error('[VoiceAgent] Token error body:', data);
           throw new Error(data.error || `Token request failed (${resp.status})`);
         }
         const data = await resp.json();
+        console.log('[VoiceAgent] Token data keys:', Object.keys(data));
         return data.token;
       } catch (err) {
         throw new Error('Could not connect to voice service: ' + err.message);
@@ -217,6 +232,7 @@ DO NOT:
 
         this._ws.onopen = () => {
           clearTimeout(connectTimeout);
+          console.log('[VoiceAgent] WebSocket opened successfully');
           // Send settings configuration
           this._sendSettings();
           resolve();
@@ -225,11 +241,13 @@ DO NOT:
         this._ws.onmessage = (event) => {
           if (event.data instanceof Blob) {
             // Binary = agent audio
+            console.log('[VoiceAgent] Received audio blob, size:', event.data.size);
             this._handleAudioBlob(event.data);
           } else {
             // JSON = control message
             try {
               const msg = JSON.parse(event.data);
+              console.log('[VoiceAgent] Received message:', msg.type, msg);
               this._handleMessage(msg);
             } catch (e) {
               console.warn('[VoiceAgent] Non-JSON message:', event.data);
@@ -239,12 +257,13 @@ DO NOT:
 
         this._ws.onerror = (err) => {
           clearTimeout(connectTimeout);
-          console.error('[VoiceAgent] WebSocket error:', err);
+          console.error('[VoiceAgent] WebSocket error event:', err);
           reject(new Error('Connection error'));
         };
 
         this._ws.onclose = (event) => {
           clearTimeout(connectTimeout);
+          console.log('[VoiceAgent] WebSocket closed — code:', event.code, 'reason:', event.reason, 'wasClean:', event.wasClean);
           if (this._status !== 'idle') {
             this._cleanup();
             this._setStatus('idle');
@@ -293,8 +312,12 @@ DO NOT:
         },
       };
 
+      console.log('[VoiceAgent] Sending Settings message:', JSON.stringify(settings, null, 2));
       if (this._ws && this._ws.readyState === WebSocket.OPEN) {
         this._ws.send(JSON.stringify(settings));
+        console.log('[VoiceAgent] Settings sent OK');
+      } else {
+        console.error('[VoiceAgent] Cannot send Settings — WebSocket not open, readyState:', this._ws?.readyState);
       }
     }
 
@@ -416,6 +439,7 @@ DO NOT:
     // ── Status Management ──────────────────────────────────────────────────
     _setStatus(status) {
       if (this._status === status) return;
+      console.log('[VoiceAgent] Status change:', this._status, '→', status);
       this._status = status;
       this.onStatusChange(status);
     }
