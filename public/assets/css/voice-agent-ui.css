@@ -1,0 +1,324 @@
+/**
+ * voice-agent-ui.css — Voice session UI styles
+ * Glassmorphism modal with animated states, transcript display, and controls.
+ * Matches the existing Down To Earth AI dark theme.
+ */
+
+/* ── Voice Session Modal ──────────────────────────────────────────────── */
+.voice-session {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+}
+
+.voice-session.active {
+  display: flex;
+}
+
+.voice-session__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.voice-session__content {
+  position: relative;
+  background: rgba(22, 22, 35, 0.95);
+  border: 1px solid rgba(232, 145, 58, 0.2);
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem 1.5rem;
+  max-width: 400px;
+  width: 92%;
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(232, 145, 58, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+/* ── Close Button ─────────────────────────────────────────────────────── */
+.voice-session__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: color 150ms, background 150ms;
+  z-index: 2;
+}
+
+.voice-session__close:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ── Avatar Area ──────────────────────────────────────────────────────── */
+.voice-session__avatar {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.voice-session__avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 2.5px solid rgba(232, 145, 58, 0.5);
+  position: relative;
+  z-index: 2;
+  transition: border-color 300ms;
+}
+
+/* Animated ring — syncs with agent status */
+.voice-session__ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  z-index: 1;
+  transition: border-color 300ms, box-shadow 300ms;
+}
+
+/* ── Status States ────────────────────────────────────────────────────── */
+
+/* Connecting — slow pulse */
+.voice-session[data-status="connecting"] .voice-session__ring {
+  border-color: rgba(232, 145, 58, 0.4);
+  animation: voice-ring-pulse 1.5s ease-in-out infinite;
+}
+.voice-session[data-status="connecting"] .voice-session__avatar-img {
+  border-color: rgba(232, 145, 58, 0.4);
+}
+
+/* Listening — gentle breathing glow */
+.voice-session[data-status="listening"] .voice-session__ring {
+  border-color: rgba(232, 145, 58, 0.6);
+  animation: voice-ring-breathe 3s ease-in-out infinite;
+}
+.voice-session[data-status="listening"] .voice-session__avatar-img {
+  border-color: rgba(232, 145, 58, 0.7);
+}
+
+/* Agent thinking — fast pulse */
+.voice-session[data-status="agent-thinking"] .voice-session__ring {
+  border-color: rgba(232, 145, 58, 0.8);
+  animation: voice-ring-think 0.8s ease-in-out infinite;
+}
+.voice-session[data-status="agent-thinking"] .voice-session__avatar-img {
+  border-color: rgba(232, 145, 58, 0.8);
+}
+
+/* Agent speaking — bright steady glow + scale with audio */
+.voice-session[data-status="agent-speaking"] .voice-session__ring {
+  border-color: rgba(232, 145, 58, 1);
+  box-shadow: 0 0 20px rgba(232, 145, 58, 0.3);
+  animation: voice-ring-speak 1s ease-in-out infinite;
+}
+.voice-session[data-status="agent-speaking"] .voice-session__avatar-img {
+  border-color: rgba(232, 145, 58, 1);
+}
+
+/* Error — red tint */
+.voice-session[data-status="error"] .voice-session__ring {
+  border-color: rgba(220, 53, 69, 0.6);
+}
+.voice-session[data-status="error"] .voice-session__avatar-img {
+  border-color: rgba(220, 53, 69, 0.6);
+}
+
+/* ── Ring Animations ──────────────────────────────────────────────────── */
+@keyframes voice-ring-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+
+@keyframes voice-ring-breathe {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.04); opacity: 0.8; }
+}
+
+@keyframes voice-ring-think {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+
+@keyframes voice-ring-speak {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+/* ── Status Text ──────────────────────────────────────────────────────── */
+.voice-session__status {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(232, 145, 58, 0.8);
+  text-align: center;
+  min-height: 1.2rem;
+  transition: color 200ms;
+}
+
+.voice-session[data-status="error"] .voice-session__status {
+  color: rgba(220, 53, 69, 0.9);
+}
+
+/* ── Transcript Area ──────────────────────────────────────────────────── */
+.voice-session__transcript {
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(232, 145, 58, 0.3) transparent;
+}
+
+.voice-session__transcript:empty::after {
+  content: 'Your conversation will appear here…';
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.8rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.voice-session__msg {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  padding: 0.4rem 0.65rem;
+  border-radius: 0.5rem;
+  max-width: 85%;
+  animation: voice-msg-in 200ms ease;
+}
+
+.voice-session__msg--user {
+  align-self: flex-end;
+  background: rgba(232, 145, 58, 0.15);
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(232, 145, 58, 0.2);
+}
+
+.voice-session__msg--agent {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@keyframes voice-msg-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Controls ─────────────────────────────────────────────────────────── */
+.voice-session__controls {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.voice-session__hangup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.5rem;
+  background: rgba(220, 53, 69, 0.15);
+  color: #dc3545;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border: 1px solid rgba(220, 53, 69, 0.3);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background 150ms, border-color 150ms, transform 150ms;
+  font-family: inherit;
+  min-height: 44px;
+}
+
+.voice-session__hangup:hover {
+  background: rgba(220, 53, 69, 0.25);
+  border-color: rgba(220, 53, 69, 0.5);
+  transform: scale(1.02);
+}
+
+.voice-session__hangup svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ── Error State ──────────────────────────────────────────────────────── */
+.voice-session__error {
+  font-size: 0.85rem;
+  color: rgba(220, 53, 69, 0.9);
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 0.5rem;
+}
+
+.voice-session__retry {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.25rem;
+  background: rgba(232, 145, 58, 0.15);
+  color: rgba(232, 145, 58, 0.9);
+  font-weight: 600;
+  font-size: 0.85rem;
+  border: 1px solid rgba(232, 145, 58, 0.3);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background 150ms, border-color 150ms;
+  font-family: inherit;
+  min-height: 44px;
+}
+
+.voice-session__retry:hover {
+  background: rgba(232, 145, 58, 0.25);
+  border-color: rgba(232, 145, 58, 0.5);
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .voice-session__content {
+    padding: 1.5rem 1rem 1rem;
+    border-radius: 1.25rem;
+  }
+
+  .voice-session__avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .voice-session__transcript {
+    max-height: 150px;
+  }
+}
