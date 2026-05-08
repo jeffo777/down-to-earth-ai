@@ -43,16 +43,15 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Request a temporary token from Deepgram (TTL: 60 seconds)
-    const response = await fetch('https://api.deepgram.com/v1/auth/token', {
+    // Request a temporary JWT token from Deepgram (TTL: 60 seconds)
+    const response = await fetch('https://api.deepgram.com/v1/auth/grant', {
       method: 'POST',
       headers: {
         'Authorization': `Token ${apiKey}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        time_to_live_in_seconds: 60,
-        scopes: ['agent'],
+        ttl_seconds: 60,
       }),
     });
 
@@ -63,7 +62,7 @@ export default async function handler(req, res) {
     }
 
     const data = await response.json();
-    return res.status(200).json({ token: data.token || data.key });
+    return res.status(200).json({ token: data.access_token });
   } catch (err) {
     console.error('Token generation error:', err);
     return res.status(500).json({ error: 'Internal server error' });
