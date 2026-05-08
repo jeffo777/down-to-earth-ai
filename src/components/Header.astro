@@ -265,14 +265,22 @@ const navLinks = [
   .header__cta {
     display: inline-flex;
     align-items: center;
-    padding: 0.5rem 1.25rem;
+    padding: 0.375rem 0.875rem;
     background: var(--color-accent);
     color: #fff;
     font-weight: 600;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     border-radius: 0.5rem;
     text-decoration: none;
     transition: background 150ms, transform 150ms;
+    white-space: nowrap;
+  }
+
+  @media (min-width: 480px) {
+    .header__cta {
+      padding: 0.5rem 1.25rem;
+      font-size: 0.875rem;
+    }
   }
 
   .header__cta:hover {
