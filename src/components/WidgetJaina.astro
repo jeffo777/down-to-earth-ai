@@ -537,11 +537,11 @@ if (widgetTrade && widgetGoal) {
     // Dynamically load voice agent assets
     const cssLink = document.createElement('link');
     cssLink.rel = 'stylesheet';
-    cssLink.href = '/assets/css/voice-agent-ui.css';
+    cssLink.href = '/assets/css/voice-agent-ui.css?v=20260508b';
     document.head.appendChild(cssLink);
 
     const script = document.createElement('script');
-    script.src = '/assets/js/voice-agent.js';
+    script.src = '/assets/js/voice-agent.js?v=20260508b';
     script.onload = () => initVoiceSession();
     document.head.appendChild(script);
   }
