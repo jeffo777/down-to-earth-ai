@@ -26,7 +26,7 @@
   // ── System Prompt ──────────────────────────────────────────────────────────
   function buildSystemPrompt(trade) {
     const tradeContext = trade
-      ? `The caller is currently viewing the ${trade} page on the website, so they are likely a ${trade} or interested in services for a ${trade} business. Tailor your conversation accordingly.`
+      ? `The caller is on the AI receptionist page for ${trade} businesses. They likely run a ${trade} business and are exploring whether an AI receptionist would work for them. Relate your answers to their trade — talk about the kinds of calls they get, missing enquiries while on site, and how an AI receptionist would handle things specific to their line of work.`
       : 'The caller is browsing the Down To Earth AI website.';
 
     return `You are the AI receptionist for Down To Earth AI — a done-for-you AI service built specifically for UK tradesmen and home services businesses.
@@ -154,7 +154,7 @@ DO NOT:
   // ── Greeting ───────────────────────────────────────────────────────────────
   function buildGreeting(trade) {
     if (trade) {
-      return `Hi! I see you're looking at our ${trade} services — what would you like to know?`;
+      return `Hi! So you run a ${trade} business — what would you like to know about having your own AI receptionist?`;
     }
     return "Hi there! Welcome to Down To Earth AI — what can I help you with?";
   }
