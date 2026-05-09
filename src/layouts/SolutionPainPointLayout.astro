@@ -1,4 +1,4 @@
-﻿---
+---
 /**
  * SolutionPainPointLayout.astro
  * Template for: Solution + problem pages (29 pages)
@@ -53,6 +53,8 @@ const fm = frontmatter;
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="alternate" hreflang="en-GB" href={fm.canonicalUrl} />
   <title>{fm.metaTitle}</title>
   <meta name="description" content={fm.metaDescription} />
   {fm.canonicalUrl && <link rel="canonical" href={fm.canonicalUrl} />}
@@ -82,7 +84,7 @@ const fm = frontmatter;
 
   <main id="main-content" style="padding-top: 64px;">
 
-    <!-- 1. HERO — Stacked -->
+    <!-- 1. HERO � Stacked -->
     <section class="sp-hero">
       <div class="sp-hero__inner">
         <div class="sp-hero__stacked">
@@ -92,8 +94,8 @@ const fm = frontmatter;
           </div>
 
           <div class="sp-hero__trust-row">
-            <span class="sp-hero__done-tag">✓ 100% done for you</span>
-            <span class="sp-hero__done-tag">🇬🇧 UK business</span>
+            <span class="sp-hero__done-tag">? 100% done for you</span>
+            <span class="sp-hero__done-tag">???? UK business</span>
             <span class="sp-hero__price-tag">Only {pricing.receptionist.formatted.monthly}</span>
             <span class="sp-hero__guarantee-tag">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
@@ -133,7 +135,7 @@ const fm = frontmatter;
               <a href={link.href} class="sp-solution-card">
                 <h3>{link.name}</h3>
                 <p>{link.description}</p>
-                <span class="sp-solution-card__link">Learn more →</span>
+                <span class="sp-solution-card__link">Learn more ?</span>
               </a>
             ))}
           </div>
@@ -148,36 +150,36 @@ const fm = frontmatter;
           <h2 class="sp-section__title">The Lead Generation Flywheel</h2>
           <div class="sp-flywheel">
             <div class="sp-flywheel__step">
-              <div class="sp-flywheel__icon">🌐</div>
+              <div class="sp-flywheel__icon">??</div>
               <span>Website ranks on Google</span>
             </div>
-            <div class="sp-flywheel__arrow">→</div>
+            <div class="sp-flywheel__arrow">?</div>
             <div class="sp-flywheel__step">
-              <div class="sp-flywheel__icon">📞</div>
+              <div class="sp-flywheel__icon">??</div>
               <span>Leads come in</span>
             </div>
-            <div class="sp-flywheel__arrow">→</div>
+            <div class="sp-flywheel__arrow">?</div>
             <div class="sp-flywheel__step">
-              <div class="sp-flywheel__icon">🤖</div>
+              <div class="sp-flywheel__icon">??</div>
               <span>Your AI receptionist answers instantly</span>
             </div>
-            <div class="sp-flywheel__arrow">→</div>
+            <div class="sp-flywheel__arrow">?</div>
             <div class="sp-flywheel__step">
-              <div class="sp-flywheel__icon">🔧</div>
+              <div class="sp-flywheel__icon">??</div>
               <span>You complete the work</span>
             </div>
-            <div class="sp-flywheel__arrow">→</div>
+            <div class="sp-flywheel__arrow">?</div>
             <div class="sp-flywheel__step">
-              <div class="sp-flywheel__icon">📸</div>
-              <span>Send photos → AI creates content</span>
+              <div class="sp-flywheel__icon">??</div>
+              <span>Send photos ? AI creates content</span>
             </div>
-            <div class="sp-flywheel__arrow">→</div>
+            <div class="sp-flywheel__arrow">?</div>
             <div class="sp-flywheel__step">
-              <div class="sp-flywheel__icon">📈</div>
-              <span>More visibility → More leads</span>
+              <div class="sp-flywheel__icon">??</div>
+              <span>More visibility ? More leads</span>
             </div>
           </div>
-          <p class="sp-flywheel__note">Every job makes the next job easier to win. ♻️</p>
+          <p class="sp-flywheel__note">Every job makes the next job easier to win. ??</p>
         </div>
       </section>
     )}
