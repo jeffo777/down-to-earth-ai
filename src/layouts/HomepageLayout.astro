@@ -1,4 +1,4 @@
----
+ï»¿---
 /**
  * HomepageLayout.astro
  * Template for: / (1 page)
@@ -82,7 +82,7 @@ const fm = frontmatter;
 
   <main id="main-content" style="padding-top: 64px;">
 
-    <!-- 1. HERO — Tight stack: Title ? Subtitle ? Price+Guarantee ? Headshot ? CTA -->
+    <!-- 1. HERO ï¿½ Tight stack: Title ? Subtitle ? Price+Guarantee ? Headshot ? CTA -->
     <section class="hp-hero">
       <div class="hp-hero__inner">
         <div class="hp-hero__stacked">
@@ -92,8 +92,8 @@ const fm = frontmatter;
           </div>
 
           <div class="hp-hero__trust-row">
-            <span class="hp-hero__done-tag">? 100% done for you</span>
-            <span class="hp-hero__done-tag">???? UK business</span>
+            <span class="hp-hero__done-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg> 100% done for you</span>
+            <span class="hp-hero__done-tag"><svg width="14" height="14" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg"><clipPath id="hp-t"><rect width="60" height="30" rx="2"/></clipPath><g clip-path="url(#hp-t)"><rect width="60" height="30" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4"/><path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10"/><path d="M30,0 V30 M0,15 H60" stroke="#C8102E" stroke-width="6"/></g></svg> UK business</span>
             {fm.heroPrice && (
               <span class="hp-hero__price-tag">Only {fm.heroPrice}</span>
             )}
@@ -181,7 +181,7 @@ const fm = frontmatter;
           <blockquote class="hp-founder__quote">
             <p>{fm.foundersNote}</p>
           </blockquote>
-          {fm.founderName && <p class="hp-founder__name">— {fm.founderName}</p>}
+          {fm.founderName && <p class="hp-founder__name">ï¿½ {fm.founderName}</p>}
           <div class="hp-founder__badge">
             <GuaranteeBadge />
           </div>
