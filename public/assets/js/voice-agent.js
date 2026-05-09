@@ -153,9 +153,6 @@ DO NOT:
 
   // ── Greeting ───────────────────────────────────────────────────────────────
   function buildGreeting(trade) {
-    if (trade) {
-      return `Hi! So you run a ${trade} business — what would you like to know about having your own AI receptionist?`;
-    }
     return "Hi there! Welcome to Down To Earth AI — what can I help you with?";
   }
 
