@@ -49,12 +49,11 @@ const contactFaqs = [
 
         <!-- Form -->
         <div class="contact-form-wrap">
-          <!-- TODO: Connect to GHL form/webhook -->
-          <form class="contact-form" action="https://formsubmit.co/jeff@downtoearthai.co.uk" method="POST">
-            <input type="hidden" name="_subject" value="New enquiry from Down To Earth AI contact page" />
-            <input type="hidden" name="_captcha" value="true" />
-            <input type="hidden" name="_next" value="https://downtoearthai.co.uk/thank-you" />
-            <input type="text" name="_honey" style="display:none" />
+          <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="82f978fd-7ee5-434d-ab2c-202b121d25fb" />
+            <input type="hidden" name="subject" value="New enquiry from Down To Earth AI contact page" />
+            <input type="hidden" name="redirect" value="https://downtoearthai.co.uk/thank-you" />
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none" />
 
             <div class="form-field">
               <label for="contact-name">Name <span class="required">*</span></label>

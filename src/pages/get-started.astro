@@ -51,11 +51,11 @@ const frontmatter = {
     <div class="core-container core-container--narrow" style="text-align: center;">
       <h2>Get In Touch With Jeff</h2>
       <p style="color: var(--color-text-secondary); margin-bottom: 2rem;">Drop Jeff a message and he'll get back to you within 24 hours. No obligation, no hard sell.</p>
-      <form class="gs-contact-form" action="https://formsubmit.co/jeff@downtoearthai.co.uk" method="POST">
-        <input type="hidden" name="_subject" value="New enquiry from Down To Earth AI — Get Started" />
-        <input type="hidden" name="_captcha" value="true" />
-        <input type="hidden" name="_next" value="https://downtoearthai.co.uk/thank-you" />
-        <input type="text" name="_honey" style="display:none" />
+      <form class="gs-contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="82f978fd-7ee5-434d-ab2c-202b121d25fb" />
+        <input type="hidden" name="subject" value="New enquiry from Down To Earth AI — Get Started" />
+        <input type="hidden" name="redirect" value="https://downtoearthai.co.uk/thank-you" />
+        <input type="checkbox" name="botcheck" class="hidden" style="display:none" />
 
         <div class="gs-form-group">
           <label for="gs-name" class="gs-label">Name <span class="gs-required">*</span></label>
